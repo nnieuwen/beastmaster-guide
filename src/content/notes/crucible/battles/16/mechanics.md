@@ -9,7 +9,7 @@ updated: 2026-09-12
 
 **Zu, cockerel & pullet** — the elite fork (the other fork is the Catoblepas).
 
-- Play it slow until the end; keep the Zu **centred** so your uptime is full and your 250-TP drop lands in the middle of the room.
+- It drops **ground hazards** and spawns eggs around the arena. Play it slow until the end; keep the Zu **centred** so your uptime is full and your 250-TP drop lands in the middle of the room.
 - Its **tankbuster is an AoE** and *will* hit your pet — Parting Blow right before it.
 - It tries to **hatch eggs**; kill it through that rather than dealing with them. Loot here is a coin flip (a Vampiric Fang is a good roll).
 

@@ -7,9 +7,9 @@ author: FC guide
 updated: 2026-09-12
 ---
 
-**Team:** triple Beastkin — **Cu Sith, Buffalo, Coeurl**, synced to rank 15 (they were rank 19). Coeurl is self-sufficient in its combo: lightning damage plus a lightning-resistance down that boosts its own follow-up. Cu Sith is there to burst. Buffalo was picked for exactly one job — its 15-second stun in the second fight — and the comp was built around that.
+**Team:** triple Beastkin — **Cu Sith, Buffalo, Coeurl**, all at rank 15 (the board's sync; his beast rank was 19). Coeurl is self-sufficient in its combo: lightning damage plus a lightning-resistance down that boosts its own follow-up. Cu Sith is there to burst. Buffalo was picked for exactly one job — its 15-second stun in the second fight — and the comp was built around that.
 
-Gear in the run: weapon and hoplon +3, everything else +1 to +2, **no food**.
+Gear in the run: weapon and hoplon +3, head +1, body +1, hands +2, legs +1, feet +2, **no food**.
 
 ## Bonuses to bank
 
