@@ -1,0 +1,4133 @@
+{
+  "battles": [
+    {
+      "enemies": [
+        {
+          "action": {
+            "effectType": 6,
+            "name": "Tumulus",
+            "status": null,
+            "target": 1
+          },
+          "bnpcNameId": 14531,
+          "element": "Blunt",
+          "icon": "/icons/pieces/242501.png",
+          "name": "bone knight",
+          "resistFlags": [
+            false,
+            true,
+            true,
+            false,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true
+          ],
+          "slot": 0
+        },
+        {
+          "action": {
+            "effectType": 7,
+            "name": "Death Spiral",
+            "status": null,
+            "target": 1
+          },
+          "bnpcNameId": 14532,
+          "element": "Blunt",
+          "icon": "/icons/pieces/242502.png",
+          "name": "bone bishop",
+          "resistFlags": [
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            false,
+            true
+          ],
+          "slot": 1
+        }
+      ],
+      "id": 1
+    },
+    {
+      "enemies": [
+        {
+          "action": {
+            "effectType": 2,
+            "name": "Abyssal Swing",
+            "status": null,
+            "target": 0
+          },
+          "bnpcNameId": 14533,
+          "element": "Lightning",
+          "icon": "/icons/pieces/242503.png",
+          "name": "arch demon piece",
+          "resistFlags": [
+            true,
+            true,
+            true,
+            true,
+            true,
+            false,
+            true,
+            true,
+            true,
+            true,
+            true
+          ],
+          "slot": 0
+        }
+      ],
+      "id": 2
+    },
+    {
+      "enemies": [
+        {
+          "action": {
+            "effectType": 1,
+            "name": "Clear Mind",
+            "status": "Damage Up",
+            "target": 1
+          },
+          "bnpcNameId": 14535,
+          "element": "Slashing",
+          "icon": "/icons/pieces/242504.png",
+          "name": "piscodemon piece",
+          "resistFlags": [
+            true,
+            true,
+            true,
+            true,
+            true,
+            false,
+            true,
+            true,
+            true,
+            false,
+            true
+          ],
+          "slot": 0
+        }
+      ],
+      "id": 3
+    },
+    {
+      "enemies": [
+        {
+          "action": {
+            "effectType": 1,
+            "name": "Deadly Thrust",
+            "status": "Poison",
+            "target": 5
+          },
+          "bnpcNameId": 14536,
+          "element": "Ice",
+          "icon": "/icons/pieces/242505.png",
+          "name": "banemite piece",
+          "resistFlags": [
+            true,
+            true,
+            true,
+            true,
+            false,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true
+          ],
+          "slot": 0
+        },
+        {
+          "action": {
+            "effectType": 2,
+            "name": "Silkscreen",
+            "status": "Heavy",
+            "target": 0
+          },
+          "bnpcNameId": 14537,
+          "element": "Ice",
+          "icon": "/icons/pieces/242506.png",
+          "name": "miteling piece",
+          "resistFlags": [
+            false,
+            false,
+            false,
+            true,
+            false,
+            true,
+            false,
+            false,
+            false,
+            false,
+            false
+          ],
+          "slot": 1
+        }
+      ],
+      "id": 4
+    },
+    {
+      "enemies": [
+        {
+          "action": {
+            "effectType": 2,
+            "name": "Scorching Smite",
+            "status": null,
+            "target": 0
+          },
+          "bnpcNameId": 14538,
+          "element": "Wind",
+          "icon": "/icons/pieces/242507.png",
+          "name": "ogre piece",
+          "resistFlags": [
+            true,
+            true,
+            true,
+            true,
+            false,
+            false,
+            true,
+            true,
+            true,
+            true,
+            true
+          ],
+          "slot": 0
+        },
+        {
+          "action": {
+            "effectType": 9,
+            "name": "Scorched Earth",
+            "status": null,
+            "target": 0
+          },
+          "bnpcNameId": 14539,
+          "element": "Water",
+          "icon": "/icons/pieces/242508.png",
+          "name": "wisp piece",
+          "resistFlags": [
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            false,
+            false,
+            true
+          ],
+          "slot": 1
+        },
+        {
+          "action": {
+            "effectType": 9,
+            "name": "Scorched Earth",
+            "status": null,
+            "target": 0
+          },
+          "bnpcNameId": 14748,
+          "element": "Water",
+          "icon": "/icons/pieces/242508.png",
+          "name": "great wisp piece",
+          "resistFlags": [
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            false,
+            false,
+            true
+          ],
+          "slot": 2
+        }
+      ],
+      "id": 5
+    },
+    {
+      "enemies": [
+        {
+          "action": {
+            "effectType": 8,
+            "name": "Blood Rain",
+            "status": null,
+            "target": 1
+          },
+          "bnpcNameId": 14541,
+          "element": "Piercing",
+          "icon": "/icons/pieces/242509.png",
+          "name": "Pas de Seul",
+          "resistFlags": [
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true
+          ],
+          "slot": 0
+        },
+        {
+          "action": {
+            "effectType": 1,
+            "name": "Fanaticism",
+            "status": "Damage Up",
+            "target": 6
+          },
+          "bnpcNameId": 14542,
+          "element": "Fire",
+          "icon": "/icons/pieces/242510.png",
+          "name": "succubus mage",
+          "resistFlags": [
+            false,
+            true,
+            true,
+            false,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            false
+          ],
+          "slot": 1
+        },
+        {
+          "action": {
+            "effectType": 2,
+            "name": "Sweet Steel",
+            "status": null,
+            "target": 0
+          },
+          "bnpcNameId": 14543,
+          "element": "Fire",
+          "icon": "/icons/pieces/242511.png",
+          "name": "succubus knight",
+          "resistFlags": [
+            false,
+            false,
+            false,
+            true,
+            true,
+            true,
+            false,
+            false,
+            true,
+            true,
+            false
+          ],
+          "slot": 2
+        }
+      ],
+      "id": 6
+    },
+    {
+      "enemies": [
+        {
+          "action": {
+            "effectType": 6,
+            "name": "Hammerleap",
+            "status": null,
+            "target": 2
+          },
+          "bnpcNameId": 14545,
+          "element": "Wind",
+          "icon": "/icons/pieces/242512.png",
+          "name": "manticore piece",
+          "resistFlags": [
+            true,
+            true,
+            true,
+            true,
+            true,
+            false,
+            true,
+            true,
+            true,
+            true,
+            true
+          ],
+          "slot": 0
+        }
+      ],
+      "id": 7
+    },
+    {
+      "enemies": [
+        {
+          "action": {
+            "effectType": 9,
+            "name": "Mortal Ray",
+            "status": "Doom",
+            "target": 0
+          },
+          "bnpcNameId": 14546,
+          "element": "Piercing",
+          "icon": "/icons/pieces/242513.png",
+          "name": "taurus piece",
+          "resistFlags": [
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true
+          ],
+          "slot": 0
+        },
+        {
+          "action": {
+            "effectType": 9,
+            "name": "Mortal Gaze",
+            "status": "Doom",
+            "target": 0
+          },
+          "bnpcNameId": 14548,
+          "element": "Ice",
+          "icon": "/icons/pieces/242514.png",
+          "name": "ahriman piece",
+          "resistFlags": [
+            false,
+            true,
+            false,
+            true,
+            false,
+            true,
+            false,
+            false,
+            true,
+            true,
+            true
+          ],
+          "slot": 1
+        }
+      ],
+      "id": 8
+    },
+    {
+      "enemies": [
+        {
+          "action": {
+            "effectType": 2,
+            "name": "Blazing Trail",
+            "status": null,
+            "target": 0
+          },
+          "bnpcNameId": 14549,
+          "element": "Lightning",
+          "icon": "/icons/pieces/242515.png",
+          "name": "wyvern piece",
+          "resistFlags": [
+            true,
+            true,
+            true,
+            true,
+            false,
+            false,
+            true,
+            true,
+            true,
+            true,
+            true
+          ],
+          "slot": 0
+        }
+      ],
+      "id": 9
+    },
+    {
+      "enemies": [
+        {
+          "action": {
+            "effectType": 1,
+            "name": "Water",
+            "status": null,
+            "target": 3
+          },
+          "bnpcNameId": 14552,
+          "element": "Earth",
+          "icon": "/icons/pieces/242516.png",
+          "name": "voidmancer piece",
+          "resistFlags": [
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true
+          ],
+          "slot": 0
+        },
+        {
+          "action": null,
+          "bnpcNameId": 14553,
+          "element": "Ice",
+          "icon": "/icons/pieces/242517.png",
+          "name": "zombie piece",
+          "resistFlags": [
+            false,
+            false,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            false,
+            false,
+            false
+          ],
+          "slot": 1
+        }
+      ],
+      "id": 10
+    },
+    {
+      "enemies": [
+        {
+          "action": {
+            "effectType": 2,
+            "name": "1000-tonze Swipe",
+            "status": null,
+            "target": 0
+          },
+          "bnpcNameId": 14555,
+          "element": "Fire",
+          "icon": "/icons/pieces/242518.png",
+          "name": "elder tablitaur piece",
+          "resistFlags": [
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true
+          ],
+          "slot": 0
+        },
+        {
+          "action": {
+            "effectType": 1,
+            "name": "Rallying Cheer",
+            "status": "Damage Up",
+            "target": 6
+          },
+          "bnpcNameId": 14556,
+          "element": "Fire",
+          "icon": "/icons/pieces/242519.png",
+          "name": "younger tablitaur piece",
+          "resistFlags": [
+            true,
+            true,
+            true,
+            false,
+            false,
+            false,
+            true,
+            true,
+            true,
+            false,
+            true
+          ],
+          "slot": 1
+        }
+      ],
+      "id": 11
+    },
+    {
+      "enemies": [
+        {
+          "action": {
+            "effectType": 1,
+            "name": "Void Paralyze",
+            "status": "Paralysis",
+            "target": 3
+          },
+          "bnpcNameId": 14557,
+          "element": "Slashing",
+          "icon": "/icons/pieces/242520.png",
+          "name": "demon piece",
+          "resistFlags": [
+            false,
+            false,
+            false,
+            true,
+            true,
+            true,
+            false,
+            false,
+            false,
+            false,
+            false
+          ],
+          "slot": 0
+        },
+        {
+          "action": {
+            "effectType": 4,
+            "name": "Smite of Excessive Rage",
+            "status": null,
+            "target": 0
+          },
+          "bnpcNameId": 14558,
+          "element": "Ice",
+          "icon": "/icons/pieces/242521.png",
+          "name": "evil weapon piece",
+          "resistFlags": [
+            false,
+            false,
+            false,
+            true,
+            true,
+            true,
+            false,
+            false,
+            false,
+            false,
+            false
+          ],
+          "slot": 1
+        },
+        {
+          "action": {
+            "effectType": 9,
+            "name": "Void Fire III",
+            "status": null,
+            "target": 0
+          },
+          "bnpcNameId": 14559,
+          "element": "Earth",
+          "icon": "/icons/pieces/242522.png",
+          "name": "devilet piece",
+          "resistFlags": [
+            false,
+            true,
+            false,
+            true,
+            true,
+            true,
+            false,
+            true,
+            true,
+            true,
+            false
+          ],
+          "slot": 2
+        }
+      ],
+      "id": 12
+    },
+    {
+      "enemies": [
+        {
+          "action": {
+            "effectType": 1,
+            "name": "Kinborrow",
+            "status": "Popoto Skin",
+            "target": 1
+          },
+          "bnpcNameId": 14561,
+          "element": "Blunt",
+          "icon": "/icons/pieces/242523.png",
+          "name": "Loosefrox Inkyjots",
+          "resistFlags": [
+            true,
+            true,
+            true,
+            true,
+            false,
+            false,
+            true,
+            true,
+            true,
+            true,
+            true
+          ],
+          "slot": 0
+        },
+        {
+          "action": {
+            "effectType": 2,
+            "name": "Sand Breath",
+            "status": "Blind",
+            "target": 0
+          },
+          "bnpcNameId": 14562,
+          "element": "Water",
+          "icon": "/icons/pieces/242524.png",
+          "name": "Chewchum Popoto",
+          "resistFlags": [
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true
+          ],
+          "slot": 1
+        }
+      ],
+      "id": 13
+    },
+    {
+      "enemies": [
+        {
+          "action": {
+            "effectType": 2,
+            "name": "Steelripper",
+            "status": null,
+            "target": 0
+          },
+          "bnpcNameId": 14564,
+          "element": "Fire",
+          "icon": "/icons/pieces/242525.png",
+          "name": "cavalier piece",
+          "resistFlags": [
+            true,
+            true,
+            true,
+            true,
+            true,
+            false,
+            true,
+            true,
+            true,
+            true,
+            true
+          ],
+          "slot": 0
+        },
+        {
+          "action": {
+            "effectType": 1,
+            "name": "Blizzard",
+            "status": null,
+            "target": 3
+          },
+          "bnpcNameId": 14567,
+          "element": "Blunt",
+          "icon": "/icons/pieces/242502.png",
+          "name": "bone bishop",
+          "resistFlags": [
+            false,
+            false,
+            false,
+            true,
+            true,
+            true,
+            false,
+            true,
+            false,
+            true,
+            true
+          ],
+          "slot": 1
+        }
+      ],
+      "id": 14
+    },
+    {
+      "enemies": [
+        {
+          "action": {
+            "effectType": 2,
+            "name": "Head Snatch",
+            "status": null,
+            "target": 0
+          },
+          "bnpcNameId": 14569,
+          "element": "Ice",
+          "icon": "/icons/pieces/242526.png",
+          "name": "ymir piece",
+          "resistFlags": [
+            true,
+            true,
+            true,
+            true,
+            true,
+            false,
+            false,
+            true,
+            false,
+            true,
+            true
+          ],
+          "slot": 0
+        },
+        {
+          "action": {
+            "effectType": 9,
+            "name": "Dreadwash",
+            "status": "Hysteria",
+            "target": 0
+          },
+          "bnpcNameId": 14571,
+          "element": "Blunt",
+          "icon": "/icons/pieces/242527.png",
+          "name": "Sahagin piece",
+          "resistFlags": [
+            true,
+            true,
+            true,
+            false,
+            false,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true
+          ],
+          "slot": 1
+        }
+      ],
+      "id": 15
+    },
+    {
+      "enemies": [
+        {
+          "action": {
+            "effectType": 2,
+            "name": "Fore Carve",
+            "status": null,
+            "target": 0
+          },
+          "bnpcNameId": 14572,
+          "element": "Earth",
+          "icon": "/icons/pieces/242528.png",
+          "name": "zu piece",
+          "resistFlags": [
+            true,
+            true,
+            true,
+            true,
+            false,
+            false,
+            true,
+            true,
+            true,
+            true,
+            true
+          ],
+          "slot": 0
+        },
+        {
+          "action": null,
+          "bnpcNameId": 14573,
+          "element": "Blunt",
+          "icon": "/icons/pieces/242529.png",
+          "name": "cockerel piece",
+          "resistFlags": [
+            false,
+            false,
+            false,
+            true,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ],
+          "slot": 1
+        },
+        {
+          "action": {
+            "effectType": 1,
+            "name": "Caustic Vomit",
+            "status": "Heavy",
+            "target": 3
+          },
+          "bnpcNameId": 14574,
+          "element": "Blunt",
+          "icon": "/icons/pieces/242530.png",
+          "name": "pullet piece",
+          "resistFlags": [
+            false,
+            false,
+            true,
+            false,
+            false,
+            false,
+            false,
+            false,
+            true,
+            true,
+            false
+          ],
+          "slot": 2
+        }
+      ],
+      "id": 16
+    },
+    {
+      "enemies": [
+        {
+          "action": {
+            "effectType": 9,
+            "name": "False Demon Eye",
+            "status": "Petrification",
+            "target": 0
+          },
+          "bnpcNameId": 14577,
+          "element": "Wind",
+          "icon": "/icons/pieces/242531.png",
+          "name": "catoblepas piece",
+          "resistFlags": [
+            true,
+            true,
+            true,
+            true,
+            true,
+            false,
+            true,
+            true,
+            true,
+            true,
+            true
+          ],
+          "slot": 0
+        }
+      ],
+      "id": 17
+    },
+    {
+      "enemies": [
+        {
+          "action": {
+            "effectType": 9,
+            "name": "Landslip",
+            "status": null,
+            "target": 0
+          },
+          "bnpcNameId": 14580,
+          "element": "Water",
+          "icon": "/icons/pieces/242532.png",
+          "name": "Lakhamu piece",
+          "resistFlags": [
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true
+          ],
+          "slot": 0
+        },
+        {
+          "action": {
+            "effectType": 2,
+            "name": "Rockslide",
+            "status": null,
+            "target": 0
+          },
+          "bnpcNameId": 14581,
+          "element": "Water",
+          "icon": "/icons/pieces/242533.png",
+          "name": "golem piece",
+          "resistFlags": [
+            false,
+            true,
+            true,
+            true,
+            true,
+            true,
+            false,
+            false,
+            true,
+            true,
+            false
+          ],
+          "slot": 1
+        }
+      ],
+      "id": 18
+    },
+    {
+      "enemies": [
+        {
+          "action": {
+            "effectType": 1,
+            "name": "Song of Torment",
+            "status": null,
+            "target": 5
+          },
+          "bnpcNameId": 14583,
+          "element": "Piercing",
+          "icon": "/icons/pieces/242534.png",
+          "name": "siren piece",
+          "resistFlags": [
+            true,
+            true,
+            true,
+            true,
+            true,
+            false,
+            true,
+            true,
+            true,
+            true,
+            true
+          ],
+          "slot": 0
+        },
+        {
+          "action": {
+            "effectType": 2,
+            "name": "Wallop",
+            "status": null,
+            "target": 0
+          },
+          "bnpcNameId": 14585,
+          "element": "Fire",
+          "icon": "/icons/pieces/242535.png",
+          "name": "shambling piece",
+          "resistFlags": [
+            false,
+            true,
+            false,
+            true,
+            true,
+            true,
+            true,
+            true,
+            false,
+            false,
+            true
+          ],
+          "slot": 1
+        },
+        {
+          "action": {
+            "effectType": 1,
+            "name": "Death Throes",
+            "status": "Bind",
+            "target": 5
+          },
+          "bnpcNameId": 14586,
+          "element": "Fire",
+          "icon": "/icons/pieces/242536.png",
+          "name": "crawling piece",
+          "resistFlags": [
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true
+          ],
+          "slot": 2
+        }
+      ],
+      "id": 19
+    },
+    {
+      "enemies": [
+        {
+          "action": {
+            "effectType": 8,
+            "name": "Seeding Needles",
+            "status": null,
+            "target": 1
+          },
+          "bnpcNameId": 14587,
+          "element": "Lightning",
+          "icon": "/icons/pieces/242537.png",
+          "name": "campeador piece",
+          "resistFlags": [
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            false,
+            true
+          ],
+          "slot": 0
+        },
+        {
+          "action": null,
+          "bnpcNameId": 14588,
+          "element": "Lightning",
+          "icon": "/icons/pieces/242538.png",
+          "name": "sabotender piece",
+          "resistFlags": [
+            false,
+            false,
+            false,
+            true,
+            true,
+            true,
+            true,
+            true,
+            false,
+            false,
+            false
+          ],
+          "slot": 1
+        },
+        {
+          "action": {
+            "effectType": 6,
+            "name": "Healing Water",
+            "status": null,
+            "target": 6
+          },
+          "bnpcNameId": 14589,
+          "element": "Lightning",
+          "icon": "/icons/pieces/242539.png",
+          "name": "flowertender piece",
+          "resistFlags": [
+            false,
+            false,
+            false,
+            true,
+            true,
+            true,
+            true,
+            true,
+            false,
+            false,
+            false
+          ],
+          "slot": 2
+        },
+        {
+          "action": {
+            "effectType": 6,
+            "name": "??? Needles",
+            "status": null,
+            "target": 1
+          },
+          "bnpcNameId": 14590,
+          "element": "Lightning",
+          "icon": "/icons/pieces/242540.png",
+          "name": "soldado piece",
+          "resistFlags": [
+            false,
+            false,
+            false,
+            true,
+            true,
+            true,
+            true,
+            true,
+            false,
+            false,
+            false
+          ],
+          "slot": 3
+        },
+        {
+          "action": {
+            "effectType": 1,
+            "name": "Cactguard",
+            "status": "Covered",
+            "target": 6
+          },
+          "bnpcNameId": 14591,
+          "element": "Ice",
+          "icon": "/icons/pieces/242541.png",
+          "name": "guardia piece",
+          "resistFlags": [
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true
+          ],
+          "slot": 4
+        }
+      ],
+      "id": 20
+    },
+    {
+      "enemies": [
+        {
+          "action": {
+            "effectType": 9,
+            "name": "Beastly Aura",
+            "status": null,
+            "target": 0
+          },
+          "bnpcNameId": 14592,
+          "element": null,
+          "icon": "/icons/pieces/242542.png",
+          "name": "Guttler the Gutter",
+          "resistFlags": [
+            true,
+            true,
+            true,
+            true,
+            true,
+            false,
+            true,
+            true,
+            true,
+            true,
+            true
+          ],
+          "slot": 0
+        },
+        {
+          "action": {
+            "effectType": 9,
+            "name": "Infernal Pain",
+            "status": null,
+            "target": 0
+          },
+          "bnpcNameId": 14595,
+          "element": "Lightning",
+          "icon": "/icons/pieces/242543.png",
+          "name": "Thanatos piece",
+          "resistFlags": [
+            false,
+            false,
+            true,
+            true,
+            true,
+            true,
+            false,
+            true,
+            true,
+            true,
+            true
+          ],
+          "slot": 1
+        }
+      ],
+      "id": 21
+    },
+    {
+      "enemies": [
+        {
+          "action": {
+            "effectType": 1,
+            "name": "Ultimate Focus",
+            "status": "Magic Damage Up",
+            "target": 1
+          },
+          "bnpcNameId": 14596,
+          "element": "Piercing",
+          "icon": "/icons/pieces/242544.png",
+          "name": "Strix piece",
+          "resistFlags": [
+            true,
+            true,
+            true,
+            true,
+            true,
+            false,
+            true,
+            true,
+            true,
+            false,
+            true
+          ],
+          "slot": 0
+        }
+      ],
+      "id": 22
+    },
+    {
+      "enemies": [
+        {
+          "action": {
+            "effectType": 2,
+            "name": "Extremely Bad Breath",
+            "status": "Paralysis",
+            "target": 0
+          },
+          "bnpcNameId": 14599,
+          "element": "Slashing",
+          "icon": "/icons/pieces/242545.png",
+          "name": "morbol piece",
+          "resistFlags": [
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true
+          ],
+          "slot": 0
+        },
+        {
+          "action": {
+            "effectType": 1,
+            "name": "attack",
+            "status": "Poison",
+            "target": 5
+          },
+          "bnpcNameId": 14600,
+          "element": "Slashing",
+          "icon": "/icons/pieces/242545.png",
+          "name": "seedling piece",
+          "resistFlags": [
+            false,
+            false,
+            true,
+            true,
+            true,
+            true,
+            false,
+            false,
+            false,
+            false,
+            true
+          ],
+          "slot": 1
+        },
+        {
+          "action": {
+            "effectType": 6,
+            "name": "Acid Mist",
+            "status": null,
+            "target": 1
+          },
+          "bnpcNameId": 14601,
+          "element": "Slashing",
+          "icon": "/icons/pieces/242546.png",
+          "name": "ochu piece",
+          "resistFlags": [
+            false,
+            true,
+            true,
+            true,
+            true,
+            true,
+            false,
+            true,
+            true,
+            true,
+            false
+          ],
+          "slot": 2
+        },
+        {
+          "action": {
+            "effectType": 1,
+            "name": "attack",
+            "status": "Paralysis",
+            "target": 5
+          },
+          "bnpcNameId": 14602,
+          "element": "Ice",
+          "icon": "/icons/pieces/242547.png",
+          "name": "carrion broth",
+          "resistFlags": [
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            false,
+            true
+          ],
+          "slot": 3
+        }
+      ],
+      "id": 23
+    },
+    {
+      "enemies": [
+        {
+          "action": {
+            "effectType": 2,
+            "name": "Rotten Stench",
+            "status": null,
+            "target": 0
+          },
+          "bnpcNameId": 14603,
+          "element": "Wind",
+          "icon": "/icons/pieces/242548.png",
+          "name": "corpse flower piece",
+          "resistFlags": [
+            true,
+            true,
+            true,
+            true,
+            false,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true
+          ],
+          "slot": 0
+        },
+        {
+          "action": {
+            "effectType": 1,
+            "name": "Final Sting",
+            "status": null,
+            "target": 3
+          },
+          "bnpcNameId": 14605,
+          "element": "Blunt",
+          "icon": "/icons/pieces/242549.png",
+          "name": "queen hawk piece",
+          "resistFlags": [
+            false,
+            true,
+            false,
+            true,
+            false,
+            true,
+            false,
+            false,
+            true,
+            true,
+            false
+          ],
+          "slot": 1
+        }
+      ],
+      "id": 24
+    },
+    {
+      "enemies": [
+        {
+          "action": {
+            "effectType": 2,
+            "name": "Cauterize",
+            "status": null,
+            "target": 0
+          },
+          "bnpcNameId": 14606,
+          "element": "Fire",
+          "icon": "/icons/pieces/242550.png",
+          "name": "ice dragon piece",
+          "resistFlags": [
+            true,
+            true,
+            true,
+            true,
+            false,
+            false,
+            true,
+            true,
+            true,
+            true,
+            true
+          ],
+          "slot": 0
+        },
+        {
+          "action": {
+            "effectType": 1,
+            "name": "Blizzard",
+            "status": null,
+            "target": 3
+          },
+          "bnpcNameId": 14607,
+          "element": "Fire",
+          "icon": "/icons/pieces/242551.png",
+          "name": "ice sprite",
+          "resistFlags": [
+            false,
+            true,
+            true,
+            true,
+            true,
+            true,
+            false,
+            true,
+            true,
+            true,
+            true
+          ],
+          "slot": 1
+        }
+      ],
+      "id": 25
+    },
+    {
+      "enemies": [
+        {
+          "action": {
+            "effectType": 8,
+            "name": "Rippling Evisceration",
+            "status": null,
+            "target": 1
+          },
+          "bnpcNameId": 14608,
+          "element": null,
+          "icon": "/icons/pieces/242552.png",
+          "name": "gargoyle piece",
+          "resistFlags": [
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true
+          ],
+          "slot": 0
+        }
+      ],
+      "id": 26
+    },
+    {
+      "enemies": [
+        {
+          "action": {
+            "effectType": 9,
+            "name": "Confound",
+            "status": "Confused",
+            "target": 0
+          },
+          "bnpcNameId": 14610,
+          "element": "Lightning",
+          "icon": "/icons/pieces/242553.png",
+          "name": "administrator piece",
+          "resistFlags": [
+            true,
+            true,
+            true,
+            false,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true
+          ],
+          "slot": 0
+        },
+        {
+          "action": null,
+          "bnpcNameId": 14611,
+          "element": "Lightning",
+          "icon": "/icons/pieces/242554.png",
+          "name": "bug piece",
+          "resistFlags": [
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            false,
+            true,
+            false,
+            false,
+            true
+          ],
+          "slot": 1
+        },
+        {
+          "action": {
+            "effectType": 6,
+            "name": "Headspin",
+            "status": null,
+            "target": 1
+          },
+          "bnpcNameId": 14612,
+          "element": "Lightning",
+          "icon": "/icons/pieces/242555.png",
+          "name": "footman piece",
+          "resistFlags": [
+            false,
+            true,
+            true,
+            true,
+            true,
+            true,
+            false,
+            true,
+            false,
+            false,
+            true
+          ],
+          "slot": 2
+        },
+        {
+          "action": {
+            "effectType": 2,
+            "name": "Incinerate",
+            "status": "Fire Resistance Down",
+            "target": 1
+          },
+          "bnpcNameId": 14613,
+          "element": "Lightning",
+          "icon": "/icons/pieces/242556.png",
+          "name": "dreadnaught piece",
+          "resistFlags": [
+            false,
+            true,
+            true,
+            true,
+            true,
+            true,
+            false,
+            true,
+            false,
+            false,
+            true
+          ],
+          "slot": 3
+        },
+        {
+          "action": {
+            "effectType": 2,
+            "name": "Auto-cannons",
+            "status": null,
+            "target": 0
+          },
+          "bnpcNameId": 14614,
+          "element": "Lightning",
+          "icon": "/icons/pieces/242557.png",
+          "name": "drone piece",
+          "resistFlags": [
+            false,
+            true,
+            true,
+            true,
+            true,
+            true,
+            false,
+            true,
+            false,
+            false,
+            true
+          ],
+          "slot": 4
+        },
+        {
+          "action": {
+            "effectType": 9,
+            "name": "Noxious Nova",
+            "status": "Poison",
+            "target": 0
+          },
+          "bnpcNameId": 14616,
+          "element": "Piercing",
+          "icon": "/icons/pieces/242559.png",
+          "name": "cobra piece",
+          "resistFlags": [
+            false,
+            true,
+            true,
+            true,
+            true,
+            true,
+            false,
+            true,
+            false,
+            false,
+            true
+          ],
+          "slot": 5
+        }
+      ],
+      "id": 27
+    },
+    {
+      "enemies": [
+        {
+          "action": {
+            "effectType": 8,
+            "name": "Stoneshower",
+            "status": null,
+            "target": 1
+          },
+          "bnpcNameId": 14617,
+          "element": "Water",
+          "icon": "/icons/pieces/242560.png",
+          "name": "golem piece",
+          "resistFlags": [
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true
+          ],
+          "slot": 0
+        }
+      ],
+      "id": 28
+    },
+    {
+      "enemies": [
+        {
+          "action": {
+            "effectType": 6,
+            "name": "Acorn Bomb",
+            "status": "Nightmare",
+            "target": 5
+          },
+          "bnpcNameId": 14618,
+          "element": "Blunt",
+          "icon": "/icons/pieces/242561.png",
+          "name": "treant piece",
+          "resistFlags": [
+            true,
+            true,
+            true,
+            true,
+            false,
+            false,
+            true,
+            true,
+            true,
+            false,
+            true
+          ],
+          "slot": 0
+        },
+        {
+          "action": {
+            "effectType": 6,
+            "name": "Aqueous Discharge",
+            "status": null,
+            "target": 1
+          },
+          "bnpcNameId": 14619,
+          "element": "Blunt",
+          "icon": "/icons/pieces/242562.png",
+          "name": "slug piece",
+          "resistFlags": [
+            false,
+            false,
+            false,
+            true,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ],
+          "slot": 1
+        },
+        {
+          "action": {
+            "effectType": 1,
+            "name": "Grab and Grow",
+            "status": "Growing",
+            "target": 6
+          },
+          "bnpcNameId": 14620,
+          "element": "Blunt",
+          "icon": "/icons/pieces/242563.png",
+          "name": "sapling piece",
+          "resistFlags": [
+            false,
+            true,
+            true,
+            true,
+            false,
+            false,
+            true,
+            true,
+            true,
+            true,
+            false
+          ],
+          "slot": 2
+        },
+        {
+          "action": {
+            "effectType": 2,
+            "name": "Silkscreen",
+            "status": "Heavy",
+            "target": 0
+          },
+          "bnpcNameId": 14621,
+          "element": "Ice",
+          "icon": "/icons/pieces/242564.png",
+          "name": "diremite piece",
+          "resistFlags": [
+            false,
+            false,
+            false,
+            true,
+            false,
+            true,
+            false,
+            false,
+            false,
+            false,
+            false
+          ],
+          "slot": 3
+        },
+        {
+          "action": {
+            "effectType": 1,
+            "name": "Natural Nurture",
+            "status": null,
+            "target": 6
+          },
+          "bnpcNameId": 14622,
+          "element": "Ice",
+          "icon": "/icons/pieces/242565.png",
+          "name": "biloko piece",
+          "resistFlags": [
+            false,
+            true,
+            true,
+            false,
+            true,
+            false,
+            true,
+            true,
+            true,
+            true,
+            false
+          ],
+          "slot": 4
+        }
+      ],
+      "id": 29
+    },
+    {
+      "enemies": [
+        {
+          "action": {
+            "effectType": 9,
+            "name": "Massive Explosion",
+            "status": null,
+            "target": 0
+          },
+          "bnpcNameId": 14623,
+          "element": "Wind",
+          "icon": "/icons/pieces/242566.png",
+          "name": "Progenitrix piece",
+          "resistFlags": [
+            true,
+            true,
+            true,
+            false,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true
+          ],
+          "slot": 0
+        },
+        {
+          "action": {
+            "effectType": 9,
+            "name": "Massive Explosion",
+            "status": null,
+            "target": 0
+          },
+          "bnpcNameId": 14624,
+          "element": "Wind",
+          "icon": "/icons/pieces/242567.png",
+          "name": "grenade piece",
+          "resistFlags": [
+            false,
+            true,
+            true,
+            true,
+            true,
+            true,
+            false,
+            true,
+            true,
+            true,
+            false
+          ],
+          "slot": 1
+        },
+        {
+          "action": {
+            "effectType": 6,
+            "name": "Fire II",
+            "status": null,
+            "target": 2
+          },
+          "bnpcNameId": 14625,
+          "element": "Wind",
+          "icon": "/icons/pieces/242568.png",
+          "name": "bomb piece",
+          "resistFlags": [
+            false,
+            true,
+            true,
+            true,
+            true,
+            true,
+            false,
+            true,
+            true,
+            true,
+            false
+          ],
+          "slot": 2
+        },
+        {
+          "action": {
+            "effectType": 1,
+            "name": "Ice Spikes",
+            "status": "Ice Spikes",
+            "target": 1
+          },
+          "bnpcNameId": 14626,
+          "element": "Fire",
+          "icon": "/icons/pieces/242569.png",
+          "name": "snoll piece",
+          "resistFlags": [
+            false,
+            true,
+            true,
+            true,
+            true,
+            true,
+            false,
+            true,
+            true,
+            true,
+            false
+          ],
+          "slot": 3
+        },
+        {
+          "action": {
+            "effectType": 0,
+            "name": "Toxic Fumes",
+            "status": "Poison",
+            "target": 1
+          },
+          "bnpcNameId": 14627,
+          "element": "Water",
+          "icon": "/icons/pieces/242570.png",
+          "name": "pyrobolus piece",
+          "resistFlags": [
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            false
+          ],
+          "slot": 4
+        }
+      ],
+      "id": 30
+    },
+    {
+      "enemies": [
+        {
+          "action": {
+            "effectType": 6,
+            "name": "Toxic Vomit",
+            "status": "Toxicosis",
+            "target": 5
+          },
+          "bnpcNameId": 14628,
+          "element": "Earth",
+          "icon": "/icons/pieces/242571.png",
+          "name": "Borgny the Venomous",
+          "resistFlags": [
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true
+          ],
+          "slot": 0
+        },
+        {
+          "action": {
+            "effectType": 9,
+            "name": "Noxious Explosion",
+            "status": "Toxicosis",
+            "target": 0
+          },
+          "bnpcNameId": 14629,
+          "element": "Water",
+          "icon": "/icons/pieces/242572.png",
+          "name": "toxic mass",
+          "resistFlags": [
+            false,
+            true,
+            true,
+            true,
+            true,
+            true,
+            false,
+            true,
+            false,
+            false,
+            false
+          ],
+          "slot": 1
+        }
+      ],
+      "id": 31
+    },
+    {
+      "enemies": [
+        {
+          "action": {
+            "effectType": 2,
+            "name": "Charged Lightning",
+            "status": null,
+            "target": 0
+          },
+          "bnpcNameId": 14631,
+          "element": "Earth",
+          "icon": "/icons/pieces/242573.png",
+          "name": "Flauros piece",
+          "resistFlags": [
+            true,
+            true,
+            true,
+            true,
+            true,
+            false,
+            true,
+            true,
+            true,
+            false,
+            true
+          ],
+          "slot": 0
+        },
+        {
+          "action": {
+            "effectType": 2,
+            "name": "Line Voltage",
+            "status": null,
+            "target": 0
+          },
+          "bnpcNameId": 14632,
+          "element": "Earth",
+          "icon": "/icons/pieces/242574.png",
+          "name": "lightning sprite",
+          "resistFlags": [
+            false,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true
+          ],
+          "slot": 1
+        }
+      ],
+      "id": 32
+    },
+    {
+      "enemies": [
+        {
+          "action": {
+            "effectType": 6,
+            "name": "Void Water III",
+            "status": "Water Resistance Down",
+            "target": 5
+          },
+          "bnpcNameId": 14633,
+          "element": "Slashing",
+          "icon": "/icons/pieces/242575.png",
+          "name": "mindflayer piece",
+          "resistFlags": [
+            true,
+            true,
+            true,
+            true,
+            true,
+            false,
+            true,
+            true,
+            true,
+            false,
+            true
+          ],
+          "slot": 0
+        },
+        {
+          "action": {
+            "effectType": 6,
+            "name": "Spore Spill",
+            "status": "Poison",
+            "target": 1
+          },
+          "bnpcNameId": 14634,
+          "element": "Water",
+          "icon": "/icons/pieces/242576.png",
+          "name": "myconid piece",
+          "resistFlags": [
+            false,
+            true,
+            true,
+            true,
+            false,
+            false,
+            true,
+            true,
+            false,
+            false,
+            false
+          ],
+          "slot": 1
+        }
+      ],
+      "id": 33
+    },
+    {
+      "enemies": [
+        {
+          "action": {
+            "effectType": 9,
+            "name": "Ripples of Gloom",
+            "status": "Blind",
+            "target": 0
+          },
+          "bnpcNameId": 14638,
+          "element": "Ice",
+          "icon": "/icons/pieces/242577.png",
+          "name": "boogyman piece",
+          "resistFlags": [
+            true,
+            true,
+            true,
+            true,
+            true,
+            false,
+            true,
+            true,
+            true,
+            false,
+            true
+          ],
+          "slot": 0
+        },
+        {
+          "action": {
+            "effectType": 9,
+            "name": "Oogle",
+            "status": "Petrification",
+            "target": 0
+          },
+          "bnpcNameId": 14639,
+          "element": "Wind",
+          "icon": "/icons/pieces/242578.png",
+          "name": "deepeye piece",
+          "resistFlags": [
+            false,
+            true,
+            false,
+            true,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ],
+          "slot": 1
+        },
+        {
+          "action": {
+            "effectType": 9,
+            "name": "Self-destruct",
+            "status": null,
+            "target": 0
+          },
+          "bnpcNameId": 14640,
+          "element": "Wind",
+          "icon": "/icons/pieces/242579.png",
+          "name": "bomb piece",
+          "resistFlags": [
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            false,
+            true,
+            true,
+            true,
+            false
+          ],
+          "slot": 2
+        },
+        {
+          "action": {
+            "effectType": 1,
+            "name": "Banish",
+            "status": null,
+            "target": 3
+          },
+          "bnpcNameId": 14641,
+          "element": null,
+          "icon": "/icons/pieces/242580.png",
+          "name": "light sprite",
+          "resistFlags": [
+            false,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true
+          ],
+          "slot": 3
+        }
+      ],
+      "id": 34
+    },
+    {
+      "enemies": [
+        {
+          "action": {
+            "effectType": 9,
+            "name": "Shockwave",
+            "status": null,
+            "target": 0
+          },
+          "bnpcNameId": 14642,
+          "element": "Blunt",
+          "icon": "/icons/pieces/242581.png",
+          "name": "Atomos piece",
+          "resistFlags": [
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true
+          ],
+          "slot": 0
+        },
+        {
+          "action": {
+            "effectType": 1,
+            "name": "Bad-mouth",
+            "status": "Physical Vulnerability Up",
+            "target": 5
+          },
+          "bnpcNameId": 14643,
+          "element": "Piercing",
+          "icon": "/icons/pieces/242582.png",
+          "name": "red gremlin piece",
+          "resistFlags": [
+            false,
+            false,
+            false,
+            true,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ],
+          "slot": 1
+        },
+        {
+          "action": null,
+          "bnpcNameId": 14644,
+          "element": "Piercing",
+          "icon": "/icons/pieces/242583.png",
+          "name": "gremlin piece",
+          "resistFlags": [
+            false,
+            false,
+            false,
+            true,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ],
+          "slot": 2
+        },
+        {
+          "action": {
+            "effectType": 6,
+            "name": "Fire III",
+            "status": null,
+            "target": 5
+          },
+          "bnpcNameId": 14645,
+          "element": "Wind",
+          "icon": "/icons/pieces/242584.png",
+          "name": "pudding piece",
+          "resistFlags": [
+            true,
+            true,
+            true,
+            true,
+            true,
+            false,
+            true,
+            true,
+            true,
+            true,
+            false
+          ],
+          "slot": 3
+        },
+        {
+          "action": {
+            "effectType": 9,
+            "name": "Water III",
+            "status": null,
+            "target": 0
+          },
+          "bnpcNameId": 14646,
+          "element": "Lightning",
+          "icon": "/icons/pieces/242585.png",
+          "name": "bavarois piece",
+          "resistFlags": [
+            true,
+            true,
+            true,
+            true,
+            true,
+            false,
+            true,
+            true,
+            true,
+            true,
+            false
+          ],
+          "slot": 4
+        },
+        {
+          "action": {
+            "effectType": 6,
+            "name": "Thunder III",
+            "status": null,
+            "target": 5
+          },
+          "bnpcNameId": 14647,
+          "element": "Earth",
+          "icon": "/icons/pieces/242586.png",
+          "name": "flan piece",
+          "resistFlags": [
+            true,
+            true,
+            true,
+            true,
+            true,
+            false,
+            true,
+            true,
+            true,
+            true,
+            false
+          ],
+          "slot": 5
+        },
+        {
+          "action": {
+            "effectType": 6,
+            "name": "Terror Eye",
+            "status": null,
+            "target": 2
+          },
+          "bnpcNameId": 14648,
+          "element": "Piercing",
+          "icon": "/icons/pieces/242587.png",
+          "name": "vodoriga piece",
+          "resistFlags": [
+            false,
+            false,
+            false,
+            true,
+            true,
+            true,
+            true,
+            true,
+            false,
+            false,
+            false
+          ],
+          "slot": 6
+        },
+        {
+          "action": {
+            "effectType": 2,
+            "name": "Rotten Breath",
+            "status": null,
+            "target": 0
+          },
+          "bnpcNameId": 14649,
+          "element": "Ice",
+          "icon": "/icons/pieces/242588.png",
+          "name": "menacing dahak piece",
+          "resistFlags": [
+            true,
+            true,
+            true,
+            true,
+            true,
+            false,
+            true,
+            true,
+            true,
+            true,
+            true
+          ],
+          "slot": 7
+        }
+      ],
+      "id": 35
+    },
+    {
+      "enemies": [
+        {
+          "action": {
+            "effectType": 1,
+            "name": "Blaze Spikes",
+            "status": "Blaze Spikes",
+            "target": 1
+          },
+          "bnpcNameId": 14651,
+          "element": "Wind",
+          "icon": "/icons/pieces/242589.png",
+          "name": "drake piece",
+          "resistFlags": [
+            true,
+            true,
+            true,
+            true,
+            false,
+            false,
+            true,
+            true,
+            true,
+            true,
+            true
+          ],
+          "slot": 0
+        },
+        {
+          "action": {
+            "effectType": 1,
+            "name": "Needles Out",
+            "status": "Needles Out",
+            "target": 1
+          },
+          "bnpcNameId": 14653,
+          "element": "Fire",
+          "icon": "/icons/pieces/242590.png",
+          "name": "barbmole piece",
+          "resistFlags": [
+            false,
+            true,
+            true,
+            true,
+            false,
+            false,
+            true,
+            true,
+            false,
+            false,
+            false
+          ],
+          "slot": 1
+        },
+        {
+          "action": null,
+          "bnpcNameId": 14655,
+          "element": "Water",
+          "icon": "/icons/pieces/242591.png",
+          "name": "abaddon piece",
+          "resistFlags": [
+            true,
+            true,
+            true,
+            true,
+            false,
+            false,
+            true,
+            true,
+            true,
+            true,
+            false
+          ],
+          "slot": 2
+        },
+        {
+          "action": {
+            "effectType": 1,
+            "name": "Unwitting Wings",
+            "status": "Wit's End",
+            "target": 5
+          },
+          "bnpcNameId": 14656,
+          "element": "Blunt",
+          "icon": "/icons/pieces/242592.png",
+          "name": "morpho piece",
+          "resistFlags": [
+            false,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true
+          ],
+          "slot": 3
+        }
+      ],
+      "id": 36
+    },
+    {
+      "enemies": [
+        {
+          "action": {
+            "effectType": 9,
+            "name": "Atomic Ray",
+            "status": null,
+            "target": 0
+          },
+          "bnpcNameId": 14657,
+          "element": "Fire",
+          "icon": "/icons/pieces/242593.png",
+          "name": "Durga piece",
+          "resistFlags": [
+            true,
+            true,
+            true,
+            true,
+            false,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true
+          ],
+          "slot": 0
+        },
+        {
+          "action": {
+            "effectType": 1,
+            "name": "Aether Charge",
+            "status": null,
+            "target": 6
+          },
+          "bnpcNameId": 14659,
+          "element": "Blunt",
+          "icon": "/icons/pieces/242594.png",
+          "name": "spinner-rook piece",
+          "resistFlags": [
+            false,
+            true,
+            true,
+            true,
+            true,
+            true,
+            false,
+            true,
+            true,
+            true,
+            true
+          ],
+          "slot": 1
+        }
+      ],
+      "id": 37
+    },
+    {
+      "enemies": [
+        {
+          "action": {
+            "effectType": 2,
+            "name": "Petrifying Regard",
+            "status": "Stone Curse",
+            "target": 0
+          },
+          "bnpcNameId": 14660,
+          "element": "Piercing",
+          "icon": "/icons/pieces/242595.png",
+          "name": "medusa piece",
+          "resistFlags": [
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true
+          ],
+          "slot": 0
+        },
+        {
+          "action": {
+            "effectType": 6,
+            "name": "Terrorizing Miasma",
+            "status": "Hysteria",
+            "target": 1
+          },
+          "bnpcNameId": 14661,
+          "element": "Piercing",
+          "icon": "/icons/pieces/242596.png",
+          "name": "lamia piece",
+          "resistFlags": [
+            true,
+            true,
+            false,
+            false,
+            true,
+            false,
+            true,
+            true,
+            true,
+            true,
+            false
+          ],
+          "slot": 1
+        },
+        {
+          "action": {
+            "effectType": 6,
+            "name": "1000-tonze Swing",
+            "status": null,
+            "target": 1
+          },
+          "bnpcNameId": 14662,
+          "element": null,
+          "icon": "/icons/pieces/242603.png",
+          "name": "cyclops piece",
+          "resistFlags": [
+            true,
+            false,
+            true,
+            true,
+            false,
+            false,
+            true,
+            true,
+            true,
+            true,
+            false
+          ],
+          "slot": 2
+        }
+      ],
+      "id": 38
+    },
+    {
+      "enemies": [
+        {
+          "action": {
+            "effectType": 6,
+            "name": "the Ram's Roar",
+            "status": "Frostbite",
+            "target": 1
+          },
+          "bnpcNameId": 14663,
+          "element": "Water",
+          "icon": "/icons/pieces/242597.png",
+          "name": "chimera piece",
+          "resistFlags": [
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true
+          ],
+          "slot": 0
+        }
+      ],
+      "id": 39
+    },
+    {
+      "enemies": [
+        {
+          "action": {
+            "effectType": 9,
+            "name": "Mnemonic Riddle",
+            "status": null,
+            "target": 0
+          },
+          "bnpcNameId": 14665,
+          "element": "Slashing",
+          "icon": "/icons/pieces/242598.png",
+          "name": "sphinx piece",
+          "resistFlags": [
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true
+          ],
+          "slot": 0
+        }
+      ],
+      "id": 40
+    },
+    {
+      "enemies": [
+        {
+          "action": {
+            "effectType": 2,
+            "name": "Smashing Stamp",
+            "status": "Down for the Count",
+            "target": 0
+          },
+          "bnpcNameId": 14670,
+          "element": null,
+          "icon": "/icons/pieces/242603.png",
+          "name": "gigantis piece",
+          "resistFlags": [
+            true,
+            true,
+            true,
+            true,
+            false,
+            false,
+            true,
+            true,
+            true,
+            false,
+            true
+          ],
+          "slot": 0
+        },
+        {
+          "action": {
+            "effectType": 2,
+            "name": "Glower",
+            "status": "Paralysis",
+            "target": 0
+          },
+          "bnpcNameId": 14671,
+          "element": null,
+          "icon": "/icons/pieces/242604.png",
+          "name": "cyclops piece",
+          "resistFlags": [
+            true,
+            false,
+            true,
+            false,
+            false,
+            false,
+            true,
+            true,
+            true,
+            false,
+            false
+          ],
+          "slot": 1
+        },
+        {
+          "action": {
+            "effectType": 9,
+            "name": "Rupture",
+            "status": null,
+            "target": 0
+          },
+          "bnpcNameId": 14672,
+          "element": "Earth",
+          "icon": "/icons/pieces/242605.png",
+          "name": "congealed lightning",
+          "resistFlags": [
+            true,
+            true,
+            true,
+            false,
+            true,
+            false,
+            true,
+            true,
+            true,
+            true,
+            true
+          ],
+          "slot": 2
+        },
+        {
+          "action": {
+            "effectType": 9,
+            "name": "Rupture",
+            "status": null,
+            "target": 0
+          },
+          "bnpcNameId": 14673,
+          "element": "Wind",
+          "icon": "/icons/pieces/242606.png",
+          "name": "congealed kindling",
+          "resistFlags": [
+            true,
+            true,
+            true,
+            false,
+            true,
+            false,
+            true,
+            true,
+            true,
+            true,
+            true
+          ],
+          "slot": 3
+        }
+      ],
+      "id": 41
+    },
+    {
+      "enemies": [
+        {
+          "action": null,
+          "bnpcNameId": 14674,
+          "element": "Lightning",
+          "icon": "/icons/pieces/242607.png",
+          "name": "swordsmog piece",
+          "resistFlags": [
+            false,
+            false,
+            false,
+            true,
+            false,
+            false,
+            true,
+            false,
+            true,
+            true,
+            false
+          ],
+          "slot": 0
+        },
+        {
+          "action": {
+            "effectType": 2,
+            "name": "100-kuponze Swipe",
+            "status": null,
+            "target": 0
+          },
+          "bnpcNameId": 14675,
+          "element": "Lightning",
+          "icon": "/icons/pieces/242608.png",
+          "name": "mogbreaker piece",
+          "resistFlags": [
+            true,
+            true,
+            true,
+            true,
+            false,
+            false,
+            true,
+            true,
+            true,
+            true,
+            true
+          ],
+          "slot": 1
+        },
+        {
+          "action": {
+            "effectType": 9,
+            "name": "Pom Flood",
+            "status": "Water Resistance Down",
+            "target": 0
+          },
+          "bnpcNameId": 14676,
+          "element": "Blunt",
+          "icon": "/icons/pieces/242610.png",
+          "name": "kinged kupocurer",
+          "resistFlags": [
+            false,
+            true,
+            true,
+            true,
+            true,
+            false,
+            false,
+            true,
+            true,
+            true,
+            true
+          ],
+          "slot": 2
+        },
+        {
+          "action": {
+            "effectType": 9,
+            "name": "Pom Flare",
+            "status": "Fire Resistance Down",
+            "target": 0
+          },
+          "bnpcNameId": 14677,
+          "element": "Blunt",
+          "icon": "/icons/pieces/242609.png",
+          "name": "kinged kupocaster",
+          "resistFlags": [
+            false,
+            true,
+            true,
+            true,
+            true,
+            false,
+            false,
+            true,
+            true,
+            true,
+            true
+          ],
+          "slot": 3
+        },
+        {
+          "action": {
+            "effectType": 0,
+            "name": "Pom Holy",
+            "status": null,
+            "target": 0
+          },
+          "bnpcNameId": 14678,
+          "element": "Blunt",
+          "icon": "/icons/pieces/242610.png",
+          "name": "kupocurer piece",
+          "resistFlags": [
+            false,
+            true,
+            true,
+            true,
+            true,
+            false,
+            false,
+            true,
+            true,
+            true,
+            true
+          ],
+          "slot": 4
+        },
+        {
+          "action": {
+            "effectType": 6,
+            "name": "Pom Meteorain",
+            "status": null,
+            "target": 2
+          },
+          "bnpcNameId": 14679,
+          "element": "Blunt",
+          "icon": "/icons/pieces/242609.png",
+          "name": "kupocaster piece",
+          "resistFlags": [
+            false,
+            true,
+            true,
+            true,
+            true,
+            false,
+            false,
+            true,
+            true,
+            true,
+            true
+          ],
+          "slot": 5
+        },
+        {
+          "action": {
+            "effectType": 2,
+            "name": "Mogshield Swipe",
+            "status": null,
+            "target": 0
+          },
+          "bnpcNameId": 14680,
+          "element": "Lightning",
+          "icon": "/icons/pieces/242611.png",
+          "name": "kinged swordsmog",
+          "resistFlags": [
+            false,
+            false,
+            false,
+            true,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            true
+          ],
+          "slot": 6
+        },
+        {
+          "action": {
+            "effectType": 6,
+            "name": "Moghemian Rhapsody",
+            "status": "Damage Up",
+            "target": 6
+          },
+          "bnpcNameId": 14681,
+          "element": "Water",
+          "icon": "/icons/pieces/242612.png",
+          "name": "melomog piece",
+          "resistFlags": [
+            true,
+            true,
+            true,
+            true,
+            true,
+            false,
+            true,
+            true,
+            true,
+            true,
+            false
+          ],
+          "slot": 7
+        },
+        {
+          "action": {
+            "effectType": 1,
+            "name": "Daylight Pommery",
+            "status": null,
+            "target": 5
+          },
+          "bnpcNameId": 14683,
+          "element": "Water",
+          "icon": "/icons/pieces/242613.png",
+          "name": "mogmugger piece",
+          "resistFlags": [
+            true,
+            true,
+            true,
+            true,
+            true,
+            false,
+            true,
+            true,
+            true,
+            true,
+            false
+          ],
+          "slot": 8
+        }
+      ],
+      "id": 42
+    },
+    {
+      "enemies": [
+        {
+          "action": {
+            "effectType": 9,
+            "name": "Ecliptic Meteor",
+            "status": null,
+            "target": 0
+          },
+          "bnpcNameId": 14684,
+          "element": "Earth",
+          "icon": "/icons/pieces/242614.png",
+          "name": "behemoth piece",
+          "resistFlags": [
+            true,
+            true,
+            true,
+            true,
+            true,
+            false,
+            true,
+            true,
+            true,
+            true,
+            true
+          ],
+          "slot": 0
+        },
+        {
+          "action": {
+            "effectType": 2,
+            "name": "Grand Sword",
+            "status": null,
+            "target": 0
+          },
+          "bnpcNameId": 14685,
+          "element": "Lightning",
+          "icon": "/icons/pieces/242615.png",
+          "name": "giant piece",
+          "resistFlags": [
+            false,
+            true,
+            true,
+            true,
+            true,
+            true,
+            false,
+            true,
+            false,
+            false,
+            true
+          ],
+          "slot": 1
+        },
+        {
+          "action": {
+            "effectType": 10,
+            "name": "Cross Charge",
+            "status": "Paralysis",
+            "target": 1
+          },
+          "bnpcNameId": 14686,
+          "element": "Earth",
+          "icon": "/icons/pieces/242574.png",
+          "name": "lightning sprite",
+          "resistFlags": [
+            false,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true
+          ],
+          "slot": 2
+        }
+      ],
+      "id": 43
+    },
+    {
+      "enemies": [
+        {
+          "action": {
+            "effectType": 0,
+            "name": "Roulette",
+            "status": null,
+            "target": 0
+          },
+          "bnpcNameId": 14688,
+          "element": "Ice",
+          "icon": "/icons/pieces/242616.png",
+          "name": "king ahriman piece",
+          "resistFlags": [
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true
+          ],
+          "slot": 0
+        },
+        {
+          "action": {
+            "effectType": 1,
+            "name": "Straight Punch",
+            "status": "Burns",
+            "target": 3
+          },
+          "bnpcNameId": 14691,
+          "element": "Wind",
+          "icon": "/icons/pieces/242617.png",
+          "name": "hapalit piece",
+          "resistFlags": [
+            true,
+            true,
+            true,
+            true,
+            false,
+            false,
+            true,
+            true,
+            false,
+            false,
+            true
+          ],
+          "slot": 1
+        },
+        {
+          "action": {
+            "effectType": 9,
+            "name": "Mortal Gaze",
+            "status": "Doom",
+            "target": 0
+          },
+          "bnpcNameId": 14692,
+          "element": "Ice",
+          "icon": "/icons/pieces/242618.png",
+          "name": "dirty eye piece",
+          "resistFlags": [
+            false,
+            true,
+            true,
+            true,
+            true,
+            true,
+            false,
+            false,
+            true,
+            true,
+            false
+          ],
+          "slot": 2
+        }
+      ],
+      "id": 44
+    },
+    {
+      "enemies": [
+        {
+          "action": {
+            "effectType": 9,
+            "name": "Beastly Aura",
+            "status": null,
+            "target": 0
+          },
+          "bnpcNameId": 14693,
+          "element": null,
+          "icon": "/icons/pieces/242619.png",
+          "name": "Lauda the Spellcleaver",
+          "resistFlags": [
+            true,
+            true,
+            true,
+            true,
+            true,
+            false,
+            true,
+            true,
+            true,
+            true,
+            true
+          ],
+          "slot": 0
+        },
+        {
+          "action": {
+            "effectType": 9,
+            "name": "Infernal Pain",
+            "status": null,
+            "target": 0
+          },
+          "bnpcNameId": 14699,
+          "element": "Lightning",
+          "icon": "/icons/pieces/242543.png",
+          "name": "Thanatos piece",
+          "resistFlags": [
+            false,
+            false,
+            true,
+            true,
+            true,
+            true,
+            false,
+            true,
+            true,
+            true,
+            true
+          ],
+          "slot": 1
+        }
+      ],
+      "id": 45
+    }
+  ],
+  "content": [
+    {
+      "id": 0,
+      "raw": {
+        "u0": 250,
+        "u1": 500,
+        "u10": 500,
+        "u11": 750,
+        "u12": 1250,
+        "u13": 750,
+        "u14": 500,
+        "u15": 750,
+        "u16": 1000,
+        "u17": 750,
+        "u18": 750,
+        "u19": 500,
+        "u2": 750,
+        "u20": 500,
+        "u21": 375,
+        "u22": 750,
+        "u23": 750,
+        "u24": 750,
+        "u25": 750,
+        "u26": 750,
+        "u27": 750,
+        "u28": 750,
+        "u29": 750,
+        "u3": 1000,
+        "u30": 4000,
+        "u31": 6250,
+        "u32": 9000,
+        "u34": 0,
+        "u35": 0,
+        "u36": 255,
+        "u4": 1250,
+        "u5": 2500,
+        "u6": 4250,
+        "u7": 250,
+        "u8": 1000,
+        "u9": 250
+      }
+    },
+    {
+      "id": 1,
+      "raw": {
+        "u0": 250,
+        "u1": 500,
+        "u10": 0,
+        "u11": 0,
+        "u12": 1250,
+        "u13": 750,
+        "u14": 0,
+        "u15": 750,
+        "u16": 0,
+        "u17": 750,
+        "u18": 0,
+        "u19": 500,
+        "u2": 750,
+        "u20": 0,
+        "u21": 375,
+        "u22": 750,
+        "u23": 750,
+        "u24": 750,
+        "u25": 750,
+        "u26": 750,
+        "u27": 750,
+        "u28": 750,
+        "u29": 750,
+        "u3": 1000,
+        "u30": 4000,
+        "u31": 6250,
+        "u32": 9000,
+        "u34": 10,
+        "u35": 3,
+        "u36": 5,
+        "u4": 1250,
+        "u5": 2500,
+        "u6": 4250,
+        "u7": 250,
+        "u8": 1000,
+        "u9": 0
+      }
+    },
+    {
+      "id": 2,
+      "raw": {
+        "u0": 250,
+        "u1": 500,
+        "u10": 0,
+        "u11": 0,
+        "u12": 1250,
+        "u13": 750,
+        "u14": 500,
+        "u15": 750,
+        "u16": 1000,
+        "u17": 750,
+        "u18": 0,
+        "u19": 500,
+        "u2": 750,
+        "u20": 500,
+        "u21": 375,
+        "u22": 750,
+        "u23": 750,
+        "u24": 750,
+        "u25": 750,
+        "u26": 750,
+        "u27": 750,
+        "u28": 750,
+        "u29": 750,
+        "u3": 1000,
+        "u30": 4000,
+        "u31": 6250,
+        "u32": 9000,
+        "u34": 12,
+        "u35": 8,
+        "u36": 10,
+        "u4": 1250,
+        "u5": 2500,
+        "u6": 4250,
+        "u7": 250,
+        "u8": 1000,
+        "u9": 0
+      }
+    },
+    {
+      "id": 3,
+      "raw": {
+        "u0": 250,
+        "u1": 500,
+        "u10": 0,
+        "u11": 0,
+        "u12": 1250,
+        "u13": 750,
+        "u14": 500,
+        "u15": 750,
+        "u16": 1000,
+        "u17": 750,
+        "u18": 1500,
+        "u19": 500,
+        "u2": 750,
+        "u20": 500,
+        "u21": 375,
+        "u22": 750,
+        "u23": 750,
+        "u24": 750,
+        "u25": 750,
+        "u26": 750,
+        "u27": 750,
+        "u28": 750,
+        "u29": 750,
+        "u3": 1000,
+        "u30": 4000,
+        "u31": 6250,
+        "u32": 9000,
+        "u34": 14,
+        "u35": 13,
+        "u36": 15,
+        "u4": 1250,
+        "u5": 2500,
+        "u6": 4250,
+        "u7": 250,
+        "u8": 1000,
+        "u9": 0
+      }
+    },
+    {
+      "id": 4,
+      "raw": {
+        "u0": 250,
+        "u1": 500,
+        "u10": 0,
+        "u11": 0,
+        "u12": 1250,
+        "u13": 750,
+        "u14": 500,
+        "u15": 750,
+        "u16": 1000,
+        "u17": 750,
+        "u18": 0,
+        "u19": 500,
+        "u2": 750,
+        "u20": 500,
+        "u21": 375,
+        "u22": 750,
+        "u23": 750,
+        "u24": 750,
+        "u25": 750,
+        "u26": 750,
+        "u27": 750,
+        "u28": 750,
+        "u29": 750,
+        "u3": 1000,
+        "u30": 4000,
+        "u31": 6250,
+        "u32": 9000,
+        "u34": 12,
+        "u35": 18,
+        "u36": 20,
+        "u4": 1250,
+        "u5": 2500,
+        "u6": 4250,
+        "u7": 250,
+        "u8": 1000,
+        "u9": 0
+      }
+    },
+    {
+      "id": 5,
+      "raw": {
+        "u0": 250,
+        "u1": 500,
+        "u10": 300,
+        "u11": 450,
+        "u12": 1250,
+        "u13": 750,
+        "u14": 500,
+        "u15": 750,
+        "u16": 1000,
+        "u17": 750,
+        "u18": 1500,
+        "u19": 500,
+        "u2": 750,
+        "u20": 500,
+        "u21": 375,
+        "u22": 750,
+        "u23": 750,
+        "u24": 750,
+        "u25": 750,
+        "u26": 750,
+        "u27": 750,
+        "u28": 750,
+        "u29": 750,
+        "u3": 1000,
+        "u30": 4000,
+        "u31": 6250,
+        "u32": 9000,
+        "u34": 15,
+        "u35": 23,
+        "u36": 25,
+        "u4": 1250,
+        "u5": 2500,
+        "u6": 4250,
+        "u7": 250,
+        "u8": 1000,
+        "u9": 150
+      }
+    }
+  ],
+  "contentBattle": [],
+  "contentCamp": [
+    {
+      "id": 1,
+      "raw": {
+        "u0": 2
+      },
+      "sub": 0
+    },
+    {
+      "id": 1,
+      "raw": {
+        "u0": 2
+      },
+      "sub": 1
+    },
+    {
+      "id": 2,
+      "raw": {
+        "u0": 2
+      },
+      "sub": 0
+    },
+    {
+      "id": 2,
+      "raw": {
+        "u0": 3
+      },
+      "sub": 1
+    },
+    {
+      "id": 3,
+      "raw": {
+        "u0": 3
+      },
+      "sub": 0
+    },
+    {
+      "id": 3,
+      "raw": {
+        "u0": 3
+      },
+      "sub": 1
+    },
+    {
+      "id": 4,
+      "raw": {
+        "u0": 2
+      },
+      "sub": 0
+    },
+    {
+      "id": 4,
+      "raw": {
+        "u0": 4
+      },
+      "sub": 1
+    },
+    {
+      "id": 5,
+      "raw": {
+        "u0": 1
+      },
+      "sub": 0
+    },
+    {
+      "id": 5,
+      "raw": {
+        "u0": 2
+      },
+      "sub": 1
+    },
+    {
+      "id": 5,
+      "raw": {
+        "u0": 3
+      },
+      "sub": 2
+    }
+  ],
+  "entrance": [
+    {
+      "id": 1,
+      "raw": {
+        "u0": 71030,
+        "u1": 1,
+        "u2": 1
+      }
+    },
+    {
+      "id": 2,
+      "raw": {
+        "u0": 71032,
+        "u1": 2,
+        "u2": 1
+      }
+    },
+    {
+      "id": 3,
+      "raw": {
+        "u0": 71034,
+        "u1": 3,
+        "u2": 1
+      }
+    },
+    {
+      "id": 4,
+      "raw": {
+        "u0": 71036,
+        "u1": 4,
+        "u2": 1
+      }
+    },
+    {
+      "id": 5,
+      "raw": {
+        "u0": 71037,
+        "u1": 5,
+        "u2": 1
+      }
+    }
+  ],
+  "scoreBonus": [
+    {
+      "description": "Clear the board with 3 incapacitated familiars.",
+      "id": 0,
+      "name": "Willing Sacrifice I",
+      "raw": {
+        "u0": "Willing Sacrifice I",
+        "u1": "Clear the board with 3 incapacitated familiars.",
+        "u2": true
+      }
+    },
+    {
+      "description": "Clear the board with 2 incapacitated familiars.",
+      "id": 1,
+      "name": "Willing Sacrifice II",
+      "raw": {
+        "u0": "Willing Sacrifice II",
+        "u1": "Clear the board with 2 incapacitated familiars.",
+        "u2": true
+      }
+    },
+    {
+      "description": "Clear the board with 1 incapacitated familiar.",
+      "id": 2,
+      "name": "Willing Sacrifice III",
+      "raw": {
+        "u0": "Willing Sacrifice III",
+        "u1": "Clear the board with 1 incapacitated familiar.",
+        "u2": true
+      }
+    },
+    {
+      "description": "Clear the board with no incapacitated familiars.",
+      "id": 3,
+      "name": "No Beast Left Behind",
+      "raw": {
+        "u0": "No Beast Left Behind",
+        "u1": "Clear the board with no incapacitated familiars.",
+        "u2": true
+      }
+    },
+    {
+      "description": "Clear the board with a team of 6 or 7 familiars.",
+      "id": 4,
+      "name": "Beast Squad I",
+      "raw": {
+        "u0": "Beast Squad I",
+        "u1": "Clear the board with a team of 6 or 7 familiars.",
+        "u2": true
+      }
+    },
+    {
+      "description": "Clear the board with a team of 4 or 5 familiars.",
+      "id": 5,
+      "name": "Beast Squad II",
+      "raw": {
+        "u0": "Beast Squad II",
+        "u1": "Clear the board with a team of 4 or 5 familiars.",
+        "u2": true
+      }
+    },
+    {
+      "description": "Clear the board with a team of 1 to 3 familiars.",
+      "id": 6,
+      "name": "Beast Squad III",
+      "raw": {
+        "u0": "Beast Squad III",
+        "u1": "Clear the board with a team of 1 to 3 familiars.",
+        "u2": true
+      }
+    },
+    {
+      "description": "Clear the board with beastmaster HP at 100%.",
+      "id": 7,
+      "name": "Self-preservation",
+      "raw": {
+        "u0": "Self-preservation",
+        "u1": "Clear the board with beastmaster HP at 100%.",
+        "u2": true
+      }
+    },
+    {
+      "description": "Clear the board with all familiar HP at 100%.",
+      "id": 8,
+      "name": "Selfless",
+      "raw": {
+        "u0": "Selfless",
+        "u1": "Clear the board with all familiar HP at 100%.",
+        "u2": true
+      }
+    },
+    {
+      "description": "Perform Universality at least 5 times.",
+      "id": 9,
+      "name": "Infinity and Beyond I",
+      "raw": {
+        "u0": "Infinity and Beyond I",
+        "u1": "Perform Universality at least 5 times.",
+        "u2": false
+      }
+    },
+    {
+      "description": "Perform Universality at least 10 times.",
+      "id": 10,
+      "name": "Infinity and Beyond II",
+      "raw": {
+        "u0": "Infinity and Beyond II",
+        "u1": "Perform Universality at least 10 times.",
+        "u2": false
+      }
+    },
+    {
+      "description": "Perform Universality at least 15 times.",
+      "id": 11,
+      "name": "Infinity and Beyond III",
+      "raw": {
+        "u0": "Infinity and Beyond III",
+        "u1": "Perform Universality at least 15 times.",
+        "u2": false
+      }
+    },
+    {
+      "description": "Clear the board without being afflicted by Damage Down or Vulnerability Up.",
+      "id": 12,
+      "name": "Unbeastable",
+      "raw": {
+        "u0": "Unbeastable",
+        "u1": "Clear the board without being afflicted by Damage Down or Vulnerability Up.",
+        "u2": true
+      }
+    },
+    {
+      "description": "Clear the board without acquiring any beast gear.",
+      "id": 13,
+      "name": "Nameday Attire",
+      "raw": {
+        "u0": "Nameday Attire",
+        "u1": "Clear the board without acquiring any beast gear.",
+        "u2": true
+      }
+    },
+    {
+      "description": "Clear the board in possession of 10 pieces of beast gear.",
+      "id": 14,
+      "name": "Walking Armory",
+      "raw": {
+        "u0": "Walking Armory",
+        "u1": "Clear the board in possession of 10 pieces of beast gear.",
+        "u2": true
+      }
+    },
+    {
+      "description": "Clear the board without using crucible items.",
+      "id": 15,
+      "name": "Economic Ethos",
+      "raw": {
+        "u0": "Economic Ethos",
+        "u1": "Clear the board without using crucible items.",
+        "u2": true
+      }
+    },
+    {
+      "description": "Clear the board in possession of 10 crucible items.",
+      "id": 16,
+      "name": "Habitual Hoarder",
+      "raw": {
+        "u0": "Habitual Hoarder",
+        "u1": "Clear the board in possession of 10 crucible items.",
+        "u2": true
+      }
+    },
+    {
+      "description": "Clear the board without feeding any familiars.",
+      "id": 17,
+      "name": "Starve the Fever",
+      "raw": {
+        "u0": "Starve the Fever",
+        "u1": "Clear the board without feeding any familiars.",
+        "u2": true
+      }
+    },
+    {
+      "description": "Clear the board having fed your familiars at least 20 times.",
+      "id": 18,
+      "name": "Feed the Bold",
+      "raw": {
+        "u0": "Feed the Bold",
+        "u1": "Clear the board having fed your familiars at least 20 times.",
+        "u2": true
+      }
+    },
+    {
+      "description": "Clear the board without spending territory tokens.",
+      "id": 19,
+      "name": "Coin Clutcher",
+      "raw": {
+        "u0": "Coin Clutcher",
+        "u1": "Clear the board without spending territory tokens.",
+        "u2": true
+      }
+    },
+    {
+      "description": "Clear the board in possession of at least 2,000 territory tokens.",
+      "id": 20,
+      "name": "Rolling in Riches",
+      "raw": {
+        "u0": "Rolling in Riches",
+        "u1": "Clear the board in possession of at least 2,000 territory tokens.",
+        "u2": true
+      }
+    },
+    {
+      "description": "Clear the board without resting at a campsite.",
+      "id": 21,
+      "name": "Sleepless Survival",
+      "raw": {
+        "u0": "Sleepless Survival",
+        "u1": "Clear the board without resting at a campsite.",
+        "u2": true
+      }
+    },
+    {
+      "description": "Clear the board with a team of only beastkin.",
+      "id": 22,
+      "name": "Beastkin Gambit",
+      "raw": {
+        "u0": "Beastkin Gambit",
+        "u1": "Clear the board with a team of only beastkin.",
+        "u2": true
+      }
+    },
+    {
+      "description": "Clear the board with a team of only vilekin.",
+      "id": 23,
+      "name": "Vilekin Gambit",
+      "raw": {
+        "u0": "Vilekin Gambit",
+        "u1": "Clear the board with a team of only vilekin.",
+        "u2": true
+      }
+    },
+    {
+      "description": "Clear the board with a team of only cloudkin.",
+      "id": 24,
+      "name": "Cloudkin Gambit",
+      "raw": {
+        "u0": "Cloudkin Gambit",
+        "u1": "Clear the board with a team of only cloudkin.",
+        "u2": true
+      }
+    },
+    {
+      "description": "Clear the board with a team of only seedkin.",
+      "id": 25,
+      "name": "Seedkin Gambit",
+      "raw": {
+        "u0": "Seedkin Gambit",
+        "u1": "Clear the board with a team of only seedkin.",
+        "u2": true
+      }
+    },
+    {
+      "description": "Clear the board with a team of only wavekin.",
+      "id": 26,
+      "name": "Wavekin Gambit",
+      "raw": {
+        "u0": "Wavekin Gambit",
+        "u1": "Clear the board with a team of only wavekin.",
+        "u2": true
+      }
+    },
+    {
+      "description": "Clear the board with a team of only scalekin.",
+      "id": 27,
+      "name": "Scalekin Gambit",
+      "raw": {
+        "u0": "Scalekin Gambit",
+        "u1": "Clear the board with a team of only scalekin.",
+        "u2": true
+      }
+    },
+    {
+      "description": "Clear the board with a team of only soulkin.",
+      "id": 28,
+      "name": "Soulkin Gambit",
+      "raw": {
+        "u0": "Soulkin Gambit",
+        "u1": "Clear the board with a team of only soulkin.",
+        "u2": true
+      }
+    },
+    {
+      "description": "Clear the board with a team of only ashkin.",
+      "id": 29,
+      "name": "Ashkin Gambit",
+      "raw": {
+        "u0": "Ashkin Gambit",
+        "u1": "Clear the board with a team of only ashkin.",
+        "u2": true
+      }
+    },
+    {
+      "description": "Clear the board under the first degree.",
+      "id": 30,
+      "name": "First Degree",
+      "raw": {
+        "u0": "First Degree",
+        "u1": "Clear the board under the first degree.",
+        "u2": false
+      }
+    },
+    {
+      "description": "Clear the board under the second degree.",
+      "id": 31,
+      "name": "Second Degree",
+      "raw": {
+        "u0": "Second Degree",
+        "u1": "Clear the board under the second degree.",
+        "u2": false
+      }
+    },
+    {
+      "description": "Clear the board under the third degree.",
+      "id": 32,
+      "name": "Third Degree",
+      "raw": {
+        "u0": "Third Degree",
+        "u1": "Clear the board under the third degree.",
+        "u2": false
+      }
+    }
+  ],
+  "scoreRank": [
+    {
+      "id": 0,
+      "name": "Legendary",
+      "raw": {
+        "u0": "Legendary"
+      }
+    },
+    {
+      "id": 1,
+      "name": "Apex",
+      "raw": {
+        "u0": "Apex"
+      }
+    },
+    {
+      "id": 2,
+      "name": "Elite",
+      "raw": {
+        "u0": "Elite"
+      }
+    },
+    {
+      "id": 3,
+      "name": "Renowned",
+      "raw": {
+        "u0": "Renowned"
+      }
+    },
+    {
+      "id": 4,
+      "name": "Exemplary",
+      "raw": {
+        "u0": "Exemplary"
+      }
+    },
+    {
+      "id": 5,
+      "name": "Adept",
+      "raw": {
+        "u0": "Adept"
+      }
+    },
+    {
+      "id": 6,
+      "name": "Journeyman",
+      "raw": {
+        "u0": "Journeyman"
+      }
+    },
+    {
+      "id": 7,
+      "name": "Novice",
+      "raw": {
+        "u0": "Novice"
+      }
+    },
+    {
+      "id": 8,
+      "name": "Apprentice",
+      "raw": {
+        "u0": "Apprentice"
+      }
+    }
+  ]
+}

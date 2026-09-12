@@ -1,0 +1,2032 @@
+[
+  {
+    "description": "Maximum HP +20%",
+    "icon": "/icons/items/243001.png",
+    "id": 1,
+    "name": "Belt of Constitution",
+    "sellPrice": 98,
+    "shortDescription": "Increases maximum HP.",
+    "slug": "belt-of-constitution",
+    "type": "Beast Gear"
+  },
+  {
+    "description": "Revives beastmaster upon KO by sacrificing the summoned familiar.\nIneffective if a familiar is not summoned.",
+    "icon": "/icons/items/243002.png",
+    "id": 2,
+    "name": "Ring of Sacrifice",
+    "sellPrice": 35,
+    "shortDescription": "Sacrifices familiar to revive beastmaster.",
+    "slug": "ring-of-sacrifice",
+    "type": "Beast Gear"
+  },
+  {
+    "description": "Recovers 25% of maximum HP at the end of battles.",
+    "icon": "/icons/items/243003.png",
+    "id": 3,
+    "name": "Ring of Curing",
+    "sellPrice": 175,
+    "shortDescription": "Recovers HP after battles.",
+    "slug": "ring-of-curing",
+    "type": "Beast Gear"
+  },
+  {
+    "description": "Procures one random beast potion upon resting at campsites.",
+    "icon": "/icons/items/243004.png",
+    "id": 4,
+    "name": "Chemist's Satchel",
+    "sellPrice": 35,
+    "shortDescription": "Grants beast potions at campsites.",
+    "slug": "chemists-satchel",
+    "type": "Beast Gear"
+  },
+  {
+    "description": "Magic Vulnerability -10%",
+    "icon": "/icons/items/243005.png",
+    "id": 5,
+    "name": "Hexed Hat",
+    "sellPrice": 56,
+    "shortDescription": "Reduces magic damage taken.",
+    "slug": "hexed-hat",
+    "type": "Beast Gear"
+  },
+  {
+    "description": "Physical Vulnerability -15%",
+    "icon": "/icons/items/243006.png",
+    "id": 6,
+    "name": "Steel Armor",
+    "sellPrice": 63,
+    "shortDescription": "Reduces physical damage taken.",
+    "slug": "steel-armor",
+    "type": "Beast Gear"
+  },
+  {
+    "description": "Physical Damage Dealt +10%\nCritical Hit Rate +3%\n※Effects also apply to summoned familiar.",
+    "icon": "/icons/items/243007.png",
+    "id": 7,
+    "name": "Crown of the Wild",
+    "sellPrice": 190,
+    "shortDescription": "Increases physical damage dealt and critical hit rate. Familiar-friendly.",
+    "slug": "crown-of-the-wild",
+    "type": "Beast Gear"
+  },
+  {
+    "description": "Magic Damage Dealt +20%\n※Effects also apply to summoned familiar.",
+    "icon": "/icons/items/243008.png",
+    "id": 8,
+    "name": "Staff of the Wise",
+    "sellPrice": 190,
+    "shortDescription": "Increases magic damage dealt. Familiar-friendly.",
+    "slug": "staff-of-the-wise",
+    "type": "Beast Gear"
+  },
+  {
+    "description": "Physical Damage Dealt +12%\nEvasion +3%",
+    "icon": "/icons/items/243009.png",
+    "id": 9,
+    "name": "Power Armlet",
+    "sellPrice": 174,
+    "shortDescription": "Increases physical damage dealt and evasion.",
+    "slug": "power-armlet",
+    "type": "Beast Gear"
+  },
+  {
+    "description": "Physical Damage Dealt +5%\nPhysical Vulnerability -5%",
+    "icon": "/icons/items/243010.png",
+    "id": 10,
+    "name": "Twisted Headband",
+    "sellPrice": 84,
+    "shortDescription": "Increases physical damage dealt. Reduces physical damage taken.",
+    "slug": "twisted-headband",
+    "type": "Beast Gear"
+  },
+  {
+    "description": "Critical Hit Power +35\nDamage Dealt +3%\nMaximum HP +7%",
+    "icon": "/icons/items/243011.png",
+    "id": 11,
+    "name": "Green Beret",
+    "sellPrice": 174,
+    "shortDescription": "Increases critical hit power, damage dealt, and maximum HP.",
+    "slug": "green-beret",
+    "type": "Beast Gear"
+  },
+  {
+    "description": "Evasion +8%\nMovement Speed +50%\nIncreases HP recovery via actions and crucible items by 15%.",
+    "icon": "/icons/items/243012.png",
+    "id": 12,
+    "name": "Mystic Boots",
+    "sellPrice": 91,
+    "shortDescription": "Increases evasion, movement speed, and HP recovery.",
+    "slug": "mystic-boots",
+    "type": "Beast Gear"
+  },
+  {
+    "description": "Damage Taken -10%\nMaximum HP +7%",
+    "icon": "/icons/items/243013.png",
+    "id": 13,
+    "name": "Ring of Protection",
+    "sellPrice": 104,
+    "shortDescription": "Reduces damage taken. Increases maximum HP.",
+    "slug": "ring-of-protection",
+    "type": "Beast Gear"
+  },
+  {
+    "description": "Damage Taken -30%\nSlow +10%\n30% chance to absorb ice damage as HP.",
+    "icon": "/icons/items/243014.png",
+    "id": 14,
+    "name": "Ice Shield",
+    "sellPrice": 140,
+    "shortDescription": "Reduces damage taken. Inflicts Slow on self. May absorb ice damage.",
+    "slug": "ice-shield",
+    "type": "Beast Gear"
+  },
+  {
+    "description": "30% chance to absorb earth damage as HP.\n10% chance to grant Stoneskin upon blocking with shield.\nStoneskin Effect: Absorbs damage totaling 15% of maximum HP\nDuration: 60s",
+    "icon": "/icons/items/243015.png",
+    "id": 15,
+    "name": "Earth Shield",
+    "sellPrice": 266,
+    "shortDescription": "May absorb earth damage. May grant Stoneskin upon shield block.",
+    "slug": "earth-shield",
+    "type": "Beast Gear"
+  },
+  {
+    "description": "Block Strength +50%\n30% chance to absorb water damage as HP.\n10% chance to grant Reflect upon blocking with shield.\nReflect Effect: Reflects most magic attacks back at the caster\nDuration: 60s",
+    "icon": "/icons/items/243016.png",
+    "id": 16,
+    "name": "Water Shield",
+    "sellPrice": 214,
+    "shortDescription": "Increases block strength. May absorb water damage. May grant Reflect upon shield block.",
+    "slug": "water-shield",
+    "type": "Beast Gear"
+  },
+  {
+    "description": "Block Strength +75%\nMagic Vulnerability -10%",
+    "icon": "/icons/items/243017.png",
+    "id": 17,
+    "name": "Force Shield",
+    "sellPrice": 82,
+    "shortDescription": "Increases block strength. Reduces magic damage taken.",
+    "slug": "force-shield",
+    "type": "Beast Gear"
+  },
+  {
+    "description": "Petrification Resistance +100%\nBlind Resistance +100%\nParalysis Resistance +100%",
+    "icon": "/icons/items/243018.png",
+    "id": 18,
+    "name": "Crimson Ribbon",
+    "sellPrice": 84,
+    "shortDescription": "Increases petrification, blind, and paralysis resistances.",
+    "slug": "crimson-ribbon",
+    "type": "Beast Gear"
+  },
+  {
+    "description": "Damage Dealt +12%\nParalysis Resistance +100%\n10% chance to recover TP upon completing a combo with a beastmaster instinctual skill.",
+    "icon": "/icons/items/243019.png",
+    "id": 19,
+    "name": "Genji Gloves",
+    "sellPrice": 238,
+    "shortDescription": "Increases damage dealt and paralysis resistance. May recover TP upon familiar combo.",
+    "slug": "genji-gloves",
+    "type": "Beast Gear"
+  },
+  {
+    "description": "Block Strength +30%\nEvasion +10%",
+    "icon": "/icons/items/243020.png",
+    "id": 20,
+    "name": "Genji Greatshield",
+    "sellPrice": 94,
+    "shortDescription": "Increases block strength and evasion.",
+    "slug": "genji-greatshield",
+    "type": "Beast Gear"
+  },
+  {
+    "description": "Movement Speed -20%\nDamage Taken -20%\nMaximum HP +30%",
+    "icon": "/icons/items/243021.png",
+    "id": 21,
+    "name": "Genji Armor",
+    "sellPrice": 226,
+    "shortDescription": "Reduces movement speed and damage taken. Increases maximum HP.",
+    "slug": "genji-armor",
+    "type": "Beast Gear"
+  },
+  {
+    "description": "Critical Hit Rate +15%\nBlind Resistance +100%",
+    "icon": "/icons/items/243022.png",
+    "id": 22,
+    "name": "Silver Specs",
+    "sellPrice": 112,
+    "shortDescription": "Increases critical hit rate and blind resistance.",
+    "slug": "silver-specs",
+    "type": "Beast Gear"
+  },
+  {
+    "description": "Damage Taken -7%\nPoison Resistance +100%\n5% chance to grant one stack of Rehabilitation upon suffering damage.\nRehabilitation Effect: Restores 3% of maximum HP at regular intervals\nDuration: 12s\nMaximum Stacks: 8",
+    "icon": "/icons/items/243023.png",
+    "id": 23,
+    "name": "Angel Robe",
+    "sellPrice": 189,
+    "shortDescription": "Reduces damage taken. Increases poison resistance. May recover HP upon suffering damage.",
+    "slug": "angel-robe",
+    "type": "Beast Gear"
+  },
+  {
+    "description": "Block Strength +125%\nDamage Taken -25%\nMaximum HP +35%",
+    "icon": "/icons/items/243024.png",
+    "id": 24,
+    "name": "Master Shield",
+    "sellPrice": 390,
+    "shortDescription": "Increases block strength and maximum HP. Reduces damage taken.",
+    "slug": "master-shield",
+    "type": "Beast Gear"
+  },
+  {
+    "description": "Magic Damage Dealt +18%\nMagic Vulnerability -15%\nIncreases HP recovery via actions and crucible items by 15%.",
+    "icon": "/icons/items/243025.png",
+    "id": 25,
+    "name": "Mystic Veil",
+    "sellPrice": 220,
+    "shortDescription": "Increases magic damage dealt and HP recovery. Reduces magic damage taken.",
+    "slug": "mystic-veil",
+    "type": "Beast Gear"
+  },
+  {
+    "description": "Maximum HP +6%\nEvasion +8%\nSleep Resistance +100%",
+    "icon": "/icons/items/243026.png",
+    "id": 26,
+    "name": "Black Cowl",
+    "sellPrice": 122,
+    "shortDescription": "Increases maximum HP, evasion, and sleep resistance.",
+    "slug": "black-cowl",
+    "type": "Beast Gear"
+  },
+  {
+    "description": "Maximum HP +30%\nDamage Dealt +18%\nGrants Excellence upon completing a combo with a beastmaster instinctual skill.\nExcellence Effect: Nullifies most attacks and increases damage dealt by 10%\nDuration: 9s",
+    "icon": "/icons/items/243027.png",
+    "id": 27,
+    "name": "Hero's Crown",
+    "sellPrice": 420,
+    "shortDescription": "Increases maximum HP and damage dealt. Grants Excellence upon familiar combo.",
+    "slug": "heros-crown",
+    "type": "Beast Gear"
+  },
+  {
+    "description": "20% chance to grant one stack of Blink upon suffering damage.\nBlink Effect: Nullifies most physical attacks, reducing one stack per nullification\nDuration: 120s",
+    "icon": "/icons/items/243028.png",
+    "id": 28,
+    "name": "Mirage Vest",
+    "sellPrice": 150,
+    "shortDescription": "May grant Blink upon suffering damage.",
+    "slug": "mirage-vest",
+    "type": "Beast Gear"
+  },
+  {
+    "description": "Maximum HP +10%\nDamage Taken -5%\nDoom Resistance +100%",
+    "icon": "/icons/items/243029.png",
+    "id": 29,
+    "name": "Soulreaper's Armor",
+    "sellPrice": 99,
+    "shortDescription": "Increases maximum HP and doom resistance. Reduces damage taken.",
+    "slug": "soulreapers-armor",
+    "type": "Beast Gear"
+  },
+  {
+    "description": "Deals unaspected damage with a potency of 360 each time you suffer physical damage.\nCounter damage is affected by magic damage increase effects of other beast gear, items, and abilities.",
+    "icon": "/icons/items/243030.png",
+    "id": 30,
+    "name": "Briar Armor",
+    "sellPrice": 168,
+    "shortDescription": "Counters upon suffering physical damage.",
+    "slug": "briar-armor",
+    "type": "Beast Gear"
+  },
+  {
+    "description": "Damage Dealt +1%\n35% chance to offer escape from an enemy space, thus avoiding battle and forfeiting loot. Ineffective on elite enemy or boss spaces.\nGrants one stack of Guerrilla Tactics upon fleeing.\nGuerrilla Tactics Effect: Increases damage dealt by 18% and evasion by 4%",
+    "icon": "/icons/items/243031.png",
+    "id": 31,
+    "name": "Coward's Knife",
+    "sellPrice": 90,
+    "shortDescription": "Increases damage dealt. May offer chance to flee enemy spaces.",
+    "slug": "cowards-knife",
+    "type": "Beast Gear"
+  },
+  {
+    "description": "Maximum HP +12%\n25% chance to recover TP upon completing a combo with a beastmaster instinctual skill.",
+    "icon": "/icons/items/243032.png",
+    "id": 32,
+    "name": "Umbral Mantle",
+    "sellPrice": 167,
+    "shortDescription": "Increases maximum HP. May recover TP upon familiar combo.",
+    "slug": "umbral-mantle",
+    "type": "Beast Gear"
+  },
+  {
+    "description": "Physical Vulnerability -9%\n10% chance to recover TP upon completing a combo with a beastmaster instinctual skill.",
+    "icon": "/icons/items/243033.png",
+    "id": 33,
+    "name": "Umbral Band",
+    "sellPrice": 81,
+    "shortDescription": "Reduces physical damage taken. May recover TP upon familiar combo.",
+    "slug": "umbral-band",
+    "type": "Beast Gear"
+  },
+  {
+    "description": "Magic Vulnerability -15%\nMaximum HP +5%\nStun Resistance +100%",
+    "icon": "/icons/items/243034.png",
+    "id": 34,
+    "name": "Umbral Wristlet",
+    "sellPrice": 112,
+    "shortDescription": "Reduces magic damage taken. Increases maximum HP and stun resistance.",
+    "slug": "umbral-wristlet",
+    "type": "Beast Gear"
+  },
+  {
+    "description": "Rapid Recast +25%\nDamage Taken -7%\nMaximum HP +15%",
+    "icon": "/icons/items/243035.png",
+    "id": 35,
+    "name": "Astral Mantle",
+    "sellPrice": 190,
+    "shortDescription": "Grants Rapid Recast. Reduces damage taken. Increases maximum HP.",
+    "slug": "astral-mantle",
+    "type": "Beast Gear"
+  },
+  {
+    "description": "Rapid Recast +15%\nPhysical Vulnerability -8%",
+    "icon": "/icons/items/243036.png",
+    "id": 36,
+    "name": "Astral Band",
+    "sellPrice": 74,
+    "shortDescription": "Grants Rapid Recast. Reduces physical damage taken.",
+    "slug": "astral-band",
+    "type": "Beast Gear"
+  },
+  {
+    "description": "Rapid Recast +15%\nMagic Vulnerability -8%",
+    "icon": "/icons/items/243037.png",
+    "id": 37,
+    "name": "Astral Wristlet",
+    "sellPrice": 86,
+    "shortDescription": "Grants Rapid Recast. Reduces magic damage taken.",
+    "slug": "astral-wristlet",
+    "type": "Beast Gear"
+  },
+  {
+    "description": "Deals additional fire damage with a potency of 240 after each auto-attack.\nAdditional damage is affected by magic damage increase effects of other beast gear, items, and abilities.\nWhen carrying multiple pieces of beast gear that influence auto-attacks, only one will take effect.",
+    "icon": "/icons/items/243038.png",
+    "id": 38,
+    "name": "Flame-wreathed Axe",
+    "sellPrice": 168,
+    "shortDescription": "Adds fire damage to auto-attacks.",
+    "slug": "flame-wreathed-axe",
+    "type": "Beast Gear"
+  },
+  {
+    "description": "Deals additional ice damage with a potency of 240 after each auto-attack.\nAdditional damage is affected by magic damage increase effects of other beast gear, items, and abilities.\nWhen carrying multiple pieces of beast gear that influence auto-attacks, only one will take effect.",
+    "icon": "/icons/items/243039.png",
+    "id": 39,
+    "name": "Icebitten Axe",
+    "sellPrice": 168,
+    "shortDescription": "Adds ice damage to auto-attacks.",
+    "slug": "icebitten-axe",
+    "type": "Beast Gear"
+  },
+  {
+    "description": "Deals additional lightning damage with a potency of 240 after each auto-attack.\nAdditional damage is affected by magic damage increase effects of other beast gear, items, and abilities.\nWhen carrying multiple pieces of beast gear that influence auto-attacks, only one will take effect.",
+    "icon": "/icons/items/243040.png",
+    "id": 40,
+    "name": "Thunderstruck Axe",
+    "sellPrice": 168,
+    "shortDescription": "Adds lightning damage to auto-attacks.",
+    "slug": "thunderstruck-axe",
+    "type": "Beast Gear"
+  },
+  {
+    "description": "Deals additional earth damage with a potency of 240 after each auto-attack.\nAdditional damage is affected by magic damage increase effects of other beast gear, items, and abilities.\nWhen carrying multiple pieces of beast gear that influence auto-attacks, only one will take effect.",
+    "icon": "/icons/items/243041.png",
+    "id": 41,
+    "name": "Earthcrushed Axe",
+    "sellPrice": 168,
+    "shortDescription": "Adds earth damage to auto-attacks.",
+    "slug": "earthcrushed-axe",
+    "type": "Beast Gear"
+  },
+  {
+    "description": "Deals additional water damage with a potency of 240 after each auto-attack.\nAdditional damage is affected by magic damage increase effects of other beast gear, items, and abilities.\nWhen carrying multiple pieces of beast gear that influence auto-attacks, only one will take effect.",
+    "icon": "/icons/items/243042.png",
+    "id": 42,
+    "name": "Deepdrowned Axe",
+    "sellPrice": 168,
+    "shortDescription": "Adds water damage to auto-attacks.",
+    "slug": "deepdrowned-axe",
+    "type": "Beast Gear"
+  },
+  {
+    "description": "Deals additional wind damage with a potency of 240 after each auto-attack.\nAdditional damage is affected by magic damage increase effects of other beast gear, items, and abilities.\nWhen carrying multiple pieces of beast gear that influence auto-attacks, only one will take effect.",
+    "icon": "/icons/items/243043.png",
+    "id": 43,
+    "name": "Windblown Axe",
+    "sellPrice": 168,
+    "shortDescription": "Adds wind damage to auto-attacks.",
+    "slug": "windblown-axe",
+    "type": "Beast Gear"
+  },
+  {
+    "description": "Maximum HP +17%\nEvasion +8%\nGrants one stack of Haste for each attack evaded.\nHaste Effect: Reduces weaponskill cast time and recast time, spell cast time and recast time, and auto-attack delay by 2%\nDuration: 60s\nMaximum Stacks: 5",
+    "icon": "/icons/items/243044.png",
+    "id": 44,
+    "name": "Ninja Suit",
+    "sellPrice": 175,
+    "shortDescription": "Increases maximum HP and evasion. Grants Haste upon dodging.",
+    "slug": "ninja-suit",
+    "type": "Beast Gear"
+  },
+  {
+    "description": "Haste +2%\nPhysical Damage Dealt +3%",
+    "icon": "/icons/items/243045.png",
+    "id": 45,
+    "name": "Ninja Gloves",
+    "sellPrice": 63,
+    "shortDescription": "Grants Haste. Increases physical damage dealt.",
+    "slug": "ninja-gloves",
+    "type": "Beast Gear"
+  },
+  {
+    "description": "Haste +5%\nCritical Hit Rate +5%",
+    "icon": "/icons/items/243046.png",
+    "id": 46,
+    "name": "Ninja Eyepatch",
+    "sellPrice": 91,
+    "shortDescription": "Grants Haste. Increases critical hit rate.",
+    "slug": "ninja-eyepatch",
+    "type": "Beast Gear"
+  },
+  {
+    "description": "30% chance to absorb wind damage as HP.\n50% chance to grant Blink upon blocking with shield.\nBlink Effect: Nullifies most physical attacks, reducing one stack per nullification\nDuration: 120s",
+    "icon": "/icons/items/243047.png",
+    "id": 47,
+    "name": "Wind Shield",
+    "sellPrice": 224,
+    "shortDescription": "May absorb wind damage. May grant Blink upon shield block.",
+    "slug": "wind-shield",
+    "type": "Beast Gear"
+  },
+  {
+    "description": "Magic Vulnerability -10%\nIncreases HP recovery via actions and crucible items by 15%.\nGrants Keen Edge upon evading an attack.\nKeen Edge Effect: Inflicts damage over time on self in exchange for increasing damage dealt by 30%\nDuration: 21s",
+    "icon": "/icons/items/243048.png",
+    "id": 48,
+    "name": "Wind Mask",
+    "sellPrice": 154,
+    "shortDescription": "Reduces magic damage taken. Increases HP recovery. Grants Keen Edge upon dodging.",
+    "slug": "wind-mask",
+    "type": "Beast Gear"
+  },
+  {
+    "description": "Damage Taken -15%\nMagic Damage Dealt +20%\nIncreases HP recovery via actions and crucible items by 30%.",
+    "icon": "/icons/items/243049.png",
+    "id": 49,
+    "name": "Wind Armor",
+    "sellPrice": 264,
+    "shortDescription": "Reduces damage taken. Increases magic damage dealt and HP recovery.",
+    "slug": "wind-armor",
+    "type": "Beast Gear"
+  },
+  {
+    "description": "Damage Dealt +25%\nMovement Speed -20%",
+    "icon": "/icons/items/243050.png",
+    "id": 50,
+    "name": "Heavy Axe",
+    "sellPrice": 268,
+    "shortDescription": "Increases damage dealt. Reduces movement speed.",
+    "slug": "heavy-axe",
+    "type": "Beast Gear"
+  },
+  {
+    "description": "Damage Taken -15%\nMaximum HP +15%",
+    "icon": "/icons/items/243051.png",
+    "id": 51,
+    "name": "Mythril Armor",
+    "sellPrice": 172,
+    "shortDescription": "Reduces damage taken. Increases maximum HP.",
+    "slug": "mythril-armor",
+    "type": "Beast Gear"
+  },
+  {
+    "description": "Damage Taken -5%\nPhysical Damage Dealt +5%\nMaximum HP +5%",
+    "icon": "/icons/items/243052.png",
+    "id": 52,
+    "name": "Mythril Gloves",
+    "sellPrice": 113,
+    "shortDescription": "Reduces damage taken. Increases physical damage dealt and maximum HP.",
+    "slug": "mythril-gloves",
+    "type": "Beast Gear"
+  },
+  {
+    "description": "Damage Taken -10%\nMaximum HP +5%",
+    "icon": "/icons/items/243053.png",
+    "id": 53,
+    "name": "Mythril Greaves",
+    "sellPrice": 85,
+    "shortDescription": "Reduces damage taken. Increases maximum HP.",
+    "slug": "mythril-greaves",
+    "type": "Beast Gear"
+  },
+  {
+    "description": "Physical Vulnerability -10%\nCritical Hit Rate +15%",
+    "icon": "/icons/items/243054.png",
+    "id": 54,
+    "name": "Beast Mask",
+    "sellPrice": 126,
+    "shortDescription": "Reduces physical damage taken. Increases critical hit rate.",
+    "slug": "beast-mask",
+    "type": "Beast Gear"
+  },
+  {
+    "description": "Critical Hit Rate +8%\n25% chance to grant one stack of Damage Up upon landing a critical hit.\nDamage Up Effect: Increases damage dealt by 3%\nDuration: 30s\nMaximum Stacks: 8",
+    "icon": "/icons/items/243055.png",
+    "id": 55,
+    "name": "Beastly Knife",
+    "sellPrice": 87,
+    "shortDescription": "Increases critical hit rate. May increase damage dealt upon critical hit.",
+    "slug": "beastly-knife",
+    "type": "Beast Gear"
+  },
+  {
+    "description": "Critical Hit Rate +15%\nMaximum HP +2%",
+    "icon": "/icons/items/243056.png",
+    "id": 56,
+    "name": "Beast Earring",
+    "sellPrice": 84,
+    "shortDescription": "Increases critical hit rate and maximum HP.",
+    "slug": "beast-earring",
+    "type": "Beast Gear"
+  },
+  {
+    "description": "Haste +1%\nGrants two items on treasure spaces.",
+    "icon": "/icons/items/243057.png",
+    "id": 57,
+    "name": "Thief's Knife",
+    "sellPrice": 200,
+    "shortDescription": "Grants Haste and two items on treasure spaces.",
+    "slug": "thiefs-knife",
+    "type": "Beast Gear"
+  },
+  {
+    "description": "Loot Drop Rate +80%\nDamage Taken -8%\nMaximum HP +18%",
+    "icon": "/icons/items/243058.png",
+    "id": 58,
+    "name": "Thief's Garb",
+    "sellPrice": 172,
+    "shortDescription": "Increases loot drop rate and maximum HP. Reduces damage taken.",
+    "slug": "thiefs-garb",
+    "type": "Beast Gear"
+  },
+  {
+    "description": "Loot Drop Rate +70%\nHaste +2%",
+    "icon": "/icons/items/243059.png",
+    "id": 59,
+    "name": "Thief's Gloves",
+    "sellPrice": 50,
+    "shortDescription": "Increases loot drop rate. Grants Haste.",
+    "slug": "thiefs-gloves",
+    "type": "Beast Gear"
+  },
+  {
+    "description": "Loot Drop Rate +40%\nEvasion +2%",
+    "icon": "/icons/items/243060.png",
+    "id": 60,
+    "name": "Thief's Boots",
+    "sellPrice": 30,
+    "shortDescription": "Increases loot drop rate and evasion.",
+    "slug": "thiefs-boots",
+    "type": "Beast Gear"
+  },
+  {
+    "description": "Damage Dealt +30%\n5% chance to inflict Stun on self upon suffering damage.\nDuration: 3s",
+    "icon": "/icons/items/243061.png",
+    "id": 61,
+    "name": "Thunder Axe",
+    "sellPrice": 315,
+    "shortDescription": "Increases damage dealt. May inflict Stun on self upon suffering damage.",
+    "slug": "thunder-axe",
+    "type": "Beast Gear"
+  },
+  {
+    "description": "30% chance to absorb lightning damage as HP.\n5% chance of granting one stack of High Wire upon landing a critical hit.\nHigh Wire Effect: Increases damage dealt by 10% and reduces damage taken by 5%\nDuration: 180s\nMaximum Stacks: 4",
+    "icon": "/icons/items/243062.png",
+    "id": 62,
+    "name": "Thunder Armor",
+    "sellPrice": 161,
+    "shortDescription": "May absorb lightning damage. May grant High Wire upon critical hit.",
+    "slug": "thunder-armor",
+    "type": "Beast Gear"
+  },
+  {
+    "description": "Grants one stack of Magic Vulnerability Down upon blocking with shield.\nMagic Vulnerability Down Effect: Reduces magic damage taken by 5%\nDuration: 60s\nMaximum Stacks: 8",
+    "icon": "/icons/items/243063.png",
+    "id": 63,
+    "name": "Warded Shield",
+    "sellPrice": 84,
+    "shortDescription": "Reduces magic damage taken upon shield block.",
+    "slug": "warded-shield",
+    "type": "Beast Gear"
+  },
+  {
+    "description": "Rapid Recast +10%\n25% chance to recover TP upon completing a combo with a beastmaster instinctual skill.",
+    "icon": "/icons/items/243064.png",
+    "id": 64,
+    "name": "Gold Hairpin",
+    "sellPrice": 113,
+    "shortDescription": "Grants Rapid Recast. May recover TP upon familiar combo.",
+    "slug": "gold-hairpin",
+    "type": "Beast Gear"
+  },
+  {
+    "description": "Damage Dealt +25%\nHaste +5%\n10% chance to inflict Chains of Condemnation on self upon landing a critical hit.\nChains of Condemnation Effect: Suffers magic damage upon moving\nDuration: 9s",
+    "icon": "/icons/items/243065.png",
+    "id": 65,
+    "name": "Flame Knife",
+    "sellPrice": 262,
+    "shortDescription": "Increases damage dealt. Grants Haste. May inflict Chains of Condemnation on self upon critical hit.",
+    "slug": "flame-knife",
+    "type": "Beast Gear"
+  },
+  {
+    "description": "Block Strength +50%\nDamage Dealt +3%\n30% chance to absorb fire damage as HP.",
+    "icon": "/icons/items/243066.png",
+    "id": 66,
+    "name": "Flame Shield",
+    "sellPrice": 116,
+    "shortDescription": "Increases block strength and damage dealt. May absorb fire damage.",
+    "slug": "flame-shield",
+    "type": "Beast Gear"
+  },
+  {
+    "description": "Territory Tokens Earned +25%\nCritical Hit Rate -10%\nDamage Dealt +5%",
+    "icon": "/icons/items/243067.png",
+    "id": 67,
+    "name": "Merchant's Cap",
+    "sellPrice": 24,
+    "shortDescription": "Increases territory tokens earned and damage dealt. Reduces critical hit rate.",
+    "slug": "merchants-cap",
+    "type": "Beast Gear"
+  },
+  {
+    "description": "Territory Tokens Earned +25%\nPhysical Vulnerability -10%",
+    "icon": "/icons/items/243068.png",
+    "id": 68,
+    "name": "Merchant's Garb",
+    "sellPrice": 52,
+    "shortDescription": "Increases territory tokens earned. Reduces physical damage taken.",
+    "slug": "merchants-garb",
+    "type": "Beast Gear"
+  },
+  {
+    "description": "Territory Tokens Earned +25%\nEvasion +4%\nMaximum HP +12%",
+    "icon": "/icons/items/243069.png",
+    "id": 69,
+    "name": "Merchant's Shoes",
+    "sellPrice": 101,
+    "shortDescription": "Increases territory tokens earned, evasion, and maximum HP.",
+    "slug": "merchants-shoes",
+    "type": "Beast Gear"
+  },
+  {
+    "description": "Maximum HP +3%\nTP Accumulation +25%",
+    "icon": "/icons/items/243070.png",
+    "id": 70,
+    "name": "Spirited Ring",
+    "sellPrice": 113,
+    "shortDescription": "Increases TP accumulation and maximum HP.",
+    "slug": "spirited-ring",
+    "type": "Beast Gear"
+  },
+  {
+    "description": "Damage Dealt +20%\nTP Accumulation +20%\n1% chance to inflict Doom on self upon suffering damage.\nDuration: 2s",
+    "icon": "/icons/items/243071.png",
+    "id": 71,
+    "name": "Demonic Helm",
+    "sellPrice": 264,
+    "shortDescription": "Increases damage dealt and TP accumulation. May inflict Doom on self upon suffering damage.",
+    "slug": "demonic-helm",
+    "type": "Beast Gear"
+  },
+  {
+    "description": "Maximum HP +5%\nTP Accumulation +5%\nGrants one stack of High Wire upon defeating an enemy.\nHigh Wire Effect: Increases damage dealt by 10% and reduces damage taken by 5%\nDuration: 180s\nMaximum Stacks: 4",
+    "icon": "/icons/items/243072.png",
+    "id": 72,
+    "name": "Demonic Armor",
+    "sellPrice": 170,
+    "shortDescription": "Increases maximum HP and TP accumulation. Grants High Wire upon defeating enemies.",
+    "slug": "demonic-armor",
+    "type": "Beast Gear"
+  },
+  {
+    "description": "Evasion +10%\nMaximum HP -8%\n2% chance to grant one stack of Rehabilitation upon landing a critical hit.\nRehabilitation Effect: Restores 3% of maximum HP at regular intervals\nDuration: 12s\nMaximum Stacks: 8",
+    "icon": "/icons/items/243073.png",
+    "id": 73,
+    "name": "Empress Hairpin",
+    "sellPrice": 129,
+    "shortDescription": "Increases evasion. Reduces maximum HP. May recover HP upon critical hit.",
+    "slug": "empress-hairpin",
+    "type": "Beast Gear"
+  },
+  {
+    "description": "Haste +6%",
+    "icon": "/icons/items/243074.png",
+    "id": 74,
+    "name": "Haste Belt",
+    "sellPrice": 76,
+    "shortDescription": "Grants Haste.",
+    "slug": "haste-belt",
+    "type": "Beast Gear"
+  },
+  {
+    "description": "Block Strength +100%\nPhysical Vulnerability -5%\nMaximum HP +2%",
+    "icon": "/icons/items/243075.png",
+    "id": 75,
+    "name": "Warrior's Buckler",
+    "sellPrice": 64,
+    "shortDescription": "Increases block strength and maximum HP. Reduces physical damage taken.",
+    "slug": "warriors-buckler",
+    "type": "Beast Gear"
+  },
+  {
+    "description": "Restores 10% of HP to self or familiar.",
+    "icon": "/icons/items/243136.png",
+    "id": 76,
+    "name": "G1 Beast Potion",
+    "sellPrice": 32,
+    "shortDescription": "",
+    "slug": "g1-beast-potion",
+    "type": "Crucible Item"
+  },
+  {
+    "description": "Restores 23% of HP to self or familiar.",
+    "icon": "/icons/items/243137.png",
+    "id": 77,
+    "name": "G2 Beast Potion",
+    "sellPrice": 72,
+    "shortDescription": "",
+    "slug": "g2-beast-potion",
+    "type": "Crucible Item"
+  },
+  {
+    "description": "Restores 36% of HP to self or familiar.",
+    "icon": "/icons/items/243138.png",
+    "id": 78,
+    "name": "G3 Beast Potion",
+    "sellPrice": 113,
+    "shortDescription": "",
+    "slug": "g3-beast-potion",
+    "type": "Crucible Item"
+  },
+  {
+    "description": "Restores 50% of HP to self or familiar.",
+    "icon": "/icons/items/243139.png",
+    "id": 79,
+    "name": "G4 Beast Potion",
+    "sellPrice": 158,
+    "shortDescription": "",
+    "slug": "g4-beast-potion",
+    "type": "Crucible Item"
+  },
+  {
+    "description": "Restores 10% of HP to self and nearby allies.",
+    "icon": "/icons/items/243140.png",
+    "id": 80,
+    "name": "G1 Crucible Ash",
+    "sellPrice": 63,
+    "shortDescription": "",
+    "slug": "g1-crucible-ash",
+    "type": "Crucible Item"
+  },
+  {
+    "description": "Restores 25% of HP to self and nearby allies.",
+    "icon": "/icons/items/243141.png",
+    "id": 81,
+    "name": "G2 Crucible Ash",
+    "sellPrice": 158,
+    "shortDescription": "",
+    "slug": "g2-crucible-ash",
+    "type": "Crucible Item"
+  },
+  {
+    "description": "Restores 40% of HP to self and nearby allies.",
+    "icon": "/icons/items/243142.png",
+    "id": 82,
+    "name": "G3 Crucible Ash",
+    "sellPrice": 252,
+    "shortDescription": "",
+    "slug": "g3-crucible-ash",
+    "type": "Crucible Item"
+  },
+  {
+    "description": "Instantly cures most instances of poison for self or familiar, restoring 25% of maximum HP upon success.\n※Can only be used on Crucible battlegrounds.",
+    "icon": "/icons/items/243143.png",
+    "id": 83,
+    "name": "Crucible Antidote",
+    "sellPrice": 32,
+    "shortDescription": "",
+    "slug": "crucible-antidote",
+    "type": "Crucible Item"
+  },
+  {
+    "description": "Instantly cures most instances of petrification for familiar, restoring 50% of maximum HP upon success. Additionally grants Stoneskin.\nStoneskin Effect: Absorbs damage totaling 50% of maximum HP\nDuration: 60s\n※Can only be used on Crucible battlegrounds.",
+    "icon": "/icons/items/243144.png",
+    "id": 84,
+    "name": "Crucible Needle",
+    "sellPrice": 32,
+    "shortDescription": "",
+    "slug": "crucible-needle",
+    "type": "Crucible Item"
+  },
+  {
+    "description": "Instantly cures most instances of blindness for self or familiar, restoring 25% of maximum HP upon success.\n※Can only be used on Crucible battlegrounds.",
+    "icon": "/icons/items/243145.png",
+    "id": 85,
+    "name": "Crucible Eye Drops",
+    "sellPrice": 32,
+    "shortDescription": "",
+    "slug": "crucible-eye-drops",
+    "type": "Crucible Item"
+  },
+  {
+    "description": "Increases poison resistance by 100% for self or familiar.\nDuration: 180s\nAdditional Effect: When carrying a crimson ribbon, restores 50% of target's total HP\n※Can only be used on Crucible battlegrounds.",
+    "icon": "/icons/items/243146.png",
+    "id": 86,
+    "name": "G1 Antipoison Soul Serum",
+    "sellPrice": 32,
+    "shortDescription": "",
+    "slug": "g1-antipoison-soul-serum",
+    "type": "Crucible Item"
+  },
+  {
+    "description": "Increases poison resistance by 100% for self and nearby allies.\nDuration: 300s\nAdditional Effect: When carrying a crimson ribbon, restores 50% of target's total HP\n※Can only be used on Crucible battlegrounds.",
+    "icon": "/icons/items/243147.png",
+    "id": 87,
+    "name": "G2 Antipoison Soul Serum",
+    "sellPrice": 50,
+    "shortDescription": "",
+    "slug": "g2-antipoison-soul-serum",
+    "type": "Crucible Item"
+  },
+  {
+    "description": "Increases paralysis resistance by 100% for self or familiar.\nDuration: 180s\nAdditional Effect: When carrying a crimson ribbon, restores 50% of target's total HP\n※Can only be used on Crucible battlegrounds.",
+    "icon": "/icons/items/243148.png",
+    "id": 88,
+    "name": "G1 Antiparalysis Soul Serum",
+    "sellPrice": 32,
+    "shortDescription": "",
+    "slug": "g1-antiparalysis-soul-serum",
+    "type": "Crucible Item"
+  },
+  {
+    "description": "Increases paralysis resistance by 100% for self and nearby allies.\nDuration: 300s\nAdditional Effect: When carrying a crimson ribbon, restores 50% of target's total HP\n※Can only be used on Crucible battlegrounds.",
+    "icon": "/icons/items/243149.png",
+    "id": 89,
+    "name": "G2 Antiparalysis Soul Serum",
+    "sellPrice": 50,
+    "shortDescription": "",
+    "slug": "g2-antiparalysis-soul-serum",
+    "type": "Crucible Item"
+  },
+  {
+    "description": "Increases blind resistance by 100% for self or familiar.\nDuration: 180s\nAdditional Effect: When carrying a crimson ribbon, restores 50% of target's total HP\n※Can only be used on Crucible battlegrounds.",
+    "icon": "/icons/items/243150.png",
+    "id": 90,
+    "name": "G1 Antiblind Soul Serum",
+    "sellPrice": 32,
+    "shortDescription": "",
+    "slug": "g1-antiblind-soul-serum",
+    "type": "Crucible Item"
+  },
+  {
+    "description": "Increases blind resistance by 100% for self and nearby allies.\nDuration: 300s\nAdditional Effect: When carrying a crimson ribbon, restores 50% of target's total HP\n※Can only be used on Crucible battlegrounds.",
+    "icon": "/icons/items/243151.png",
+    "id": 91,
+    "name": "G2 Antiblind Soul Serum",
+    "sellPrice": 50,
+    "shortDescription": "",
+    "slug": "g2-antiblind-soul-serum",
+    "type": "Crucible Item"
+  },
+  {
+    "description": "Increases petrification resistance by 100% for self or familiar.\nDuration: 180s\nAdditional Effect: When carrying a crimson ribbon, restores 50% of target's total HP\n※Can only be used on Crucible battlegrounds.",
+    "icon": "/icons/items/243152.png",
+    "id": 92,
+    "name": "G1 Antipetrification Soul Serum",
+    "sellPrice": 32,
+    "shortDescription": "",
+    "slug": "g1-antipetrification-soul-serum",
+    "type": "Crucible Item"
+  },
+  {
+    "description": "Increases petrification resistance by 100% for self and nearby allies.\nDuration: 300s\nAdditional Effect: When carrying a crimson ribbon, restores 50% of target's total HP\n※Can only be used on Crucible battlegrounds.",
+    "icon": "/icons/items/243153.png",
+    "id": 93,
+    "name": "G2 Antipetrification Soul Serum",
+    "sellPrice": 50,
+    "shortDescription": "",
+    "slug": "g2-antipetrification-soul-serum",
+    "type": "Crucible Item"
+  },
+  {
+    "description": "Increases sleep resistance by 100% for self or familiar.\nDuration: 180s\nAdditional Effect: When carrying a crimson ribbon, restores 50% of target's total HP\n※Can only be used on Crucible battlegrounds.",
+    "icon": "/icons/items/243154.png",
+    "id": 94,
+    "name": "G1 Antisleep Soul Serum",
+    "sellPrice": 32,
+    "shortDescription": "",
+    "slug": "g1-antisleep-soul-serum",
+    "type": "Crucible Item"
+  },
+  {
+    "description": "Increases sleep resistance by 100% for self and nearby allies.\nDuration: 300s\nAdditional Effect: When carrying a crimson ribbon, restores 50% of target's total HP\n※Can only be used on Crucible battlegrounds.",
+    "icon": "/icons/items/243155.png",
+    "id": 95,
+    "name": "G2 Antisleep Soul Serum",
+    "sellPrice": 50,
+    "shortDescription": "",
+    "slug": "g2-antisleep-soul-serum",
+    "type": "Crucible Item"
+  },
+  {
+    "description": "Revives an incapacitated familiar.\n※Can only be used while traversing a Crucible board.",
+    "icon": "/icons/items/243156.png",
+    "id": 96,
+    "name": "Blessed Horn",
+    "sellPrice": 135,
+    "shortDescription": "",
+    "slug": "blessed-horn",
+    "type": "Crucible Item"
+  },
+  {
+    "description": "Creates a distraction, allowing escape from battle. Ineffective against elite enemies and bosses.\nUse by selecting “Flee” upon an enemy space.",
+    "icon": "/icons/items/243157.png",
+    "id": 97,
+    "name": "Beastly Smokebomb",
+    "sellPrice": 85,
+    "shortDescription": "",
+    "slug": "beastly-smokebomb",
+    "type": "Crucible Item"
+  },
+  {
+    "description": "Grants Reraise to self.\nReraise Effect: 70% chance of automatic revival upon KO",
+    "icon": "/icons/items/243158.png",
+    "id": 98,
+    "name": "G1 Beastmaster Reraiser",
+    "sellPrice": 221,
+    "shortDescription": "",
+    "slug": "g1-beastmaster-reraiser",
+    "type": "Crucible Item"
+  },
+  {
+    "description": "Grants Reraise to self.\nReraise Effect: 95% chance of automatic revival upon KO",
+    "icon": "/icons/items/243159.png",
+    "id": 99,
+    "name": "G2 Beastmaster Reraiser",
+    "sellPrice": 299,
+    "shortDescription": "",
+    "slug": "g2-beastmaster-reraiser",
+    "type": "Crucible Item"
+  },
+  {
+    "description": "Triples the loot drop rate for the next enemy space cleared.\nDuration: 30m\n※Can only be used on Crucible battlegrounds.",
+    "icon": "/icons/items/243160.png",
+    "id": 100,
+    "name": "Thief's Eye",
+    "sellPrice": 32,
+    "shortDescription": "",
+    "slug": "thiefs-eye",
+    "type": "Crucible Item"
+  },
+  {
+    "description": "Doubles the territory tokens earned for the next enemy space cleared.\nDuration: 30m\n※Can only be used on Crucible battlegrounds.",
+    "icon": "/icons/items/243161.png",
+    "id": 101,
+    "name": "Merchant's Eye",
+    "sellPrice": 23,
+    "shortDescription": "",
+    "slug": "merchants-eye",
+    "type": "Crucible Item"
+  },
+  {
+    "description": "Grants Tough Skin to self or familiar.\nTough Skin Effect: Reduces damage taken by 20%\nDuration: 60s\nAdditional Effect: When carrying an ice shield, duration increases to 90s\n※Can only be used on Crucible battlegrounds.",
+    "icon": "/icons/items/243162.png",
+    "id": 102,
+    "name": "Crucible Tannin",
+    "sellPrice": 47,
+    "shortDescription": "",
+    "slug": "crucible-tannin",
+    "type": "Crucible Item"
+  },
+  {
+    "description": "Grants Hasty Spirit to self or familiar.\nHasty Spirit Effect: Reduces weaponskill cast time and recast time, spell cast time and recast time, and auto-attack delay by 15%\nDuration: 60s\nAdditional Effect: When carrying thief's gloves, duration increases to 90s\n※Can only be used on Crucible battlegrounds.",
+    "icon": "/icons/items/243163.png",
+    "id": 103,
+    "name": "Crucible Stimulant",
+    "sellPrice": 43,
+    "shortDescription": "",
+    "slug": "crucible-stimulant",
+    "type": "Crucible Item"
+  },
+  {
+    "description": "Grants Liquid Strength to self or familiar.\nLiquid Strength Effect: Increases physical damage dealt by 30%\nDuration: 15s\n※Can only be used on Crucible battlegrounds.",
+    "icon": "/icons/items/243164.png",
+    "id": 104,
+    "name": "Potion of Tempered Strength",
+    "sellPrice": 36,
+    "shortDescription": "",
+    "slug": "potion-of-tempered-strength",
+    "type": "Crucible Item"
+  },
+  {
+    "description": "Inflicts Stun while also granting Liquid Strength to self or familiar.\nStun Duration: 15s\nLiquid Strength Effect: Increases physical damage dealt by 45%\nDuration: 30s\n※Can only be used on Crucible battlegrounds.",
+    "icon": "/icons/items/243165.png",
+    "id": 105,
+    "name": "Potion of Feral Strength",
+    "sellPrice": 88,
+    "shortDescription": "",
+    "slug": "potion-of-feral-strength",
+    "type": "Crucible Item"
+  },
+  {
+    "description": "Grants Liquid Magic to self or familiar.\nLiquid Magic Effect: Increases magic damage dealt by 30%\nDuration: 15s\n※Can only be used on Crucible battlegrounds.",
+    "icon": "/icons/items/243166.png",
+    "id": 106,
+    "name": "Potion of Tempered Magic",
+    "sellPrice": 23,
+    "shortDescription": "",
+    "slug": "potion-of-tempered-magic",
+    "type": "Crucible Item"
+  },
+  {
+    "description": "Inflicts Nightmare while also granting Liquid Magic to self or familiar.\nNightmare Duration: 30s\nLiquid Magic Effect: Increases magic damage dealt by 50%\nDuration: 30s\n※Can only be used on Crucible battlegrounds.",
+    "icon": "/icons/items/243167.png",
+    "id": 107,
+    "name": "Potion of Feral Magic",
+    "sellPrice": 50,
+    "shortDescription": "",
+    "slug": "potion-of-feral-magic",
+    "type": "Crucible Item"
+  },
+  {
+    "description": "Grants Liquid Intensity to self or familiar.\nLiquid Intensity Effect: Increases critical hit rate by 30%\nDuration: 30s\nAdditional Effect: When carrying silver specs, duration increases to 60s\n※Can only be used on Crucible battlegrounds.",
+    "icon": "/icons/items/243168.png",
+    "id": 108,
+    "name": "Potion of Tempered Intensity",
+    "sellPrice": 20,
+    "shortDescription": "",
+    "slug": "potion-of-tempered-intensity",
+    "type": "Crucible Item"
+  },
+  {
+    "description": "Inflicts Petrification while also granting Liquid Intensity to self or familiar.\nPetrification Duration: 15s\nLiquid Intensity Effect: Increases critical hit rate by 50%\nDuration: 30s\nAdditional Effect: When carrying silver specs, duration increases to 60s\n※Can only be used on Crucible battlegrounds.",
+    "icon": "/icons/items/243169.png",
+    "id": 109,
+    "name": "Potion of Feral Intensity",
+    "sellPrice": 36,
+    "shortDescription": "",
+    "slug": "potion-of-feral-intensity",
+    "type": "Crucible Item"
+  },
+  {
+    "description": "Grants Liquid Evasion to self or familiar.\nLiquid Evasion Effect: Increases evasion by 25%\nDuration: 30s\n※Can only be used on Crucible battlegrounds.",
+    "icon": "/icons/items/243170.png",
+    "id": 110,
+    "name": "Potion of Tempered Evasion",
+    "sellPrice": 21,
+    "shortDescription": "",
+    "slug": "potion-of-tempered-evasion",
+    "type": "Crucible Item"
+  },
+  {
+    "description": "Inflicts Blind while also granting Liquid Evasion to self or familiar.\nBlind Duration: 30s\nLiquid Evasion Effect: Increases evasion by 25%\nDuration: 60s\n※Can only be used on Crucible battlegrounds.",
+    "icon": "/icons/items/243171.png",
+    "id": 111,
+    "name": "Potion of Feral Evasion",
+    "sellPrice": 36,
+    "shortDescription": "",
+    "slug": "potion-of-feral-evasion",
+    "type": "Crucible Item"
+  },
+  {
+    "description": "Grants Liquid Constitution while also restoring 10% of HP to self or familiar.\nLiquid Constitution Effect: Increases maximum HP by 20%\nEffect ends upon combat completion.\n※Can only be used on Crucible battlegrounds.",
+    "icon": "/icons/items/243172.png",
+    "id": 112,
+    "name": "Potion of Tempered Constitution",
+    "sellPrice": 95,
+    "shortDescription": "",
+    "slug": "potion-of-tempered-constitution",
+    "type": "Crucible Item"
+  },
+  {
+    "description": "Inflicts Pollen while also granting Liquid Constitution and restoring 10% of HP to self or familiar.\nPollen Duration: 180s\nLiquid Constitution Effect: Increases maximum HP by 30%\nEffect ends upon combat completion.\n※Can only be used on Crucible battlegrounds.",
+    "icon": "/icons/items/243173.png",
+    "id": 113,
+    "name": "Potion of Feral Constitution",
+    "sellPrice": 140,
+    "shortDescription": "",
+    "slug": "potion-of-feral-constitution",
+    "type": "Crucible Item"
+  },
+  {
+    "description": "Grants Spirit of the Breathtaker to self.\nSpirit of the Breathtaker Effect: Increases movement speed by 20%, evasion by 5%, and poison resistance by 100%\nEffect ends upon combat completion.\n※Can only be used on Crucible battlegrounds.",
+    "icon": "/icons/items/243174.png",
+    "id": 114,
+    "name": "Potion of Breathtaking Swiftness",
+    "sellPrice": 225,
+    "shortDescription": "",
+    "slug": "potion-of-breathtaking-swiftness",
+    "type": "Crucible Item"
+  },
+  {
+    "description": "Grants 100 TP to self or familiar.\nAdditional Effect: When carrying a spirited ring, grants 250 TP\n※Can only be used on Crucible battlegrounds.",
+    "icon": "/icons/items/243175.png",
+    "id": 115,
+    "name": "Crucible Feather",
+    "sellPrice": 43,
+    "shortDescription": "",
+    "slug": "crucible-feather",
+    "type": "Crucible Item"
+  },
+  {
+    "description": "Grants Through Fire to self and nearby allies.\nThrough Fire Effect: 50% chance to absorb fire damage as HP\nDuration: 15s\n※Can only be used on Crucible battlegrounds.",
+    "icon": "/icons/items/243176.png",
+    "id": 116,
+    "name": "G1 Wildfire Weakener",
+    "sellPrice": 47,
+    "shortDescription": "",
+    "slug": "g1-wildfire-weakener",
+    "type": "Crucible Item"
+  },
+  {
+    "description": "Grants Through Fire to self and nearby allies.\nThrough Fire Effect: 70% chance to absorb fire damage as HP\nDuration: 15s\n※Can only be used on Crucible battlegrounds.",
+    "icon": "/icons/items/243177.png",
+    "id": 117,
+    "name": "G2 Wildfire Weakener",
+    "sellPrice": 95,
+    "shortDescription": "",
+    "slug": "g2-wildfire-weakener",
+    "type": "Crucible Item"
+  },
+  {
+    "description": "Grants Through Water to self and nearby allies.\nThrough Water Effect: 50% chance to absorb water damage as HP\nDuration: 15s\n※Can only be used on Crucible battlegrounds.",
+    "icon": "/icons/items/243178.png",
+    "id": 118,
+    "name": "G1 Wildwave Weakener",
+    "sellPrice": 47,
+    "shortDescription": "",
+    "slug": "g1-wildwave-weakener",
+    "type": "Crucible Item"
+  },
+  {
+    "description": "Grants Through Water to self and nearby allies.\nThrough Water Effect: 70% chance to absorb water damage as HP\nDuration: 15s\n※Can only be used on Crucible battlegrounds.",
+    "icon": "/icons/items/243179.png",
+    "id": 119,
+    "name": "G2 Wildwave Weakener",
+    "sellPrice": 95,
+    "shortDescription": "",
+    "slug": "g2-wildwave-weakener",
+    "type": "Crucible Item"
+  },
+  {
+    "description": "Grants Through Earth to self and nearby allies.\nThrough Earth Effect: 50% chance to absorb earth damage as HP\nDuration: 15s\n※Can only be used on Crucible battlegrounds.",
+    "icon": "/icons/items/243180.png",
+    "id": 120,
+    "name": "G1 Wildearth Weakener",
+    "sellPrice": 47,
+    "shortDescription": "",
+    "slug": "g1-wildearth-weakener",
+    "type": "Crucible Item"
+  },
+  {
+    "description": "Grants Through Earth to self and nearby allies.\nThrough Earth Effect: 70% chance to absorb earth damage as HP\nDuration: 15s\n※Can only be used on Crucible battlegrounds.",
+    "icon": "/icons/items/243181.png",
+    "id": 121,
+    "name": "G2 Wildearth Weakener",
+    "sellPrice": 95,
+    "shortDescription": "",
+    "slug": "g2-wildearth-weakener",
+    "type": "Crucible Item"
+  },
+  {
+    "description": "Grants Through Thunder to self and nearby allies.\nThrough Thunder Effect: 50% chance to absorb lightning damage as HP\nDuration: 15s\n※Can only be used on Crucible battlegrounds.",
+    "icon": "/icons/items/243182.png",
+    "id": 122,
+    "name": "G1 Wildthunder Weakener",
+    "sellPrice": 47,
+    "shortDescription": "",
+    "slug": "g1-wildthunder-weakener",
+    "type": "Crucible Item"
+  },
+  {
+    "description": "Grants Through Thunder to self and nearby allies.\nThrough Thunder Effect: 70% chance to absorb lightning damage as HP\nDuration: 15s\n※Can only be used on Crucible battlegrounds.",
+    "icon": "/icons/items/243183.png",
+    "id": 123,
+    "name": "G2 Wildthunder Weakener",
+    "sellPrice": 95,
+    "shortDescription": "",
+    "slug": "g2-wildthunder-weakener",
+    "type": "Crucible Item"
+  },
+  {
+    "description": "Grants Through Wind to self and nearby allies.\nThrough Wind Effect: 50% chance to absorb wind damage as HP\nDuration: 15s\n※Can only be used on Crucible battlegrounds.",
+    "icon": "/icons/items/243184.png",
+    "id": 124,
+    "name": "G1 Wildgale Weakener",
+    "sellPrice": 47,
+    "shortDescription": "",
+    "slug": "g1-wildgale-weakener",
+    "type": "Crucible Item"
+  },
+  {
+    "description": "Grants Through Wind to self and nearby allies.\nThrough Wind Effect: 70% chance to absorb wind damage as HP\nDuration: 15s\n※Can only be used on Crucible battlegrounds.",
+    "icon": "/icons/items/243185.png",
+    "id": 125,
+    "name": "G2 Wildgale Weakener",
+    "sellPrice": 95,
+    "shortDescription": "",
+    "slug": "g2-wildgale-weakener",
+    "type": "Crucible Item"
+  },
+  {
+    "description": "Grants Through Ice to self and nearby allies.\nThrough Ice Effect: 50% chance to absorb ice damage as HP\nDuration: 15s\n※Can only be used on Crucible battlegrounds.",
+    "icon": "/icons/items/243186.png",
+    "id": 126,
+    "name": "G1 Wildfreeze Weakener",
+    "sellPrice": 47,
+    "shortDescription": "",
+    "slug": "g1-wildfreeze-weakener",
+    "type": "Crucible Item"
+  },
+  {
+    "description": "Grants Through Ice to self and nearby allies.\nThrough Ice Effect: 70% chance to absorb ice damage as HP\nDuration: 15s\n※Can only be used on Crucible battlegrounds.",
+    "icon": "/icons/items/243187.png",
+    "id": 127,
+    "name": "G2 Wildfreeze Weakener",
+    "sellPrice": 95,
+    "shortDescription": "",
+    "slug": "g2-wildfreeze-weakener",
+    "type": "Crucible Item"
+  },
+  {
+    "description": "Deals ranged fire damage with a potency of 2,500 to target and all enemies within 12 yalms of it.\nAdditional Effect: Targets suffering from Deep Freeze receive additional damage with a potency of 1,000\nDamage is affected by magic damage increase effects of other beast gear, items, or abilities.\n※Can only be used on Crucible battlegrounds.",
+    "icon": "/icons/items/243188.png",
+    "id": 128,
+    "name": "Fang of Fire",
+    "sellPrice": 45,
+    "shortDescription": "",
+    "slug": "fang-of-fire",
+    "type": "Crucible Item"
+  },
+  {
+    "description": "Deals ranged ice damage with a potency of 2,000 to target and all enemies within 12 yalms of it.\nAdditional Effect: Afflicts target with Deep Freeze\nDuration: 20s\nDamage is affected by magic damage increase effects of other beast gear, items, and abilities.\n※Can only be used on Crucible battlegrounds.",
+    "icon": "/icons/items/243189.png",
+    "id": 129,
+    "name": "Fang of Ice",
+    "sellPrice": 45,
+    "shortDescription": "",
+    "slug": "fang-of-ice",
+    "type": "Crucible Item"
+  },
+  {
+    "description": "Deals ranged water damage with a potency of 2,000 to target and all enemies within 12 yalms of it.\nAdditional Effect: Removes one beneficial status from target, thereby granting 100 TP\nDamage is affected by magic damage increase effects of other beast gear, items, and abilities.\n※Can only be used on Crucible battlegrounds.",
+    "icon": "/icons/items/243190.png",
+    "id": 130,
+    "name": "Fang of Water",
+    "sellPrice": 45,
+    "shortDescription": "",
+    "slug": "fang-of-water",
+    "type": "Crucible Item"
+  },
+  {
+    "description": "Deals ranged lightning damage with a potency of 2,000 to target and all enemies within 12 yalms of it.\nAdditional Effect: Afflicts target with Paralysis\nDuration: 30s\nDamage is affected by magic damage increase effects of other beast gear, items, and abilities.\n※Can only be used on Crucible battlegrounds.",
+    "icon": "/icons/items/243191.png",
+    "id": 131,
+    "name": "Fang of Lightning",
+    "sellPrice": 45,
+    "shortDescription": "",
+    "slug": "fang-of-lightning",
+    "type": "Crucible Item"
+  },
+  {
+    "description": "Deals ranged earth damage with a potency of 2,000 to target and all enemies within 12 yalms of it.\nAdditional Effect: Afflicts target with Heavy\nDuration: 60s\nDamage is affected by magic damage increase effects of other beast gear, items, and abilities.\n※Can only be used on Crucible battlegrounds.",
+    "icon": "/icons/items/243192.png",
+    "id": 132,
+    "name": "Fang of Earth",
+    "sellPrice": 45,
+    "shortDescription": "",
+    "slug": "fang-of-earth",
+    "type": "Crucible Item"
+  },
+  {
+    "description": "Deals ranged wind damage with a potency of 2,000 to target and all enemies within 12 yalms of it.\nAdditional Effect: 15-yalm knockback\nDamage is affected by magic damage increase effects of other beast gear, items, and abilities.\n※Can only be used on Crucible battlegrounds.",
+    "icon": "/icons/items/243193.png",
+    "id": 133,
+    "name": "Fang of Wind",
+    "sellPrice": 45,
+    "shortDescription": "",
+    "slug": "fang-of-wind",
+    "type": "Crucible Item"
+  },
+  {
+    "description": "Deals ranged piercing physical damage with a potency of 1,500 to target and all enemies within 12 yalms of it.\nPotency increases up to 3,300 as your maximum HP increases, and damage is partially absorbed as HP.\n※Can only be used on Crucible battlegrounds.",
+    "icon": "/icons/items/243194.png",
+    "id": 134,
+    "name": "Vampiric Fang",
+    "sellPrice": 68,
+    "shortDescription": "",
+    "slug": "vampiric-fang",
+    "type": "Crucible Item"
+  },
+  {
+    "description": "Grants Life Siphon to self or familiar.\nLife Siphon Effect: Absorbs 10% of damage dealt as HP\nDuration: 60s\nAdditional Effect: When carrying demonic armor, duration increases to 90s\n※Can only be used on Crucible battlegrounds.",
+    "icon": "/icons/items/243195.png",
+    "id": 135,
+    "name": "Vampiric Essence",
+    "sellPrice": 378,
+    "shortDescription": "",
+    "slug": "vampiric-essence",
+    "type": "Crucible Item"
+  },
+  {
+    "description": "Grants Reflect to self or familiar.\nReflect Effect: Reflects most magic attacks back at the caster\nDuration: 30s\nAdditional Effect: When carrying a hexed hat, duration increases to 60s\n※Can only be used on Crucible battlegrounds.",
+    "icon": "/icons/items/243196.png",
+    "id": 136,
+    "name": "Tome of Reflection",
+    "sellPrice": 81,
+    "shortDescription": "",
+    "slug": "tome-of-reflection",
+    "type": "Crucible Item"
+  },
+  {
+    "description": "Grants five stacks of Blink to self or familiar.\nBlink Effect: Nullifies most physical attacks, reducing one stack per nullification\nDuration: 120s\nSpirit of the Breathtaker Effect: Grants three additional stacks\n※Can only be used on Crucible battlegrounds.",
+    "icon": "/icons/items/243197.png",
+    "id": 137,
+    "name": "Tome of the Impervious",
+    "sellPrice": 63,
+    "shortDescription": "",
+    "slug": "tome-of-the-impervious",
+    "type": "Crucible Item"
+  },
+  {
+    "description": "Grants Sandstill to self.\nSandstill Effect: Returns you to the moment combat commences upon incapacitation\n※Can only be used outside of combat.",
+    "icon": "/icons/items/243198.png",
+    "id": 138,
+    "name": "Temporal Sand",
+    "sellPrice": 315,
+    "shortDescription": "",
+    "slug": "temporal-sand",
+    "type": "Crucible Item"
+  },
+  {
+    "description": "Calls down a Starstorm that deals fire damage with a potency of 3,000 to target and all enemies within 18 yalms of it.\nAdditional Effect: Increases TP Gauge by 50 for every enemy hit\nAdditional Effect: Reduces target's fire resistance by 20%\nDuration: 60s\nDamage is affected by magic damage increase effects of other beast gear, items, and abilities.\n※Can only be used on Crucible battlegrounds.",
+    "icon": "/icons/items/243199.png",
+    "id": 139,
+    "name": "Celestial Sand",
+    "sellPrice": 72,
+    "shortDescription": "",
+    "slug": "celestial-sand",
+    "type": "Crucible Item"
+  },
+  {
+    "description": "Grants Auto-potion to self.\nAuto-potion Effect: Restores 40% of HP automatically when HP falls below 50%\n50% chance for the effect to expire when triggered. Chance is reduced to 10% when under the effect of Spirit of the Breathtaker.\nDuration: 150s\nAdditional Effect: When carrying thief's garb, duration increases to 240s\n※Can only be used on Crucible battlegrounds.",
+    "icon": "/icons/items/243200.png",
+    "id": 140,
+    "name": "Beast Potion Kit",
+    "sellPrice": 189,
+    "shortDescription": "",
+    "slug": "beast-potion-kit",
+    "type": "Crucible Item"
+  },
+  {
+    "description": "Grants Auto-remedy to self.\nAuto-remedy Effect: Automatically cures the next status ailment suffered\nDuration: 240s\n※Can only be used on Crucible battlegrounds.",
+    "icon": "/icons/items/243201.png",
+    "id": 141,
+    "name": "Beast Remedy Kit",
+    "sellPrice": 32,
+    "shortDescription": "",
+    "slug": "beast-remedy-kit",
+    "type": "Crucible Item"
+  },
+  {
+    "description": "Ensures all attacks deal magic damage. Effects also apply to familiars.\nDuration: 180s\n※Can only be used on Crucible battlegrounds.",
+    "icon": "/icons/items/243202.png",
+    "id": 142,
+    "name": "Spellforge Tome",
+    "sellPrice": 63,
+    "shortDescription": "",
+    "slug": "spellforge-tome",
+    "type": "Crucible Item"
+  },
+  {
+    "description": "Ensures all attacks deliver physical damage. Effects also apply to familiars.\nDuration: 180s\n※Can only be used on Crucible battlegrounds.",
+    "icon": "/icons/items/243203.png",
+    "id": 143,
+    "name": "Steelsting Tome",
+    "sellPrice": 63,
+    "shortDescription": "",
+    "slug": "steelsting-tome",
+    "type": "Crucible Item"
+  },
+  {
+    "description": "Maximum HP +15%\nDamage Dealt +5%\nAdditional Effect: Restores 10% of HP upon consumption\nAdditional Effect: Increases familiar's earned EXP by 25%\n[Suitable for beastkin, vilekin, cloudkin, seedkin, wavekin, scalekin, soulkin, and ashkin.]",
+    "icon": "/icons/items/243076.png",
+    "id": 144,
+    "name": "G1 Primafodder",
+    "sellPrice": 0,
+    "shortDescription": "",
+    "slug": "g1-primafodder",
+    "type": "Feed"
+  },
+  {
+    "description": "Maximum HP +30%\nDamage Dealt +10%\nAdditional Effect: Restores 18% of HP upon consumption\nAdditional Effect: Increases familiar's earned EXP by 50%\n[Suitable for beastkin, vilekin, cloudkin, seedkin, wavekin, scalekin, soulkin, and ashkin.]",
+    "icon": "/icons/items/243077.png",
+    "id": 145,
+    "name": "G2 Primafodder",
+    "sellPrice": 0,
+    "shortDescription": "",
+    "slug": "g2-primafodder",
+    "type": "Feed"
+  },
+  {
+    "description": "Physical Damage Dealt +20%\n[Suitable for beastkin, vilekin, cloudkin, seedkin, wavekin, scalekin, and ashkin.]",
+    "icon": "/icons/items/243078.png",
+    "id": 146,
+    "name": "Meat Simular",
+    "sellPrice": 0,
+    "shortDescription": "",
+    "slug": "meat-simular",
+    "type": "Feed"
+  },
+  {
+    "description": "Aetheric Burst Potency +35%\n[Suitable for beastkin, vilekin, cloudkin, seedkin, wavekin, scalekin, and ashkin.]",
+    "icon": "/icons/items/243079.png",
+    "id": 147,
+    "name": "Hydrolixer",
+    "sellPrice": 0,
+    "shortDescription": "",
+    "slug": "hydrolixer",
+    "type": "Feed"
+  },
+  {
+    "description": "Physical Vulnerability -25%\nAetheric Burst Potency +10%\n[Suitable for beastkin, vilekin, cloudkin, seedkin, wavekin, scalekin, and ashkin.]",
+    "icon": "/icons/items/243080.png",
+    "id": 148,
+    "name": "Honey Simular",
+    "sellPrice": 0,
+    "shortDescription": "",
+    "slug": "honey-simular",
+    "type": "Feed"
+  },
+  {
+    "description": "Critical Hit Rate +35%\nMagic Vulnerability -30%\nMaximum HP +10%\nAdditional Effect: Restores 7% of HP upon consumption\n[Suitable for soulkin.]",
+    "icon": "/icons/items/243081.png",
+    "id": 149,
+    "name": "Crab Ball Simular",
+    "sellPrice": 0,
+    "shortDescription": "",
+    "slug": "crab-ball-simular",
+    "type": "Feed"
+  },
+  {
+    "description": "Aetheric Burst Potency +10%\nGrants one stack of Physical Damage Up upon landing a critical hit.\nPhysical Damage Up Effect: Increases physical damage dealt by 10%\nDuration: 30s\nMaximum Stacks: 5\n[Suitable for beastkin, vilekin, cloudkin, seedkin, wavekin, scalekin, and ashkin.]",
+    "icon": "/icons/items/243082.png",
+    "id": 150,
+    "name": "Banana Simular",
+    "sellPrice": 0,
+    "shortDescription": "",
+    "slug": "banana-simular",
+    "type": "Feed"
+  },
+  {
+    "description": "Critical Hit Power +60\nAetheric Burst Potency +10%\n[Suitable for beastkin, vilekin, cloudkin, seedkin, wavekin, scalekin, and ashkin.]",
+    "icon": "/icons/items/243083.png",
+    "id": 151,
+    "name": "Berry Simular",
+    "sellPrice": 0,
+    "shortDescription": "",
+    "slug": "berry-simular",
+    "type": "Feed"
+  },
+  {
+    "description": "Haste +5%\nPhysical Damage Dealt +25%\n[Suitable for beastkin, vilekin, cloudkin, wavekin, and scalekin.]",
+    "icon": "/icons/items/243084.png",
+    "id": 152,
+    "name": "Egg Simular",
+    "sellPrice": 0,
+    "shortDescription": "",
+    "slug": "egg-simular",
+    "type": "Feed"
+  },
+  {
+    "description": "Haste +15%\nDamage Dealt +5%\nMaximum HP +35%\nAdditional Effect: Restores 20% of HP upon consumption\n[Suitable for seedkin.]",
+    "icon": "/icons/items/243085.png",
+    "id": 153,
+    "name": "Yellow Egg Simular",
+    "sellPrice": 0,
+    "shortDescription": "",
+    "slug": "yellow-egg-simular",
+    "type": "Feed"
+  },
+  {
+    "description": "Evasion +10%\nPhysical Damage Dealt +10%\n[Suitable for beastkin, vilekin, cloudkin, seedkin, wavekin, and ashkin.]",
+    "icon": "/icons/items/243086.png",
+    "id": 154,
+    "name": "Tomato Simular",
+    "sellPrice": 0,
+    "shortDescription": "",
+    "slug": "tomato-simular",
+    "type": "Feed"
+  },
+  {
+    "description": "Haste +5%\nMaximum HP +50%\nAdditional Effect: Restores 26% of HP upon consumption\n[Suitable for beastkin, vilekin, cloudkin, wavekin, and scalekin.]",
+    "icon": "/icons/items/243087.png",
+    "id": 155,
+    "name": "Milk Simular",
+    "sellPrice": 0,
+    "shortDescription": "",
+    "slug": "milk-simular",
+    "type": "Feed"
+  },
+  {
+    "description": "Haste +5%\nAetheric Burst Potency +25%\n[Suitable for beastkin, vilekin, cloudkin, wavekin, and scalekin.]",
+    "icon": "/icons/items/243088.png",
+    "id": 156,
+    "name": "Rolanberry Cheese Simular",
+    "sellPrice": 0,
+    "shortDescription": "",
+    "slug": "rolanberry-cheese-simular",
+    "type": "Feed"
+  },
+  {
+    "description": "Poison Resistance +100%\nDamage Taken -10%\n[Suitable for beastkin, vilekin, cloudkin, seedkin, wavekin, scalekin, soulkin, and ashkin.]",
+    "icon": "/icons/items/243089.png",
+    "id": 157,
+    "name": "Porcini Simular",
+    "sellPrice": 0,
+    "shortDescription": "",
+    "slug": "porcini-simular",
+    "type": "Feed"
+  },
+  {
+    "description": "Paralysis Resistance +100%\nDamage Taken -10%\n[Suitable for beastkin, vilekin, cloudkin, seedkin, wavekin, scalekin, soulkin, and ashkin.]",
+    "icon": "/icons/items/243090.png",
+    "id": 158,
+    "name": "Morel Simular",
+    "sellPrice": 0,
+    "shortDescription": "",
+    "slug": "morel-simular",
+    "type": "Feed"
+  },
+  {
+    "description": "Blind Resistance +100%\nDamage Taken -10%\n[Suitable for beastkin, vilekin, cloudkin, seedkin, wavekin, scalekin, soulkin, and ashkin.]",
+    "icon": "/icons/items/243091.png",
+    "id": 159,
+    "name": "Black Truffle Simular",
+    "sellPrice": 0,
+    "shortDescription": "",
+    "slug": "black-truffle-simular",
+    "type": "Feed"
+  },
+  {
+    "description": "Petrification Resistance +100%\nDamage Taken -10%\n[Suitable for beastkin, vilekin, cloudkin, seedkin, wavekin, scalekin, soulkin, and ashkin.]",
+    "icon": "/icons/items/243092.png",
+    "id": 160,
+    "name": "White Truffle Simular",
+    "sellPrice": 0,
+    "shortDescription": "",
+    "slug": "white-truffle-simular",
+    "type": "Feed"
+  },
+  {
+    "description": "Sleep Resistance +100%\nDamage Taken -10%\n[Suitable for beastkin, vilekin, cloudkin, seedkin, wavekin, scalekin, soulkin, and ashkin.]",
+    "icon": "/icons/items/243093.png",
+    "id": 161,
+    "name": "Mushroom Simular",
+    "sellPrice": 0,
+    "shortDescription": "",
+    "slug": "mushroom-simular",
+    "type": "Feed"
+  },
+  {
+    "description": "Physical Damage Dealt +20%\nTP Accumulation +50%\n[Suitable for cloudkin.]",
+    "icon": "/icons/items/243094.png",
+    "id": 162,
+    "name": "Sole Simular",
+    "sellPrice": 0,
+    "shortDescription": "",
+    "slug": "sole-simular",
+    "type": "Feed"
+  },
+  {
+    "description": "Maximum HP +30%\nDamage Dealt +15%\nAdditional Effect: Restores 18% of HP upon consumption\nGrants one stack of Rehabilitation upon defeating an enemy.\nRehabilitation Effect: Restores 3% of maximum HP at regular intervals\nDuration: 6s\nMaximum Stacks: 8\n[Suitable for wavekin.]",
+    "icon": "/icons/items/243095.png",
+    "id": 163,
+    "name": "Magnum Water",
+    "sellPrice": 0,
+    "shortDescription": "",
+    "slug": "magnum-water",
+    "type": "Feed"
+  },
+  {
+    "description": "Critical Hit Rate +50%\nDamage Dealt +35%\nAdditional Effect: Inflicts damage over time on self\n[Suitable for vilekin.]",
+    "icon": "/icons/items/243096.png",
+    "id": 164,
+    "name": "Blood Simular",
+    "sellPrice": 0,
+    "shortDescription": "",
+    "slug": "blood-simular",
+    "type": "Feed"
+  },
+  {
+    "description": "Maximum HP +20%\nCritical Hit Rate +15%\nAdditional Effect: Restores 13% of HP upon consumption\n5% chance to grant one stack of Rehabilitation upon landing a critical hit.\nRehabilitation Effect: Restores 3% of maximum HP at regular intervals\nDuration: 6s\nMaximum Stacks: 8\n[Suitable for wavekin.]",
+    "icon": "/icons/items/243097.png",
+    "id": 165,
+    "name": "Noble Blood Simular",
+    "sellPrice": 0,
+    "shortDescription": "",
+    "slug": "noble-blood-simular",
+    "type": "Feed"
+  },
+  {
+    "description": "Damage Dealt +10%\nDamage Taken -10%\nAdditional Effect: Preserves the effects of feed when resting at a campsite\n[Suitable for beastkin, vilekin, cloudkin, seedkin, wavekin, scalekin, soulkin, and ashkin.]",
+    "icon": "/icons/items/243098.png",
+    "id": 166,
+    "name": "Lily Simular",
+    "sellPrice": 0,
+    "shortDescription": "",
+    "slug": "lily-simular",
+    "type": "Feed"
+  },
+  {
+    "description": "Physical Damage Dealt +10%\n30% chance to recover TP upon completing a combo with a familiar instinctual skill.\n[Suitable for beastkin, vilekin, seedkin, wavekin, scalekin, and ashkin.]",
+    "icon": "/icons/items/243099.png",
+    "id": 167,
+    "name": "Flounder Simular",
+    "sellPrice": 0,
+    "shortDescription": "",
+    "slug": "flounder-simular",
+    "type": "Feed"
+  },
+  {
+    "description": "Grants Reflect when summoned by a beastmaster.\nReflect Effect: Reflects most magic attacks back at the caster\nDuration: 60s\n[Suitable for scalekin.]",
+    "icon": "/icons/items/243100.png",
+    "id": 168,
+    "name": "White Scorpion Simular",
+    "sellPrice": 0,
+    "shortDescription": "",
+    "slug": "white-scorpion-simular",
+    "type": "Feed"
+  },
+  {
+    "description": "Damage Dealt +15%\nDamage Taken -35%\n3% chance to inflict Poison on self upon suffering damage.\nDuration: 30s\n[Suitable for scalekin.]",
+    "icon": "/icons/items/243101.png",
+    "id": 169,
+    "name": "Black Scorpion Simular",
+    "sellPrice": 0,
+    "shortDescription": "",
+    "slug": "black-scorpion-simular",
+    "type": "Feed"
+  },
+  {
+    "description": "Aetheric Burst Potency +25%\n35% chance to recover TP upon completing a combo with a familiar instinctual skill.\n[Suitable for cloudkin.]",
+    "icon": "/icons/items/243102.png",
+    "id": 170,
+    "name": "Herring Simular",
+    "sellPrice": 0,
+    "shortDescription": "",
+    "slug": "herring-simular",
+    "type": "Feed"
+  },
+  {
+    "description": "Damage Taken -10%\nTP Accumulation +30%\n[Suitable for beastkin, vilekin, seedkin, wavekin, and ashkin.]",
+    "icon": "/icons/items/243103.png",
+    "id": 171,
+    "name": "Angelfish Simular",
+    "sellPrice": 0,
+    "shortDescription": "",
+    "slug": "angelfish-simular",
+    "type": "Feed"
+  },
+  {
+    "description": "Critical Hit Rate +35%\nPhysical Damage Dealt +15%\n[Suitable for beastkin, vilekin, cloudkin, seedkin, wavekin, scalekin, and ashkin.]",
+    "icon": "/icons/items/243104.png",
+    "id": 172,
+    "name": "Grape Simular",
+    "sellPrice": 0,
+    "shortDescription": "",
+    "slug": "grape-simular",
+    "type": "Feed"
+  },
+  {
+    "description": "Critical Hit Rate +25%\nAetheric Burst Potency +20%\n[Suitable for beastkin, vilekin, cloudkin, seedkin, wavekin, scalekin, and ashkin.]",
+    "icon": "/icons/items/243105.png",
+    "id": 173,
+    "name": "Orange Simular",
+    "sellPrice": 0,
+    "shortDescription": "",
+    "slug": "orange-simular",
+    "type": "Feed"
+  },
+  {
+    "description": "Maximum HP +30%\nAdditional Effect: Restores 18% of HP upon consumption\nGrants one stack of Magic Vulnerability Down upon suffering damage.\nMagic Vulnerability Down Effect: Reduces magic damage taken by 5%\nDuration: 60s\nMaximum Stacks: 8\n[Suitable for soulkin.]",
+    "icon": "/icons/items/243106.png",
+    "id": 174,
+    "name": "Lugworm Simular",
+    "sellPrice": 0,
+    "shortDescription": "",
+    "slug": "lugworm-simular",
+    "type": "Feed"
+  },
+  {
+    "description": "Grants one stack of High Wire upon defeating an enemy.\nHigh Wire Effect: Increases damage dealt by 15% and reduces damage taken by 8%\nDuration: 60s\nMaximum Stacks: 4\n[Suitable for beastkin, vilekin, cloudkin, seedkin, wavekin, scalekin, soulkin, and ashkin.]",
+    "icon": "/icons/items/243107.png",
+    "id": 175,
+    "name": "Crucible Tonic",
+    "sellPrice": 0,
+    "shortDescription": "",
+    "slug": "crucible-tonic",
+    "type": "Feed"
+  },
+  {
+    "description": "Evasion +10%\nAetheric Burst Potency +5%\n[Suitable for beastkin, vilekin, cloudkin, seedkin, wavekin, and ashkin.]",
+    "icon": "/icons/items/243108.png",
+    "id": 176,
+    "name": "Carrot Simular",
+    "sellPrice": 0,
+    "shortDescription": "",
+    "slug": "carrot-simular",
+    "type": "Feed"
+  },
+  {
+    "description": "Evasion +15%\nDamage Taken -5%\n[Suitable for beastkin, vilekin, cloudkin, seedkin, wavekin, and ashkin.]",
+    "icon": "/icons/items/243109.png",
+    "id": 177,
+    "name": "Onion Simular",
+    "sellPrice": 0,
+    "shortDescription": "",
+    "slug": "onion-simular",
+    "type": "Feed"
+  },
+  {
+    "description": "Evasion +5%\nGrants one stack of High Wire for each attack evaded.\nHigh Wire Effect: Increases damage dealt by 15% and reduces damage taken by 8%\nDuration: 60s\nMaximum Stacks: 4\n[Suitable for beastkin, vilekin, cloudkin, seedkin, wavekin, and ashkin.]",
+    "icon": "/icons/items/243110.png",
+    "id": 178,
+    "name": "Lettuce Simular",
+    "sellPrice": 0,
+    "shortDescription": "",
+    "slug": "lettuce-simular",
+    "type": "Feed"
+  },
+  {
+    "description": "Aetheric Burst Potency +10%\nGrants one stack of Blink upon landing a critical hit.\nBlink Effect: Nullifies most physical attacks, reducing one stack per nullification\nDuration: 120s\nMaximum Stacks: 5\n[Suitable for beastkin, vilekin, cloudkin, seedkin, wavekin, scalekin, and ashkin.]",
+    "icon": "/icons/items/243111.png",
+    "id": 179,
+    "name": "Lemon Simular",
+    "sellPrice": 0,
+    "shortDescription": "",
+    "slug": "lemon-simular",
+    "type": "Feed"
+  },
+  {
+    "description": "Haste +20%\nGrants one stack of High Wire for each combo completed with a familiar instinctual skill.\nHigh Wire Effect: Increases damage dealt by 15% and reduces damage taken by 8%\nDuration: 60s\nMaximum Stacks: 4\n[Suitable for soulkin.]",
+    "icon": "/icons/items/243112.png",
+    "id": 180,
+    "name": "Untaming Oil",
+    "sellPrice": 0,
+    "shortDescription": "",
+    "slug": "untaming-oil",
+    "type": "Feed"
+  },
+  {
+    "description": "Damage Dealt +30%\nDamage Taken -30%\nInflicts Nightmare on self upon landing a critical hit.\nDuration: 30s\n[Suitable for beastkin, vilekin, cloudkin, seedkin, wavekin, scalekin, and ashkin.]",
+    "icon": "/icons/items/243113.png",
+    "id": 181,
+    "name": "Mucus Simular",
+    "sellPrice": 0,
+    "shortDescription": "",
+    "slug": "mucus-simular",
+    "type": "Feed"
+  },
+  {
+    "description": "Physical Vulnerability -40%\nAetheric Burst Potency +20%\n[Suitable for scalekin.]",
+    "icon": "/icons/items/243114.png",
+    "id": 182,
+    "name": "Sap Simular",
+    "sellPrice": 0,
+    "shortDescription": "",
+    "slug": "sap-simular",
+    "type": "Feed"
+  },
+  {
+    "description": "Evasion +25%\n15% chance to grant Stoneskin upon evading an attack.\nStoneskin Effect: Absorbs damage equivalent to 12% of maximum HP\nDuration: 60s\n[Suitable for soulkin.]",
+    "icon": "/icons/items/243115.png",
+    "id": 183,
+    "name": "Salt Simular",
+    "sellPrice": 0,
+    "shortDescription": "",
+    "slug": "salt-simular",
+    "type": "Feed"
+  },
+  {
+    "description": "Damage Dealt +30%\nPhysical Vulnerability -30%\n3% chance to inflict Paralysis on self upon suffering damage.\nDuration: 30s\n[Suitable for vilekin.]",
+    "icon": "/icons/items/243116.png",
+    "id": 184,
+    "name": "Syrup Simular",
+    "sellPrice": 0,
+    "shortDescription": "",
+    "slug": "syrup-simular",
+    "type": "Feed"
+  },
+  {
+    "description": "Maximum HP +50%\nDamage Taken -20%\nAdditional Effect: Restores 26% of HP upon consumption\n50% chance to grant one stack of Haste upon suffering damage.\nHaste Effect: Reduces weaponskill cast time and recast time, spell cast time and recast time, and auto-attack delay by 3%\nDuration: 60s\nMaximum Stacks: 5\n[Suitable for seedkin.]",
+    "icon": "/icons/items/243117.png",
+    "id": 185,
+    "name": "Cream Cheese Simular",
+    "sellPrice": 0,
+    "shortDescription": "",
+    "slug": "cream-cheese-simular",
+    "type": "Feed"
+  },
+  {
+    "description": "Haste +15%\nDamage Dealt +30%\nAdditional Effect: Inflicts damage over time on self\n[Suitable for beastkin, vilekin, cloudkin, wavekin, and scalekin.]",
+    "icon": "/icons/items/243118.png",
+    "id": 186,
+    "name": "Red Egg Simular",
+    "sellPrice": 0,
+    "shortDescription": "",
+    "slug": "red-egg-simular",
+    "type": "Feed"
+  },
+  {
+    "description": "Magic Vulnerability -30%\n[Suitable for beastkin, vilekin, cloudkin, seedkin, wavekin, scalekin, and ashkin.]",
+    "icon": "/icons/items/243119.png",
+    "id": 187,
+    "name": "Toast Simular",
+    "sellPrice": 0,
+    "shortDescription": "",
+    "slug": "toast-simular",
+    "type": "Feed"
+  },
+  {
+    "description": "Magic Vulnerability -40%\nAetheric Burst Potency +10%\nMaximum HP +15%\nAdditional Effect: Restores 10% of HP upon consumption\n[Suitable for vilekin.]",
+    "icon": "/icons/items/243120.png",
+    "id": 188,
+    "name": "Cornbread Simular",
+    "sellPrice": 0,
+    "shortDescription": "",
+    "slug": "cornbread-simular",
+    "type": "Feed"
+  },
+  {
+    "description": "Physical Damage Dealt +40%\nInflicts Blind on self upon landing a critical hit.\nDuration: 30s\n[Suitable for beastkin, vilekin, cloudkin, seedkin, wavekin, scalekin, soulkin, and ashkin.]",
+    "icon": "/icons/items/243121.png",
+    "id": 189,
+    "name": "Mandrake Simular",
+    "sellPrice": 0,
+    "shortDescription": "",
+    "slug": "mandrake-simular",
+    "type": "Feed"
+  },
+  {
+    "description": "Critical Hit Rate +25%\nGrants one stack of Damage Up upon landing a critical hit.\nDamage Up Effect: Increases damage dealt by 10%\nDuration: 60s\nMaximum Stacks: 5\n[Suitable for soulkin.]",
+    "icon": "/icons/items/243122.png",
+    "id": 190,
+    "name": "Tarantula Simular",
+    "sellPrice": 0,
+    "shortDescription": "",
+    "slug": "tarantula-simular",
+    "type": "Feed"
+  },
+  {
+    "description": "Damage Taken -30%\nMaximum HP +30%\nAdditional Effect: Restores 18% of HP upon consumption\n3% chance to inflict Petrification on self upon suffering damage.\nDuration: 30s\n[Suitable for beastkin, vilekin, cloudkin, seedkin, wavekin, scalekin, soulkin, and ashkin.]",
+    "icon": "/icons/items/243123.png",
+    "id": 191,
+    "name": "Belladonna Simular",
+    "sellPrice": 0,
+    "shortDescription": "",
+    "slug": "belladonna-simular",
+    "type": "Feed"
+  },
+  {
+    "description": "Delivers blunt physical damage with a potency of 350 each time your familiar suffers physical damage.\nCounter damage is affected by physical damage increase effects of other feed and crucible items, and your familiar's strength.\n[Suitable for beastkin, vilekin, cloudkin, scalekin, and ashkin.]",
+    "icon": "/icons/items/243124.png",
+    "id": 192,
+    "name": "Steak Simular",
+    "sellPrice": 0,
+    "shortDescription": "",
+    "slug": "steak-simular",
+    "type": "Feed"
+  },
+  {
+    "description": "Aetheric Burst Potency +10%\n30% chance to recover TP upon completing a combo with a familiar instinctual skill.\n[Suitable for beastkin, vilekin, seedkin, wavekin, scalekin, and ashkin.]",
+    "icon": "/icons/items/243125.png",
+    "id": 193,
+    "name": "Roe Simular",
+    "sellPrice": 0,
+    "shortDescription": "",
+    "slug": "roe-simular",
+    "type": "Feed"
+  },
+  {
+    "description": "Grants Stoneskin when summoned by a beastmaster.\nStoneskin Effect: Absorbs damage equivalent to 24% of maximum HP\nDuration: 60s\n[Suitable for beastkin, vilekin, cloudkin, seedkin, wavekin, scalekin, and ashkin.]",
+    "icon": "/icons/items/243126.png",
+    "id": 194,
+    "name": "Herbal Tea Simular",
+    "sellPrice": 0,
+    "shortDescription": "",
+    "slug": "herbal-tea-simular",
+    "type": "Feed"
+  },
+  {
+    "description": "Physical Vulnerability -30%\nDamage Dealt +10%\n30% chance to recover TP upon completing a combo with a familiar instinctual skill.\n[Suitable for soulkin.]",
+    "icon": "/icons/items/243127.png",
+    "id": 195,
+    "name": "Honeycomb Simular",
+    "sellPrice": 0,
+    "shortDescription": "",
+    "slug": "honeycomb-simular",
+    "type": "Feed"
+  },
+  {
+    "description": "Magic Damage Dealt +30%\nAetheric Burst Potency +15%\n[Suitable for beastkin, vilekin, cloudkin, seedkin, wavekin, scalekin, and ashkin.]",
+    "icon": "/icons/items/243128.png",
+    "id": 196,
+    "name": "Orange Juice Simular",
+    "sellPrice": 0,
+    "shortDescription": "",
+    "slug": "orange-juice-simular",
+    "type": "Feed"
+  },
+  {
+    "description": "Physical Damage Dealt +30%\nAetheric Burst Potency +50%\nMaximum HP -80%\n[Suitable for beastkin, vilekin, cloudkin, seedkin, wavekin, scalekin, and ashkin.]",
+    "icon": "/icons/items/243129.png",
+    "id": 197,
+    "name": "Grape Juice Simular",
+    "sellPrice": 0,
+    "shortDescription": "",
+    "slug": "grape-juice-simular",
+    "type": "Feed"
+  },
+  {
+    "description": "Slow +200%\nPhysical Damage Dealt +50%\n[Suitable for beastkin, vilekin, cloudkin, seedkin, wavekin, scalekin, and ashkin.]",
+    "icon": "/icons/items/243130.png",
+    "id": 198,
+    "name": "Skewer Simular",
+    "sellPrice": 0,
+    "shortDescription": "",
+    "slug": "skewer-simular",
+    "type": "Feed"
+  },
+  {
+    "description": "Slow +200%\nMagic Damage Dealt +50%\n[Suitable for beastkin, vilekin, cloudkin, seedkin, wavekin, scalekin, and ashkin.]",
+    "icon": "/icons/items/243131.png",
+    "id": 199,
+    "name": "Pineapple Juice Simular",
+    "sellPrice": 0,
+    "shortDescription": "",
+    "slug": "pineapple-juice-simular",
+    "type": "Feed"
+  },
+  {
+    "description": "Increases Familiar TP Gauge by 100 upon commencing battle or when summoned by a beastmaster during combat.\n[Suitable for cloudkin.]",
+    "icon": "/icons/items/243132.png",
+    "id": 200,
+    "name": "Oyster Simular",
+    "sellPrice": 0,
+    "shortDescription": "",
+    "slug": "oyster-simular",
+    "type": "Feed"
+  },
+  {
+    "description": "Deals unaspected damage with a potency of 350 each time your familiar suffers magic damage.\nCounter damage is affected by magic damage increase effects of other feed and crucible items, and your familiar's intelligence.\n[Suitable for seedkin and wavekin.]",
+    "icon": "/icons/items/243133.png",
+    "id": 201,
+    "name": "Blue Cheese Simular",
+    "sellPrice": 0,
+    "shortDescription": "",
+    "slug": "blue-cheese-simular",
+    "type": "Feed"
+  },
+  {
+    "description": "Maximum HP +30%\nHaste +15%\nAdditional Effect: Restores 18% of HP upon consumption\n30% chance to recover TP upon completing a combo with a familiar instinctual skill.\n[Suitable for vilekin.]",
+    "icon": "/icons/items/243134.png",
+    "id": 202,
+    "name": "Cottage Cheese Simular",
+    "sellPrice": 0,
+    "shortDescription": "",
+    "slug": "cottage-cheese-simular",
+    "type": "Feed"
+  },
+  {
+    "description": "Maximum HP +30%\nAdditional Effect: Restores 18% of HP upon consumption\nAdditional Effect: Completely restores HP at campsites\n[Suitable for beastkin, vilekin, cloudkin, seedkin, wavekin, and scalekin.]",
+    "icon": "/icons/items/243135.png",
+    "id": 203,
+    "name": "Lassi Simular",
+    "sellPrice": 0,
+    "shortDescription": "",
+    "slug": "lassi-simular",
+    "type": "Feed"
+  }
+]

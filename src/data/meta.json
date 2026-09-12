@@ -1,0 +1,23 @@
+{
+  "counts": {
+    "actions": 20,
+    "beasts": 50,
+    "crucibleBattles": 45,
+    "items": 203,
+    "quests": 13,
+    "traits": 14
+  },
+  "fetchedAt": "2026-09-12T09:21:14.584Z",
+  "job": {
+    "abbreviation": "BST",
+    "id": 43,
+    "name": "Beastmaster",
+    "role": 2
+  },
+  "patch": "7.56",
+  "xivapi": {
+    "base": "https://v2.xivapi.com/api",
+    "schema": "exdschema@2:rev:e773c41a90aed788cf4c1c48469fa85618ef01fb",
+    "version": "f5af21155b99a524"
+  }
+}

@@ -1,0 +1,158 @@
+[
+  {
+    "expansion": "Dawntrail",
+    "id": 71027,
+    "issuer": "J'yhuh Tia",
+    "key": "JobXbm101_05491",
+    "level": 1,
+    "name": "The Wilds Call",
+    "previous": [
+      "Strangers in the Wood"
+    ],
+    "zone": "Central Shroud"
+  },
+  {
+    "expansion": "Dawntrail",
+    "id": 71028,
+    "issuer": "J'yhuh Tia",
+    "key": "JobXbm111_05492",
+    "level": 8,
+    "name": "Hearts Aligned",
+    "previous": [
+      "The Wilds Call"
+    ],
+    "zone": "Central Shroud"
+  },
+  {
+    "expansion": "Dawntrail",
+    "id": 71029,
+    "issuer": "J'yhuh Tia",
+    "key": "JobXbm121_05493",
+    "level": 18,
+    "name": "Master of the Lhu",
+    "previous": [
+      "Hearts Aligned"
+    ],
+    "zone": "Central Shroud"
+  },
+  {
+    "expansion": "Dawntrail",
+    "id": 71030,
+    "issuer": "J'yhuh Tia",
+    "key": "JobXbm131_05494",
+    "level": 30,
+    "name": "Into the Crucible",
+    "previous": [
+      "Master of the Lhu"
+    ],
+    "zone": "Central Shroud"
+  },
+  {
+    "expansion": "Dawntrail",
+    "id": 71031,
+    "issuer": "J'yhuh Tia",
+    "key": "JobXbm132_05495",
+    "level": 30,
+    "name": "Wit as Weaponry",
+    "previous": [
+      "Into the Crucible"
+    ],
+    "zone": "Central Shroud"
+  },
+  {
+    "expansion": "Dawntrail",
+    "id": 71032,
+    "issuer": "J'yhuh Tia",
+    "key": "JobXbm141_05496",
+    "level": 40,
+    "name": "Gobsmacked",
+    "previous": [
+      "Wit as Weaponry"
+    ],
+    "zone": "Central Shroud"
+  },
+  {
+    "expansion": "Dawntrail",
+    "id": 71033,
+    "issuer": "Lauda",
+    "key": "JobXbm142_05497",
+    "level": 40,
+    "name": "Sin of Blood",
+    "previous": [
+      "Gobsmacked"
+    ],
+    "zone": "Central Shroud"
+  },
+  {
+    "expansion": "Dawntrail",
+    "id": 71026,
+    "issuer": "excited adventurer",
+    "key": "JobXbm001_05490",
+    "level": 50,
+    "name": "Strangers in the Wood",
+    "previous": [
+      "The Ultimate Weapon"
+    ],
+    "zone": "New Gridania"
+  },
+  {
+    "expansion": "Dawntrail",
+    "id": 71034,
+    "issuer": "J'yhuh Tia",
+    "key": "JobXbm151_05498",
+    "level": 50,
+    "name": "A Beastmaster's Path",
+    "previous": [
+      "Sin of Blood"
+    ],
+    "zone": "Central Shroud"
+  },
+  {
+    "expansion": "Dawntrail",
+    "id": 71035,
+    "issuer": "Lauda",
+    "key": "JobXbm152_05499",
+    "level": 50,
+    "name": "Bonds Unbroken",
+    "previous": [
+      "A Beastmaster's Path"
+    ],
+    "zone": "Central Shroud"
+  },
+  {
+    "expansion": "Dawntrail",
+    "id": 71036,
+    "issuer": "Sylmond",
+    "key": "JobXbm191_05500",
+    "level": 50,
+    "name": "Free for All",
+    "previous": [
+      "Bonds Unbroken"
+    ],
+    "zone": "Central Shroud"
+  },
+  {
+    "expansion": "Dawntrail",
+    "id": 71037,
+    "issuer": "Sylmond",
+    "key": "JobXbm192_05501",
+    "level": 50,
+    "name": "Mastery Rematch",
+    "previous": [
+      "Free for All"
+    ],
+    "zone": "Central Shroud"
+  },
+  {
+    "expansion": "Dawntrail",
+    "id": 71045,
+    "issuer": "Sylmond",
+    "key": "JobXbm193_05509",
+    "level": 50,
+    "name": "Blazing Trails",
+    "previous": [
+      "Mastery Rematch"
+    ],
+    "zone": "Central Shroud"
+  }
+]

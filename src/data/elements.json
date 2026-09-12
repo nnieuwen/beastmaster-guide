@@ -1,0 +1,38 @@
+[
+  {
+    "id": 1,
+    "name": "Fire"
+  },
+  {
+    "id": 2,
+    "name": "Wind"
+  },
+  {
+    "id": 3,
+    "name": "Earth"
+  },
+  {
+    "id": 4,
+    "name": "Lightning"
+  },
+  {
+    "id": 5,
+    "name": "Ice"
+  },
+  {
+    "id": 6,
+    "name": "Water"
+  },
+  {
+    "id": 7,
+    "name": "Blunt"
+  },
+  {
+    "id": 8,
+    "name": "Piercing"
+  },
+  {
+    "id": 9,
+    "name": "Slashing"
+  }
+]

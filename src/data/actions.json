@@ -1,0 +1,542 @@
+[
+  {
+    "cast": 0,
+    "category": "Weaponskill",
+    "combo": null,
+    "cooldownGroup": 58,
+    "cost": {
+      "type": 0,
+      "value": 0
+    },
+    "description": "Delivers an attack with a potency of 160.",
+    "effectRange": 0,
+    "icon": "/icons/actions/3936.png",
+    "id": 44879,
+    "job": "BST",
+    "level": 1,
+    "maxCharges": 0,
+    "name": "Smash Axe",
+    "preservesCombo": false,
+    "range": -1,
+    "recast": 2.5,
+    "targets": {
+      "area": false,
+      "hostile": true,
+      "party": false,
+      "self": false
+    }
+  },
+  {
+    "cast": 0,
+    "category": "Ability",
+    "combo": null,
+    "cooldownGroup": 58,
+    "cost": {
+      "type": 0,
+      "value": 0
+    },
+    "description": "Delivers an attack with a potency of 100.\nTarget cannot be incapacitated by this attack.\nAdditional Effect: Marks target with Interest Captured\nDuration: 120s\nInterest Captured Effect: Forges a pact with the targeted beast should you succeed in their subdual\nSuccess is determined upon defeating targets under the effect of Interest Captured.\nAn entry in the Master's Bestiary will be added upon successful subdual, allowing the beast to be summoned as a familiar.\nSuccess rate is inversely proportional to the target's HP at the time of execution. Furthermore, success rate increases if the target is a lower level than you.\nIneffective against targets whose level is higher than your own.",
+    "effectRange": 0,
+    "icon": "/icons/actions/3939.png",
+    "id": 44880,
+    "job": "BST",
+    "level": 1,
+    "maxCharges": 0,
+    "name": "Capture",
+    "preservesCombo": true,
+    "range": 10,
+    "recast": 2.5,
+    "targets": {
+      "area": false,
+      "hostile": true,
+      "party": false,
+      "self": false
+    }
+  },
+  {
+    "cast": 1,
+    "category": "Ability",
+    "combo": null,
+    "cooldownGroup": 4,
+    "cost": {
+      "type": 0,
+      "value": 0
+    },
+    "description": "Summons your familiar to fight at your side.\nDuring combat, recast timer cooldown will begin once your familiar has retreated. Retreat outside of combat will not affect recast timer.\nAdditional Effect: Grants One with Nature\nAdditional Effect: Resets Tempered Release recast timer\nAdditional Effect: Resets Borrow recast timer",
+    "effectRange": 0,
+    "icon": "/icons/actions/3941.png",
+    "id": 44881,
+    "job": "BST",
+    "level": 1,
+    "maxCharges": 0,
+    "name": "First Battlehorn",
+    "preservesCombo": true,
+    "range": 0,
+    "recast": 2,
+    "targets": {
+      "area": false,
+      "hostile": false,
+      "party": false,
+      "self": true
+    }
+  },
+  {
+    "cast": 0,
+    "category": "Ability",
+    "combo": null,
+    "cooldownGroup": 18,
+    "cost": {
+      "type": 0,
+      "value": 0
+    },
+    "description": "Investigates a targeted beast's probability of Capture.\nCan be executed while mounted, but only when grounded.",
+    "effectRange": 0,
+    "icon": "/icons/actions/3940.png",
+    "id": 44882,
+    "job": "BST",
+    "level": 1,
+    "maxCharges": 0,
+    "name": "Gauge",
+    "preservesCombo": true,
+    "range": 30,
+    "recast": 3,
+    "targets": {
+      "area": false,
+      "hostile": true,
+      "party": false,
+      "self": false
+    }
+  },
+  {
+    "cast": 0,
+    "category": "Weaponskill",
+    "combo": "Smash Axe",
+    "cooldownGroup": 58,
+    "cost": {
+      "type": 0,
+      "value": 0
+    },
+    "description": "Delivers an attack with a potency of 260.\nCombo Action: Smash Axe\nCombo Potency: 500\nCombo Bonus: Increases TP Gauge by 13",
+    "effectRange": 0,
+    "icon": "/icons/actions/3937.png",
+    "id": 44883,
+    "job": "BST",
+    "level": 2,
+    "maxCharges": 0,
+    "name": "Axeblade Bite",
+    "preservesCombo": false,
+    "range": -1,
+    "recast": 2.5,
+    "targets": {
+      "area": false,
+      "hostile": true,
+      "party": false,
+      "self": false
+    }
+  },
+  {
+    "cast": 0,
+    "category": "Weaponskill",
+    "combo": null,
+    "cooldownGroup": 16,
+    "cost": {
+      "type": 111,
+      "value": 100
+    },
+    "description": "Delivers an attack with a potency of 400.\nPotency increases up to 1,000 as TP nears maximum. All TP will be expended upon execution.\nMinimum TP Gauge Cost: 100\nInstinctual Affinity: Rampant\nAdditional Effect: Grants Rampant Heart\nDuration: 7s\nInstinctual skills may be executed sequentially to deal additional damage, which is determined by the skill that completes the combo.\nExecuting a Rampant skill while under the effect of Volant Heart will complete a Sunstrider intentional combo, dealing greater additional damage.\nInstinctual skills do not share a recast timer with any other actions.",
+    "effectRange": 0,
+    "icon": "/icons/actions/3901.png",
+    "id": 44884,
+    "job": "BST",
+    "level": 4,
+    "maxCharges": 0,
+    "name": "Avalanche Axe",
+    "preservesCombo": true,
+    "range": -1,
+    "recast": 5,
+    "targets": {
+      "area": false,
+      "hostile": true,
+      "party": false,
+      "self": false
+    }
+  },
+  {
+    "cast": 0,
+    "category": "Ability",
+    "combo": null,
+    "cooldownGroup": 3,
+    "cost": {
+      "type": 0,
+      "value": 0
+    },
+    "description": "Orders your familiar to execute Aetheric Burst.\nAetheric Burst Effect: Deals unaspected damage to target and all enemies nearby it with a potency of 1,000\nLingering Vantage Potency: 1,500\nFamiliar retreats from combat upon execution.\nAdditional Effect: Increases Familiar TP Gauge by 24\nCan only be executed while in combat.",
+    "effectRange": 8,
+    "icon": "/icons/actions/3924.png",
+    "id": 44891,
+    "job": "BST",
+    "level": 6,
+    "maxCharges": 0,
+    "name": "Parting Blow",
+    "preservesCombo": true,
+    "range": 25,
+    "recast": 10,
+    "targets": {
+      "area": false,
+      "hostile": true,
+      "party": false,
+      "self": false
+    }
+  },
+  {
+    "cast": 0,
+    "category": "Weaponskill",
+    "combo": null,
+    "cooldownGroup": 16,
+    "cost": {
+      "type": 111,
+      "value": 100
+    },
+    "description": "Delivers an attack with a potency of 400.\nPotency increases up to 1,000 as TP nears maximum. All TP will be expended upon execution.\nMinimum TP Gauge Cost: 100\nInstinctual Affinity: Durant\nAdditional Effect: Grants Durant Heart\nDuration: 7s\nInstinctual skills may be executed sequentially to deal additional damage, which is determined by the skill that completes the combo.\nExecuting a Durant skill while under the effect of Rampant Heart will complete a Moonstalker intentional combo, dealing greater additional damage.\nInstinctual skills do not share a recast timer with any other actions.",
+    "effectRange": 0,
+    "icon": "/icons/actions/3902.png",
+    "id": 44887,
+    "job": "BST",
+    "level": 8,
+    "maxCharges": 0,
+    "name": "Mistral Axe",
+    "preservesCombo": true,
+    "range": -1,
+    "recast": 5,
+    "targets": {
+      "area": false,
+      "hostile": true,
+      "party": false,
+      "self": false
+    }
+  },
+  {
+    "cast": 0,
+    "category": "Ability",
+    "combo": null,
+    "cooldownGroup": 19,
+    "cost": {
+      "type": 112,
+      "value": 100
+    },
+    "description": "Orders your familiar to execute an instinctual skill.\nMinimum TP Gauge Cost: 100\nAdditional Effect: Grants Volant Heart, Rampant Heart, Durant Heart, or Eldritch Heart\nDuration: 7s\nEffects granted by this action may be paired with beastmaster instinctual skills to create combos.",
+    "effectRange": 0,
+    "icon": "/icons/actions/3905.png",
+    "id": 47093,
+    "job": "BST",
+    "level": 8,
+    "maxCharges": 0,
+    "name": "Trick",
+    "preservesCombo": true,
+    "range": 30,
+    "recast": 3,
+    "targets": {
+      "area": false,
+      "hostile": true,
+      "party": false,
+      "self": false
+    }
+  },
+  {
+    "cast": 1,
+    "category": "Ability",
+    "combo": null,
+    "cooldownGroup": 5,
+    "cost": {
+      "type": 0,
+      "value": 0
+    },
+    "description": "Summons your familiar to fight at your side.\nDuring combat, recast timer cooldown will begin once your familiar has retreated. Retreat outside of combat will not affect recast timer.\nAdditional Effect: Grants One with Nature\nAdditional Effect: Resets Tempered Release recast timer\nAdditional Effect: Resets Borrow recast timer",
+    "effectRange": 0,
+    "icon": "/icons/actions/3942.png",
+    "id": 44892,
+    "job": "BST",
+    "level": 10,
+    "maxCharges": 0,
+    "name": "Second Battlehorn",
+    "preservesCombo": true,
+    "range": 0,
+    "recast": 2,
+    "targets": {
+      "area": false,
+      "hostile": false,
+      "party": false,
+      "self": true
+    }
+  },
+  {
+    "cast": 0,
+    "category": "Weaponskill",
+    "combo": "Axeblade Bite",
+    "cooldownGroup": 58,
+    "cost": {
+      "type": 0,
+      "value": 0
+    },
+    "description": "Delivers an attack with a potency of 280.\nCombo Action: Axeblade Bite\nCombo Potency: 600\nCombo Bonus: Increases TP Gauge by 15",
+    "effectRange": 0,
+    "icon": "/icons/actions/3938.png",
+    "id": 44885,
+    "job": "BST",
+    "level": 12,
+    "maxCharges": 0,
+    "name": "Shieldsplitter",
+    "preservesCombo": false,
+    "range": -1,
+    "recast": 2.5,
+    "targets": {
+      "area": false,
+      "hostile": true,
+      "party": false,
+      "self": false
+    }
+  },
+  {
+    "cast": 0,
+    "category": "Weaponskill",
+    "combo": null,
+    "cooldownGroup": 16,
+    "cost": {
+      "type": 111,
+      "value": 100
+    },
+    "description": "Delivers an attack with a potency of 400.\nPotency increases up to 1,000 as TP nears maximum. All TP will be expended upon execution.\nMinimum TP Gauge Cost: 100\nInstinctual Affinity: Eldritch\nAdditional Effect: Grants Eldritch Heart\nDuration: 7s\nInstinctual skills may be executed sequentially to deal additional damage, which is determined by the skill that completes the combo.\nExecuting an Eldritch skill while under the effect of Durant Heart will complete a Sunstrider intentional combo, dealing greater additional damage.\nInstinctual skills do not share a recast timer with any other actions.",
+    "effectRange": 0,
+    "icon": "/icons/actions/3903.png",
+    "id": 44888,
+    "job": "BST",
+    "level": 14,
+    "maxCharges": 0,
+    "name": "Spinning Axe",
+    "preservesCombo": true,
+    "range": -1,
+    "recast": 5,
+    "targets": {
+      "area": false,
+      "hostile": true,
+      "party": false,
+      "self": false
+    }
+  },
+  {
+    "cast": 0,
+    "category": "Weaponskill",
+    "combo": null,
+    "cooldownGroup": 16,
+    "cost": {
+      "type": 111,
+      "value": 100
+    },
+    "description": "Delivers an attack with a potency of 400.\nPotency increases up to 1,000 as TP nears maximum. All TP will be expended upon execution.\nMinimum TP Gauge Cost: 100\nInstinctual Affinity: Volant\nAdditional Effect: Grants Volant Heart\nDuration: 7s\nInstinctual skills may be executed sequentially to deal additional damage, which is determined by the skill that completes the combo.\nExecuting a Volant skill while under the effect of Eldritch Heart will complete a Moonstalker intentional combo, dealing greater additional damage.\nInstinctual skills do not share a recast timer with any other actions.",
+    "effectRange": 0,
+    "icon": "/icons/actions/3904.png",
+    "id": 44889,
+    "job": "BST",
+    "level": 16,
+    "maxCharges": 0,
+    "name": "Gale Axe",
+    "preservesCombo": true,
+    "range": -1,
+    "recast": 5,
+    "targets": {
+      "area": false,
+      "hostile": true,
+      "party": false,
+      "self": false
+    }
+  },
+  {
+    "cast": 0,
+    "category": "Ability",
+    "combo": null,
+    "cooldownGroup": 7,
+    "cost": {
+      "type": 10,
+      "value": 4601
+    },
+    "description": "Orders your familiar to execute a controlled ability.\nAdditional Effect: Grants Lingering Vantage\nDuration: 60s\nCan only be executed while in combat and under the effect of One with Nature.",
+    "effectRange": 0,
+    "icon": "/icons/actions/3923.png",
+    "id": 44890,
+    "job": "BST",
+    "level": 18,
+    "maxCharges": 0,
+    "name": "Tempered Release",
+    "preservesCombo": true,
+    "range": 0,
+    "recast": 30,
+    "targets": {
+      "area": false,
+      "hostile": false,
+      "party": false,
+      "self": true
+    }
+  },
+  {
+    "cast": 1,
+    "category": "Ability",
+    "combo": null,
+    "cooldownGroup": 6,
+    "cost": {
+      "type": 0,
+      "value": 0
+    },
+    "description": "Summons your familiar to fight at your side.\nDuring combat, recast timer cooldown will begin once your familiar has retreated. Retreat outside of combat will not affect recast timer.\nAdditional Effect: Grants One with Nature\nAdditional Effect: Resets Tempered Release recast timer\nAdditional Effect: Resets Borrow recast timer",
+    "effectRange": 0,
+    "icon": "/icons/actions/3943.png",
+    "id": 44894,
+    "job": "BST",
+    "level": 20,
+    "maxCharges": 0,
+    "name": "Third Battlehorn",
+    "preservesCombo": true,
+    "range": 0,
+    "recast": 2,
+    "targets": {
+      "area": false,
+      "hostile": false,
+      "party": false,
+      "self": true
+    }
+  },
+  {
+    "cast": 0,
+    "category": "Ability",
+    "combo": null,
+    "cooldownGroup": 58,
+    "cost": {
+      "type": 0,
+      "value": 0
+    },
+    "description": "Upon using Borrow, changes to an action dependent on Kinship.\nBeast Kinship Effect: Action reduces physical vulnerability\nVile Kinship Effect: Action increases block rate\nCloud Kinship Effect: Action bolsters movement\nSeed Kinship Effect: Action inflicts poison and weakening effects\nWave Kinship Effect: Action deals ranged magic damage to a single target\nScale Kinship Effect: Action absorbs magic damage\nSoul Kinship Effect: Action delivers an attack that interrupts a single target\nAsh Kinship Effect: Action removes a detrimental effect",
+    "effectRange": 0,
+    "icon": "/icons/actions/3944.png",
+    "id": 44886,
+    "job": "BST",
+    "level": 22,
+    "maxCharges": 0,
+    "name": "Beast Mode",
+    "preservesCombo": false,
+    "range": 0,
+    "recast": 2.5,
+    "targets": {
+      "area": false,
+      "hostile": false,
+      "party": false,
+      "self": true
+    }
+  },
+  {
+    "cast": 0,
+    "category": "Ability",
+    "combo": null,
+    "cooldownGroup": 8,
+    "cost": {
+      "type": 10,
+      "value": 4601
+    },
+    "description": "Borrows aether from your summoned familiar to gain Kinship according to its classification.\nBeastkin Familiar Effect: Grants Beast Kinship\nVilekin Familiar Effect: Grants Vile Kinship\nCloudkin Familiar Effect: Grants Cloud Kinship\nSeedkin Familiar Effect: Grants Seed Kinship\nWavekin Familiar Effect: Grants Wave Kinship\nScalekin Familiar Effect: Grants Scale Kinship\nSoulkin Familiar Effect: Grants Soul Kinship\nAshkin Familiar Effect: Grants Ash Kinship\nChanges Beast Mode into an action according to your familiar's classification.\nDuration: 90s\nExpiration timer is halted while your familiar is summoned.\nAdditional Effect: Grants Lingering Vantage\nDuration: 60s\nCan only be executed while under the effect of One with Nature.",
+    "effectRange": 0,
+    "icon": "/icons/actions/3914.png",
+    "id": 44895,
+    "job": "BST",
+    "level": 22,
+    "maxCharges": 0,
+    "name": "Borrow",
+    "preservesCombo": true,
+    "range": 0,
+    "recast": 30,
+    "targets": {
+      "area": false,
+      "hostile": false,
+      "party": false,
+      "self": true
+    }
+  },
+  {
+    "cast": 0,
+    "category": "Ability",
+    "combo": null,
+    "cooldownGroup": 20,
+    "cost": {
+      "type": 0,
+      "value": 0
+    },
+    "description": "Rushes forward and delivers an attack to target and all enemies nearby it with a potency of 300\nMaximum Charges: 3\nCannot be executed while bound.",
+    "effectRange": 6,
+    "icon": "/icons/actions/3925.png",
+    "id": 44893,
+    "job": "BST",
+    "level": 24,
+    "maxCharges": 1,
+    "name": "Shield Charge",
+    "preservesCombo": true,
+    "range": 20,
+    "recast": 60,
+    "targets": {
+      "area": false,
+      "hostile": true,
+      "party": false,
+      "self": false
+    }
+  },
+  {
+    "cast": 0,
+    "category": "Ability",
+    "combo": null,
+    "cooldownGroup": 15,
+    "cost": {
+      "type": 0,
+      "value": 0
+    },
+    "description": "Spends all stacks of Mastered Instinct to increase TP Gauge.\nStandard TP Gauge Increase: 40\nEach stack of Mastered Instinct increases TP Gauge by 70.\nCan only be executed while in combat.",
+    "effectRange": 0,
+    "icon": "/icons/actions/3935.png",
+    "id": 44905,
+    "job": "BST",
+    "level": 28,
+    "maxCharges": 0,
+    "name": "Rally",
+    "preservesCombo": true,
+    "range": 0,
+    "recast": 120,
+    "targets": {
+      "area": false,
+      "hostile": false,
+      "party": false,
+      "self": true
+    }
+  },
+  {
+    "cast": 0,
+    "category": "Ability",
+    "combo": null,
+    "cooldownGroup": 14,
+    "cost": {
+      "type": 0,
+      "value": 0
+    },
+    "description": "Spends all stacks of Natural Instinct to increase Familiar TP Gauge.\nStandard Familiar TP Gauge Increase: 30\nEach stack of Natural Instinct increases Familiar TP Gauge by 70.\nCan only be executed while in combat.",
+    "effectRange": 0,
+    "icon": "/icons/actions/3934.png",
+    "id": 44904,
+    "job": "BST",
+    "level": 40,
+    "maxCharges": 0,
+    "name": "Rallying Cheer",
+    "preservesCombo": true,
+    "range": 0,
+    "recast": 120,
+    "targets": {
+      "area": false,
+      "hostile": false,
+      "party": false,
+      "self": true
+    }
+  }
+]

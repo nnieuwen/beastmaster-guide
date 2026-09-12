@@ -1,0 +1,100 @@
+[
+  {
+    "description": "Allows for TP Gauge accumulation upon landing certain weaponskill combos.",
+    "icon": "/icons/traits/6601.png",
+    "id": 690,
+    "level": 4,
+    "name": "Wild Heart"
+  },
+  {
+    "description": "Allows for Familiar TP Gauge accumulation upon the landing of auto-attacks or Aetheric Burst.",
+    "icon": "/icons/traits/6602.png",
+    "id": 691,
+    "level": 8,
+    "name": "Wild Heart II"
+  },
+  {
+    "description": "Grants the effect of One with Nature upon summoning a familiar.",
+    "icon": "/icons/traits/6603.png",
+    "id": 692,
+    "level": 18,
+    "name": "Battlehorn Mastery"
+  },
+  {
+    "description": "Grants 1 stack of Mastered Instinct upon completing a combo with a beastmaster instinctual skill.",
+    "icon": "/icons/traits/6604.png",
+    "id": 694,
+    "level": 28,
+    "name": "Wild Heart III"
+  },
+  {
+    "description": "Resets the recast timer for Tempered Release upon summoning a familiar.",
+    "icon": "/icons/traits/6605.png",
+    "id": 754,
+    "level": 30,
+    "name": "Battlehorn Mastery II"
+  },
+  {
+    "description": "Resets the recast timer for Borrow upon summoning a familiar.",
+    "icon": "/icons/traits/6606.png",
+    "id": 755,
+    "level": 34,
+    "name": "Battlehorn Mastery III"
+  },
+  {
+    "description": "Allows the accumulation of charges for consecutive uses of Shield Charge.\nMaximum Charges: 3",
+    "icon": "/icons/traits/6607.png",
+    "id": 751,
+    "level": 36,
+    "name": "Enhanced Shield Charge"
+  },
+  {
+    "description": "Increases the potency of Smash Axe to 160 and Shield Charge to 300.",
+    "icon": "/icons/traits/6806.png",
+    "id": 752,
+    "level": 38,
+    "name": "Beastmastery"
+  },
+  {
+    "description": "Grants 1 stack of Natural Instinct upon completing a combo with a familiar instinctual skill.",
+    "icon": "/icons/traits/6608.png",
+    "id": 693,
+    "level": 40,
+    "name": "Wild Heart IV"
+  },
+  {
+    "description": "Reduces Rally recast time to 90 seconds.",
+    "icon": "/icons/traits/6609.png",
+    "id": 756,
+    "level": 42,
+    "name": "Enhanced Rally"
+  },
+  {
+    "description": "Grants Lingering Vantage upon using Tempered Release.\nDuration: 60s",
+    "icon": "/icons/traits/6610.png",
+    "id": 749,
+    "level": 44,
+    "name": "Tempered Release Mastery"
+  },
+  {
+    "description": "Grants Lingering Vantage upon using Borrow.\nDuration: 60s",
+    "icon": "/icons/traits/6611.png",
+    "id": 750,
+    "level": 46,
+    "name": "Enhanced Borrow"
+  },
+  {
+    "description": "Reduces Rallying Cheer recast time to 90 seconds.",
+    "icon": "/icons/traits/6612.png",
+    "id": 757,
+    "level": 48,
+    "name": "Enhanced Rallying Cheer"
+  },
+  {
+    "description": "Upgrades Avalanche Axe to Brutal Rage, Mistral Axe to Hawkish Talons, Spinning Axe to Risen Fall, and Gale Axe to Calamity upon accumulating 250 TP.",
+    "icon": "/icons/traits/6613.png",
+    "id": 758,
+    "level": 50,
+    "name": "Instinctual Mastery"
+  }
+]
