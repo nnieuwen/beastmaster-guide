@@ -48,7 +48,7 @@ Practical notes:
 | `Location`, `LocationKey` | `source`, `sourceType` | mapped | key 0 starter / 1 field zone (`PlaceName`) / 2 duty (`ContentFinderCondition`) |
 | `Unknown0` | `lore` | certain | bestiary flavour text |
 | `Unknown1` | `autoAttack.description` | certain | "Delivers a slashing physical attack." |
-| `Unknown2` | `trick.description` | certain | what Trick does for this beast |
+| `Unknown2` | `controlledAbility.description` | certain | summary of the familiar's second skill — the "controlled ability" Tempered Release fires. (The first skill, fired by Trick, is the instinctual one; its tooltip carries `Instinctual Affinity: …`.) |
 | `Unknown3` | `iconId` | certain | 242001–242050 |
 | `Unknown7` | `kin` | high | 1–8 in the order Borrow lists classifications: Beastkin, Vilekin, Cloudkin, Seedkin, Wavekin, Scalekin, Soulkin, Ashkin. Checked against all 50. |
 | `Unknown8` | `raw.u8` | **unknown** | 5–50 with duplicates; not level, not sort order |

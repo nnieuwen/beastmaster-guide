@@ -1,0 +1,8 @@
+---
+interface Props {
+  kin: string | null;
+}
+const { kin } = Astro.props;
+---
+
+{kin && <span class="badge kin" data-kin={kin}>{kin}</span>}

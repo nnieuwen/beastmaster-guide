@@ -1,0 +1,214 @@
+---
+import Base from '../../layouts/Base.astro';
+import KinBadge from '../../components/KinBadge.astro';
+import { beasts, KINS, AFFINITIES, roleTags, element, beastLevel, tiers, instinctOf, controlledOf, affinityColor } from '../../lib/data';
+
+const rows = beasts.map((b) => {
+  const instinct = instinctOf(b);
+  const controlled = controlledOf(b);
+  const tags = [...new Set([...roleTags(b.controlledAbility.description), ...roleTags(instinct.ability?.description ?? '')])];
+  const lvl = beastLevel(b);
+  return {
+    b,
+    instinct,
+    controlled,
+    tags,
+    instinctElement: element(instinct.ability?.description ?? ''),
+    controlledElement: element(b.controlledAbility.description),
+    level: lvl,
+    tier: tiers.placements[b.slug] ?? null,
+    sourceName: b.source?.name ?? 'Starter',
+    search: [b.name, b.kin, b.source?.name, instinct.affinity, b.controlledAbility.description, ...b.abilities.map((a) => a.name)].join(' ').toLowerCase(),
+  };
+});
+const sources = [...new Set(rows.map((r) => r.sourceName))].sort();
+const allTags = ['Damage', 'Control', 'Debuff', 'Buff', 'Sustain', 'Sacrifice'];
+---
+
+<Base title="Bestiary" description="All 50 Beastmaster familiars: where to capture them, their kits, Tricks and classifications.">
+  <h1>Bestiary</h1>
+  <p class="lead">
+    All {beasts.length} familiars from the Patch 7.56 roster. Tick the ones you've captured — the list is saved in this browser only.
+  </p>
+
+  <div class="filters" data-filters>
+    <input type="search" placeholder="Search name, kit, zone…" data-f="q" aria-label="Search beasts" />
+    <select data-f="kin" aria-label="Classification">
+      <option value="">All classifications</option>
+      {KINS.map((k) => <option value={k}>{k}</option>)}
+    </select>
+    <select data-f="sourceType" aria-label="Source type">
+      <option value="">Field & duty</option>
+      <option value="field">Open world</option>
+      <option value="duty">Duty</option>
+      <option value="starter">Starter</option>
+    </select>
+    <select data-f="source" aria-label="Zone or duty">
+      <option value="">Any zone / duty</option>
+      {sources.map((s) => <option value={s}>{s}</option>)}
+    </select>
+    <select data-f="affinity" aria-label="Instinctual affinity">
+      <option value="">Any affinity</option>
+      {AFFINITIES.map((a) => <option value={a.name}>{a.name}</option>)}
+    </select>
+    <select data-f="tag" aria-label="Skill role">
+      <option value="">Any role</option>
+      {allTags.map((t) => <option value={t}>{t}</option>)}
+    </select>
+    <label><input type="checkbox" data-f="uncaught" /> Hide captured</label>
+    <span class="muted small" data-count></span>
+  </div>
+
+  <div class="table-wrap">
+    <table data-bestiary>
+      <thead>
+        <tr>
+          <th scope="col"><span class="visually-hidden">Captured</span>✓</th>
+          <th scope="col" data-sort="name" aria-sort="ascending">Beast</th>
+          <th scope="col" data-sort="kin">Kin</th>
+          <th scope="col" data-sort="source">Source</th>
+          <th scope="col" data-sort="level">Lv.</th>
+          <th scope="col" data-sort="affinity">Instinct (Trick)</th>
+          <th scope="col">Controlled ability (Tempered Release)</th>
+          <th scope="col" data-sort="tier">Tier</th>
+        </tr>
+      </thead>
+      <tbody>
+        {
+          rows.map((r) => (
+            <tr
+              data-slug={r.b.slug}
+              data-name={r.b.name}
+              data-kin={r.b.kin ?? ''}
+              data-source-type={r.b.sourceType}
+              data-source={r.sourceName}
+              data-level={r.level ?? ''}
+              data-tier={r.tier ?? ''}
+              data-affinity={r.instinct.affinity ?? ''}
+              data-tags={r.tags.join(' ')}
+              data-search={r.search}
+            >
+              <td>
+                <input type="checkbox" data-caught={r.b.slug} aria-label={`Captured ${r.b.name}`} />
+              </td>
+              <td>
+                <a class="row" href={`/bestiary/${r.b.slug}/`} style="color:inherit;font-weight:600">
+                  {r.b.icon ? <img class="icon sm" src={r.b.icon} alt="" width="28" height="28" loading="lazy" /> : <span class="icon sm" />}
+                  {r.b.name}
+                </a>
+              </td>
+              <td>
+                <KinBadge kin={r.b.kin} />
+              </td>
+              <td>
+                <span>{r.sourceName}</span>
+                {r.b.sourceType === 'duty' && <span class="tag" style="margin-left:0.35rem">duty</span>}
+              </td>
+              <td class="num">{r.level ?? <span class="muted">—</span>}</td>
+              <td>
+                <strong class="small">{r.instinct.ability?.name}</strong>
+                <div style="margin-top:0.2rem">
+                  {r.instinct.affinity && (
+                    <span class="tag" style={`color:${affinityColor(r.instinct.affinity)};border-color:${affinityColor(r.instinct.affinity)}`}>
+                      {r.instinct.affinity}
+                    </span>
+                  )}
+                  {r.instinctElement && r.instinctElement !== 'Unaspected' && <span class="tag">{r.instinctElement}</span>}
+                </div>
+              </td>
+              <td>
+                <strong class="small">{r.controlled?.name}</strong>
+                <div class="small muted">{r.b.controlledAbility.description}</div>
+                <div style="display:flex;gap:0.25rem;flex-wrap:wrap;margin-top:0.2rem">
+                  {r.tags.map((t) => (
+                    <span class="tag">{t}</span>
+                  ))}
+                </div>
+              </td>
+              <td>{r.tier ? <span class="badge accent">{r.tier}</span> : <span class="muted small">unrated</span>}</td>
+            </tr>
+          ))
+        }
+      </tbody>
+    </table>
+  </div>
+  <p class="muted small" style="margin-top:0.75rem">
+    Levels come from the curated location file (duty beasts default to the duty's level). Tiers are unrated until the guide's ratings are entered.
+  </p>
+</Base>
+
+<script>
+  const table = document.querySelector<HTMLTableElement>('[data-bestiary]')!;
+  const tbody = table.tBodies[0];
+  const rows = [...tbody.rows];
+  const filters = document.querySelector<HTMLElement>('[data-filters]')!;
+  const count = document.querySelector<HTMLElement>('[data-count]')!;
+  const KEY = 'bst-caught';
+
+  // Capture checklist, per browser.
+  let caught = new Set<string>();
+  try {
+    caught = new Set(JSON.parse(localStorage.getItem(KEY) || '[]'));
+  } catch {}
+  for (const box of table.querySelectorAll<HTMLInputElement>('[data-caught]')) {
+    box.checked = caught.has(box.dataset.caught!);
+    box.addEventListener('change', () => {
+      box.checked ? caught.add(box.dataset.caught!) : caught.delete(box.dataset.caught!);
+      try {
+        localStorage.setItem(KEY, JSON.stringify([...caught]));
+      } catch {}
+      apply();
+    });
+  }
+
+  const get = (name: string) => filters.querySelector<HTMLInputElement | HTMLSelectElement>(`[data-f="${name}"]`)!;
+  function apply() {
+    const q = get('q').value.trim().toLowerCase();
+    const kin = get('kin').value;
+    const st = get('sourceType').value;
+    const src = get('source').value;
+    const tag = get('tag').value;
+    const aff = get('affinity').value;
+    const hide = (get('uncaught') as HTMLInputElement).checked;
+    let shown = 0;
+    for (const r of rows) {
+      const d = r.dataset;
+      const ok =
+        (!q || d.search!.includes(q)) &&
+        (!kin || d.kin === kin) &&
+        (!st || d.sourceType === st) &&
+        (!src || d.source === src) &&
+        (!tag || d.tags!.split(' ').includes(tag)) &&
+        (!aff || d.affinity === aff) &&
+        (!hide || !caught.has(d.slug!));
+      r.hidden = !ok;
+      if (ok) shown++;
+    }
+    count.textContent = `${shown} of ${rows.length} · ${caught.size} captured`;
+  }
+  filters.addEventListener('input', apply);
+  apply();
+
+  // Column sorting.
+  for (const th of table.querySelectorAll<HTMLTableCellElement>('th[data-sort]')) {
+    th.addEventListener('click', () => {
+      const key = th.dataset.sort!;
+      const asc = th.getAttribute('aria-sort') !== 'ascending';
+      for (const other of table.querySelectorAll('th[data-sort]')) other.removeAttribute('aria-sort');
+      th.setAttribute('aria-sort', asc ? 'ascending' : 'descending');
+      const val = (r: HTMLTableRowElement) => r.dataset[key] ?? '';
+      const numeric = key === 'level';
+      rows.sort((a, b) => {
+        const av = val(a), bv = val(b);
+        if (numeric) {
+          const an = av === '' ? Infinity : Number(av), bn = bv === '' ? Infinity : Number(bv);
+          return asc ? an - bn : bn - an;
+        }
+        if (av === '' && bv !== '') return 1;
+        if (bv === '' && av !== '') return -1;
+        return asc ? av.localeCompare(bv) : bv.localeCompare(av);
+      });
+      rows.forEach((r) => tbody.appendChild(r));
+    });
+  }
+</script>

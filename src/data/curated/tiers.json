@@ -1,0 +1,11 @@
+{
+  "tiers": [
+    "S",
+    "A",
+    "B",
+    "C"
+  ],
+  "placements": {},
+  "updated": null,
+  "notes": "Ratings pending the FC guide. Add \"slug\": \"S\" entries under placements; anything missing renders as Unrated."
+}

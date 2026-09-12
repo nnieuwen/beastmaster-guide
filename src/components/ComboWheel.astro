@@ -1,0 +1,72 @@
+---
+// The Instinctual Combo wheel. Each instinctual axe grants a Heart of its own
+// affinity; using the *next* affinity's axe while that Heart is up completes
+// an intentional combo. The pairings alternate Sunstrider / Moonstalker.
+import { AFFINITIES, actionByName } from '../lib/data';
+
+const cx = 160, cy = 160, r = 108, gap = 10;
+const pt = (deg: number, rad = r) => {
+  const t = ((deg - 90) * Math.PI) / 180;
+  return [cx + rad * Math.cos(t), cy + rad * Math.sin(t)] as const;
+};
+const arc = (a1: number, a2: number) => {
+  const [x1, y1] = pt(a1);
+  const [x2, y2] = pt(a2);
+  return `M ${x1.toFixed(1)} ${y1.toFixed(1)} A ${r} ${r} 0 0 1 ${x2.toFixed(1)} ${y2.toFixed(1)}`;
+};
+const segments = AFFINITIES.map((a, i) => {
+  const start = i * 90 - 45 + gap / 2;
+  const end = i * 90 + 45 - gap / 2;
+  const [lx, ly] = pt(i * 90, r + 34);
+  const [ix, iy] = pt(i * 90, r);
+  const next = AFFINITIES[(i + 1) % 4];
+  const [mx, my] = pt(i * 90 + 45, r - 40);
+  return { ...a, d: arc(start, end), lx, ly, ix, iy, mx, my, next, icon: actionByName.get(a.action)?.icon };
+});
+---
+
+<figure class="wheel card" style="margin:0;display:grid;grid-template-columns:minmax(220px,320px) 1fr;gap:1rem 1.5rem;align-items:center">
+  <svg viewBox="-44 -14 408 348" width="100%" role="img" aria-label="Instinctual combo wheel: Volant to Rampant is Sunstrider, Rampant to Durant is Moonstalker, Durant to Eldritch is Sunstrider, Eldritch to Volant is Moonstalker.">
+    <defs>
+      <marker id="arrow" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="16" markerHeight="16" markerUnits="userSpaceOnUse" orient="auto">
+        <path d="M 0 0 L 10 5 L 0 10 z" fill="var(--muted)"></path>
+      </marker>
+    </defs>
+    {segments.map((s) => <path d={s.d} fill="none" stroke={s.color} stroke-width="14" stroke-linecap="round" marker-end="url(#arrow)"></path>)}
+    {segments.map((s) => (
+      <g>
+        <circle cx={s.ix} cy={s.iy} r="22" fill="var(--surface)" stroke={s.color} stroke-width="3"></circle>
+        {s.icon && <image href={s.icon} x={s.ix - 18} y={s.iy - 18} width="36" height="36" clip-path="inset(0 round 6px)"></image>}
+        <text x={s.lx} y={s.ly} text-anchor="middle" dominant-baseline="middle" font-size="13" font-weight="700" fill={s.color}>
+          {s.name}
+        </text>
+        <text x={s.mx} y={s.my} text-anchor="middle" dominant-baseline="middle" font-size="10" fill="var(--muted)">
+          {s.next.combo}
+        </text>
+      </g>
+    ))}
+    <text x={cx} y={cy - 6} text-anchor="middle" font-size="12" fill="var(--muted)">Heart → next axe</text>
+    <text x={cx} y={cy + 12} text-anchor="middle" font-size="12" fill="var(--muted)">= intentional combo</text>
+  </svg>
+  <figcaption class="small">
+    <ol style="padding-left:1.2rem;margin:0;display:grid;gap:0.35rem">
+      {segments.map((s) => (
+        <li>
+          <strong style={`color:${s.color}`}>{s.action}</strong> grants <em>{s.name} Heart</em> (7s). Follow it with{' '}
+          <strong style={`color:${s.next.color}`}>{s.next.action}</strong> to complete <strong>{s.next.combo}</strong>.
+        </li>
+      ))}
+    </ol>
+    <p class="muted" style="margin:0.75rem 0 0">
+      Instinctual skills don't share a recast with anything else, cost at least 100 TP, and scale from 400 to 1,000 potency as TP nears the 250 cap — they spend all of it.
+    </p>
+  </figcaption>
+</figure>
+
+<style>
+  @media (max-width: 640px) {
+    .wheel {
+      grid-template-columns: 1fr !important;
+    }
+  }
+</style>

@@ -1,0 +1,76 @@
+---
+import '../styles/global.css';
+import { meta } from '../lib/data';
+
+interface Props {
+  title: string;
+  description?: string;
+  wide?: boolean;
+}
+const { title, description = 'Community strategy guide for Beastmaster, the FFXIV limited job added in Patch 7.56.' } = Astro.props;
+
+const nav = [
+  ['/bestiary/', 'Bestiary'],
+  ['/actions/', 'Actions'],
+  ['/leveling/', 'Leveling'],
+  ['/crucible/', 'Crucible'],
+  ['/comps/', 'Comps'],
+  ['/gear/', 'Gear'],
+  ['/tier-list/', 'Tier list'],
+] as const;
+const path = Astro.url.pathname;
+const fetched = new Date(meta.fetchedAt).toISOString().slice(0, 10);
+---
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{title} · Beastmaster Guide</title>
+    <meta name="description" content={description} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <link rel="icon" href="/icons/beasts/242001.png" />
+    <script is:inline>
+      // Apply the saved theme before first paint so there is no flash.
+      try {
+        const t = localStorage.getItem('theme');
+        if (t === 'light' || t === 'dark') document.documentElement.dataset.theme = t;
+      } catch {}
+    </script>
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container">
+        <a class="brand" href="/"><img src="/icons/beasts/242001.png" alt="" width="28" height="28" /> Beastmaster Guide</a>
+        <nav class="nav" aria-label="Sections">
+          {nav.map(([href, label]) => <a href={href} aria-current={path.startsWith(href) ? 'page' : undefined}>{label}</a>)}
+        </nav>
+        <button class="theme-toggle" type="button" data-theme-toggle aria-label="Toggle light or dark theme">Theme</button>
+      </div>
+    </header>
+    <main class="container">
+      <slot />
+    </main>
+    <footer class="site-footer">
+      <div class="container">
+        <span>Game data: XIVAPI v2, Patch {meta.patch}, fetched {fetched}.</span>
+        <span>FINAL FANTASY XIV © SQUARE ENIX CO., LTD. Fan-made; not affiliated with Square Enix.</span>
+        <span><a href="https://github.com/">Source</a></span>
+      </div>
+    </footer>
+    <script>
+      const btn = document.querySelector('[data-theme-toggle]');
+      btn?.addEventListener('click', () => {
+        const root = document.documentElement;
+        const systemDark = matchMedia('(prefers-color-scheme: dark)').matches;
+        const current = root.dataset.theme || (systemDark ? 'dark' : 'light');
+        const next = current === 'dark' ? 'light' : 'dark';
+        root.dataset.theme = next;
+        try {
+          localStorage.setItem('theme', next);
+        } catch {}
+      });
+    </script>
+  </body>
+</html>

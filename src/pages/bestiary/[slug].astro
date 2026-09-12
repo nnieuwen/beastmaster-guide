@@ -1,0 +1,133 @@
+---
+import Base from '../../layouts/Base.astro';
+import KinBadge from '../../components/KinBadge.astro';
+import StatBars from '../../components/StatBars.astro';
+import AbilityList from '../../components/AbilityList.astro';
+import Notes from '../../components/Notes.astro';
+import { beasts, locations, tiers, roleTags, element, beastLevel, SHARED_ABILITIES, instinctOf, controlledOf, affinityColor, affinityNeighbours } from '../../lib/data';
+
+export function getStaticPaths() {
+  return beasts.map((b) => ({ params: { slug: b.slug }, props: { beast: b } }));
+}
+const { beast } = Astro.props;
+const loc = locations[beast.slug] ?? {};
+const level = beastLevel(beast);
+const tier = tiers.placements[beast.slug] ?? null;
+const instinct = instinctOf(beast);
+const controlled = controlledOf(beast);
+const tags = roleTags(beast.controlledAbility.description);
+const controlledEl = element(beast.controlledAbility.description);
+const instinctEl = element(instinct.ability?.description ?? '');
+const autoEl = element(beast.autoAttack.description);
+const neighbours = instinct.affinity ? affinityNeighbours(instinct.affinity) : null;
+const signature = beast.abilities.filter((a) => !SHARED_ABILITIES.has(a.name));
+const shared = beast.abilities.filter((a) => SHARED_ABILITIES.has(a.name));
+const idx = beasts.findIndex((b) => b.slug === beast.slug);
+const prev = beasts[(idx - 1 + beasts.length) % beasts.length];
+const next = beasts[(idx + 1) % beasts.length];
+const sourceLabel =
+  beast.sourceType === 'starter' ? 'Starter familiar' : beast.sourceType === 'duty' ? `${beast.source?.contentType ?? 'Duty'}: ${beast.source?.name}` : beast.source?.name;
+---
+
+<Base title={beast.name} description={`${beast.name} (${beast.kin}) — where to capture it, its kit and Trick. ${beast.lore.slice(0, 120)}`}>
+  <nav class="small muted" aria-label="Breadcrumb"><a href="/bestiary/">Bestiary</a> › {beast.name}</nav>
+  <header class="row" style="gap:1.25rem;align-items:flex-start;margin:0.75rem 0 1.5rem">
+    {beast.icon ? <img class="icon lg" src={beast.icon} alt="" width="80" height="80" /> : <span class="icon lg" />}
+    <div>
+      <h1 style="margin-bottom:0.35rem">{beast.name}</h1>
+      <div class="row" style="flex-wrap:wrap">
+        <KinBadge kin={beast.kin} />
+        <span class="badge">#{beast.id}</span>
+        {level != null && <span class="badge">Lv. {level}</span>}
+        {tier ? <span class="badge accent">Tier {tier}</span> : <span class="badge">Unrated</span>}
+      </div>
+    </div>
+  </header>
+
+  <blockquote>{beast.lore}</blockquote>
+
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:1rem;margin-top:1.5rem">
+    <section class="card">
+      <h2 style="margin-top:0;font-size:1.1rem">Where to get it</h2>
+      <dl style="margin:0;display:grid;grid-template-columns:auto 1fr;gap:0.35rem 1rem">
+        <dt class="muted">Source</dt>
+        <dd style="margin:0">{sourceLabel}</dd>
+        {
+          beast.sourceType === 'duty' && beast.source?.level && (
+            <>
+              <dt class="muted">Duty level</dt>
+              <dd style="margin:0">{beast.source.level}</dd>
+            </>
+          )
+        }
+        <dt class="muted">Beast level</dt>
+        <dd style="margin:0">{loc.level ?? <span class="muted">not recorded yet</span>}</dd>
+        <dt class="muted">Coordinates</dt>
+        <dd style="margin:0">{loc.x != null && loc.y != null ? `X: ${loc.x}, Y: ${loc.y}` : <span class="muted">not recorded yet</span>}</dd>
+        {
+          loc.notes && (
+            <>
+              <dt class="muted">Notes</dt>
+              <dd style="margin:0">{loc.notes}</dd>
+            </>
+          )
+        }
+      </dl>
+      <p class="small muted" style="margin:0.75rem 0 0">
+        {loc.verified ? 'Verified in game.' : loc.source ? `Unverified — ${loc.source}.` : 'Fill in src/data/curated/beast-locations.json.'}
+        {' '}Capture only works on beasts at or below your Beastmaster level.
+      </p>
+    </section>
+
+    <section class="card">
+      <h2 style="margin-top:0;font-size:1.1rem">Instinct</h2>
+      <p style="margin-bottom:0.4rem">
+        <strong>{instinct.ability?.name}</strong> — fired by Trick.
+        {instinct.affinity && (
+          <span class="tag" style={`margin-left:0.3rem;color:${affinityColor(instinct.affinity)};border-color:${affinityColor(instinct.affinity)}`}>
+            {instinct.affinity}
+          </span>
+        )}
+        {instinctEl && instinctEl !== 'Unaspected' && <span class="tag" style="margin-left:0.3rem">{instinctEl}</span>}
+      </p>
+      {neighbours && (
+        <p class="small muted" style="margin:0 0 0.75rem">
+          Combos after <strong style={`color:${neighbours.before.color}`}>{neighbours.before.action}</strong> ({neighbours.before.name} Heart) and sets up{' '}
+          <strong style={`color:${neighbours.after.color}`}>{neighbours.after.action}</strong>.
+        </p>
+      )}
+      <h3 style="font-size:1rem;margin-top:0.5rem">Controlled ability</h3>
+      <p style="margin-bottom:0.4rem">
+        <strong>{controlled?.name}</strong> — fired by Tempered Release. {beast.controlledAbility.description}
+      </p>
+      <div style="display:flex;gap:0.3rem;flex-wrap:wrap">
+        {tags.map((t) => <span class="tag">{t}</span>)}
+        {controlledEl && controlledEl !== 'Unaspected' && <span class="tag">{controlledEl}</span>}
+      </div>
+      <h3 style="font-size:1rem">Auto-attack</h3>
+      <p class="small" style="margin:0">{beast.autoAttack.description} {autoEl && <span class="tag">{autoEl}</span>}</p>
+    </section>
+  </div>
+
+  <h2>Kit</h2>
+  <p class="muted small">The instinctual skill (Trick), the controlled ability (Tempered Release), plus the shared Aetheric Burst (Parting Blow) and Threaten.</p>
+  <AbilityList abilities={signature} />
+  <details style="margin-top:0.75rem">
+    <summary class="muted small">Shared abilities</summary>
+    <div style="margin-top:0.5rem"><AbilityList abilities={shared} /></div>
+  </details>
+
+  <h2>Growth</h2>
+  <div class="card" style="max-width:520px">
+    <StatBars growth={beast.growth} />
+    <p class="muted small" style="margin:0.75rem 0 0">Five growth percentages from the game data; which stat each column drives is still being decoded.</p>
+  </div>
+
+  <h2>Guide notes</h2>
+  <Notes id={`beasts/${beast.slug}`} heading={`${beast.name} notes`} hint="Where it spawns, how to pull it safely, and when it's worth bringing." />
+
+  <nav style="display:flex;justify-content:space-between;margin-top:2.5rem" aria-label="Neighbouring beasts">
+    <a href={`/bestiary/${prev.slug}/`}>← {prev.name}</a>
+    <a href={`/bestiary/${next.slug}/`}>{next.name} →</a>
+  </nav>
+</Base>

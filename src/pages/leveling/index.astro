@@ -1,0 +1,95 @@
+---
+import Base from '../../layouts/Base.astro';
+import Notes from '../../components/Notes.astro';
+import BeastCard from '../../components/BeastCard.astro';
+import { beasts, quests, beastLevel, actionByName } from '../../lib/data';
+
+const unlock = quests.find((q) => q.key.startsWith('JobXbm001'));
+const chain = quests.filter((q) => q !== unlock);
+const capture = actionByName.get('Capture');
+
+const field = beasts.filter((b) => b.sourceType === 'field');
+const zones = [...new Set(field.map((b) => b.source!.name))].sort();
+const duties = beasts.filter((b) => b.sourceType === 'duty').sort((a, b) => (a.source!.level ?? 0) - (b.source!.level ?? 0) || a.source!.name.localeCompare(b.source!.name));
+const dutyGroups = [...new Set(duties.map((b) => b.source!.name))].map((name) => ({ name, level: duties.find((b) => b.source!.name === name)!.source!.level, beasts: duties.filter((b) => b.source!.name === name) }));
+---
+
+<Base title="Getting started & leveling" description="How to unlock Beastmaster, how Capture works, the job quest chain, and where the beasts are by zone.">
+  <h1>Getting started</h1>
+
+  <h2>Unlocking the job</h2>
+  <div class="card">
+    <ul style="margin:0;padding-left:1.2rem">
+      <li>Own Dawntrail and have a level 50 Disciple of War or Magic.</li>
+      <li>Have finished the ARR main scenario through <strong>The Ultimate Weapon</strong>.</li>
+      {
+        unlock && (
+          <li>
+            Pick up <strong>{unlock.name}</strong> from the {unlock.issuer} in <strong>{unlock.zone}</strong>.
+          </li>
+        )
+      }
+      <li>Beastmaster is a limited job: level cap 50, no Duty Finder matchmaking (pre-formed parties only), and it can't be used in most current endgame content.</li>
+    </ul>
+  </div>
+
+  <h2>How capturing works</h2>
+  {capture && <pre class="desc card">{capture.description}</pre>}
+  <p class="muted small">In short: use <strong>Gauge</strong> to check the odds, hit the beast with <strong>Capture</strong> so it's marked with Interest Captured, get its HP low, then kill it. Lower HP and a lower level than yours both raise the chance; a beast above your level can't be captured at all.</p>
+
+  <h2>Job quests</h2>
+  <div class="table-wrap">
+    <table>
+      <thead><tr><th>Lv.</th><th>Quest</th><th>From</th><th>Where</th></tr></thead>
+      <tbody>
+        {
+          chain.map((q) => (
+            <tr>
+              <td class="num">{q.level}</td>
+              <td><strong>{q.name}</strong></td>
+              <td>{q.issuer}</td>
+              <td>{q.zone}</td>
+            </tr>
+          ))
+        }
+      </tbody>
+    </table>
+  </div>
+
+  <h2>Leveling route</h2>
+  <Notes id="leveling" heading="Leveling" hint="Which zones to work through in what order, which beasts to grab early, and where the 40–50 grind is fastest." />
+
+  <h2>Beasts by zone</h2>
+  <p class="muted small">Open-world captures grouped by zone. Levels appear once they're recorded in the curated location file.</p>
+  {
+    zones.map((z) => (
+      <section>
+        <h3>{z}</h3>
+        <div class="grid">
+          {field
+            .filter((b) => b.source!.name === z)
+            .map((b) => (
+              <BeastCard beast={b} extra={beastLevel(b) != null ? `Lv. ${beastLevel(b)}` : undefined} />
+            ))}
+        </div>
+      </section>
+    ))
+  }
+
+  <h2>Beasts from duties</h2>
+  <p class="muted small">These need a pre-formed party (or an unsynced solo run where the duty allows it).</p>
+  {
+    dutyGroups.map((g) => (
+      <section>
+        <h3>
+          {g.name} <span class="badge">Lv. {g.level}</span>
+        </h3>
+        <div class="grid">
+          {g.beasts.map((b) => (
+            <BeastCard beast={b} />
+          ))}
+        </div>
+      </section>
+    ))
+  }
+</Base>

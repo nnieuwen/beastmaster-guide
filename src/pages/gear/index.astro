@@ -1,0 +1,64 @@
+---
+import Base from '../../layouts/Base.astro';
+import Notes from '../../components/Notes.astro';
+import { items } from '../../lib/data';
+
+const types = ['Beast Gear', 'Feed', 'Crucible Item'];
+const byType = types.map((t) => ({ type: t, items: items.filter((i) => i.type === t) }));
+---
+
+<Base title="Beast gear, feed & Crucible items" description="Every Beastmaster item from the game data: beast gear, feed, and Crucible consumables with their effects.">
+  <h1>Beast gear, feed & Crucible items</h1>
+  <p class="lead">{items.length} items from the game data, with their in-game effect text. How they're earned and what's worth using is guide territory.</p>
+
+  <div class="filters">
+    <input type="search" placeholder="Filter by name or effect…" data-item-q aria-label="Filter items" />
+    {types.map((t) => <a class="btn" href={`#${t.toLowerCase().replace(/\s+/g, '-')}`}>{t} ({byType.find((g) => g.type === t)!.items.length})</a>)}
+  </div>
+
+  <Notes id="gear" heading="Gear notes" hint="Where gear drops, what to feed which familiar, and Crucible item priorities." />
+
+  {
+    byType.map((g) => (
+      <section id={g.type.toLowerCase().replace(/\s+/g, '-')}>
+        <h2>{g.type}</h2>
+        <div class="table-wrap">
+          <table data-items>
+            <thead>
+              <tr>
+                <th>Item</th>
+                <th>Effect</th>
+                <th class="num">Sells</th>
+              </tr>
+            </thead>
+            <tbody>
+              {g.items.map((i) => (
+                <tr data-search={`${i.name} ${i.description} ${i.shortDescription}`.toLowerCase()}>
+                  <td>
+                    <span class="row">
+                      {i.icon ? <img class="icon sm" src={i.icon} alt="" width="28" height="28" loading="lazy" /> : <span class="icon sm" />}
+                      <strong>{i.name}</strong>
+                    </span>
+                  </td>
+                  <td>
+                    <pre class="desc">{i.description || i.shortDescription}</pre>
+                  </td>
+                  <td class="num muted">{i.sellPrice ? i.sellPrice.toLocaleString() : '—'}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+      </section>
+    ))
+  }
+</Base>
+
+<script>
+  const q = document.querySelector<HTMLInputElement>('[data-item-q]')!;
+  const rows = [...document.querySelectorAll<HTMLTableRowElement>('[data-items] tbody tr')];
+  q.addEventListener('input', () => {
+    const v = q.value.trim().toLowerCase();
+    for (const r of rows) r.hidden = !!v && !r.dataset.search!.includes(v);
+  });
+</script>

@@ -114,6 +114,9 @@
       "actionId": 45187,
       "description": "Delivers a slashing physical attack."
     },
+    "controlledAbility": {
+      "description": "Delivers a sixfold slashing physical attack."
+    },
     "growth": [
       100,
       91,
@@ -151,10 +154,7 @@
     },
     "slug": "cu-sith",
     "source": null,
-    "sourceType": "starter",
-    "trick": {
-      "description": "Delivers a sixfold slashing physical attack."
-    }
+    "sourceType": "starter"
   },
   {
     "abilities": [
@@ -271,6 +271,9 @@
       "actionId": 48643,
       "description": "Deals fire-aspected damage."
     },
+    "controlledAbility": {
+      "description": "Hastens allies."
+    },
     "growth": [
       91,
       100,
@@ -312,10 +315,7 @@
       "kind": "zone",
       "name": "Central Shroud"
     },
-    "sourceType": "field",
-    "trick": {
-      "description": "Hastens allies."
-    }
+    "sourceType": "field"
   },
   {
     "abilities": [
@@ -432,6 +432,9 @@
       "actionId": 45188,
       "description": "Delivers a blunt physical attack."
     },
+    "controlledAbility": {
+      "description": "Puts enemies to sleep and improves sleep resistance of allies."
+    },
     "growth": [
       82,
       82,
@@ -473,10 +476,7 @@
       "kind": "zone",
       "name": "Middle La Noscea"
     },
-    "sourceType": "field",
-    "trick": {
-      "description": "Puts enemies to sleep and improves sleep resistance of allies."
-    }
+    "sourceType": "field"
   },
   {
     "abilities": [
@@ -593,6 +593,9 @@
       "actionId": 48648,
       "description": "Deals water-aspected damage."
     },
+    "controlledAbility": {
+      "description": "Reduces magic vulnerability and improves paralysis resistance of allies."
+    },
     "growth": [
       100,
       100,
@@ -634,10 +637,7 @@
       "kind": "zone",
       "name": "Middle La Noscea"
     },
-    "sourceType": "field",
-    "trick": {
-      "description": "Reduces magic vulnerability and improves paralysis resistance of allies."
-    }
+    "sourceType": "field"
   },
   {
     "abilities": [
@@ -754,6 +754,9 @@
       "actionId": 49696,
       "description": "Delivers a blunt physical attack."
     },
+    "controlledAbility": {
+      "description": "Deals unaspected damage that paralyzes enemy."
+    },
     "growth": [
       97,
       97,
@@ -795,10 +798,7 @@
       "kind": "zone",
       "name": "North Shroud"
     },
-    "sourceType": "field",
-    "trick": {
-      "description": "Deals unaspected damage that paralyzes enemy."
-    }
+    "sourceType": "field"
   },
   {
     "abilities": [
@@ -915,6 +915,9 @@
       "actionId": 48647,
       "description": "Deals earth-aspected damage that blinds enemies."
     },
+    "controlledAbility": {
+      "description": "Improves earth resistance and blind resistance of allies."
+    },
     "growth": [
       91,
       91,
@@ -956,10 +959,7 @@
       "kind": "zone",
       "name": "Lower La Noscea"
     },
-    "sourceType": "field",
-    "trick": {
-      "description": "Improves earth resistance and blind resistance of allies."
-    }
+    "sourceType": "field"
   },
   {
     "abilities": [
@@ -1076,6 +1076,9 @@
       "actionId": 48645,
       "description": "Deals lightning-aspected damage."
     },
+    "controlledAbility": {
+      "description": "Reduces physical vulnerability and improves poison resistance of allies."
+    },
     "growth": [
       100,
       100,
@@ -1117,10 +1120,7 @@
       "kind": "zone",
       "name": "Western Thanalan"
     },
-    "sourceType": "field",
-    "trick": {
-      "description": "Reduces physical vulnerability and improves poison resistance of allies."
-    }
+    "sourceType": "field"
   },
   {
     "abilities": [
@@ -1237,6 +1237,9 @@
       "actionId": 45187,
       "description": "Delivers a piercing physical attack that inflicts poison on enemy."
     },
+    "controlledAbility": {
+      "description": "Deals unaspected damage that knocks back and binds enemies."
+    },
     "growth": [
       100,
       100,
@@ -1278,10 +1281,7 @@
       "kind": "zone",
       "name": "Central Shroud"
     },
-    "sourceType": "field",
-    "trick": {
-      "description": "Deals unaspected damage that knocks back and binds enemies."
-    }
+    "sourceType": "field"
   },
   {
     "abilities": [
@@ -1398,6 +1398,9 @@
       "actionId": 49695,
       "description": "Deals water-aspected damage."
     },
+    "controlledAbility": {
+      "description": "Deals water-aspected damage and lowers water resistance of enemies."
+    },
     "growth": [
       97,
       97,
@@ -1439,10 +1442,7 @@
       "kind": "zone",
       "name": "Middle La Noscea"
     },
-    "sourceType": "field",
-    "trick": {
-      "description": "Deals water-aspected damage and lowers water resistance of enemies."
-    }
+    "sourceType": "field"
   },
   {
     "abilities": [
@@ -1559,6 +1559,9 @@
       "actionId": 45187,
       "description": "Delivers a piercing physical attack that inflicts poison on enemy."
     },
+    "controlledAbility": {
+      "description": "Delivers a piercing physical attack on enemy. Familiar retreats upon execution."
+    },
     "growth": [
       97,
       97,
@@ -1600,10 +1603,7 @@
       "kind": "zone",
       "name": "Central Thanalan"
     },
-    "sourceType": "field",
-    "trick": {
-      "description": "Delivers a piercing physical attack on enemy. Familiar retreats upon execution."
-    }
+    "sourceType": "field"
   },
   {
     "abilities": [
@@ -1720,6 +1720,9 @@
       "actionId": 48646,
       "description": "Deals wind-aspected damage."
     },
+    "controlledAbility": {
+      "description": "Deals wind-aspected damage and dispels one beneficial status from enemies."
+    },
     "growth": [
       100,
       100,
@@ -1761,10 +1764,7 @@
       "kind": "zone",
       "name": "Western Thanalan"
     },
-    "sourceType": "field",
-    "trick": {
-      "description": "Deals wind-aspected damage and dispels one beneficial status from enemies."
-    }
+    "sourceType": "field"
   },
   {
     "abilities": [
@@ -1881,6 +1881,9 @@
       "actionId": 45188,
       "description": "Delivers a blunt physical attack."
     },
+    "controlledAbility": {
+      "description": "Deals unaspected damage and inflicts heaviness on enemies."
+    },
     "growth": [
       91,
       91,
@@ -1922,10 +1925,7 @@
       "kind": "zone",
       "name": "Middle La Noscea"
     },
-    "sourceType": "field",
-    "trick": {
-      "description": "Deals unaspected damage and inflicts heaviness on enemies."
-    }
+    "sourceType": "field"
   },
   {
     "abilities": [
@@ -2042,6 +2042,9 @@
       "actionId": 49692,
       "description": "Deals lightning-aspected damage."
     },
+    "controlledAbility": {
+      "description": "Grants HP absorption to allies."
+    },
     "growth": [
       100,
       100,
@@ -2083,10 +2086,7 @@
       "kind": "zone",
       "name": "Central Shroud"
     },
-    "sourceType": "field",
-    "trick": {
-      "description": "Grants HP absorption to allies."
-    }
+    "sourceType": "field"
   },
   {
     "abilities": [
@@ -2203,6 +2203,9 @@
       "actionId": 45187,
       "description": "Deals fire-aspected damage."
     },
+    "controlledAbility": {
+      "description": "Delivers a slashing physical attack that knocks back enemies."
+    },
     "growth": [
       100,
       88,
@@ -2244,10 +2247,7 @@
       "kind": "zone",
       "name": "Middle La Noscea"
     },
-    "sourceType": "field",
-    "trick": {
-      "description": "Delivers a slashing physical attack that knocks back enemies."
-    }
+    "sourceType": "field"
   },
   {
     "abilities": [
@@ -2364,6 +2364,9 @@
       "actionId": 48648,
       "description": "Deals water-aspected damage."
     },
+    "controlledAbility": {
+      "description": "Hastens self."
+    },
     "growth": [
       94,
       94,
@@ -2405,10 +2408,7 @@
       "kind": "zone",
       "name": "Western Thanalan"
     },
-    "sourceType": "field",
-    "trick": {
-      "description": "Hastens self."
-    }
+    "sourceType": "field"
   },
   {
     "abilities": [
@@ -2525,6 +2525,9 @@
       "actionId": 45186,
       "description": "Delivers a slashing physical attack."
     },
+    "controlledAbility": {
+      "description": "Deals unaspected damage that increases physical vulnerability of enemies."
+    },
     "growth": [
       94,
       94,
@@ -2566,10 +2569,7 @@
       "kind": "zone",
       "name": "Western La Noscea"
     },
-    "sourceType": "field",
-    "trick": {
-      "description": "Deals unaspected damage that increases physical vulnerability of enemies."
-    }
+    "sourceType": "field"
   },
   {
     "abilities": [
@@ -2686,6 +2686,9 @@
       "actionId": 49689,
       "description": "Deals unaspected damage that generates beastmaster HP."
     },
+    "controlledAbility": {
+      "description": "Deals unaspected damage that binds enemies."
+    },
     "growth": [
       97,
       1,
@@ -2729,10 +2732,7 @@
       "level": 17,
       "name": "Copperbell Mines"
     },
-    "sourceType": "duty",
-    "trick": {
-      "description": "Deals unaspected damage that binds enemies."
-    }
+    "sourceType": "duty"
   },
   {
     "abilities": [
@@ -2849,6 +2849,9 @@
       "actionId": 45186,
       "description": "Delivers a slashing physical attack."
     },
+    "controlledAbility": {
+      "description": "Increases physical damage dealt by allies."
+    },
     "growth": [
       97,
       97,
@@ -2892,10 +2895,7 @@
       "level": 20,
       "name": "Halatali"
     },
-    "sourceType": "duty",
-    "trick": {
-      "description": "Increases physical damage dealt by allies."
-    }
+    "sourceType": "duty"
   },
   {
     "abilities": [
@@ -3012,6 +3012,9 @@
       "actionId": 49689,
       "description": "Deals unaspected damage that generates beastmaster HP."
     },
+    "controlledAbility": {
+      "description": "Deals unaspected damage, reduces enemy accuracy, and removes a status ailment from allies."
+    },
     "growth": [
       94,
       94,
@@ -3053,10 +3056,7 @@
       "kind": "zone",
       "name": "Lower La Noscea"
     },
-    "sourceType": "field",
-    "trick": {
-      "description": "Deals unaspected damage, reduces enemy accuracy, and removes a status ailment from allies."
-    }
+    "sourceType": "field"
   },
   {
     "abilities": [
@@ -3173,6 +3173,9 @@
       "actionId": 49697,
       "description": "Deals wind-aspected damage that knocks back and poisons enemies."
     },
+    "controlledAbility": {
+      "description": "Deals unaspected damage and increases magic vulnerability of enemies."
+    },
     "growth": [
       100,
       97,
@@ -3214,10 +3217,7 @@
       "kind": "zone",
       "name": "Central Shroud"
     },
-    "sourceType": "field",
-    "trick": {
-      "description": "Deals unaspected damage and increases magic vulnerability of enemies."
-    }
+    "sourceType": "field"
   },
   {
     "abilities": [
@@ -3334,6 +3334,9 @@
       "actionId": 48644,
       "description": "Deals ice-aspected damage."
     },
+    "controlledAbility": {
+      "description": "Deals unaspected damage that petrifies enemies."
+    },
     "growth": [
       97,
       94,
@@ -3375,10 +3378,7 @@
       "kind": "zone",
       "name": "Western La Noscea"
     },
-    "sourceType": "field",
-    "trick": {
-      "description": "Deals unaspected damage that petrifies enemies."
-    }
+    "sourceType": "field"
   },
   {
     "abilities": [
@@ -3495,6 +3495,9 @@
       "actionId": 45187,
       "description": "Delivers a piercing physical attack."
     },
+    "controlledAbility": {
+      "description": "Grants a keen edge to allies."
+    },
     "growth": [
       97,
       94,
@@ -3536,10 +3539,7 @@
       "kind": "zone",
       "name": "Western Thanalan"
     },
-    "sourceType": "field",
-    "trick": {
-      "description": "Grants a keen edge to allies."
-    }
+    "sourceType": "field"
   },
   {
     "abilities": [
@@ -3656,6 +3656,9 @@
       "actionId": 48647,
       "description": "Deals earth-aspected damage."
     },
+    "controlledAbility": {
+      "description": "Deals earth-aspected damage and lowers earth resistance of enemies."
+    },
     "growth": [
       94,
       94,
@@ -3697,10 +3700,7 @@
       "kind": "zone",
       "name": "Southern Thanalan"
     },
-    "sourceType": "field",
-    "trick": {
-      "description": "Deals earth-aspected damage and lowers earth resistance of enemies."
-    }
+    "sourceType": "field"
   },
   {
     "abilities": [
@@ -3817,6 +3817,9 @@
       "actionId": 45187,
       "description": "Deals water-aspected damage."
     },
+    "controlledAbility": {
+      "description": "Deals water-aspected damage that slows enemy."
+    },
     "growth": [
       97,
       97,
@@ -3858,10 +3861,7 @@
       "kind": "zone",
       "name": "Eastern La Noscea"
     },
-    "sourceType": "field",
-    "trick": {
-      "description": "Deals water-aspected damage that slows enemy."
-    }
+    "sourceType": "field"
   },
   {
     "abilities": [
@@ -3978,6 +3978,9 @@
       "actionId": 49692,
       "description": "Deals lightning-aspected damage."
     },
+    "controlledAbility": {
+      "description": "Reduces physical vulnerability and improves petrification resistance of allies."
+    },
     "growth": [
       94,
       97,
@@ -4019,10 +4022,7 @@
       "kind": "zone",
       "name": "Central Thanalan"
     },
-    "sourceType": "field",
-    "trick": {
-      "description": "Reduces physical vulnerability and improves petrification resistance of allies."
-    }
+    "sourceType": "field"
   },
   {
     "abilities": [
@@ -4139,6 +4139,9 @@
       "actionId": 45188,
       "description": "Delivers a blunt physical attack."
     },
+    "controlledAbility": {
+      "description": "Deals unaspected damage that stuns enemies."
+    },
     "growth": [
       88,
       88,
@@ -4180,10 +4183,7 @@
       "kind": "zone",
       "name": "Middle La Noscea"
     },
-    "sourceType": "field",
-    "trick": {
-      "description": "Deals unaspected damage that stuns enemies."
-    }
+    "sourceType": "field"
   },
   {
     "abilities": [
@@ -4300,6 +4300,9 @@
       "actionId": 48644,
       "description": "Deals ice-aspected damage."
     },
+    "controlledAbility": {
+      "description": "Deals unaspected damage that poisons enemies."
+    },
     "growth": [
       91,
       91,
@@ -4341,10 +4344,7 @@
       "kind": "zone",
       "name": "Western Thanalan"
     },
-    "sourceType": "field",
-    "trick": {
-      "description": "Deals unaspected damage that poisons enemies."
-    }
+    "sourceType": "field"
   },
   {
     "abilities": [
@@ -4461,6 +4461,9 @@
       "actionId": 49694,
       "description": "Deals earth-aspected damage that blinds enemies."
     },
+    "controlledAbility": {
+      "description": "Deals earth-aspected damage and inflicts heaviness on enemies."
+    },
     "growth": [
       91,
       91,
@@ -4502,10 +4505,7 @@
       "kind": "zone",
       "name": "Southern Thanalan"
     },
-    "sourceType": "field",
-    "trick": {
-      "description": "Deals earth-aspected damage and inflicts heaviness on enemies."
-    }
+    "sourceType": "field"
   },
   {
     "abilities": [
@@ -4622,6 +4622,9 @@
       "actionId": 49691,
       "description": "Deals fire-aspected damage."
     },
+    "controlledAbility": {
+      "description": "Delivers a sevenfold blunt physical attack."
+    },
     "growth": [
       91,
       91,
@@ -4663,10 +4666,7 @@
       "kind": "zone",
       "name": "Central Thanalan"
     },
-    "sourceType": "field",
-    "trick": {
-      "description": "Delivers a sevenfold blunt physical attack."
-    }
+    "sourceType": "field"
   },
   {
     "abilities": [
@@ -4783,6 +4783,9 @@
       "actionId": 45188,
       "description": "Delivers a blunt physical attack."
     },
+    "controlledAbility": {
+      "description": "Deals unaspected damage that sickens enemies."
+    },
     "growth": [
       85,
       85,
@@ -4824,10 +4827,7 @@
       "kind": "zone",
       "name": "Lower La Noscea"
     },
-    "sourceType": "field",
-    "trick": {
-      "description": "Deals unaspected damage that sickens enemies."
-    }
+    "sourceType": "field"
   },
   {
     "abilities": [
@@ -4944,6 +4944,9 @@
       "actionId": 45188,
       "description": "Deals ice-aspected damage."
     },
+    "controlledAbility": {
+      "description": "Delivers a blunt physical attack that draws in and reduces accuracy of enemy."
+    },
     "growth": [
       88,
       88,
@@ -4985,10 +4988,7 @@
       "kind": "zone",
       "name": "Lower La Noscea"
     },
-    "sourceType": "field",
-    "trick": {
-      "description": "Delivers a blunt physical attack that draws in and reduces accuracy of enemy."
-    }
+    "sourceType": "field"
   },
   {
     "abilities": [
@@ -5105,6 +5105,9 @@
       "actionId": 45187,
       "description": "Delivers a piercing physical attack."
     },
+    "controlledAbility": {
+      "description": "Delivers a fivefold piercing physical attack."
+    },
     "growth": [
       88,
       88,
@@ -5146,10 +5149,7 @@
       "kind": "zone",
       "name": "Eastern La Noscea"
     },
-    "sourceType": "field",
-    "trick": {
-      "description": "Delivers a fivefold piercing physical attack."
-    }
+    "sourceType": "field"
   },
   {
     "abilities": [
@@ -5266,6 +5266,9 @@
       "actionId": 48645,
       "description": "Deals lightning-aspected damage."
     },
+    "controlledAbility": {
+      "description": "Deals lightning-aspected damage that paralyzes and lowers lightning resistance of enemies."
+    },
     "growth": [
       94,
       94,
@@ -5307,10 +5310,7 @@
       "kind": "zone",
       "name": "Outer La Noscea"
     },
-    "sourceType": "field",
-    "trick": {
-      "description": "Deals lightning-aspected damage that paralyzes and lowers lightning resistance of enemies."
-    }
+    "sourceType": "field"
   },
   {
     "abilities": [
@@ -5427,6 +5427,9 @@
       "actionId": 48644,
       "description": "Deals ice-aspected damage."
     },
+    "controlledAbility": {
+      "description": "Deals fire-aspected damage and lowers fire resistance of enemies."
+    },
     "growth": [
       91,
       91,
@@ -5468,10 +5471,7 @@
       "kind": "zone",
       "name": "Central Shroud"
     },
-    "sourceType": "field",
-    "trick": {
-      "description": "Deals fire-aspected damage and lowers fire resistance of enemies."
-    }
+    "sourceType": "field"
   },
   {
     "abilities": [
@@ -5588,6 +5588,9 @@
       "actionId": 49691,
       "description": "Deals fire-aspected damage."
     },
+    "controlledAbility": {
+      "description": "Reduces magic vulnerability and improves fire resistance of allies."
+    },
     "growth": [
       88,
       100,
@@ -5629,10 +5632,7 @@
       "kind": "zone",
       "name": "Southern Thanalan"
     },
-    "sourceType": "field",
-    "trick": {
-      "description": "Reduces magic vulnerability and improves fire resistance of allies."
-    }
+    "sourceType": "field"
   },
   {
     "abilities": [
@@ -5749,6 +5749,9 @@
       "actionId": 48647,
       "description": "Deals earth-aspected damage that causes nightmares."
     },
+    "controlledAbility": {
+      "description": "Deals wind-aspected damage that knocks back enemies."
+    },
     "growth": [
       94,
       100,
@@ -5790,10 +5793,7 @@
       "kind": "zone",
       "name": "Central Shroud"
     },
-    "sourceType": "field",
-    "trick": {
-      "description": "Deals wind-aspected damage that knocks back enemies."
-    }
+    "sourceType": "field"
   },
   {
     "abilities": [
@@ -5910,6 +5910,9 @@
       "actionId": 45186,
       "description": "Delivers a piercing physical attack."
     },
+    "controlledAbility": {
+      "description": "Slows enemies and improves water, earth, and ice resistance of allies."
+    },
     "growth": [
       88,
       88,
@@ -5953,10 +5956,7 @@
       "level": 38,
       "name": "Cutter's Cry"
     },
-    "sourceType": "duty",
-    "trick": {
-      "description": "Slows enemies and improves water, earth, and ice resistance of allies."
-    }
+    "sourceType": "duty"
   },
   {
     "abilities": [
@@ -6073,6 +6073,9 @@
       "actionId": 45186,
       "description": "Deals fire-aspected damage particularly effective against deeply frozen enemies."
     },
+    "controlledAbility": {
+      "description": "Deals ice-aspected damage that deeply freezes and lowers ice resistance of enemies."
+    },
     "growth": [
       79,
       79,
@@ -6116,10 +6119,7 @@
       "level": 38,
       "name": "Cutter's Cry"
     },
-    "sourceType": "duty",
-    "trick": {
-      "description": "Deals ice-aspected damage that deeply freezes and lowers ice resistance of enemies."
-    }
+    "sourceType": "duty"
   },
   {
     "abilities": [
@@ -6236,6 +6236,9 @@
       "actionId": 45188,
       "description": "Delivers a piercing physical attack."
     },
+    "controlledAbility": {
+      "description": "Deals unaspected damage that slows, blinds, and paralyzes enemies."
+    },
     "growth": [
       88,
       88,
@@ -6277,10 +6280,7 @@
       "kind": "zone",
       "name": "Central Shroud"
     },
-    "sourceType": "field",
-    "trick": {
-      "description": "Deals unaspected damage that slows, blinds, and paralyzes enemies."
-    }
+    "sourceType": "field"
   },
   {
     "abilities": [
@@ -6397,6 +6397,9 @@
       "actionId": 49693,
       "description": "Deals wind-aspected damage that may doom enemies."
     },
+    "controlledAbility": {
+      "description": "Deals unaspected damage that may doom enemies. Inflicts additional damage upon diseased enemies."
+    },
     "growth": [
       94,
       94,
@@ -6438,10 +6441,7 @@
       "kind": "zone",
       "name": "Middle La Noscea"
     },
-    "sourceType": "field",
-    "trick": {
-      "description": "Deals unaspected damage that may doom enemies. Inflicts additional damage upon diseased enemies."
-    }
+    "sourceType": "field"
   },
   {
     "abilities": [
@@ -6558,6 +6558,9 @@
       "actionId": 48648,
       "description": "Deals water-aspected damage."
     },
+    "controlledAbility": {
+      "description": "Deals unaspected damage that increases magic vulnerability of enemies."
+    },
     "growth": [
       85,
       85,
@@ -6599,10 +6602,7 @@
       "kind": "zone",
       "name": "Central Shroud"
     },
-    "sourceType": "field",
-    "trick": {
-      "description": "Deals unaspected damage that increases magic vulnerability of enemies."
-    }
+    "sourceType": "field"
   },
   {
     "abilities": [
@@ -6719,6 +6719,9 @@
       "actionId": 45187,
       "description": "Delivers a piercing physical attack that poisons enemy."
     },
+    "controlledAbility": {
+      "description": "Deals unaspected damage that petrifies enemy."
+    },
     "growth": [
       85,
       85,
@@ -6760,10 +6763,7 @@
       "kind": "zone",
       "name": "Mor Dhona"
     },
-    "sourceType": "field",
-    "trick": {
-      "description": "Deals unaspected damage that petrifies enemy."
-    }
+    "sourceType": "field"
   },
   {
     "abilities": [
@@ -6880,6 +6880,9 @@
       "actionId": 45186,
       "description": "Delivers a piercing physical attack."
     },
+    "controlledAbility": {
+      "description": "Deals unaspected damage that sickens enemies."
+    },
     "growth": [
       82,
       82,
@@ -6923,10 +6926,7 @@
       "level": 50,
       "name": "A Relic Reborn: the Hydra"
     },
-    "sourceType": "duty",
-    "trick": {
-      "description": "Deals unaspected damage that sickens enemies."
-    }
+    "sourceType": "duty"
   },
   {
     "abilities": [
@@ -7043,6 +7043,9 @@
       "actionId": 49693,
       "description": "Deals wind-aspected damage."
     },
+    "controlledAbility": {
+      "description": "Deals unaspected damage that poisons enemies."
+    },
     "growth": [
       85,
       85,
@@ -7086,10 +7089,7 @@
       "level": 50,
       "name": "the Lost City of Amdapor"
     },
-    "sourceType": "duty",
-    "trick": {
-      "description": "Deals unaspected damage that poisons enemies."
-    }
+    "sourceType": "duty"
   },
   {
     "abilities": [
@@ -7206,6 +7206,9 @@
       "actionId": 49694,
       "description": "Deals earth-aspected damage."
     },
+    "controlledAbility": {
+      "description": "Deals unaspected damage that draws in enemies."
+    },
     "growth": [
       91,
       97,
@@ -7249,10 +7252,7 @@
       "level": 50,
       "name": "the Lost City of Amdapor"
     },
-    "sourceType": "duty",
-    "trick": {
-      "description": "Deals unaspected damage that draws in enemies."
-    }
+    "sourceType": "duty"
   },
   {
     "abilities": [
@@ -7369,6 +7369,9 @@
       "actionId": 49698,
       "description": "Rushes enemy and delivers a blunt physical attack."
     },
+    "controlledAbility": {
+      "description": "Deals wind-aspected damage and lowers wind resistance of enemies."
+    },
     "growth": [
       85,
       85,
@@ -7412,10 +7415,7 @@
       "level": 50,
       "name": "Pharos Sirius"
     },
-    "sourceType": "duty",
-    "trick": {
-      "description": "Deals wind-aspected damage and lowers wind resistance of enemies."
-    }
+    "sourceType": "duty"
   },
   {
     "abilities": [
@@ -7532,6 +7532,9 @@
       "actionId": 49690,
       "description": "Deals ice-aspected damage."
     },
+    "controlledAbility": {
+      "description": "Increases magic damage dealt by allies."
+    },
     "growth": [
       88,
       88,
@@ -7575,10 +7578,7 @@
       "level": 50,
       "name": "Snowcloak"
     },
-    "sourceType": "duty",
-    "trick": {
-      "description": "Increases magic damage dealt by allies."
-    }
+    "sourceType": "duty"
   },
   {
     "abilities": [
@@ -7695,6 +7695,9 @@
       "actionId": 49695,
       "description": "Delivers a piercing physical attack."
     },
+    "controlledAbility": {
+      "description": "Deals water-aspected damage. Occasionally reduces enemy HP to a single digit."
+    },
     "growth": [
       82,
       82,
@@ -7738,10 +7741,7 @@
       "level": 50,
       "name": "Sastasha (Hard)"
     },
-    "sourceType": "duty",
-    "trick": {
-      "description": "Deals water-aspected damage. Occasionally reduces enemy HP to a single digit."
-    }
+    "sourceType": "duty"
   },
   {
     "abilities": [
@@ -7858,6 +7858,9 @@
       "actionId": 45187,
       "description": "Deals wind-aspected damage."
     },
+    "controlledAbility": {
+      "description": "Deals unaspected damage that may doom enemies."
+    },
     "growth": [
       85,
       85,
@@ -7901,10 +7904,7 @@
       "level": 50,
       "name": "the Second Coil of Bahamut - Turn 1"
     },
-    "sourceType": "duty",
-    "trick": {
-      "description": "Deals unaspected damage that may doom enemies."
-    }
+    "sourceType": "duty"
   },
   {
     "abilities": [
@@ -8021,6 +8021,9 @@
       "actionId": 48645,
       "description": "Deals lightning-aspected damage."
     },
+    "controlledAbility": {
+      "description": "Deals fire-aspected damage."
+    },
     "growth": [
       76,
       76,
@@ -8064,9 +8067,6 @@
       "level": 50,
       "name": "the Labyrinth of the Ancients"
     },
-    "sourceType": "duty",
-    "trick": {
-      "description": "Deals fire-aspected damage."
-    }
+    "sourceType": "duty"
   }
 ]

@@ -1,0 +1,402 @@
+{
+  "cu-sith": {
+    "level": 1,
+    "x": null,
+    "y": null,
+    "notes": "Starter familiar, granted by the job quest.",
+    "source": "job quest",
+    "verified": true
+  },
+  "squirrel": {
+    "level": 1,
+    "x": 23,
+    "y": 16,
+    "notes": "Several squirrel variants qualify.",
+    "source": "hardcoregamer.com bestiary guide (Sep 2026)",
+    "verified": false
+  },
+  "lamb": {
+    "level": null,
+    "x": null,
+    "y": null,
+    "notes": "",
+    "source": "",
+    "verified": false
+  },
+  "pugil": {
+    "level": null,
+    "x": null,
+    "y": null,
+    "notes": "",
+    "source": "",
+    "verified": false
+  },
+  "opo-opo": {
+    "level": null,
+    "x": null,
+    "y": null,
+    "notes": "",
+    "source": "",
+    "verified": false
+  },
+  "dodo": {
+    "level": null,
+    "x": null,
+    "y": null,
+    "notes": "",
+    "source": "",
+    "verified": false
+  },
+  "coblyn": {
+    "level": null,
+    "x": null,
+    "y": null,
+    "notes": "",
+    "source": "",
+    "verified": false
+  },
+  "diremite": {
+    "level": null,
+    "x": null,
+    "y": null,
+    "notes": "",
+    "source": "",
+    "verified": false
+  },
+  "megalocrab": {
+    "level": null,
+    "x": null,
+    "y": null,
+    "notes": "",
+    "source": "",
+    "verified": false
+  },
+  "wespe": {
+    "level": null,
+    "x": null,
+    "y": null,
+    "notes": "",
+    "source": "",
+    "verified": false
+  },
+  "vulture": {
+    "level": null,
+    "x": null,
+    "y": null,
+    "notes": "",
+    "source": "",
+    "verified": false
+  },
+  "mandragora": {
+    "level": null,
+    "x": null,
+    "y": null,
+    "notes": "",
+    "source": "",
+    "verified": false
+  },
+  "geshunpest": {
+    "level": null,
+    "x": null,
+    "y": null,
+    "notes": "",
+    "source": "",
+    "verified": false
+  },
+  "puk": {
+    "level": null,
+    "x": null,
+    "y": null,
+    "notes": "",
+    "source": "",
+    "verified": false
+  },
+  "crab": {
+    "level": null,
+    "x": null,
+    "y": null,
+    "notes": "",
+    "source": "",
+    "verified": false
+  },
+  "mantis": {
+    "level": null,
+    "x": null,
+    "y": null,
+    "notes": "",
+    "source": "",
+    "verified": false
+  },
+  "slime": {
+    "level": 17,
+    "x": null,
+    "y": null,
+    "notes": "",
+    "source": "duty level from ContentFinderCondition",
+    "verified": false
+  },
+  "dullahan": {
+    "level": 20,
+    "x": null,
+    "y": null,
+    "notes": "",
+    "source": "duty level from ContentFinderCondition",
+    "verified": false
+  },
+  "bat": {
+    "level": null,
+    "x": null,
+    "y": null,
+    "notes": "",
+    "source": "",
+    "verified": false
+  },
+  "flying-trap": {
+    "level": null,
+    "x": null,
+    "y": null,
+    "notes": "",
+    "source": "",
+    "verified": false
+  },
+  "ziz": {
+    "level": null,
+    "x": null,
+    "y": null,
+    "notes": "",
+    "source": "",
+    "verified": false
+  },
+  "sabotender": {
+    "level": 3,
+    "x": 28,
+    "y": 25,
+    "notes": "",
+    "source": "hardcoregamer.com bestiary guide (Sep 2026)",
+    "verified": false
+  },
+  "golem": {
+    "level": null,
+    "x": null,
+    "y": null,
+    "notes": "",
+    "source": "",
+    "verified": false
+  },
+  "apkallu": {
+    "level": null,
+    "x": null,
+    "y": null,
+    "notes": "",
+    "source": "",
+    "verified": false
+  },
+  "adamantoise": {
+    "level": null,
+    "x": null,
+    "y": null,
+    "notes": "",
+    "source": "",
+    "verified": false
+  },
+  "buffalo": {
+    "level": null,
+    "x": null,
+    "y": null,
+    "notes": "",
+    "source": "",
+    "verified": false
+  },
+  "uragnite": {
+    "level": null,
+    "x": null,
+    "y": null,
+    "notes": "",
+    "source": "",
+    "verified": false
+  },
+  "worm": {
+    "level": null,
+    "x": null,
+    "y": null,
+    "notes": "",
+    "source": "",
+    "verified": false
+  },
+  "spriggan": {
+    "level": null,
+    "x": null,
+    "y": null,
+    "notes": "",
+    "source": "",
+    "verified": false
+  },
+  "goobbue": {
+    "level": null,
+    "x": null,
+    "y": null,
+    "notes": "",
+    "source": "",
+    "verified": false
+  },
+  "gigantoad": {
+    "level": null,
+    "x": null,
+    "y": null,
+    "notes": "",
+    "source": "",
+    "verified": false
+  },
+  "colibri": {
+    "level": null,
+    "x": null,
+    "y": null,
+    "notes": "",
+    "source": "",
+    "verified": false
+  },
+  "coeurl": {
+    "level": null,
+    "x": null,
+    "y": null,
+    "notes": "",
+    "source": "",
+    "verified": false
+  },
+  "raptor": {
+    "level": null,
+    "x": null,
+    "y": null,
+    "notes": "",
+    "source": "",
+    "verified": false
+  },
+  "drake": {
+    "level": null,
+    "x": null,
+    "y": null,
+    "notes": "",
+    "source": "",
+    "verified": false
+  },
+  "treant": {
+    "level": null,
+    "x": null,
+    "y": null,
+    "notes": "",
+    "source": "",
+    "verified": false
+  },
+  "antling": {
+    "level": 38,
+    "x": null,
+    "y": null,
+    "notes": "",
+    "source": "duty level from ContentFinderCondition",
+    "verified": false
+  },
+  "chimera": {
+    "level": 38,
+    "x": null,
+    "y": null,
+    "notes": "",
+    "source": "duty level from ContentFinderCondition",
+    "verified": false
+  },
+  "morbol": {
+    "level": null,
+    "x": null,
+    "y": null,
+    "notes": "",
+    "source": "",
+    "verified": false
+  },
+  "ghost": {
+    "level": null,
+    "x": null,
+    "y": null,
+    "notes": "",
+    "source": "",
+    "verified": false
+  },
+  "salamander": {
+    "level": null,
+    "x": null,
+    "y": null,
+    "notes": "",
+    "source": "",
+    "verified": false
+  },
+  "cobra": {
+    "level": null,
+    "x": null,
+    "y": null,
+    "notes": "",
+    "source": "",
+    "verified": false
+  },
+  "hydra": {
+    "level": 50,
+    "x": null,
+    "y": null,
+    "notes": "Trial: A Relic Reborn: the Hydra.",
+    "source": "hardcoregamer.com bestiary guide (Sep 2026)",
+    "verified": false
+  },
+  "damselfly": {
+    "level": 50,
+    "x": null,
+    "y": null,
+    "notes": "",
+    "source": "duty level from ContentFinderCondition",
+    "verified": false
+  },
+  "rotting-goobbue": {
+    "level": 50,
+    "x": null,
+    "y": null,
+    "notes": "",
+    "source": "duty level from ContentFinderCondition",
+    "verified": false
+  },
+  "zu": {
+    "level": 50,
+    "x": null,
+    "y": null,
+    "notes": "",
+    "source": "duty level from ContentFinderCondition",
+    "verified": false
+  },
+  "ice-golem": {
+    "level": 50,
+    "x": null,
+    "y": null,
+    "notes": "",
+    "source": "duty level from ContentFinderCondition",
+    "verified": false
+  },
+  "karlabos": {
+    "level": 50,
+    "x": null,
+    "y": null,
+    "notes": "",
+    "source": "duty level from ContentFinderCondition",
+    "verified": false
+  },
+  "rafflesia": {
+    "level": 50,
+    "x": null,
+    "y": null,
+    "notes": "",
+    "source": "duty level from ContentFinderCondition",
+    "verified": false
+  },
+  "behemoth": {
+    "level": 50,
+    "x": null,
+    "y": null,
+    "notes": "Alliance raid: the Labyrinth of the Ancients.",
+    "source": "hardcoregamer.com bestiary guide (Sep 2026)",
+    "verified": false
+  }
+}

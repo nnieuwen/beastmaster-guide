@@ -1,0 +1,53 @@
+---
+import Base from '../../layouts/Base.astro';
+import Notes from '../../components/Notes.astro';
+import { crucible, quests } from '../../lib/data';
+
+const entranceQuestIds = new Set(crucible.entrance.map((e) => Number(e.raw.u0)));
+const unlock = quests.find((q) => entranceQuestIds.has(q.id));
+const ranks = crucible.scoreRank.filter((r) => r.name);
+const bonuses = crucible.scoreBonus.filter((b) => b.name);
+---
+
+<Base title="Crucible" description="Beastmaster's solo challenge mode: every battle's enemy pieces, the score ranks and bonuses, and strategy write-ups per board.">
+  <h1>The Crucible</h1>
+  <p class="lead">
+    Beastmaster's own solo content. The game data describes it as a <em>board</em> you clear with your familiars, scored against a rank ladder with named bonuses.
+    {unlock && <> Unlocked by the level {unlock.level} job quest <strong>{unlock.name}</strong>.</>}
+  </p>
+  <p class="muted small">Stage names, order and unlock structure aren't decoded from the data yet — battles below are numbered as they appear in the game files.</p>
+
+  <h2>Overview & rules</h2>
+  <Notes id="crucible" heading="Crucible overview" hint="How a run flows, what the board looks like, how scoring works, and general team advice." />
+
+  <h2>Score ranks</h2>
+  <div style="display:flex;gap:0.4rem;flex-wrap:wrap">
+    {ranks.map((r) => <span class="badge accent">{r.name}</span>)}
+  </div>
+
+  <h2>Score bonuses</h2>
+  <div class="table-wrap">
+    <table>
+      <thead><tr><th>Bonus</th><th>Condition</th></tr></thead>
+      <tbody>{bonuses.map((b) => <tr><td><strong>{b.name}</strong></td><td>{b.description}</td></tr>)}</tbody>
+    </table>
+  </div>
+
+  <h2>Battles</h2>
+  <div class="grid">
+    {
+      crucible.battles.map((b) => (
+        <a class="card" href={`/crucible/${b.id}/`} style="color:inherit">
+          <div class="row" style="justify-content:space-between">
+            <strong>Battle {b.id}</strong>
+            <span class="muted small">{b.enemies.length} piece{b.enemies.length === 1 ? '' : 's'}</span>
+          </div>
+          <div class="row" style="margin-top:0.5rem;flex-wrap:wrap">
+            {b.enemies.map((e) => (e.icon ? <img class="icon sm" src={e.icon} alt={e.name} title={e.name} width="28" height="28" loading="lazy" /> : <span class="tag">{e.name}</span>))}
+          </div>
+          <div class="small muted" style="margin-top:0.4rem">{b.enemies.map((e) => e.name).join(', ')}</div>
+        </a>
+      ))
+    }
+  </div>
+</Base>

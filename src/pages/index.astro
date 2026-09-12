@@ -1,0 +1,75 @@
+---
+import Base from '../layouts/Base.astro';
+import Notes from '../components/Notes.astro';
+import { getCollection } from 'astro:content';
+import { beasts, actions, traits, items, crucible, meta, tiers, comps } from '../lib/data';
+
+const notes = await getCollection('notes');
+const verified = notes.filter((n) => n.data.status === 'verified').length;
+const drafts = notes.length - verified;
+const rated = Object.keys(tiers.placements).length;
+const starter = beasts.find((b) => b.sourceType === 'starter');
+
+const sections = [
+  { href: '/bestiary/', title: 'Bestiary', text: `All ${beasts.length} familiars — sources, kits, Tricks, classifications, plus a capture checklist.` },
+  { href: '/actions/', title: 'Actions & traits', text: `${actions.length} actions and ${traits.length} traits with tooltip text, and the Instinctual Combo wheel.` },
+  { href: '/leveling/', title: 'Getting started', text: 'Unlock requirements, how Capture works, the job quest chain, beasts by zone.' },
+  { href: '/crucible/', title: 'Crucible', text: `${crucible.battles.length} battles with their enemy pieces, score ranks and bonuses; strategy tabs per board.` },
+  { href: '/comps/', title: 'Team comps', text: 'Build a trio, see its coverage, share it by link.' },
+  { href: '/gear/', title: 'Gear & feed', text: `${items.length} beast gear, feed and Crucible items with effects.` },
+  { href: '/tier-list/', title: 'Tier list', text: rated ? `${rated} familiars rated.` : 'Ratings pending.' },
+];
+---
+
+<Base title="Home" description="Community strategy guide for Beastmaster, the FFXIV limited job added in Patch 7.56: bestiary, actions, Crucible, team comps and gear.">
+  <section class="hero">
+    <h1>Beastmaster</h1>
+    <p class="lead">
+      The limited job added to Final Fantasy XIV in Patch {meta.patch}. Capture wild beasts, command up to three familiars, and cycle the Instinctual Combo wheel. Level cap 50.
+    </p>
+    <div class="status-banner">
+      <span class="badge ok">game data live</span>
+      <span>{beasts.length} beasts · {actions.length} actions · {items.length} items · {crucible.battles.length} Crucible battles</span>
+      <span class="badge warn">guide text in progress</span>
+      <span>{verified} verified · {drafts} draft · sections without notes show a stub</span>
+    </div>
+  </section>
+
+  <div class="grid section-links" style="margin-top:1.5rem">
+    {
+      sections.map((s) => (
+        <a class="card" href={s.href}>
+          <h3>{s.title}</h3>
+          <p class="muted small" style="margin:0">{s.text}</p>
+        </a>
+      ))
+    }
+  </div>
+
+  <h2>The basics</h2>
+  <div class="grid">
+    <div class="card">
+      <h3 style="margin-top:0">Two gauges</h3>
+      <p class="small" style="margin:0">Your TP (from weaponskill combos) and your familiar's TP (from its auto-attacks and Aetheric Burst). Both cap at 250 and are spent separately — on instinctual axes and on Trick.</p>
+    </div>
+    <div class="card">
+      <h3 style="margin-top:0">Hearts and the wheel</h3>
+      <p class="small" style="margin:0">Each instinctual axe leaves a 7-second Heart. Follow it with the next affinity in the wheel — Volant → Rampant → Durant → Eldritch — to land a Sunstrider or Moonstalker combo.</p>
+    </div>
+    <div class="card">
+      <h3 style="margin-top:0">Capture</h3>
+      <p class="small" style="margin:0">Mark a beast with Capture, get it low, kill it. Lower HP and a lower level than yours raise the odds; anything above your level can't be taken.</p>
+    </div>
+    <div class="card">
+      <h3 style="margin-top:0">Kinship</h3>
+      <p class="small" style="margin:0">Borrow takes on your summoned familiar's classification — eight of them, from Beastkin to Ashkin — and turns Beast Mode into a matching utility action.</p>
+    </div>
+  </div>
+
+  <h2>Start here</h2>
+  <p class="small muted">Your first familiar is {starter?.name}, granted by the job quest. From there, the <a href="/leveling/">getting started</a> page lists what's capturable in each zone.</p>
+
+  <Notes id="intro" heading="Introduction" hint="The guide's own introduction — who it's by, what it covers, and how to contribute." />
+
+  <p class="small muted" style="margin-top:2rem">{comps.length} featured comp{comps.length === 1 ? '' : 's'} · data fetched {new Date(meta.fetchedAt).toISOString().slice(0, 10)}</p>
+</Base>

@@ -1,0 +1,198 @@
+---
+import Base from '../../layouts/Base.astro';
+import BeastCard from '../../components/BeastCard.astro';
+import { beasts, comps, KINS, AFFINITIES, roleTags, element, beastBySlug, SHARED_ABILITIES, instinctOf, controlledOf } from '../../lib/data';
+
+// Everything the client needs to describe a trio, in one small blob.
+const data = beasts.map((b) => ({
+  slug: b.slug,
+  name: b.name,
+  kin: b.kin,
+  icon: b.icon,
+  instinct: instinctOf(b).ability?.name ?? '',
+  affinity: instinctOf(b).affinity,
+  controlled: controlledOf(b)?.name ?? '',
+  controlledText: b.controlledAbility.description,
+  tags: [...new Set([...roleTags(b.controlledAbility.description), ...roleTags(instinctOf(b).ability?.description ?? '')])],
+  elements: [element(instinctOf(b).ability?.description ?? ''), element(b.controlledAbility.description), element(b.autoAttack.description)].filter((e) => e && e !== 'Unaspected'),
+  skills: b.abilities.filter((a) => !SHARED_ABILITIES.has(a.name)).map((a) => a.name),
+  growth: b.growth,
+}));
+const featured = comps.map((c) => ({ ...c, resolved: c.beasts.map((s) => beastBySlug.get(s)).filter((b): b is NonNullable<typeof b> => !!b) }));
+---
+
+<Base title="Team comps" description="Build a three-familiar Beastmaster team and see its combined kit, elements and classifications; share it by link.">
+  <h1>Team comps</h1>
+  <p class="lead">
+    Pick familiars and see what the team covers. Three slots match the Battlehorn summons; switch to a Crucible squad for up to seven (the score bonuses reward
+    clearing boards with teams of 6–7 as well as small squads). The link updates as you go, so a comp can be shared or bookmarked.
+  </p>
+
+  <div class="card" data-comp>
+    <div class="row" style="margin-bottom:0.75rem;gap:1rem;flex-wrap:wrap">
+      <label class="small"><input type="radio" name="mode" value="3" data-mode checked /> Combat (3 Battlehorn slots)</label>
+      <label class="small"><input type="radio" name="mode" value="7" data-mode /> Crucible squad (up to 7)</label>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:0.75rem">
+      {
+        [0, 1, 2, 3, 4, 5, 6].map((i) => (
+          <label style="display:grid;gap:0.3rem" data-slot-wrap={i} hidden={i >= 3}>
+            <span class="muted small">Slot {i + 1}</span>
+            <select data-slot={i} aria-label={`Familiar slot ${i + 1}`}>
+              <option value="">— empty —</option>
+              {KINS.map((k) => (
+                <optgroup label={k}>
+                  {beasts
+                    .filter((b) => b.kin === k)
+                    .map((b) => (
+                      <option value={b.slug}>{b.name}</option>
+                    ))}
+                </optgroup>
+              ))}
+            </select>
+          </label>
+        ))
+      }
+    </div>
+    <div class="row" style="margin-top:0.75rem;gap:0.5rem;flex-wrap:wrap">
+      <button class="btn primary" type="button" data-copy>Copy link</button>
+      <button class="btn" type="button" data-clear>Clear</button>
+      <span class="muted small" data-msg></span>
+    </div>
+  </div>
+
+  <div data-summary style="margin-top:1rem"></div>
+
+  <h2>Featured comps</h2>
+  <p class="muted small">Curated in <code>src/data/curated/comps.json</code>. Load one into the builder to tweak it.</p>
+  <div class="grid">
+    {
+      featured.map((c) => (
+        <div class="card">
+          <div class="row" style="justify-content:space-between;align-items:flex-start">
+            <div>
+              <strong>{c.name}</strong>
+              {c.role && <span class="badge" style="margin-left:0.4rem">{c.role}</span>}
+            </div>
+            <span class:list={['badge', c.status === 'verified' ? 'ok' : c.status === 'draft' ? 'warn' : '']}>{c.status ?? 'draft'}</span>
+          </div>
+          <div style="display:grid;gap:0.4rem;margin:0.6rem 0">
+            {c.resolved.map((b) => (
+              <BeastCard beast={b} />
+            ))}
+          </div>
+          {c.notes && <p class="small muted" style="margin:0 0 0.6rem">{c.notes}</p>}
+          <a class="btn" href={`/comps/?b=${c.beasts.join(',')}`}>Load in builder</a>
+        </div>
+      ))
+    }
+  </div>
+
+  <script type="application/json" id="beast-data" set:html={JSON.stringify(data)} />
+  <script type="application/json" id="affinity-data" set:html={JSON.stringify(AFFINITIES)} />
+</Base>
+
+<script>
+  type B = { slug: string; name: string; kin: string | null; icon: string | null; instinct: string; affinity: string | null; controlled: string; controlledText: string; tags: string[]; elements: string[]; skills: string[]; growth: number[] };
+  type A = { name: string; action: string; color: string; combo: string };
+  const all: B[] = JSON.parse(document.getElementById('beast-data')!.textContent!);
+  const affinities: A[] = JSON.parse(document.getElementById('affinity-data')!.textContent!);
+  const bySlug = new Map(all.map((b) => [b.slug, b]));
+  const selects = [...document.querySelectorAll<HTMLSelectElement>('[data-slot]')];
+  const wraps = [...document.querySelectorAll<HTMLElement>('[data-slot-wrap]')];
+  const modes = [...document.querySelectorAll<HTMLInputElement>('[data-mode]')];
+  const slotCount = () => Number(modes.find((m) => m.checked)?.value ?? 3);
+  function applyMode() {
+    const n = slotCount();
+    wraps.forEach((w, i) => (w.hidden = i >= n));
+    selects.forEach((s, i) => {
+      if (i >= n) s.value = '';
+    });
+  }
+  const summary = document.querySelector<HTMLElement>('[data-summary]')!;
+  const msg = document.querySelector<HTMLElement>('[data-msg]')!;
+  const esc = (s: string) => s.replace(/[&<>"]/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' })[c]!);
+
+  function fromUrl() {
+    const b = new URLSearchParams(location.search).get('b');
+    const slugs = (b ? b.split(',') : []).slice(0, 7);
+    if (slugs.length > 3) modes.forEach((m) => (m.checked = m.value === '7'));
+    applyMode();
+    selects.forEach((s, i) => (s.value = bySlug.has(slugs[i] ?? '') ? slugs[i]! : ''));
+  }
+  function toUrl() {
+    const slugs = selects.map((s) => s.value).filter(Boolean);
+    const url = new URL(location.href);
+    slugs.length ? url.searchParams.set('b', slugs.join(',')) : url.searchParams.delete('b');
+    history.replaceState(null, '', url);
+  }
+  function render() {
+    const picked = selects.map((s) => bySlug.get(s.value)).filter((b): b is B => !!b);
+    if (!picked.length) {
+      summary.innerHTML = '<p class="muted">Choose familiars above to see what the team covers.</p>';
+      return;
+    }
+    const kins = new Set(picked.map((b) => b.kin).filter(Boolean));
+    const tags = new Set(picked.flatMap((b) => b.tags));
+    const elements = new Set(picked.flatMap((b) => b.elements));
+    const affs = new Set(picked.map((b) => b.affinity).filter(Boolean));
+    const growth = [0, 1, 2, 3, 4].map((i) => Math.round(picked.reduce((s, b) => s + (b.growth[i] ?? 0), 0) / picked.length));
+    const roleTags = ['Damage', 'Control', 'Debuff', 'Buff', 'Sustain'];
+    summary.innerHTML = `
+      <div class="grid">
+        ${picked
+          .map(
+            (b) => `
+          <div class="card">
+            <div class="row">
+              ${b.icon ? `<img class="icon" src="${b.icon}" alt="" width="40" height="40">` : ''}
+              <div><a href="/bestiary/${b.slug}/"><strong>${esc(b.name)}</strong></a><br><span class="badge kin" data-kin="${b.kin ?? ''}">${b.kin ?? ''}</span></div>
+            </div>
+            <p class="small" style="margin:0.6rem 0 0.3rem"><span class="muted">Trick:</span> ${esc(b.instinct)} ${b.affinity ? `<span class="tag" style="color:var(--c-${b.affinity.toLowerCase()});border-color:var(--c-${b.affinity.toLowerCase()})">${b.affinity}</span>` : ''}</p>
+            <p class="small" style="margin:0"><span class="muted">Tempered Release:</span> ${esc(b.controlled)} — ${esc(b.controlledText)}</p>
+          </div>`,
+          )
+          .join('')}
+      </div>
+      <div class="card" style="margin-top:1rem">
+        <h2 style="margin-top:0;font-size:1.1rem">Coverage</h2>
+        <dl style="margin:0;display:grid;grid-template-columns:auto 1fr;gap:0.4rem 1rem;align-items:baseline">
+          <dt class="muted">Affinities</dt><dd style="margin:0">${affinities.map((a) => `<span class="tag" style="${affs.has(a.name) ? `color:${a.color};border-color:${a.color}` : 'opacity:.45'}">${a.name}</span>`).join(' ')} <span class="muted small">(${affs.size} of 4 — a familiar Trick can complete a combo off the matching Heart)</span></dd>
+          <dt class="muted">Skill roles</dt><dd style="margin:0">${roleTags.map((t) => `<span class="tag" style="${tags.has(t) ? 'color:var(--ok);border-color:var(--ok)' : 'opacity:.45'}">${t}</span>`).join(' ')}</dd>
+          <dt class="muted">Elements</dt><dd style="margin:0">${elements.size ? [...elements].map((e) => `<span class="tag">${e}</span>`).join(' ') : '<span class="muted small">none aspected</span>'}</dd>
+          <dt class="muted">Kinships</dt><dd style="margin:0">${[...kins].map((k) => `<span class="badge kin" data-kin="${k}">${k}</span>`).join(' ')} <span class="muted small">(${kins.size} distinct — each gives Borrow a different Beast Mode)</span></dd>
+          <dt class="muted">Squad size</dt><dd style="margin:0" class="small">${picked.length} familiar${picked.length === 1 ? '' : 's'}${picked.length >= 6 ? ' — Beast Squad I range' : picked.length >= 4 ? ' — Beast Squad II range' : ' — Beast Squad III range'}</dd>
+          <dt class="muted">Avg. growth</dt><dd style="margin:0" class="small">${growth.map((g, i) => `<span class="tag">${['I', 'II', 'III', 'IV', 'V'][i]}: ${g}</span>`).join(' ')}</dd>
+        </dl>
+      </div>`;
+  }
+  selects.forEach((s) =>
+    s.addEventListener('change', () => {
+      toUrl();
+      render();
+      msg.textContent = '';
+    }),
+  );
+  modes.forEach((m) =>
+    m.addEventListener('change', () => {
+      applyMode();
+      toUrl();
+      render();
+    }),
+  );
+  document.querySelector('[data-clear]')?.addEventListener('click', () => {
+    selects.forEach((s) => (s.value = ''));
+    toUrl();
+    render();
+  });
+  document.querySelector('[data-copy]')?.addEventListener('click', async () => {
+    try {
+      await navigator.clipboard.writeText(location.href);
+      msg.textContent = 'Link copied.';
+    } catch {
+      msg.textContent = location.href;
+    }
+  });
+  fromUrl();
+  render();
+</script>

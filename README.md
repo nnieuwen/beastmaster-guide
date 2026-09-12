@@ -21,12 +21,17 @@ that need a human are easy to drop in:
 Every page renders something useful from layer 1 today and shows a "notes pending" stub where
 layer 2 is still empty.
 
+## Pages
+
+`/bestiary/` (+ one page per beast) · `/actions/` · `/leveling/` · `/crucible/` (+ one page per battle) ·
+`/comps/` · `/gear/` · `/tier-list/`
+
 ## Commands
 
 ```bash
 npm install
 npm run fetch      # refresh src/data + icons from XIVAPI (needs network)
-npm run dev        # http://localhost:4321
+npm run dev        # http://localhost:4321 (Astro 7 daemonises it; `npx astro dev stop` to stop)
 npm run build      # static output in dist/
 npm run preview
 ```

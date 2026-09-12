@@ -1,0 +1,23 @@
+---
+// XBMPet's five growth percentages. The game's stat labels for these columns
+// aren't decoded yet (docs/DATA-NOTES.md), so they are shown as Growth I–V.
+interface Props {
+  growth: number[];
+  labels?: string[];
+}
+const { growth, labels = ['Growth I', 'Growth II', 'Growth III', 'Growth IV', 'Growth V'] } = Astro.props;
+---
+
+<div class="bars" role="list">
+  {
+    growth.map((v, i) => (
+      <>
+        <span class="muted">{labels[i] ?? `Growth ${i + 1}`}</span>
+        <div class="track" role="listitem" aria-label={`${labels[i] ?? i + 1}: ${v}`}>
+          <div class="fill" style={`width:${Math.max(0, Math.min(100, v))}%`} />
+        </div>
+        <span class="num">{v}</span>
+      </>
+    ))
+  }
+</div>

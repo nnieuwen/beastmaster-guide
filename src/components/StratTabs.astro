@@ -1,0 +1,70 @@
+---
+// wtfdig-style strategy variants: every Markdown file under
+// src/content/notes/<prefix>/ becomes a tab. Files carry `variant` (tab label)
+// and `order` in frontmatter. With no files, renders the pending stub.
+import { getCollection, render } from 'astro:content';
+
+interface Props {
+  prefix: string; // e.g. "crucible/12"
+  hint?: string;
+}
+const { prefix, hint } = Astro.props;
+const entries = (await getCollection('notes', (e) => e.id.startsWith(prefix + '/'))).sort((a, b) => a.data.order - b.data.order);
+const rendered = await Promise.all(entries.map(async (e) => ({ entry: e, Content: (await render(e)).Content })));
+const uid = prefix.replace(/[^a-z0-9]+/gi, '-');
+---
+
+{
+  rendered.length === 0 ? (
+    <section class="notes pending">
+      <div class="notes-meta">
+        <span class="badge">pending</span>
+      </div>
+      <p>
+        <strong>Strategy:</strong> no write-up yet. {hint ?? 'Each variant is its own Markdown file, shown as a tab.'}
+        <span class="small">
+          {' '}
+          (Create <code>src/content/notes/{prefix}/default.md</code>; add more files for alternate strats.)
+        </span>
+      </p>
+    </section>
+  ) : (
+    <div class="strat" data-strat={uid}>
+      {rendered.length > 1 && (
+        <div class="tabs" role="tablist">
+          {rendered.map(({ entry }, i) => (
+            <button type="button" role="tab" id={`${uid}-tab-${i}`} aria-selected={i === 0 ? 'true' : 'false'} aria-controls={`${uid}-panel-${i}`}>
+              {entry.data.variant ?? entry.data.title ?? entry.id.split('/').pop()}
+            </button>
+          ))}
+        </div>
+      )}
+      {rendered.map(({ entry, Content }, i) => (
+        <section class="notes" role="tabpanel" id={`${uid}-panel-${i}`} aria-labelledby={`${uid}-tab-${i}`} hidden={i !== 0}>
+          <div class="notes-meta">
+            <span class:list={['badge', entry.data.status === 'verified' ? 'ok' : 'warn']}>{entry.data.status}</span>
+            {entry.data.author && <span> · {entry.data.author}</span>}
+            {entry.data.updated && <span> · updated {entry.data.updated.toISOString().slice(0, 10)}</span>}
+          </div>
+          {entry.data.title && <h3 style="margin-top:0">{entry.data.title}</h3>}
+          <div class="prose">
+            <Content />
+          </div>
+        </section>
+      ))}
+    </div>
+  )
+}
+
+<script>
+  for (const root of document.querySelectorAll<HTMLElement>('[data-strat]')) {
+    const tabs = [...root.querySelectorAll<HTMLButtonElement>('[role=tab]')];
+    const panels = [...root.querySelectorAll<HTMLElement>('[role=tabpanel]')];
+    tabs.forEach((tab, i) =>
+      tab.addEventListener('click', () => {
+        tabs.forEach((t, j) => t.setAttribute('aria-selected', String(i === j)));
+        panels.forEach((p, j) => (p.hidden = i !== j));
+      }),
+    );
+  }
+</script>

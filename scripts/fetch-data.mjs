@@ -264,7 +264,10 @@ async function fetchBeasts() {
       iconId: raw.u3 ?? null,
       lore: cleanText(raw.u0),
       autoAttack: { actionId: rel(f.Action)?.row_id ?? 0, description: cleanText(raw.u1) },
-      trick: { description: cleanText(raw.u2) },
+      // Unknown2 summarises the familiar's second skill: the "controlled
+      // ability" that Tempered Release fires (the first skill, fired by Trick,
+      // is the instinctual one and carries an affinity in its own tooltip).
+      controlledAbility: { description: cleanText(raw.u2) },
       kin: KIN[raw.u7] ?? null,
       sourceType,
       source,

@@ -1,0 +1,77 @@
+---
+import Base from '../../layouts/Base.astro';
+import AbilityList from '../../components/AbilityList.astro';
+import ComboWheel from '../../components/ComboWheel.astro';
+import Notes from '../../components/Notes.astro';
+import { actions, traits, ACTION_GROUPS, actionByName } from '../../lib/data';
+
+const grouped = ACTION_GROUPS.map((g) => ({ ...g, actions: g.names.map((n) => actionByName.get(n)).filter((a): a is NonNullable<typeof a> => !!a) }));
+const listed = new Set(ACTION_GROUPS.flatMap((g) => g.names));
+const rest = actions.filter((a) => !listed.has(a.name));
+const byLevel = [...actions.map((a) => ({ level: a.level, name: a.name, kind: 'Action' })), ...traits.map((t) => ({ level: t.level, name: t.name, kind: 'Trait' }))].sort(
+  (a, b) => a.level - b.level || a.kind.localeCompare(b.kind),
+);
+---
+
+<Base title="Actions & traits" description="Every Beastmaster action and trait with tooltip text, plus how the Instinctual Combo wheel works.">
+  <h1>Actions & traits</h1>
+  <p class="lead">
+    Straight from the game's tooltips. Beastmaster has two gauges that fill and empty independently: your <strong>TP</strong> (fed by weaponskill combos, spent on
+    instinctual axes) and your familiar's <strong>Familiar TP</strong> (fed by its auto-attacks and Aetheric Burst, spent on Trick). Both cap at 250.
+  </p>
+
+  <h2>Instinctual combos</h2>
+  <ComboWheel />
+
+  {
+    grouped.map((g) => (
+      <section>
+        <h2>{g.title}</h2>
+        <p class="muted">{g.blurb}</p>
+        <AbilityList abilities={g.actions} showLevel />
+      </section>
+    ))
+  }
+  {
+    rest.length > 0 && (
+      <section>
+        <h2>Other</h2>
+        <AbilityList abilities={rest} showLevel />
+      </section>
+    )
+  }
+
+  <h2>Traits</h2>
+  <div class="table-wrap">
+    <table>
+      <thead><tr><th>Lv.</th><th>Trait</th><th>Effect</th></tr></thead>
+      <tbody>
+        {
+          traits.map((t) => (
+            <tr>
+              <td class="num">{t.level}</td>
+              <td>
+                <span class="row">
+                  {t.icon && <img class="icon sm" src={t.icon} alt="" width="28" height="28" loading="lazy" />}
+                  <strong>{t.name}</strong>
+                </span>
+              </td>
+              <td><pre class="desc">{t.description}</pre></td>
+            </tr>
+          ))
+        }
+      </tbody>
+    </table>
+  </div>
+
+  <h2>Unlock order</h2>
+  <div class="table-wrap" style="max-width:520px">
+    <table>
+      <thead><tr><th>Lv.</th><th>Unlock</th><th></th></tr></thead>
+      <tbody>{byLevel.map((u) => <tr><td class="num">{u.level}</td><td>{u.name}</td><td><span class="tag">{u.kind}</span></td></tr>)}</tbody>
+    </table>
+  </div>
+
+  <h2>Rotation & priorities</h2>
+  <Notes id="rotation" heading="Rotation" hint="Openers, gauge pacing, when to Rally, and which Heart to hold going into a Trick." />
+</Base>

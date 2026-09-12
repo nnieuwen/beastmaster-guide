@@ -1,0 +1,16 @@
+{
+  "comps": [
+    {
+      "name": "Starter trio (example)",
+      "beasts": [
+        "cu-sith",
+        "lamb",
+        "pugil"
+      ],
+      "role": "Leveling",
+      "status": "example",
+      "author": "site",
+      "notes": "Placeholder so the featured-comps section has a shape. Cu Sith for slashing damage, Lamb for the sleep Trick, Pugil for the magic-vulnerability buff. Replace with real comps."
+    }
+  ]
+}

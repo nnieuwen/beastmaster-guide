@@ -1,0 +1,47 @@
+---
+// Renders the hand-written Markdown note for a page slot, or a "pending" stub
+// pointing at the file to create. This is where the FC guide lands.
+import { getCollection, render } from 'astro:content';
+
+interface Props {
+  id: string; // e.g. "leveling", "beasts/cu-sith"
+  heading?: string;
+  hint?: string;
+}
+const { id, heading = 'Notes', hint } = Astro.props;
+// getCollection + filter rather than getEntry: a missing slot is normal here
+// and shouldn't log a warning on every build.
+const entry = (await getCollection('notes', (e) => e.id === id))[0];
+const Content = entry ? (await render(entry)).Content : null;
+const status = entry?.data.status ?? null;
+const updated = entry?.data.updated?.toISOString().slice(0, 10);
+---
+
+{
+  entry && Content ? (
+    <section class="notes" data-status={status}>
+      <div class="notes-meta">
+        <span class:list={['badge', status === 'verified' ? 'ok' : 'warn']}>{status}</span>
+        {entry.data.author && <span> · {entry.data.author}</span>}
+        {updated && <span> · updated {updated}</span>}
+      </div>
+      {entry.data.title && <h2 style="margin-top:0">{entry.data.title}</h2>}
+      <div class="prose">
+        <Content />
+      </div>
+    </section>
+  ) : (
+    <section class="notes pending">
+      <div class="notes-meta">
+        <span class="badge">pending</span>
+      </div>
+      <p>
+        <strong>{heading}:</strong> nothing written yet. {hint ?? 'Strategy text goes here once the guide is ready.'}
+        <span class="small">
+          {' '}
+          (Create <code>src/content/notes/{id}.md</code>.)
+        </span>
+      </p>
+    </section>
+  )
+}
