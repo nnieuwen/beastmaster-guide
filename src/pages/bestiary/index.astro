@@ -1,7 +1,7 @@
 ---
 import Base from '../../layouts/Base.astro';
 import KinBadge from '../../components/KinBadge.astro';
-import { beasts, KINS, AFFINITIES, roleTags, element, beastLevel, tiers, instinctOf, controlledOf, affinityColor } from '../../lib/data';
+import { beasts, KINS, AFFINITIES, roleTags, element, beastLevel, instinctOf, controlledOf, affinityColor, build, statsAt } from '../../lib/data';
 
 const rows = beasts.map((b) => {
   const instinct = instinctOf(b);
@@ -16,7 +16,8 @@ const rows = beasts.map((b) => {
     instinctElement: element(instinct.ability?.description ?? ''),
     controlledElement: element(b.controlledAbility.description),
     level: lvl,
-    tier: tiers.placements[b.slug] ?? null,
+    build: build(b),
+    r25: statsAt(b, 25),
     sourceName: b.source?.name ?? 'Starter',
     search: [b.name, b.kin, b.source?.name, instinct.affinity, b.controlledAbility.description, ...b.abilities.map((a) => a.name)].join(' ').toLowerCase(),
   };
@@ -51,6 +52,12 @@ const allTags = ['Damage', 'Control', 'Debuff', 'Buff', 'Sustain', 'Sacrifice'];
       <option value="">Any affinity</option>
       {AFFINITIES.map((a) => <option value={a.name}>{a.name}</option>)}
     </select>
+    <select data-f="build" aria-label="Attacker build">
+      <option value="">Any build</option>
+      <option value="Physical">Physical (STR)</option>
+      <option value="Magical">Magical (INT)</option>
+      <option value="Hybrid">Hybrid</option>
+    </select>
     <select data-f="tag" aria-label="Skill role">
       <option value="">Any role</option>
       {allTags.map((t) => <option value={t}>{t}</option>)}
@@ -68,9 +75,9 @@ const allTags = ['Damage', 'Control', 'Debuff', 'Buff', 'Sustain', 'Sacrifice'];
           <th scope="col" data-sort="kin">Kin</th>
           <th scope="col" data-sort="source">Source</th>
           <th scope="col" data-sort="level">Lv.</th>
+          <th scope="col" data-sort="build">Build</th>
           <th scope="col" data-sort="affinity">Instinct (Trick)</th>
           <th scope="col">Controlled ability (Tempered Release)</th>
-          <th scope="col" data-sort="tier">Tier</th>
         </tr>
       </thead>
       <tbody>
@@ -83,8 +90,8 @@ const allTags = ['Damage', 'Control', 'Debuff', 'Buff', 'Sustain', 'Sacrifice'];
               data-source-type={r.b.sourceType}
               data-source={r.sourceName}
               data-level={r.level ?? ''}
-              data-tier={r.tier ?? ''}
               data-affinity={r.instinct.affinity ?? ''}
+              data-build={r.build ?? ''}
               data-tags={r.tags.join(' ')}
               data-search={r.search}
             >
@@ -106,6 +113,14 @@ const allTags = ['Damage', 'Control', 'Debuff', 'Buff', 'Sustain', 'Sacrifice'];
               </td>
               <td class="num">{r.level ?? <span class="muted">—</span>}</td>
               <td>
+                {r.build && <span class="tag">{r.build}</span>}
+                {r.r25 && (
+                  <div class="small muted" title="STR / INT at rank 25">
+                    {r.r25[0]} / {r.r25[1]}
+                  </div>
+                )}
+              </td>
+              <td>
                 <strong class="small">{r.instinct.ability?.name}</strong>
                 <div style="margin-top:0.2rem">
                   {r.instinct.affinity && (
@@ -125,7 +140,6 @@ const allTags = ['Damage', 'Control', 'Debuff', 'Buff', 'Sustain', 'Sacrifice'];
                   ))}
                 </div>
               </td>
-              <td>{r.tier ? <span class="badge accent">{r.tier}</span> : <span class="muted small">unrated</span>}</td>
             </tr>
           ))
         }
@@ -133,7 +147,7 @@ const allTags = ['Damage', 'Control', 'Debuff', 'Buff', 'Sustain', 'Sacrifice'];
     </table>
   </div>
   <p class="muted small" style="margin-top:0.75rem">
-    Levels come from the curated location file (duty beasts default to the duty's level). Tiers are unrated until the guide's ratings are entered.
+    Levels come from the curated location file (duty beasts default to the duty's level). STR / INT are the rank 25 values.
   </p>
 </Base>
 
@@ -169,6 +183,7 @@ const allTags = ['Damage', 'Control', 'Debuff', 'Buff', 'Sustain', 'Sacrifice'];
     const src = get('source').value;
     const tag = get('tag').value;
     const aff = get('affinity').value;
+    const bld = get('build').value;
     const hide = (get('uncaught') as HTMLInputElement).checked;
     let shown = 0;
     for (const r of rows) {
@@ -180,6 +195,7 @@ const allTags = ['Damage', 'Control', 'Debuff', 'Buff', 'Sustain', 'Sacrifice'];
         (!src || d.source === src) &&
         (!tag || d.tags!.split(' ').includes(tag)) &&
         (!aff || d.affinity === aff) &&
+        (!bld || d.build === bld) &&
         (!hide || !caught.has(d.slug!));
       r.hidden = !ok;
       if (ok) shown++;

@@ -538,5 +538,117 @@
       "party": false,
       "self": true
     }
+  },
+  {
+    "cast": 0,
+    "category": "Weaponskill",
+    "combo": null,
+    "cooldownGroup": 16,
+    "cost": {
+      "type": 111,
+      "value": 250
+    },
+    "description": "Rushes forward and delivers an attack with a potency of 1,200 to target and all enemies nearby it.\nAll TP will be expended upon execution.\nTP Gauge Cost: 250\nInstinctual Affinity: Sunstrider\nAdditional Effect: Grants Sunstrider\nDuration: 7s\nInstinctual skills may be executed sequentially to deal additional damage, which is determined by the skill that completes the combo.\nExecuting a Sunstrider skill while under the effect of Moonstalker will complete the infinitive combo Universality, dealing greater additional damage.\nCannot be executed while bound.\n\n※This action cannot be assigned to a hotbar.\n※Avalanche Axe changes to Brutal Rage when requirements for execution are met.",
+    "effectRange": 6,
+    "icon": "/icons/actions/3910.png",
+    "id": 44930,
+    "job": "",
+    "level": 50,
+    "maxCharges": 0,
+    "name": "Brutal Rage",
+    "preservesCombo": true,
+    "range": 25,
+    "recast": 5,
+    "targets": {
+      "area": false,
+      "hostile": true,
+      "party": false,
+      "self": false
+    },
+    "upgradeOf": "Avalanche Axe"
+  },
+  {
+    "cast": 0,
+    "category": "Weaponskill",
+    "combo": null,
+    "cooldownGroup": 16,
+    "cost": {
+      "type": 111,
+      "value": 250
+    },
+    "description": "Rushes forward and delivers an attack with a potency of 1,200 to target and all enemies nearby it.\nAll TP will be expended upon execution.\nTP Gauge Cost: 250\nInstinctual Affinity: Moonstalker\nAdditional Effect: Grants Moonstalker\nDuration: 7s\nInstinctual skills may be executed sequentially to deal additional damage, which is determined by the skill that completes the combo.\nExecuting a Moonstalker skill while under the effect of Sunstrider will complete the infinitive combo Universality, dealing greater additional damage.\nCannot be executed while bound.\n\n※This action cannot be assigned to a hotbar.\n※Mistral Axe changes to Hawkish Talons when requirements for execution are met.",
+    "effectRange": 6,
+    "icon": "/icons/actions/3911.png",
+    "id": 44931,
+    "job": "",
+    "level": 50,
+    "maxCharges": 0,
+    "name": "Hawkish Talons",
+    "preservesCombo": true,
+    "range": 25,
+    "recast": 5,
+    "targets": {
+      "area": false,
+      "hostile": true,
+      "party": false,
+      "self": false
+    },
+    "upgradeOf": "Mistral Axe"
+  },
+  {
+    "cast": 0,
+    "category": "Weaponskill",
+    "combo": null,
+    "cooldownGroup": 16,
+    "cost": {
+      "type": 111,
+      "value": 250
+    },
+    "description": "Deals unaspected damage with a potency of 1,200 to target and all enemies nearby it.\nAll TP will be expended upon execution.\nTP Gauge Cost: 250\nInstinctual Affinity: Sunstrider\nAdditional Effect: Grants Sunstrider\nDuration: 7s\nInstinctual skills may be executed sequentially to deal additional damage, which is determined by the skill that completes the combo.\nExecuting a Sunstrider skill while under the effect of Moonstalker will complete the infinitive combo Universality, dealing greater additional damage.\n\n※This action cannot be assigned to a hotbar.\n※Spinning Axe changes to Risen Fall when requirements for execution are met.",
+    "effectRange": 6,
+    "icon": "/icons/actions/3912.png",
+    "id": 44932,
+    "job": "",
+    "level": 50,
+    "maxCharges": 0,
+    "name": "Risen Fall",
+    "preservesCombo": true,
+    "range": 25,
+    "recast": 5,
+    "targets": {
+      "area": false,
+      "hostile": true,
+      "party": false,
+      "self": false
+    },
+    "upgradeOf": "Spinning Axe"
+  },
+  {
+    "cast": 0,
+    "category": "Weaponskill",
+    "combo": null,
+    "cooldownGroup": 16,
+    "cost": {
+      "type": 111,
+      "value": 250
+    },
+    "description": "Deals unaspected damage with a potency of 1,200 to all enemies in a straight line.\nAll TP will be expended upon execution.\nTP Gauge Cost: 250\nInstinctual Affinity: Moonstalker\nAdditional Effect: Grants Moonstalker\nDuration: 7s\nInstinctual skills may be executed sequentially to deal additional damage, which is determined by the skill that completes the combo.\nExecuting a Moonstalker skill while under the effect of Sunstrider will complete the infinitive combo Universality, dealing greater additional damage.\n\n※This action cannot be assigned to a hotbar.\n※Gale Axe changes to Calamity when requirements for execution are met.",
+    "effectRange": 10,
+    "icon": "/icons/actions/3913.png",
+    "id": 44933,
+    "job": "",
+    "level": 50,
+    "maxCharges": 0,
+    "name": "Calamity",
+    "preservesCombo": true,
+    "range": 10,
+    "recast": 5,
+    "targets": {
+      "area": false,
+      "hostile": true,
+      "party": false,
+      "self": false
+    },
+    "upgradeOf": "Gale Axe"
   }
 ]

@@ -1,0 +1,71 @@
+---
+import Base from '../../../layouts/Base.astro';
+import StratTabs from '../../../components/StratTabs.astro';
+import { crucible, boardOfBattle } from '../../../lib/data';
+
+export function getStaticPaths() {
+  return crucible.battles.map((b) => ({ params: { id: String(b.id) }, props: { battle: b } }));
+}
+const { battle } = Astro.props;
+const board = boardOfBattle.get(battle.id);
+// Walk the board's battles in tile order with the boss last (the data lists it first).
+const siblings = board ? [...board.battleIds.slice(1), board.battleIds[0]].map((id) => crucible.battles.find((b) => b.id === id)!).filter(Boolean) : crucible.battles;
+const idx = siblings.findIndex((b) => b.id === battle.id);
+const prev = siblings[idx - 1];
+const next = siblings[idx + 1];
+const isBoss = board?.bossBattleId === battle.id;
+const tiles = board ? board.tiles.filter((t) => t.battleId === battle.id || (t.options ?? []).some((o) => o.battleId === battle.id)) : [];
+---
+
+<Base title={`${isBoss ? 'Boss' : 'Battle'} ${battle.id}${board ? ` · ${board.name}` : ''}`} description={`Crucible battle ${battle.id}: ${battle.enemies.map((e) => e.name).join(', ')} — weaknesses, signature actions and strategy.`}>
+  <nav class="small muted" aria-label="Breadcrumb">
+    <a href="/crucible/">Crucible</a> › {board && <><a href={`/crucible/${board.slug}/`}>{board.name}</a> › </>}Battle {battle.id}
+  </nav>
+  <h1>
+    {isBoss ? 'Boss: ' : ''}{battle.enemies.map((e) => e.name).join(', ')}
+  </h1>
+  <div class="row" style="flex-wrap:wrap;margin-bottom:1rem">
+    <span class="badge">Battle {battle.id}</span>
+    {isBoss && <span class="badge accent">Boss of the board</span>}
+    {tiles.some((t) => t.type === 'elite') && <span class="badge warn">Elite</span>}
+    {tiles.map((t) => (
+      <span class="badge">Move {t.move}{t.type === 'random' ? ' (random tile)' : ''}</span>
+    ))}
+  </div>
+
+  <h2>Enemy pieces</h2>
+  <div class="grid">
+    {
+      battle.enemies.map((e) => (
+        <div class="card">
+          <div class="row">
+            {e.icon ? <img class="icon" src={e.icon} alt="" width="40" height="40" /> : <span class="icon" />}
+            <div>
+              <strong style="text-transform:capitalize">{e.name}</strong>
+              <div class="row small" style="flex-wrap:wrap;margin-top:0.2rem">
+                {e.weakness && <span class="tag">Weak to {e.weakness}</span>}
+              </div>
+            </div>
+          </div>
+          {e.action && (
+            <p class="small" style="margin:0.6rem 0 0">
+              <span class="muted">Signature:</span> <strong>{e.action.name}</strong>
+              {e.action.status && <span class="tag" style="margin-left:0.3rem">{e.action.status}</span>}
+            </p>
+          )}
+        </div>
+      ))
+    }
+  </div>
+  <p class="muted small" style="margin-top:0.75rem">
+    Weaknesses come straight from the game data (they match the in-game board preview). The star ratings the preview shows for Strength / Intelligence / resistances aren't decoded yet, and attack patterns beyond the signature action aren't in the data at all — that's what the write-up below is for.
+  </p>
+
+  <h2>Strategy</h2>
+  <StratTabs prefix={`crucible/battles/${battle.id}`} hint="Mechanics, kill order, which familiars handle it — one file per variant, rendered as tabs." />
+
+  <nav style="display:flex;justify-content:space-between;margin-top:2.5rem" aria-label="Neighbouring battles">
+    <span>{prev && <a href={`/crucible/battles/${prev.id}/`}>← Battle {prev.id}</a>}</span>
+    <span>{next && <a href={`/crucible/battles/${next.id}/`}>Battle {next.id} →</a>}</span>
+  </nav>
+</Base>

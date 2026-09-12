@@ -1,14 +1,12 @@
 ---
-title: Leveling route
+title: Leveling
 status: draft
-author: site
+author: FC guide
 updated: 2026-09-12
 ---
 
-**What's confirmed from the game data and job quests** (everything else on this page is still to be written):
+**1–15:** hit mobs in the open world or run FATEs. You're capturing as you go, so work through the low-level La Noscea, Shroud and Thanalan zones and pick up everything at or below your level.
 
-- The unlock quest starts in New Gridania and needs *The Ultimate Weapon* done on a level 50 job.
-- The job quests come from J'yhuh Tia in Central Shroud at levels 1, 8, 18, 30 (two), 40, then 50 — the level 30 quest *Into the Crucible* opens the Crucible.
-- Capture can't take a beast above your own level, so the open-world roster gates itself: low-level La Noscea / Shroud / Thanalan beasts first, Mor Dhona and the level 50 duties last.
+**15–50:** spam dungeons — you'll get roughly two levels per run. Limited jobs can't use Duty Finder matchmaking, so put up a Party Finder listing (something like *"Leveling BST"*) and people will join.
 
-Still to write: the actual zone order, which early Tricks make pulls safer, and whether FATEs or duties are the faster 40–50 stretch.
+**Job quest gating:** the quest table above is the order, but from level 30 the quests also want Crucible clears — board 1 for the level 30 quest, board 2 for level 40, and boards 3–5 for the level 50 chain. The "Opens" column shows which board each quest unlocks.

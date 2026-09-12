@@ -1,10 +1,10 @@
 ---
 import Base from '../../layouts/Base.astro';
 import KinBadge from '../../components/KinBadge.astro';
-import StatBars from '../../components/StatBars.astro';
+import StatTable from '../../components/StatTable.astro';
 import AbilityList from '../../components/AbilityList.astro';
 import Notes from '../../components/Notes.astro';
-import { beasts, locations, tiers, roleTags, element, beastLevel, SHARED_ABILITIES, instinctOf, controlledOf, affinityColor, affinityNeighbours } from '../../lib/data';
+import { beasts, locations, roleTags, element, beastLevel, SHARED_ABILITIES, instinctOf, controlledOf, affinityColor, affinityNeighbours, build } from '../../lib/data';
 
 export function getStaticPaths() {
   return beasts.map((b) => ({ params: { slug: b.slug }, props: { beast: b } }));
@@ -12,7 +12,6 @@ export function getStaticPaths() {
 const { beast } = Astro.props;
 const loc = locations[beast.slug] ?? {};
 const level = beastLevel(beast);
-const tier = tiers.placements[beast.slug] ?? null;
 const instinct = instinctOf(beast);
 const controlled = controlledOf(beast);
 const tags = roleTags(beast.controlledAbility.description);
@@ -39,7 +38,7 @@ const sourceLabel =
         <KinBadge kin={beast.kin} />
         <span class="badge">#{beast.id}</span>
         {level != null && <span class="badge">Lv. {level}</span>}
-        {tier ? <span class="badge accent">Tier {tier}</span> : <span class="badge">Unrated</span>}
+        {build(beast) && <span class="badge">{build(beast)}</span>}
       </div>
     </div>
   </header>
@@ -117,11 +116,8 @@ const sourceLabel =
     <div style="margin-top:0.5rem"><AbilityList abilities={shared} /></div>
   </details>
 
-  <h2>Growth</h2>
-  <div class="card" style="max-width:520px">
-    <StatBars growth={beast.growth} />
-    <p class="muted small" style="margin:0.75rem 0 0">Five growth percentages from the game data; which stat each column drives is still being decoded.</p>
-  </div>
+  <h2>Stats by rank</h2>
+  <StatTable beast={beast} />
 
   <h2>Guide notes</h2>
   <Notes id={`beasts/${beast.slug}`} heading={`${beast.name} notes`} hint="Where it spawns, how to pull it safely, and when it's worth bringing." />

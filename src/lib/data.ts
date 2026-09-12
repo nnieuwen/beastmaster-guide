@@ -9,20 +9,43 @@ import crucibleJson from '../data/crucible.json';
 import questsJson from '../data/quests.json';
 import metaJson from '../data/meta.json';
 import locationsJson from '../data/curated/beast-locations.json';
-import tiersJson from '../data/curated/tiers.json';
 import compsJson from '../data/curated/comps.json';
-import type { Ability, Beast, BeastLocation, Comp, Crucible, Item, Kin, Meta, Quest, Tiers, Trait } from './types';
+import routesJson from '../data/curated/routes.json';
+import statusesJson from '../data/statuses.json';
+import type { Ability, Beast, BeastLocation, Comp, Crucible, CrucibleBoard, Item, Kin, Meta, Quest, Routes, Status, Trait } from './types';
 
 export const beasts = beastsJson as Beast[];
-export const actions = actionsJson as Ability[];
+const allActions = actionsJson as Ability[];
+/** Base kit (what the ClassJob=43 search returns). */
+export const actions = allActions.filter((a) => !a.upgradeOf);
+/** The four level 50 replacements that appear at 250 TP. */
+export const upgrades = allActions.filter((a) => !!a.upgradeOf);
+export const statuses = statusesJson as Status[];
 export const traits = traitsJson as Trait[];
 export const items = itemsJson as Item[];
 export const crucible = crucibleJson as unknown as Crucible;
 export const quests = questsJson as Quest[];
 export const meta = metaJson as Meta;
 export const locations = locationsJson as Record<string, BeastLocation>;
-export const tiers = tiersJson as Tiers;
 export const comps = (compsJson as { comps: Comp[] }).comps;
+export const routes = routesJson as unknown as Routes;
+
+export const boards = crucible.boards as CrucibleBoard[];
+export const boardBySlug = new Map(boards.map((b) => [b.slug, b]));
+export const battleById = new Map(crucible.battles.map((b) => [b.id, b]));
+/** Which board a battle belongs to. */
+export const boardOfBattle = new Map(boards.flatMap((b) => b.battleIds.map((id) => [id, b] as const)));
+
+export const TILE_LABELS: Record<string, string> = {
+  start: 'Start',
+  battle: 'Enemy',
+  elite: 'Elite enemy',
+  boss: 'Boss',
+  shop: 'Shop',
+  campsite: 'Campsite',
+  treasure: 'Treasure coffer',
+  random: 'Random (triple card)',
+};
 
 export const KINS: Kin[] = ['Beastkin', 'Vilekin', 'Cloudkin', 'Seedkin', 'Wavekin', 'Scalekin', 'Soulkin', 'Ashkin'];
 
@@ -92,6 +115,22 @@ export function element(desc: string): string | null {
 
 export const isMagicElement = (e: string | null) => !!e && ['Fire', 'Wind', 'Earth', 'Lightning', 'Ice', 'Water'].includes(e);
 
+export const STAT_NAMES = ['STR', 'INT', 'PHY R', 'MAG R', 'CON'] as const;
+/** The rank syncs of the five Crucible boards, plus rank 1. */
+export const RANK_MARKS = [1, 5, 10, 15, 20, 25];
+
+export const statsAt = (b: Beast, rank: number): number[] | null => b.stats.ranks[Math.min(Math.max(rank, 1), b.stats.ranks.length) - 1] ?? null;
+
+/** Physical / magical / hybrid attacker, from the STR:INT split at max rank. */
+export function build(b: Beast): 'Physical' | 'Magical' | 'Hybrid' | null {
+  const s = statsAt(b, 25);
+  if (!s) return null;
+  const [str, int] = s;
+  if (str > int * 1.15) return 'Physical';
+  if (int > str * 1.15) return 'Magical';
+  return 'Hybrid';
+}
+
 export function beastLevel(b: Beast): number | null {
   const loc = locations[b.slug];
   if (loc?.level != null) return loc.level;
@@ -127,7 +166,8 @@ export const ACTION_GROUPS: { title: string; blurb: string; names: string[] }[] 
   },
 ];
 
-export const actionByName = new Map(actions.map((a) => [a.name, a]));
+export const actionByName = new Map(allActions.map((a) => [a.name, a]));
+export const statusByName = new Map(statuses.map((s) => [s.name, s]));
 
 // Notes status helpers ---------------------------------------------------------
 

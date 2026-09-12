@@ -2,22 +2,20 @@
 import Base from '../layouts/Base.astro';
 import Notes from '../components/Notes.astro';
 import { getCollection } from 'astro:content';
-import { beasts, actions, traits, items, crucible, meta, tiers, comps } from '../lib/data';
+import { beasts, actions, traits, items, crucible, meta, comps } from '../lib/data';
 
 const notes = await getCollection('notes');
 const verified = notes.filter((n) => n.data.status === 'verified').length;
 const drafts = notes.length - verified;
-const rated = Object.keys(tiers.placements).length;
 const starter = beasts.find((b) => b.sourceType === 'starter');
 
 const sections = [
   { href: '/bestiary/', title: 'Bestiary', text: `All ${beasts.length} familiars — sources, kits, Tricks, classifications, plus a capture checklist.` },
   { href: '/actions/', title: 'Actions & traits', text: `${actions.length} actions and ${traits.length} traits with tooltip text, and the Instinctual Combo wheel.` },
   { href: '/leveling/', title: 'Getting started', text: 'Unlock requirements, how Capture works, the job quest chain, beasts by zone.' },
-  { href: '/crucible/', title: 'Crucible', text: `${crucible.battles.length} battles with their enemy pieces, score ranks and bonuses; strategy tabs per board.` },
+  { href: '/crucible/', title: 'Crucible', text: `All ${crucible.boards.length} boards drawn from the game data — tile maps, ${crucible.battles.length} battles, squad caps, rank syncs — plus comps and strategy per board.` },
   { href: '/comps/', title: 'Team comps', text: 'Build a trio, see its coverage, share it by link.' },
-  { href: '/gear/', title: 'Gear & feed', text: `${items.length} beast gear, feed and Crucible items with effects.` },
-  { href: '/tier-list/', title: 'Tier list', text: rated ? `${rated} familiars rated.` : 'Ratings pending.' },
+  { href: '/gear/', title: 'Gear', text: `Player BiS, plus ${items.length} beast gear, feed and Crucible items with effects.` },
 ];
 ---
 
@@ -29,7 +27,7 @@ const sections = [
     </p>
     <div class="status-banner">
       <span class="badge ok">game data live</span>
-      <span>{beasts.length} beasts · {actions.length} actions · {items.length} items · {crucible.battles.length} Crucible battles</span>
+      <span>{beasts.length} beasts · {actions.length} actions · {items.length} items · {crucible.boards.length} Crucible boards / {crucible.battles.length} battles</span>
       <span class="badge warn">guide text in progress</span>
       <span>{verified} verified · {drafts} draft · sections without notes show a stub</span>
     </div>

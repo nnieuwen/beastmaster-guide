@@ -8,11 +8,12 @@ the written guide lives — the site renders a "pending" stub anywhere a file do
 | `intro.md` | home page |
 | `leveling.md` | Getting started |
 | `rotation.md` | Actions & traits |
+| `actions.md` | Actions & traits (kit primer, top of page) |
 | `crucible.md` | Crucible overview |
 | `gear.md` | Gear |
-| `tier-list.md` | Tier list (rationale; placements live in `src/data/curated/tiers.json`) |
 | `beasts/<slug>.md` | that beast's page (slugs are the URL: `beasts/cu-sith.md`) |
-| `crucible/<battle>/<anything>.md` | that battle's page — every file becomes a tab, so alternate strats are separate files |
+| `crucible/<board>/<anything>.md` | that board's page (`unbroken-1`, `unbroken-2`, `unbroken-3`, `masters-1`, `masters-2`) — every file becomes a tab, so normal clear vs. Legendary run are separate files |
+| `crucible/battles/<id>/<anything>.md` | a single battle's page, same tab behaviour |
 
 Frontmatter:
 

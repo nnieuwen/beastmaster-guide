@@ -1,0 +1,8 @@
+{
+  "_comment": "Routes drawn over a board map: { \"<board slug>\": [ { \"label\": \"Legendary\", \"nodes\": [0, 1, 3, ...], \"source\": \"https://...\" } ] }. Node ids are shown on the board page map.",
+  "unbroken-1": [],
+  "unbroken-2": [],
+  "unbroken-3": [],
+  "masters-1": [],
+  "masters-2": []
+}

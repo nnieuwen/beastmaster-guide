@@ -1,13 +1,15 @@
 {
   "counts": {
-    "actions": 20,
+    "actions": 24,
     "beasts": 50,
     "crucibleBattles": 45,
+    "crucibleBoards": 5,
     "items": 203,
     "quests": 13,
+    "statuses": 22,
     "traits": 14
   },
-  "fetchedAt": "2026-09-12T09:38:45.860Z",
+  "fetchedAt": "2026-09-12T19:33:39.016Z",
   "job": {
     "abbreviation": "BST",
     "id": 43,

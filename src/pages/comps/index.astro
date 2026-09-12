@@ -1,7 +1,7 @@
 ---
 import Base from '../../layouts/Base.astro';
 import BeastCard from '../../components/BeastCard.astro';
-import { beasts, comps, KINS, AFFINITIES, roleTags, element, beastBySlug, SHARED_ABILITIES, instinctOf, controlledOf } from '../../lib/data';
+import { beasts, comps, boards, KINS, AFFINITIES, roleTags, element, beastBySlug, SHARED_ABILITIES, instinctOf, controlledOf, statsAt, build, RANK_MARKS, STAT_NAMES } from '../../lib/data';
 
 // Everything the client needs to describe a trio, in one small blob.
 const data = beasts.map((b) => ({
@@ -16,26 +16,44 @@ const data = beasts.map((b) => ({
   tags: [...new Set([...roleTags(b.controlledAbility.description), ...roleTags(instinctOf(b).ability?.description ?? '')])],
   elements: [element(instinctOf(b).ability?.description ?? ''), element(b.controlledAbility.description), element(b.autoAttack.description)].filter((e) => e && e !== 'Unaspected'),
   skills: b.abilities.filter((a) => !SHARED_ABILITIES.has(a.name)).map((a) => a.name),
-  growth: b.growth,
+  build: build(b),
+  // [STR, INT, PHY R, MAG R, CON] at rank 1 and each board's rank sync.
+  stats: Object.fromEntries(RANK_MARKS.map((r) => [r, statsAt(b, r)])),
 }));
-const featured = comps.map((c) => ({ ...c, resolved: c.beasts.map((s) => beastBySlug.get(s)).filter((b): b is NonNullable<typeof b> => !!b) }));
+const featured = comps.map((c) => ({
+  ...c,
+  boardName: boards.find((b) => b.slug === c.board)?.name ?? null,
+  resolved: c.beasts.map((s) => beastBySlug.get(s)).filter((b): b is NonNullable<typeof b> => !!b),
+}));
+const MAX_SLOTS = Math.max(3, ...boards.map((b) => b.squadSize));
+const boardMeta = boards.map((b) => ({ slug: b.slug, name: b.name, squadSize: b.squadSize, rankSync: b.rankSync }));
+const statNames = [...STAT_NAMES];
 ---
 
 <Base title="Team comps" description="Build a three-familiar Beastmaster team and see its combined kit, elements and classifications; share it by link.">
   <h1>Team comps</h1>
   <p class="lead">
-    Pick familiars and see what the team covers. Three slots match the Battlehorn summons; switch to a Crucible squad for up to seven (the score bonuses reward
-    clearing boards with teams of 6–7 as well as small squads). The link updates as you go, so a comp can be shared or bookmarked.
+    Pick familiars and see what the team covers. Three slots match the Battlehorn summons; pick a Crucible board and the slots grow to that board's squad cap
+    (10–15). The link updates as you go, so a comp can be shared or bookmarked.
   </p>
 
   <div class="card" data-comp>
     <div class="row" style="margin-bottom:0.75rem;gap:1rem;flex-wrap:wrap">
-      <label class="small"><input type="radio" name="mode" value="3" data-mode checked /> Combat (3 Battlehorn slots)</label>
-      <label class="small"><input type="radio" name="mode" value="7" data-mode /> Crucible squad (up to 7)</label>
+      <label class="small"><input type="radio" name="mode" value="combat" data-mode checked /> Combat (3 Battlehorn slots)</label>
+      <label class="small">
+        <input type="radio" name="mode" value="crucible" data-mode /> Crucible squad:
+        <select data-board aria-label="Crucible board" style="margin-left:0.3rem">
+          {boards.map((b) => (
+            <option value={b.slug}>
+              {b.name} (up to {b.squadSize})
+            </option>
+          ))}
+        </select>
+      </label>
     </div>
     <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:0.75rem">
       {
-        [0, 1, 2, 3, 4, 5, 6].map((i) => (
+        Array.from({ length: MAX_SLOTS }, (_, i) => i).map((i) => (
           <label style="display:grid;gap:0.3rem" data-slot-wrap={i} hidden={i >= 3}>
             <span class="muted small">Slot {i + 1}</span>
             <select data-slot={i} aria-label={`Familiar slot ${i + 1}`}>
@@ -73,16 +91,20 @@ const featured = comps.map((c) => ({ ...c, resolved: c.beasts.map((s) => beastBy
             <div>
               <strong>{c.name}</strong>
               {c.role && <span class="badge" style="margin-left:0.4rem">{c.role}</span>}
+              {c.boardName && <span class="badge" style="margin-left:0.4rem">{c.boardName}</span>}
             </div>
             <span class:list={['badge', c.status === 'verified' ? 'ok' : c.status === 'draft' ? 'warn' : '']}>{c.status ?? 'draft'}</span>
           </div>
-          <div style="display:grid;gap:0.4rem;margin:0.6rem 0">
+          <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(160px,1fr));gap:0.4rem;margin:0.6rem 0">
             {c.resolved.map((b) => (
               <BeastCard beast={b} />
             ))}
           </div>
           {c.notes && <p class="small muted" style="margin:0 0 0.6rem">{c.notes}</p>}
-          <a class="btn" href={`/comps/?b=${c.beasts.join(',')}`}>Load in builder</a>
+          <div class="row" style="flex-wrap:wrap">
+            <a class="btn" href={`/comps/?${c.board ? `board=${c.board}&` : ''}b=${c.beasts.join(',')}`}>Load in builder</a>
+            {c.source && <a class="small" href={c.source} rel="noopener">Source ↗</a>}
+          </div>
         </div>
       ))
     }
@@ -90,18 +112,24 @@ const featured = comps.map((c) => ({ ...c, resolved: c.beasts.map((s) => beastBy
 
   <script type="application/json" id="beast-data" set:html={JSON.stringify(data)} />
   <script type="application/json" id="affinity-data" set:html={JSON.stringify(AFFINITIES)} />
+  <script type="application/json" id="board-data" set:html={JSON.stringify(boardMeta)} />
+  <script type="application/json" id="stat-names" set:html={JSON.stringify(statNames)} />
 </Base>
 
 <script>
-  type B = { slug: string; name: string; kin: string | null; icon: string | null; instinct: string; affinity: string | null; controlled: string; controlledText: string; tags: string[]; elements: string[]; skills: string[]; growth: number[] };
+  type B = { slug: string; name: string; kin: string | null; icon: string | null; instinct: string; affinity: string | null; controlled: string; controlledText: string; tags: string[]; elements: string[]; skills: string[]; build: string | null; stats: Record<string, number[] | null> };
+  const statNames: string[] = JSON.parse(document.getElementById('stat-names')!.textContent!);
   type A = { name: string; action: string; color: string; combo: string };
   const all: B[] = JSON.parse(document.getElementById('beast-data')!.textContent!);
   const affinities: A[] = JSON.parse(document.getElementById('affinity-data')!.textContent!);
+  const boardMeta: { slug: string; name: string; squadSize: number; rankSync: number }[] = JSON.parse(document.getElementById('board-data')!.textContent!);
+  const boardSelect = document.querySelector<HTMLSelectElement>('[data-board]')!;
   const bySlug = new Map(all.map((b) => [b.slug, b]));
   const selects = [...document.querySelectorAll<HTMLSelectElement>('[data-slot]')];
   const wraps = [...document.querySelectorAll<HTMLElement>('[data-slot-wrap]')];
   const modes = [...document.querySelectorAll<HTMLInputElement>('[data-mode]')];
-  const slotCount = () => Number(modes.find((m) => m.checked)?.value ?? 3);
+  const isCrucible = () => modes.find((m) => m.checked)?.value === 'crucible';
+  const slotCount = () => (isCrucible() ? (boardMeta.find((b) => b.slug === boardSelect.value)?.squadSize ?? 3) : 3);
   function applyMode() {
     const n = slotCount();
     wraps.forEach((w, i) => (w.hidden = i >= n));
@@ -114,9 +142,19 @@ const featured = comps.map((c) => ({ ...c, resolved: c.beasts.map((s) => beastBy
   const esc = (s: string) => s.replace(/[&<>"]/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' })[c]!);
 
   function fromUrl() {
-    const b = new URLSearchParams(location.search).get('b');
-    const slugs = (b ? b.split(',') : []).slice(0, 7);
-    if (slugs.length > 3) modes.forEach((m) => (m.checked = m.value === '7'));
+    const params = new URLSearchParams(location.search);
+    const board = params.get('board');
+    const b = params.get('b');
+    const slugs = (b ? b.split(',') : []).slice(0, selects.length);
+    if (board && boardMeta.some((x) => x.slug === board)) {
+      boardSelect.value = board;
+      modes.forEach((m) => (m.checked = m.value === 'crucible'));
+    } else if (slugs.length > 3) {
+      // Too many for combat: pick the smallest board that fits.
+      const fit = [...boardMeta].sort((x, y) => x.squadSize - y.squadSize).find((x) => x.squadSize >= slugs.length) ?? boardMeta.at(-1);
+      if (fit) boardSelect.value = fit.slug;
+      modes.forEach((m) => (m.checked = m.value === 'crucible'));
+    }
     applyMode();
     selects.forEach((s, i) => (s.value = bySlug.has(slugs[i] ?? '') ? slugs[i]! : ''));
   }
@@ -124,6 +162,7 @@ const featured = comps.map((c) => ({ ...c, resolved: c.beasts.map((s) => beastBy
     const slugs = selects.map((s) => s.value).filter(Boolean);
     const url = new URL(location.href);
     slugs.length ? url.searchParams.set('b', slugs.join(',')) : url.searchParams.delete('b');
+    isCrucible() ? url.searchParams.set('board', boardSelect.value) : url.searchParams.delete('board');
     history.replaceState(null, '', url);
   }
   function render() {
@@ -136,7 +175,9 @@ const featured = comps.map((c) => ({ ...c, resolved: c.beasts.map((s) => beastBy
     const tags = new Set(picked.flatMap((b) => b.tags));
     const elements = new Set(picked.flatMap((b) => b.elements));
     const affs = new Set(picked.map((b) => b.affinity).filter(Boolean));
-    const growth = [0, 1, 2, 3, 4].map((i) => Math.round(picked.reduce((s, b) => s + (b.growth[i] ?? 0), 0) / picked.length));
+    const rank = isCrucible() ? (boardMeta.find((b) => b.slug === boardSelect.value)?.rankSync ?? 25) : 25;
+    const totals = [0, 1, 2, 3, 4].map((i) => picked.reduce((s, b) => s + (b.stats[String(rank)]?.[i] ?? 0), 0));
+    const builds = picked.map((b) => b.build).filter(Boolean);
     const roleTags = ['Damage', 'Control', 'Debuff', 'Buff', 'Sustain'];
     summary.innerHTML = `
       <div class="grid">
@@ -146,7 +187,7 @@ const featured = comps.map((c) => ({ ...c, resolved: c.beasts.map((s) => beastBy
           <div class="card">
             <div class="row">
               ${b.icon ? `<img class="icon" src="${b.icon}" alt="" width="40" height="40">` : ''}
-              <div><a href="/bestiary/${b.slug}/"><strong>${esc(b.name)}</strong></a><br><span class="badge kin" data-kin="${b.kin ?? ''}">${b.kin ?? ''}</span></div>
+              <div><a href="/bestiary/${b.slug}/"><strong>${esc(b.name)}</strong></a><br><span class="badge kin" data-kin="${b.kin ?? ''}">${b.kin ?? ''}</span> ${b.build ? `<span class="tag">${b.build}</span>` : ''}</div>
             </div>
             <p class="small" style="margin:0.6rem 0 0.3rem"><span class="muted">Trick:</span> ${esc(b.instinct)} ${b.affinity ? `<span class="tag" style="color:var(--c-${b.affinity.toLowerCase()});border-color:var(--c-${b.affinity.toLowerCase()})">${b.affinity}</span>` : ''}</p>
             <p class="small" style="margin:0"><span class="muted">Tempered Release:</span> ${esc(b.controlled)} — ${esc(b.controlledText)}</p>
@@ -161,8 +202,8 @@ const featured = comps.map((c) => ({ ...c, resolved: c.beasts.map((s) => beastBy
           <dt class="muted">Skill roles</dt><dd style="margin:0">${roleTags.map((t) => `<span class="tag" style="${tags.has(t) ? 'color:var(--ok);border-color:var(--ok)' : 'opacity:.45'}">${t}</span>`).join(' ')}</dd>
           <dt class="muted">Elements</dt><dd style="margin:0">${elements.size ? [...elements].map((e) => `<span class="tag">${e}</span>`).join(' ') : '<span class="muted small">none aspected</span>'}</dd>
           <dt class="muted">Kinships</dt><dd style="margin:0">${[...kins].map((k) => `<span class="badge kin" data-kin="${k}">${k}</span>`).join(' ')} <span class="muted small">(${kins.size} distinct — each gives Borrow a different Beast Mode)</span></dd>
-          <dt class="muted">Squad size</dt><dd style="margin:0" class="small">${picked.length} familiar${picked.length === 1 ? '' : 's'}${picked.length >= 6 ? ' — Beast Squad I range' : picked.length >= 4 ? ' — Beast Squad II range' : ' — Beast Squad III range'}</dd>
-          <dt class="muted">Avg. growth</dt><dd style="margin:0" class="small">${growth.map((g, i) => `<span class="tag">${['I', 'II', 'III', 'IV', 'V'][i]}: ${g}</span>`).join(' ')}</dd>
+          <dt class="muted">Squad size</dt><dd style="margin:0" class="small">${picked.length} of ${slotCount()}${isCrucible() ? ` on ${boardMeta.find((b) => b.slug === boardSelect.value)?.name ?? ''}` : ''}${picked.length >= 6 ? ' — Beast Squad I range' : picked.length >= 4 ? ' — Beast Squad II range' : ' — Beast Squad III range'}</dd>
+          <dt class="muted">Stats at rank ${rank}</dt><dd style="margin:0" class="small">${totals.map((t, i) => `<span class="tag">${statNames[i]} ${t}</span>`).join(' ')} <span class="muted">(squad total · ${builds.filter((x) => x === 'Physical').length} physical, ${builds.filter((x) => x === 'Magical').length} magical, ${builds.filter((x) => x === 'Hybrid').length} hybrid)</span></dd>
         </dl>
       </div>`;
   }
@@ -173,13 +214,14 @@ const featured = comps.map((c) => ({ ...c, resolved: c.beasts.map((s) => beastBy
       msg.textContent = '';
     }),
   );
-  modes.forEach((m) =>
-    m.addEventListener('change', () => {
+  for (const el of [...modes, boardSelect]) {
+    el.addEventListener('change', () => {
+      if (el === boardSelect) modes.forEach((m) => (m.checked = m.value === 'crucible'));
       applyMode();
       toUrl();
       render();
-    }),
-  );
+    });
+  }
   document.querySelector('[data-clear]')?.addEventListener('click', () => {
     selects.forEach((s) => (s.value = ''));
     toUrl();

@@ -44,7 +44,8 @@ async function api(path, params = {}) {
   throw new Error(`gave up on ${url}`);
 }
 
-// Every row of a sheet. XIVAPI pages with `after=<last row id>`.
+// Every row of a sheet. XIVAPI pages with `after=<row>` or, on sheets with
+// subrows, `after=<row>:<subrow>` (a bare row id resumes at subrow 1).
 async function allRows(sheet, fields, extra = {}) {
   const rows = [];
   let after;
@@ -52,7 +53,8 @@ async function allRows(sheet, fields, extra = {}) {
     const page = await api(`sheet/${sheet}`, { fields, limit: 500, after, ...extra });
     rows.push(...page.rows);
     if (page.rows.length < 500) return { rows, version: page.version, schema: page.schema };
-    after = page.rows.at(-1).row_id;
+    const last = page.rows.at(-1);
+    after = last.subrow_id !== undefined ? `${last.row_id}:${last.subrow_id}` : last.row_id;
   }
 }
 
@@ -199,6 +201,37 @@ async function fetchPlayerActions() {
   return [...details.values()].sort((a, b) => a.level - b.level || a.id - b.id);
 }
 
+// The level 50 trait swaps the four axes for these at 250 TP. They carry
+// ClassJob 0 so the ClassJob=43 search misses them.
+const UPGRADED_AXES = { 'Brutal Rage': 'Avalanche Axe', 'Hawkish Talons': 'Mistral Axe', 'Risen Fall': 'Spinning Axe', Calamity: 'Gale Axe' };
+
+async function fetchUpgradedActions() {
+  const ids = [];
+  for (const name of Object.keys(UPGRADED_AXES)) {
+    const s = await api('search', { sheets: 'Action', query: `Name="${name}"`, fields: 'Name,IsPvP', limit: 5 });
+    const hit = s.results.find((r) => !r.fields.IsPvP);
+    if (hit) ids.push(hit.row_id);
+  }
+  const details = await actionDetails(ids);
+  return [...details.values()].map((a) => ({ ...a, upgradeOf: UPGRADED_AXES[a.name] ?? null })).sort((a, b) => a.id - b.id);
+}
+
+// Beastmaster's own status effects (the Hearts, Sunstrider/Moonstalker, the
+// Kinships, ...). They sit in one block of the Status sheet.
+const STATUS_NAMES = new Set([
+  'Volant Heart', 'Rampant Heart', 'Durant Heart', 'Eldritch Heart', 'Sunstrider', 'Moonstalker', 'One with Nature',
+  'Beast Kinship', 'Vile Kinship', 'Cloud Kinship', 'Seed Kinship', 'Wave Kinship', 'Scale Kinship', 'Soul Kinship', 'Ash Kinship',
+  'Lingering Vantage', 'Vileskin', 'Beastskin', 'Seeds Sown', 'Scaleskin', 'Capturing Interest', 'Interest Captured',
+]);
+
+async function fetchStatuses() {
+  const rows = await rowsById('Status', Array.from({ length: 40 }, (_, i) => 4590 + i), 'Name,Description,Icon,MaxStacks');
+  return [...rows.entries()]
+    .filter(([, f]) => STATUS_NAMES.has(f.Name))
+    .map(([id, f]) => ({ id, name: f.Name, description: cleanText(f.Description), icon: wantIcon('statuses', f.Icon?.id), maxStacks: f.MaxStacks }))
+    .sort((a, b) => a.id - b.id);
+}
+
 async function fetchTraits() {
   const search = await api('search', { sheets: 'Trait', query: `ClassJob=${BST_CLASSJOB}`, fields: 'Name,Level,Icon', limit: 100 });
   const ids = search.results.map((r) => r.row_id);
@@ -229,6 +262,16 @@ async function fetchBeasts() {
   ].join(',');
   const { rows, version, schema } = await allRows('XBMPet', fields);
   const pets = rows.filter((r) => r.row_id > 0 && relName(r.fields.Pet));
+
+  // Per-rank stats. XBMPet.Unknown8 picks a row of XBMPetParamGrow; its 25
+  // subrows are ranks 1-25 and the five columns are STR, INT, PHY R, MAG R,
+  // CON (verified line-for-line against the in-game team screen).
+  const { rows: growRows } = await allRows('XBMPetParamGrow', 'Unknown0,Unknown1,Unknown2,Unknown3,Unknown4');
+  const profiles = new Map();
+  for (const g of growRows) {
+    if (!profiles.has(g.row_id)) profiles.set(g.row_id, []);
+    profiles.get(g.row_id)[g.subrow_id] = [0, 1, 2, 3, 4].map((i) => g.fields[`Unknown${i}`]);
+  }
 
   // Beast skill kits live on the Pet sheet, one Action id per Abilities slot.
   const petIds = pets.map((r) => rel(r.fields.Pet).row_id);
@@ -269,13 +312,14 @@ async function fetchBeasts() {
       // is the instinctual one and carries an affinity in its own tooltip).
       controlledAbility: { description: cleanText(raw.u2) },
       kin: KIN[raw.u7] ?? null,
+      stats: { profileId: raw.u8 ?? null, ranks: (profiles.get(raw.u8) ?? []).filter(Boolean) },
       sourceType,
       source,
       growth: growth.filter((v) => typeof v === 'number'),
       growthFlags: growth.filter((v) => typeof v === 'boolean'),
       abilities: kit,
       // Undecoded columns; see docs/DATA-NOTES.md before relying on these.
-      raw: { u7: raw.u7 ?? null, u8: raw.u8 ?? null, u9: raw.u9 ?? null, flags: [39, 40, 41, 42, 43].map((i) => raw[`u${i}`] ?? null) },
+      raw: { u7: raw.u7 ?? null, u9: raw.u9 ?? null, flags: [39, 40, 41, 42, 43].map((i) => raw[`u${i}`] ?? null) },
     };
   });
   return { beasts, version, schema };
@@ -324,7 +368,9 @@ async function fetchCrucible() {
       slot: r.subrow_id,
       name,
       bnpcNameId: rel(r.fields.Name).row_id,
-      element: relName(r.fields.Element).trim() || null,
+      // XBMBattleDetail.Element is the piece's *weakness* (verified against
+      // the in-game board preview: Pas de Seul = Piercing, succubi = Fire).
+      weakness: relName(r.fields.Element).trim() || null,
       icon: wantIcon('pieces', r.fields.Unknown1?.id),
       resistFlags: rel(r.fields.Resist)?.fields?.Unknown0 ?? [],
       action: act && act.row_id > 0
@@ -346,15 +392,93 @@ async function fetchCrucible() {
   const scoreBonus = (await rawSheet('XBMScoreBonus')).map((r) => ({ id: r.id, name: r.raw.u0, description: cleanText(r.raw.u1), raw: r.raw }));
   return {
     battles: [...battles.values()].sort((a, b) => a.id - b.id),
+    boards: await fetchBoards(),
     scoreRank,
     scoreBonus,
-    // Everything below is still schema-less; stored so the site can start
-    // decoding once someone (or EXDSchema) works out the columns.
-    content: await rawSheet('XBMContent'),
-    contentBattle: await rawSheet('XBMContentBattle'),
-    contentCamp: await rawSheet('XBMContentCamp'),
-    entrance: await rawSheet('XBMEntrance'),
   };
+}
+
+// The five Crucible boards. Decoded from XBMContent + its satellite sheets;
+// see docs/DATA-NOTES.md ("Crucible boards") for how each column was pinned
+// down against the in-game board preview.
+// 3 is an elite enemy tile (the board-1 Ogre fight, which guides call the "elite mob").
+const TILE_TYPES = { 1: 'start', 2: 'battle', 3: 'elite', 4: 'boss', 5: 'shop', 6: 'campsite', 7: 'treasure', 8: 'random' };
+
+async function fetchBoards() {
+  // Unknown0..32 are the point values of XBMScoreBonus rows 0..32 on this
+  // board (0 = bonus not available here); 34 squad cap, 36 rank sync.
+  const content = await allRows('XBMContent', `ContentFinderCondition.Name,ContentFinderCondition.ClassJobLevelRequired,ContentFinderCondition.ClassJobLevelSync,${unknownFields(37)}`);
+  const { rows: battleRows } = await allRows('XBMContentBattle', 'BattleDetail');
+  const { rows: campRows } = await allRows('XBMContentCamp', 'Unknown0');
+  const { rows: entranceRows } = await allRows('XBMEntrance', 'Unknown0,Unknown1,Unknown2');
+  const { rows: eventRows } = await allRows('XBMContentStageEvent', 'Unknown0,Unknown1,Unknown2,Unknown3');
+  const { rows: mapRows } = await allRows('XBMContentStageEventMap', 'Unknown0,Unknown1,Unknown2,Unknown3,Unknown4');
+  const { rows: randomRows } = await allRows('XBMRandomStageEvent', 'Unknown0,Unknown1');
+  const { rows: contentRandomRows } = await allRows('XBMContentRandomStageEvent', 'RandomStageEvent');
+
+  const sub = (rows, id) => rows.filter((r) => r.row_id === id).sort((a, b) => a.subrow_id - b.subrow_id);
+  const val = (f) => (f && typeof f === 'object' ? (f.value ?? f.row_id ?? 0) : (f ?? 0));
+  const slugs = { 1: 'unbroken-1', 2: 'unbroken-2', 3: 'unbroken-3', 4: 'masters-1', 5: 'masters-2' };
+
+  return content.rows
+    .filter((r) => relName(r.fields.ContentFinderCondition))
+    .map((r) => {
+      const id = r.row_id;
+      const f = r.fields;
+      const cfc = rel(f.ContentFinderCondition).fields;
+      // Battles in XBMContentBattle order; subrow 0 is the board's boss.
+      const battles = sub(battleRows, id).map((x) => val(x.fields.BattleDetail));
+      const camps = sub(campRows, id).map((x) => x.fields.Unknown0);
+      const randomEvents = sub(contentRandomRows, id).map((x) => sub(randomRows, val(x.fields.RandomStageEvent)).map((o) => ({ typeCode: o.fields.Unknown0, index: o.fields.Unknown1 })));
+      const entrance = entranceRows.find((e) => e.fields.Unknown1 === id);
+
+      const describe = (typeCode, index) => {
+        const type = TILE_TYPES[typeCode] ?? `type-${typeCode}`;
+        const t = { type, typeCode, index };
+        if (type === 'battle' || type === 'elite' || type === 'boss') t.battleId = battles[index] ?? null;
+        if (type === 'campsite') t.familiars = camps[index] ?? null;
+        return t;
+      };
+
+      // Map: kind 1 rows are nodes (x, y, id); every other kind is an edge
+      // node -> node (6 straight up, 9/4 up-left, 10/5 up-right, 7/8 sideways).
+      const nodes = [];
+      const edges = [];
+      for (const m of sub(mapRows, id)) {
+        const [x, y, kind, a, b] = [0, 1, 2, 3, 4].map((i) => m.fields[`Unknown${i}`]);
+        if (!x && !y && !kind && !a && !b) continue;
+        if (kind === 1) nodes.push({ id: a, x, y });
+        else edges.push({ from: a, to: b, kind });
+      }
+      // Tiles: XBMContentStageEvent subrows in order; the k-th non-start
+      // event is map node k (node 0 is the start tile).
+      let k = 0;
+      const tiles = sub(eventRows, id).map((e) => {
+        const typeCode = e.fields.Unknown0;
+        const tile = { node: typeCode === 1 ? 0 : ++k, move: e.fields.Unknown1, ...describe(typeCode, e.fields.Unknown2) };
+        if (tile.type === 'random') tile.options = (randomEvents[e.fields.Unknown2] ?? []).map((o) => describe(o.typeCode, o.index));
+        return tile;
+      });
+
+      return {
+        id,
+        slug: slugs[id] ?? `board-${id}`,
+        name: cfc.Name,
+        level: cfc.ClassJobLevelRequired,
+        sync: cfc.ClassJobLevelSync,
+        squadSize: f.Unknown34,
+        rankSync: f.Unknown36,
+        unlockQuestId: entrance?.fields.Unknown0 ?? null,
+        modeBonuses: { first: f.Unknown30, second: f.Unknown31, third: f.Unknown32 },
+        bonusPoints: Array.from({ length: 33 }, (_, i) => f[`Unknown${i}`] ?? 0),
+        bossBattleId: battles[0] ?? null,
+        battleIds: battles,
+        campsites: camps,
+        tiles,
+        map: { nodes, edges },
+        raw: { u35: f.Unknown35 },
+      };
+    });
 }
 
 // Job quests. The quest text sheets are named quest/054/JobXbm001_05490 etc;
@@ -362,7 +486,17 @@ async function fetchCrucible() {
 async function fetchQuests() {
   const numbers = [5490, 5491, 5492, 5493, 5494, 5495, 5496, 5497, 5498, 5499, 5500, 5501, 5509];
   const ids = numbers.map((n) => 65536 + n);
-  const rows = await rowsById('Quest', ids, 'Name,Id,ClassJobLevel,IssuerStart.Singular,IssuerLocation.Territory.PlaceName.Name,PreviousQuest[].Name,Expansion.Name');
+  const rows = await rowsById(
+    'Quest',
+    ids,
+    'Name,Id,ClassJobLevel,IssuerStart.Singular,IssuerLocation.Territory.PlaceName.Name,IssuerLocation.X,IssuerLocation.Z,IssuerLocation.Map.SizeFactor,IssuerLocation.Map.OffsetX,IssuerLocation.Map.OffsetY,PreviousQuest[].Name,Expansion.Name',
+  );
+  // World position -> the map coordinates the game shows (truncated to 0.1
+  // like the in-game display).
+  const mapCoord = (world, sizeFactor, offset) => {
+    const c = sizeFactor / 100;
+    return Math.floor(((41 / c) * (((world + offset) * c + 1024) / 2048) + 1) * 10) / 10;
+  };
   return [...rows.entries()]
     .filter(([, f]) => f.Name)
     .map(([id, f]) => ({
@@ -372,6 +506,11 @@ async function fetchQuests() {
       level: Array.isArray(f.ClassJobLevel) ? (f.ClassJobLevel.find((l) => l > 0) ?? null) : f.ClassJobLevel ?? null,
       issuer: relName(f.IssuerStart, 'Singular'),
       zone: rel(f.IssuerLocation)?.fields?.Territory?.fields?.PlaceName?.fields?.Name ?? '',
+      coords: (() => {
+        const L = rel(f.IssuerLocation)?.fields;
+        const M = L?.Map?.fields;
+        return L && M?.SizeFactor ? { x: mapCoord(L.X, M.SizeFactor, M.OffsetX), y: mapCoord(L.Z, M.SizeFactor, M.OffsetY) } : null;
+      })(),
       previous: (f.PreviousQuest ?? []).map((q) => relName(q)).filter(Boolean),
       expansion: relName(f.Expansion),
     }))
@@ -387,18 +526,23 @@ const { beasts, version, schema } = await fetchBeasts();
 console.log(`beasts: ${beasts.length}`);
 const actions = await fetchPlayerActions();
 console.log(`actions: ${actions.length}`);
+const upgrades = await fetchUpgradedActions();
+console.log(`upgraded axes: ${upgrades.length}`);
+const statuses = await fetchStatuses();
+console.log(`statuses: ${statuses.length}`);
 const traits = await fetchTraits();
 console.log(`traits: ${traits.length}`);
 const items = await fetchItems();
 console.log(`items: ${items.length}`);
 const elements = await fetchElements();
 const crucible = await fetchCrucible();
-console.log(`crucible battles: ${crucible.battles.length}`);
+console.log(`crucible battles: ${crucible.battles.length}, boards: ${crucible.boards.length}`);
 const quests = await fetchQuests();
 console.log(`quests: ${quests.length}`);
 
 await writeJson('beasts.json', beasts);
-await writeJson('actions.json', actions);
+await writeJson('actions.json', [...actions, ...upgrades]);
+await writeJson('statuses.json', statuses);
 await writeJson('traits.json', traits);
 await writeJson('items.json', items);
 await writeJson('elements.json', elements);
@@ -409,7 +553,7 @@ await writeJson('meta.json', {
   patch: '7.56',
   xivapi: { base: BASE, version, schema },
   job: { id: BST_CLASSJOB, name: job.NameEnglish, abbreviation: job.Abbreviation, role: job.Role },
-  counts: { beasts: beasts.length, actions: actions.length, traits: traits.length, items: items.length, crucibleBattles: crucible.battles.length, quests: quests.length },
+  counts: { beasts: beasts.length, actions: actions.length + upgrades.length, traits: traits.length, items: items.length, statuses: statuses.length, crucibleBattles: crucible.battles.length, crucibleBoards: crucible.boards.length, quests: quests.length },
 });
 
 await downloadIcons();

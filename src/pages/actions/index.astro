@@ -3,11 +3,18 @@ import Base from '../../layouts/Base.astro';
 import AbilityList from '../../components/AbilityList.astro';
 import ComboWheel from '../../components/ComboWheel.astro';
 import Notes from '../../components/Notes.astro';
-import { actions, traits, ACTION_GROUPS, actionByName } from '../../lib/data';
+import { actions, traits, upgrades, statuses, ACTION_GROUPS, actionByName, AFFINITIES } from '../../lib/data';
 
 const grouped = ACTION_GROUPS.map((g) => ({ ...g, actions: g.names.map((n) => actionByName.get(n)).filter((a): a is NonNullable<typeof a> => !!a) }));
 const listed = new Set(ACTION_GROUPS.flatMap((g) => g.names));
 const rest = actions.filter((a) => !listed.has(a.name));
+const sunMoon = (a: { description: string }) => /Instinctual Affinity: (Sunstrider|Moonstalker)/.exec(a.description)?.[1] ?? null;
+const statusGroups = [
+  { title: 'Hearts & combo states', names: ['Volant Heart', 'Rampant Heart', 'Durant Heart', 'Eldritch Heart', 'Sunstrider', 'Moonstalker'] },
+  { title: 'Familiar', names: ['One with Nature', 'Lingering Vantage', 'Capturing Interest', 'Interest Captured'] },
+  { title: 'Kinships (Borrow)', names: ['Beast Kinship', 'Vile Kinship', 'Cloud Kinship', 'Seed Kinship', 'Wave Kinship', 'Scale Kinship', 'Soul Kinship', 'Ash Kinship'] },
+  { title: 'Beast Mode effects', names: ['Beastskin', 'Vileskin', 'Scaleskin', 'Seeds Sown'] },
+].map((g) => ({ ...g, statuses: g.names.map((n) => statuses.find((s) => s.name === n)).filter((s): s is NonNullable<typeof s> => !!s) }));
 const byLevel = [...actions.map((a) => ({ level: a.level, name: a.name, kind: 'Action' })), ...traits.map((t) => ({ level: t.level, name: t.name, kind: 'Trait' }))].sort(
   (a, b) => a.level - b.level || a.kind.localeCompare(b.kind),
 );
@@ -20,8 +27,25 @@ const byLevel = [...actions.map((a) => ({ level: a.level, name: a.name, kind: 'A
     instinctual axes) and your familiar's <strong>Familiar TP</strong> (fed by its auto-attacks and Aetheric Burst, spent on Trick). Both cap at 250.
   </p>
 
+  <h2>How the kit fits together</h2>
+  <Notes id="actions" heading="Kit primer" hint="Battlehorns, the four shared familiar commands, and what each one is for." />
+
   <h2>Instinctual combos</h2>
   <ComboWheel />
+  <div class="card" style="margin-top:1rem">
+    <h3 style="margin-top:0;font-size:1.05rem">At 250 TP: Sunstrider and Moonstalker</h3>
+    <p class="small" style="margin:0 0 0.5rem">
+      The level 50 trait swaps each axe for a 1,200-potency version once TP is full. Those carry a <strong>Sunstrider</strong> or <strong>Moonstalker</strong> affinity
+      instead of a colour: using one while the <em>other</em> state is up triggers an <strong>infinitive</strong> combo, the biggest multiplier there is — and the end of the chain.
+    </p>
+    <ul class="small" style="margin:0;padding-left:1.2rem">
+      {upgrades.map((u) => (
+        <li>
+          <strong>{u.name}</strong> (from {u.upgradeOf}) — {sunMoon(u) ?? 'affinity not in tooltip'}
+        </li>
+      ))}
+    </ul>
+  </div>
 
   {
     grouped.map((g) => (
@@ -39,6 +63,38 @@ const byLevel = [...actions.map((a) => ({ level: a.level, name: a.name, kind: 'A
         <AbilityList abilities={rest} showLevel />
       </section>
     )
+  }
+
+  <section>
+    <h2>Level 50 upgrades</h2>
+    <p class="muted">What the four instinctual axes become at 250 TP (trait: Instinctual Mastery).</p>
+    <AbilityList abilities={upgrades} showLevel />
+  </section>
+
+  <h2>Status effects</h2>
+  {
+    statusGroups.map((g) => (
+      <section>
+        <h3>{g.title}</h3>
+        <div class="table-wrap">
+          <table>
+            <tbody>
+              {g.statuses.map((s) => (
+                <tr>
+                  <td style="white-space:nowrap">
+                    <span class="row">
+                      {s.icon && <img class="icon sm" src={s.icon} alt="" width="28" height="28" loading="lazy" />}
+                      <strong>{s.name}</strong>
+                    </span>
+                  </td>
+                  <td>{s.description}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+      </section>
+    ))
   }
 
   <h2>Traits</h2>

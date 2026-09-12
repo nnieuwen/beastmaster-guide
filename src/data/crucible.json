@@ -10,7 +10,6 @@
             "target": 1
           },
           "bnpcNameId": 14531,
-          "element": "Blunt",
           "icon": "/icons/pieces/242501.png",
           "name": "bone knight",
           "resistFlags": [
@@ -26,7 +25,8 @@
             true,
             true
           ],
-          "slot": 0
+          "slot": 0,
+          "weakness": "Blunt"
         },
         {
           "action": {
@@ -36,7 +36,6 @@
             "target": 1
           },
           "bnpcNameId": 14532,
-          "element": "Blunt",
           "icon": "/icons/pieces/242502.png",
           "name": "bone bishop",
           "resistFlags": [
@@ -52,7 +51,8 @@
             false,
             true
           ],
-          "slot": 1
+          "slot": 1,
+          "weakness": "Blunt"
         }
       ],
       "id": 1
@@ -67,7 +67,6 @@
             "target": 0
           },
           "bnpcNameId": 14533,
-          "element": "Lightning",
           "icon": "/icons/pieces/242503.png",
           "name": "arch demon piece",
           "resistFlags": [
@@ -83,7 +82,8 @@
             true,
             true
           ],
-          "slot": 0
+          "slot": 0,
+          "weakness": "Lightning"
         }
       ],
       "id": 2
@@ -98,7 +98,6 @@
             "target": 1
           },
           "bnpcNameId": 14535,
-          "element": "Slashing",
           "icon": "/icons/pieces/242504.png",
           "name": "piscodemon piece",
           "resistFlags": [
@@ -114,7 +113,8 @@
             false,
             true
           ],
-          "slot": 0
+          "slot": 0,
+          "weakness": "Slashing"
         }
       ],
       "id": 3
@@ -129,7 +129,6 @@
             "target": 5
           },
           "bnpcNameId": 14536,
-          "element": "Ice",
           "icon": "/icons/pieces/242505.png",
           "name": "banemite piece",
           "resistFlags": [
@@ -145,7 +144,8 @@
             true,
             true
           ],
-          "slot": 0
+          "slot": 0,
+          "weakness": "Ice"
         },
         {
           "action": {
@@ -155,7 +155,6 @@
             "target": 0
           },
           "bnpcNameId": 14537,
-          "element": "Ice",
           "icon": "/icons/pieces/242506.png",
           "name": "miteling piece",
           "resistFlags": [
@@ -171,7 +170,8 @@
             false,
             false
           ],
-          "slot": 1
+          "slot": 1,
+          "weakness": "Ice"
         }
       ],
       "id": 4
@@ -186,7 +186,6 @@
             "target": 0
           },
           "bnpcNameId": 14538,
-          "element": "Wind",
           "icon": "/icons/pieces/242507.png",
           "name": "ogre piece",
           "resistFlags": [
@@ -202,7 +201,8 @@
             true,
             true
           ],
-          "slot": 0
+          "slot": 0,
+          "weakness": "Wind"
         },
         {
           "action": {
@@ -212,7 +212,6 @@
             "target": 0
           },
           "bnpcNameId": 14539,
-          "element": "Water",
           "icon": "/icons/pieces/242508.png",
           "name": "wisp piece",
           "resistFlags": [
@@ -228,7 +227,8 @@
             false,
             true
           ],
-          "slot": 1
+          "slot": 1,
+          "weakness": "Water"
         },
         {
           "action": {
@@ -238,7 +238,6 @@
             "target": 0
           },
           "bnpcNameId": 14748,
-          "element": "Water",
           "icon": "/icons/pieces/242508.png",
           "name": "great wisp piece",
           "resistFlags": [
@@ -254,7 +253,8 @@
             false,
             true
           ],
-          "slot": 2
+          "slot": 2,
+          "weakness": "Water"
         }
       ],
       "id": 5
@@ -269,7 +269,6 @@
             "target": 1
           },
           "bnpcNameId": 14541,
-          "element": "Piercing",
           "icon": "/icons/pieces/242509.png",
           "name": "Pas de Seul",
           "resistFlags": [
@@ -285,7 +284,8 @@
             true,
             true
           ],
-          "slot": 0
+          "slot": 0,
+          "weakness": "Piercing"
         },
         {
           "action": {
@@ -295,7 +295,6 @@
             "target": 6
           },
           "bnpcNameId": 14542,
-          "element": "Fire",
           "icon": "/icons/pieces/242510.png",
           "name": "succubus mage",
           "resistFlags": [
@@ -311,7 +310,8 @@
             true,
             false
           ],
-          "slot": 1
+          "slot": 1,
+          "weakness": "Fire"
         },
         {
           "action": {
@@ -321,7 +321,6 @@
             "target": 0
           },
           "bnpcNameId": 14543,
-          "element": "Fire",
           "icon": "/icons/pieces/242511.png",
           "name": "succubus knight",
           "resistFlags": [
@@ -337,7 +336,8 @@
             true,
             false
           ],
-          "slot": 2
+          "slot": 2,
+          "weakness": "Fire"
         }
       ],
       "id": 6
@@ -352,7 +352,6 @@
             "target": 2
           },
           "bnpcNameId": 14545,
-          "element": "Wind",
           "icon": "/icons/pieces/242512.png",
           "name": "manticore piece",
           "resistFlags": [
@@ -368,7 +367,8 @@
             true,
             true
           ],
-          "slot": 0
+          "slot": 0,
+          "weakness": "Wind"
         }
       ],
       "id": 7
@@ -383,7 +383,6 @@
             "target": 0
           },
           "bnpcNameId": 14546,
-          "element": "Piercing",
           "icon": "/icons/pieces/242513.png",
           "name": "taurus piece",
           "resistFlags": [
@@ -399,7 +398,8 @@
             true,
             true
           ],
-          "slot": 0
+          "slot": 0,
+          "weakness": "Piercing"
         },
         {
           "action": {
@@ -409,7 +409,6 @@
             "target": 0
           },
           "bnpcNameId": 14548,
-          "element": "Ice",
           "icon": "/icons/pieces/242514.png",
           "name": "ahriman piece",
           "resistFlags": [
@@ -425,7 +424,8 @@
             true,
             true
           ],
-          "slot": 1
+          "slot": 1,
+          "weakness": "Ice"
         }
       ],
       "id": 8
@@ -440,7 +440,6 @@
             "target": 0
           },
           "bnpcNameId": 14549,
-          "element": "Lightning",
           "icon": "/icons/pieces/242515.png",
           "name": "wyvern piece",
           "resistFlags": [
@@ -456,7 +455,8 @@
             true,
             true
           ],
-          "slot": 0
+          "slot": 0,
+          "weakness": "Lightning"
         }
       ],
       "id": 9
@@ -471,7 +471,6 @@
             "target": 3
           },
           "bnpcNameId": 14552,
-          "element": "Earth",
           "icon": "/icons/pieces/242516.png",
           "name": "voidmancer piece",
           "resistFlags": [
@@ -487,12 +486,12 @@
             true,
             true
           ],
-          "slot": 0
+          "slot": 0,
+          "weakness": "Earth"
         },
         {
           "action": null,
           "bnpcNameId": 14553,
-          "element": "Ice",
           "icon": "/icons/pieces/242517.png",
           "name": "zombie piece",
           "resistFlags": [
@@ -508,7 +507,8 @@
             false,
             false
           ],
-          "slot": 1
+          "slot": 1,
+          "weakness": "Ice"
         }
       ],
       "id": 10
@@ -523,7 +523,6 @@
             "target": 0
           },
           "bnpcNameId": 14555,
-          "element": "Fire",
           "icon": "/icons/pieces/242518.png",
           "name": "elder tablitaur piece",
           "resistFlags": [
@@ -539,7 +538,8 @@
             true,
             true
           ],
-          "slot": 0
+          "slot": 0,
+          "weakness": "Fire"
         },
         {
           "action": {
@@ -549,7 +549,6 @@
             "target": 6
           },
           "bnpcNameId": 14556,
-          "element": "Fire",
           "icon": "/icons/pieces/242519.png",
           "name": "younger tablitaur piece",
           "resistFlags": [
@@ -565,7 +564,8 @@
             false,
             true
           ],
-          "slot": 1
+          "slot": 1,
+          "weakness": "Fire"
         }
       ],
       "id": 11
@@ -580,7 +580,6 @@
             "target": 3
           },
           "bnpcNameId": 14557,
-          "element": "Slashing",
           "icon": "/icons/pieces/242520.png",
           "name": "demon piece",
           "resistFlags": [
@@ -596,7 +595,8 @@
             false,
             false
           ],
-          "slot": 0
+          "slot": 0,
+          "weakness": "Slashing"
         },
         {
           "action": {
@@ -606,7 +606,6 @@
             "target": 0
           },
           "bnpcNameId": 14558,
-          "element": "Ice",
           "icon": "/icons/pieces/242521.png",
           "name": "evil weapon piece",
           "resistFlags": [
@@ -622,7 +621,8 @@
             false,
             false
           ],
-          "slot": 1
+          "slot": 1,
+          "weakness": "Ice"
         },
         {
           "action": {
@@ -632,7 +632,6 @@
             "target": 0
           },
           "bnpcNameId": 14559,
-          "element": "Earth",
           "icon": "/icons/pieces/242522.png",
           "name": "devilet piece",
           "resistFlags": [
@@ -648,7 +647,8 @@
             true,
             false
           ],
-          "slot": 2
+          "slot": 2,
+          "weakness": "Earth"
         }
       ],
       "id": 12
@@ -663,7 +663,6 @@
             "target": 1
           },
           "bnpcNameId": 14561,
-          "element": "Blunt",
           "icon": "/icons/pieces/242523.png",
           "name": "Loosefrox Inkyjots",
           "resistFlags": [
@@ -679,7 +678,8 @@
             true,
             true
           ],
-          "slot": 0
+          "slot": 0,
+          "weakness": "Blunt"
         },
         {
           "action": {
@@ -689,7 +689,6 @@
             "target": 0
           },
           "bnpcNameId": 14562,
-          "element": "Water",
           "icon": "/icons/pieces/242524.png",
           "name": "Chewchum Popoto",
           "resistFlags": [
@@ -705,7 +704,8 @@
             true,
             true
           ],
-          "slot": 1
+          "slot": 1,
+          "weakness": "Water"
         }
       ],
       "id": 13
@@ -720,7 +720,6 @@
             "target": 0
           },
           "bnpcNameId": 14564,
-          "element": "Fire",
           "icon": "/icons/pieces/242525.png",
           "name": "cavalier piece",
           "resistFlags": [
@@ -736,7 +735,8 @@
             true,
             true
           ],
-          "slot": 0
+          "slot": 0,
+          "weakness": "Fire"
         },
         {
           "action": {
@@ -746,7 +746,6 @@
             "target": 3
           },
           "bnpcNameId": 14567,
-          "element": "Blunt",
           "icon": "/icons/pieces/242502.png",
           "name": "bone bishop",
           "resistFlags": [
@@ -762,7 +761,8 @@
             true,
             true
           ],
-          "slot": 1
+          "slot": 1,
+          "weakness": "Blunt"
         }
       ],
       "id": 14
@@ -777,7 +777,6 @@
             "target": 0
           },
           "bnpcNameId": 14569,
-          "element": "Ice",
           "icon": "/icons/pieces/242526.png",
           "name": "ymir piece",
           "resistFlags": [
@@ -793,7 +792,8 @@
             true,
             true
           ],
-          "slot": 0
+          "slot": 0,
+          "weakness": "Ice"
         },
         {
           "action": {
@@ -803,7 +803,6 @@
             "target": 0
           },
           "bnpcNameId": 14571,
-          "element": "Blunt",
           "icon": "/icons/pieces/242527.png",
           "name": "Sahagin piece",
           "resistFlags": [
@@ -819,7 +818,8 @@
             true,
             true
           ],
-          "slot": 1
+          "slot": 1,
+          "weakness": "Blunt"
         }
       ],
       "id": 15
@@ -834,7 +834,6 @@
             "target": 0
           },
           "bnpcNameId": 14572,
-          "element": "Earth",
           "icon": "/icons/pieces/242528.png",
           "name": "zu piece",
           "resistFlags": [
@@ -850,12 +849,12 @@
             true,
             true
           ],
-          "slot": 0
+          "slot": 0,
+          "weakness": "Earth"
         },
         {
           "action": null,
           "bnpcNameId": 14573,
-          "element": "Blunt",
           "icon": "/icons/pieces/242529.png",
           "name": "cockerel piece",
           "resistFlags": [
@@ -871,7 +870,8 @@
             false,
             false
           ],
-          "slot": 1
+          "slot": 1,
+          "weakness": "Blunt"
         },
         {
           "action": {
@@ -881,7 +881,6 @@
             "target": 3
           },
           "bnpcNameId": 14574,
-          "element": "Blunt",
           "icon": "/icons/pieces/242530.png",
           "name": "pullet piece",
           "resistFlags": [
@@ -897,7 +896,8 @@
             true,
             false
           ],
-          "slot": 2
+          "slot": 2,
+          "weakness": "Blunt"
         }
       ],
       "id": 16
@@ -912,7 +912,6 @@
             "target": 0
           },
           "bnpcNameId": 14577,
-          "element": "Wind",
           "icon": "/icons/pieces/242531.png",
           "name": "catoblepas piece",
           "resistFlags": [
@@ -928,7 +927,8 @@
             true,
             true
           ],
-          "slot": 0
+          "slot": 0,
+          "weakness": "Wind"
         }
       ],
       "id": 17
@@ -943,7 +943,6 @@
             "target": 0
           },
           "bnpcNameId": 14580,
-          "element": "Water",
           "icon": "/icons/pieces/242532.png",
           "name": "Lakhamu piece",
           "resistFlags": [
@@ -959,7 +958,8 @@
             true,
             true
           ],
-          "slot": 0
+          "slot": 0,
+          "weakness": "Water"
         },
         {
           "action": {
@@ -969,7 +969,6 @@
             "target": 0
           },
           "bnpcNameId": 14581,
-          "element": "Water",
           "icon": "/icons/pieces/242533.png",
           "name": "golem piece",
           "resistFlags": [
@@ -985,7 +984,8 @@
             true,
             false
           ],
-          "slot": 1
+          "slot": 1,
+          "weakness": "Water"
         }
       ],
       "id": 18
@@ -1000,7 +1000,6 @@
             "target": 5
           },
           "bnpcNameId": 14583,
-          "element": "Piercing",
           "icon": "/icons/pieces/242534.png",
           "name": "siren piece",
           "resistFlags": [
@@ -1016,7 +1015,8 @@
             true,
             true
           ],
-          "slot": 0
+          "slot": 0,
+          "weakness": "Piercing"
         },
         {
           "action": {
@@ -1026,7 +1026,6 @@
             "target": 0
           },
           "bnpcNameId": 14585,
-          "element": "Fire",
           "icon": "/icons/pieces/242535.png",
           "name": "shambling piece",
           "resistFlags": [
@@ -1042,7 +1041,8 @@
             false,
             true
           ],
-          "slot": 1
+          "slot": 1,
+          "weakness": "Fire"
         },
         {
           "action": {
@@ -1052,7 +1052,6 @@
             "target": 5
           },
           "bnpcNameId": 14586,
-          "element": "Fire",
           "icon": "/icons/pieces/242536.png",
           "name": "crawling piece",
           "resistFlags": [
@@ -1068,7 +1067,8 @@
             true,
             true
           ],
-          "slot": 2
+          "slot": 2,
+          "weakness": "Fire"
         }
       ],
       "id": 19
@@ -1083,7 +1083,6 @@
             "target": 1
           },
           "bnpcNameId": 14587,
-          "element": "Lightning",
           "icon": "/icons/pieces/242537.png",
           "name": "campeador piece",
           "resistFlags": [
@@ -1099,12 +1098,12 @@
             false,
             true
           ],
-          "slot": 0
+          "slot": 0,
+          "weakness": "Lightning"
         },
         {
           "action": null,
           "bnpcNameId": 14588,
-          "element": "Lightning",
           "icon": "/icons/pieces/242538.png",
           "name": "sabotender piece",
           "resistFlags": [
@@ -1120,7 +1119,8 @@
             false,
             false
           ],
-          "slot": 1
+          "slot": 1,
+          "weakness": "Lightning"
         },
         {
           "action": {
@@ -1130,7 +1130,6 @@
             "target": 6
           },
           "bnpcNameId": 14589,
-          "element": "Lightning",
           "icon": "/icons/pieces/242539.png",
           "name": "flowertender piece",
           "resistFlags": [
@@ -1146,7 +1145,8 @@
             false,
             false
           ],
-          "slot": 2
+          "slot": 2,
+          "weakness": "Lightning"
         },
         {
           "action": {
@@ -1156,7 +1156,6 @@
             "target": 1
           },
           "bnpcNameId": 14590,
-          "element": "Lightning",
           "icon": "/icons/pieces/242540.png",
           "name": "soldado piece",
           "resistFlags": [
@@ -1172,7 +1171,8 @@
             false,
             false
           ],
-          "slot": 3
+          "slot": 3,
+          "weakness": "Lightning"
         },
         {
           "action": {
@@ -1182,7 +1182,6 @@
             "target": 6
           },
           "bnpcNameId": 14591,
-          "element": "Ice",
           "icon": "/icons/pieces/242541.png",
           "name": "guardia piece",
           "resistFlags": [
@@ -1198,7 +1197,8 @@
             true,
             true
           ],
-          "slot": 4
+          "slot": 4,
+          "weakness": "Ice"
         }
       ],
       "id": 20
@@ -1213,7 +1213,6 @@
             "target": 0
           },
           "bnpcNameId": 14592,
-          "element": null,
           "icon": "/icons/pieces/242542.png",
           "name": "Guttler the Gutter",
           "resistFlags": [
@@ -1229,7 +1228,8 @@
             true,
             true
           ],
-          "slot": 0
+          "slot": 0,
+          "weakness": null
         },
         {
           "action": {
@@ -1239,7 +1239,6 @@
             "target": 0
           },
           "bnpcNameId": 14595,
-          "element": "Lightning",
           "icon": "/icons/pieces/242543.png",
           "name": "Thanatos piece",
           "resistFlags": [
@@ -1255,7 +1254,8 @@
             true,
             true
           ],
-          "slot": 1
+          "slot": 1,
+          "weakness": "Lightning"
         }
       ],
       "id": 21
@@ -1270,7 +1270,6 @@
             "target": 1
           },
           "bnpcNameId": 14596,
-          "element": "Piercing",
           "icon": "/icons/pieces/242544.png",
           "name": "Strix piece",
           "resistFlags": [
@@ -1286,7 +1285,8 @@
             false,
             true
           ],
-          "slot": 0
+          "slot": 0,
+          "weakness": "Piercing"
         }
       ],
       "id": 22
@@ -1301,7 +1301,6 @@
             "target": 0
           },
           "bnpcNameId": 14599,
-          "element": "Slashing",
           "icon": "/icons/pieces/242545.png",
           "name": "morbol piece",
           "resistFlags": [
@@ -1317,7 +1316,8 @@
             true,
             true
           ],
-          "slot": 0
+          "slot": 0,
+          "weakness": "Slashing"
         },
         {
           "action": {
@@ -1327,7 +1327,6 @@
             "target": 5
           },
           "bnpcNameId": 14600,
-          "element": "Slashing",
           "icon": "/icons/pieces/242545.png",
           "name": "seedling piece",
           "resistFlags": [
@@ -1343,7 +1342,8 @@
             false,
             true
           ],
-          "slot": 1
+          "slot": 1,
+          "weakness": "Slashing"
         },
         {
           "action": {
@@ -1353,7 +1353,6 @@
             "target": 1
           },
           "bnpcNameId": 14601,
-          "element": "Slashing",
           "icon": "/icons/pieces/242546.png",
           "name": "ochu piece",
           "resistFlags": [
@@ -1369,7 +1368,8 @@
             true,
             false
           ],
-          "slot": 2
+          "slot": 2,
+          "weakness": "Slashing"
         },
         {
           "action": {
@@ -1379,7 +1379,6 @@
             "target": 5
           },
           "bnpcNameId": 14602,
-          "element": "Ice",
           "icon": "/icons/pieces/242547.png",
           "name": "carrion broth",
           "resistFlags": [
@@ -1395,7 +1394,8 @@
             false,
             true
           ],
-          "slot": 3
+          "slot": 3,
+          "weakness": "Ice"
         }
       ],
       "id": 23
@@ -1410,7 +1410,6 @@
             "target": 0
           },
           "bnpcNameId": 14603,
-          "element": "Wind",
           "icon": "/icons/pieces/242548.png",
           "name": "corpse flower piece",
           "resistFlags": [
@@ -1426,7 +1425,8 @@
             true,
             true
           ],
-          "slot": 0
+          "slot": 0,
+          "weakness": "Wind"
         },
         {
           "action": {
@@ -1436,7 +1436,6 @@
             "target": 3
           },
           "bnpcNameId": 14605,
-          "element": "Blunt",
           "icon": "/icons/pieces/242549.png",
           "name": "queen hawk piece",
           "resistFlags": [
@@ -1452,7 +1451,8 @@
             true,
             false
           ],
-          "slot": 1
+          "slot": 1,
+          "weakness": "Blunt"
         }
       ],
       "id": 24
@@ -1467,7 +1467,6 @@
             "target": 0
           },
           "bnpcNameId": 14606,
-          "element": "Fire",
           "icon": "/icons/pieces/242550.png",
           "name": "ice dragon piece",
           "resistFlags": [
@@ -1483,7 +1482,8 @@
             true,
             true
           ],
-          "slot": 0
+          "slot": 0,
+          "weakness": "Fire"
         },
         {
           "action": {
@@ -1493,7 +1493,6 @@
             "target": 3
           },
           "bnpcNameId": 14607,
-          "element": "Fire",
           "icon": "/icons/pieces/242551.png",
           "name": "ice sprite",
           "resistFlags": [
@@ -1509,7 +1508,8 @@
             true,
             true
           ],
-          "slot": 1
+          "slot": 1,
+          "weakness": "Fire"
         }
       ],
       "id": 25
@@ -1524,7 +1524,6 @@
             "target": 1
           },
           "bnpcNameId": 14608,
-          "element": null,
           "icon": "/icons/pieces/242552.png",
           "name": "gargoyle piece",
           "resistFlags": [
@@ -1540,7 +1539,8 @@
             true,
             true
           ],
-          "slot": 0
+          "slot": 0,
+          "weakness": null
         }
       ],
       "id": 26
@@ -1555,7 +1555,6 @@
             "target": 0
           },
           "bnpcNameId": 14610,
-          "element": "Lightning",
           "icon": "/icons/pieces/242553.png",
           "name": "administrator piece",
           "resistFlags": [
@@ -1571,12 +1570,12 @@
             true,
             true
           ],
-          "slot": 0
+          "slot": 0,
+          "weakness": "Lightning"
         },
         {
           "action": null,
           "bnpcNameId": 14611,
-          "element": "Lightning",
           "icon": "/icons/pieces/242554.png",
           "name": "bug piece",
           "resistFlags": [
@@ -1592,7 +1591,8 @@
             false,
             true
           ],
-          "slot": 1
+          "slot": 1,
+          "weakness": "Lightning"
         },
         {
           "action": {
@@ -1602,7 +1602,6 @@
             "target": 1
           },
           "bnpcNameId": 14612,
-          "element": "Lightning",
           "icon": "/icons/pieces/242555.png",
           "name": "footman piece",
           "resistFlags": [
@@ -1618,7 +1617,8 @@
             false,
             true
           ],
-          "slot": 2
+          "slot": 2,
+          "weakness": "Lightning"
         },
         {
           "action": {
@@ -1628,7 +1628,6 @@
             "target": 1
           },
           "bnpcNameId": 14613,
-          "element": "Lightning",
           "icon": "/icons/pieces/242556.png",
           "name": "dreadnaught piece",
           "resistFlags": [
@@ -1644,7 +1643,8 @@
             false,
             true
           ],
-          "slot": 3
+          "slot": 3,
+          "weakness": "Lightning"
         },
         {
           "action": {
@@ -1654,7 +1654,6 @@
             "target": 0
           },
           "bnpcNameId": 14614,
-          "element": "Lightning",
           "icon": "/icons/pieces/242557.png",
           "name": "drone piece",
           "resistFlags": [
@@ -1670,7 +1669,8 @@
             false,
             true
           ],
-          "slot": 4
+          "slot": 4,
+          "weakness": "Lightning"
         },
         {
           "action": {
@@ -1680,7 +1680,6 @@
             "target": 0
           },
           "bnpcNameId": 14616,
-          "element": "Piercing",
           "icon": "/icons/pieces/242559.png",
           "name": "cobra piece",
           "resistFlags": [
@@ -1696,7 +1695,8 @@
             false,
             true
           ],
-          "slot": 5
+          "slot": 5,
+          "weakness": "Piercing"
         }
       ],
       "id": 27
@@ -1711,7 +1711,6 @@
             "target": 1
           },
           "bnpcNameId": 14617,
-          "element": "Water",
           "icon": "/icons/pieces/242560.png",
           "name": "golem piece",
           "resistFlags": [
@@ -1727,7 +1726,8 @@
             true,
             true
           ],
-          "slot": 0
+          "slot": 0,
+          "weakness": "Water"
         }
       ],
       "id": 28
@@ -1742,7 +1742,6 @@
             "target": 5
           },
           "bnpcNameId": 14618,
-          "element": "Blunt",
           "icon": "/icons/pieces/242561.png",
           "name": "treant piece",
           "resistFlags": [
@@ -1758,7 +1757,8 @@
             false,
             true
           ],
-          "slot": 0
+          "slot": 0,
+          "weakness": "Blunt"
         },
         {
           "action": {
@@ -1768,7 +1768,6 @@
             "target": 1
           },
           "bnpcNameId": 14619,
-          "element": "Blunt",
           "icon": "/icons/pieces/242562.png",
           "name": "slug piece",
           "resistFlags": [
@@ -1784,7 +1783,8 @@
             false,
             false
           ],
-          "slot": 1
+          "slot": 1,
+          "weakness": "Blunt"
         },
         {
           "action": {
@@ -1794,7 +1794,6 @@
             "target": 6
           },
           "bnpcNameId": 14620,
-          "element": "Blunt",
           "icon": "/icons/pieces/242563.png",
           "name": "sapling piece",
           "resistFlags": [
@@ -1810,7 +1809,8 @@
             true,
             false
           ],
-          "slot": 2
+          "slot": 2,
+          "weakness": "Blunt"
         },
         {
           "action": {
@@ -1820,7 +1820,6 @@
             "target": 0
           },
           "bnpcNameId": 14621,
-          "element": "Ice",
           "icon": "/icons/pieces/242564.png",
           "name": "diremite piece",
           "resistFlags": [
@@ -1836,7 +1835,8 @@
             false,
             false
           ],
-          "slot": 3
+          "slot": 3,
+          "weakness": "Ice"
         },
         {
           "action": {
@@ -1846,7 +1846,6 @@
             "target": 6
           },
           "bnpcNameId": 14622,
-          "element": "Ice",
           "icon": "/icons/pieces/242565.png",
           "name": "biloko piece",
           "resistFlags": [
@@ -1862,7 +1861,8 @@
             true,
             false
           ],
-          "slot": 4
+          "slot": 4,
+          "weakness": "Ice"
         }
       ],
       "id": 29
@@ -1877,7 +1877,6 @@
             "target": 0
           },
           "bnpcNameId": 14623,
-          "element": "Wind",
           "icon": "/icons/pieces/242566.png",
           "name": "Progenitrix piece",
           "resistFlags": [
@@ -1893,7 +1892,8 @@
             true,
             true
           ],
-          "slot": 0
+          "slot": 0,
+          "weakness": "Wind"
         },
         {
           "action": {
@@ -1903,7 +1903,6 @@
             "target": 0
           },
           "bnpcNameId": 14624,
-          "element": "Wind",
           "icon": "/icons/pieces/242567.png",
           "name": "grenade piece",
           "resistFlags": [
@@ -1919,7 +1918,8 @@
             true,
             false
           ],
-          "slot": 1
+          "slot": 1,
+          "weakness": "Wind"
         },
         {
           "action": {
@@ -1929,7 +1929,6 @@
             "target": 2
           },
           "bnpcNameId": 14625,
-          "element": "Wind",
           "icon": "/icons/pieces/242568.png",
           "name": "bomb piece",
           "resistFlags": [
@@ -1945,7 +1944,8 @@
             true,
             false
           ],
-          "slot": 2
+          "slot": 2,
+          "weakness": "Wind"
         },
         {
           "action": {
@@ -1955,7 +1955,6 @@
             "target": 1
           },
           "bnpcNameId": 14626,
-          "element": "Fire",
           "icon": "/icons/pieces/242569.png",
           "name": "snoll piece",
           "resistFlags": [
@@ -1971,7 +1970,8 @@
             true,
             false
           ],
-          "slot": 3
+          "slot": 3,
+          "weakness": "Fire"
         },
         {
           "action": {
@@ -1981,7 +1981,6 @@
             "target": 1
           },
           "bnpcNameId": 14627,
-          "element": "Water",
           "icon": "/icons/pieces/242570.png",
           "name": "pyrobolus piece",
           "resistFlags": [
@@ -1997,7 +1996,8 @@
             true,
             false
           ],
-          "slot": 4
+          "slot": 4,
+          "weakness": "Water"
         }
       ],
       "id": 30
@@ -2012,7 +2012,6 @@
             "target": 5
           },
           "bnpcNameId": 14628,
-          "element": "Earth",
           "icon": "/icons/pieces/242571.png",
           "name": "Borgny the Venomous",
           "resistFlags": [
@@ -2028,7 +2027,8 @@
             true,
             true
           ],
-          "slot": 0
+          "slot": 0,
+          "weakness": "Earth"
         },
         {
           "action": {
@@ -2038,7 +2038,6 @@
             "target": 0
           },
           "bnpcNameId": 14629,
-          "element": "Water",
           "icon": "/icons/pieces/242572.png",
           "name": "toxic mass",
           "resistFlags": [
@@ -2054,7 +2053,8 @@
             false,
             false
           ],
-          "slot": 1
+          "slot": 1,
+          "weakness": "Water"
         }
       ],
       "id": 31
@@ -2069,7 +2069,6 @@
             "target": 0
           },
           "bnpcNameId": 14631,
-          "element": "Earth",
           "icon": "/icons/pieces/242573.png",
           "name": "Flauros piece",
           "resistFlags": [
@@ -2085,7 +2084,8 @@
             false,
             true
           ],
-          "slot": 0
+          "slot": 0,
+          "weakness": "Earth"
         },
         {
           "action": {
@@ -2095,7 +2095,6 @@
             "target": 0
           },
           "bnpcNameId": 14632,
-          "element": "Earth",
           "icon": "/icons/pieces/242574.png",
           "name": "lightning sprite",
           "resistFlags": [
@@ -2111,7 +2110,8 @@
             true,
             true
           ],
-          "slot": 1
+          "slot": 1,
+          "weakness": "Earth"
         }
       ],
       "id": 32
@@ -2126,7 +2126,6 @@
             "target": 5
           },
           "bnpcNameId": 14633,
-          "element": "Slashing",
           "icon": "/icons/pieces/242575.png",
           "name": "mindflayer piece",
           "resistFlags": [
@@ -2142,7 +2141,8 @@
             false,
             true
           ],
-          "slot": 0
+          "slot": 0,
+          "weakness": "Slashing"
         },
         {
           "action": {
@@ -2152,7 +2152,6 @@
             "target": 1
           },
           "bnpcNameId": 14634,
-          "element": "Water",
           "icon": "/icons/pieces/242576.png",
           "name": "myconid piece",
           "resistFlags": [
@@ -2168,7 +2167,8 @@
             false,
             false
           ],
-          "slot": 1
+          "slot": 1,
+          "weakness": "Water"
         }
       ],
       "id": 33
@@ -2183,7 +2183,6 @@
             "target": 0
           },
           "bnpcNameId": 14638,
-          "element": "Ice",
           "icon": "/icons/pieces/242577.png",
           "name": "boogyman piece",
           "resistFlags": [
@@ -2199,7 +2198,8 @@
             false,
             true
           ],
-          "slot": 0
+          "slot": 0,
+          "weakness": "Ice"
         },
         {
           "action": {
@@ -2209,7 +2209,6 @@
             "target": 0
           },
           "bnpcNameId": 14639,
-          "element": "Wind",
           "icon": "/icons/pieces/242578.png",
           "name": "deepeye piece",
           "resistFlags": [
@@ -2225,7 +2224,8 @@
             false,
             false
           ],
-          "slot": 1
+          "slot": 1,
+          "weakness": "Wind"
         },
         {
           "action": {
@@ -2235,7 +2235,6 @@
             "target": 0
           },
           "bnpcNameId": 14640,
-          "element": "Wind",
           "icon": "/icons/pieces/242579.png",
           "name": "bomb piece",
           "resistFlags": [
@@ -2251,7 +2250,8 @@
             true,
             false
           ],
-          "slot": 2
+          "slot": 2,
+          "weakness": "Wind"
         },
         {
           "action": {
@@ -2261,7 +2261,6 @@
             "target": 3
           },
           "bnpcNameId": 14641,
-          "element": null,
           "icon": "/icons/pieces/242580.png",
           "name": "light sprite",
           "resistFlags": [
@@ -2277,7 +2276,8 @@
             true,
             true
           ],
-          "slot": 3
+          "slot": 3,
+          "weakness": null
         }
       ],
       "id": 34
@@ -2292,7 +2292,6 @@
             "target": 0
           },
           "bnpcNameId": 14642,
-          "element": "Blunt",
           "icon": "/icons/pieces/242581.png",
           "name": "Atomos piece",
           "resistFlags": [
@@ -2308,7 +2307,8 @@
             true,
             true
           ],
-          "slot": 0
+          "slot": 0,
+          "weakness": "Blunt"
         },
         {
           "action": {
@@ -2318,7 +2318,6 @@
             "target": 5
           },
           "bnpcNameId": 14643,
-          "element": "Piercing",
           "icon": "/icons/pieces/242582.png",
           "name": "red gremlin piece",
           "resistFlags": [
@@ -2334,12 +2333,12 @@
             false,
             false
           ],
-          "slot": 1
+          "slot": 1,
+          "weakness": "Piercing"
         },
         {
           "action": null,
           "bnpcNameId": 14644,
-          "element": "Piercing",
           "icon": "/icons/pieces/242583.png",
           "name": "gremlin piece",
           "resistFlags": [
@@ -2355,7 +2354,8 @@
             false,
             false
           ],
-          "slot": 2
+          "slot": 2,
+          "weakness": "Piercing"
         },
         {
           "action": {
@@ -2365,7 +2365,6 @@
             "target": 5
           },
           "bnpcNameId": 14645,
-          "element": "Wind",
           "icon": "/icons/pieces/242584.png",
           "name": "pudding piece",
           "resistFlags": [
@@ -2381,7 +2380,8 @@
             true,
             false
           ],
-          "slot": 3
+          "slot": 3,
+          "weakness": "Wind"
         },
         {
           "action": {
@@ -2391,7 +2391,6 @@
             "target": 0
           },
           "bnpcNameId": 14646,
-          "element": "Lightning",
           "icon": "/icons/pieces/242585.png",
           "name": "bavarois piece",
           "resistFlags": [
@@ -2407,7 +2406,8 @@
             true,
             false
           ],
-          "slot": 4
+          "slot": 4,
+          "weakness": "Lightning"
         },
         {
           "action": {
@@ -2417,7 +2417,6 @@
             "target": 5
           },
           "bnpcNameId": 14647,
-          "element": "Earth",
           "icon": "/icons/pieces/242586.png",
           "name": "flan piece",
           "resistFlags": [
@@ -2433,7 +2432,8 @@
             true,
             false
           ],
-          "slot": 5
+          "slot": 5,
+          "weakness": "Earth"
         },
         {
           "action": {
@@ -2443,7 +2443,6 @@
             "target": 2
           },
           "bnpcNameId": 14648,
-          "element": "Piercing",
           "icon": "/icons/pieces/242587.png",
           "name": "vodoriga piece",
           "resistFlags": [
@@ -2459,7 +2458,8 @@
             false,
             false
           ],
-          "slot": 6
+          "slot": 6,
+          "weakness": "Piercing"
         },
         {
           "action": {
@@ -2469,7 +2469,6 @@
             "target": 0
           },
           "bnpcNameId": 14649,
-          "element": "Ice",
           "icon": "/icons/pieces/242588.png",
           "name": "menacing dahak piece",
           "resistFlags": [
@@ -2485,7 +2484,8 @@
             true,
             true
           ],
-          "slot": 7
+          "slot": 7,
+          "weakness": "Ice"
         }
       ],
       "id": 35
@@ -2500,7 +2500,6 @@
             "target": 1
           },
           "bnpcNameId": 14651,
-          "element": "Wind",
           "icon": "/icons/pieces/242589.png",
           "name": "drake piece",
           "resistFlags": [
@@ -2516,7 +2515,8 @@
             true,
             true
           ],
-          "slot": 0
+          "slot": 0,
+          "weakness": "Wind"
         },
         {
           "action": {
@@ -2526,7 +2526,6 @@
             "target": 1
           },
           "bnpcNameId": 14653,
-          "element": "Fire",
           "icon": "/icons/pieces/242590.png",
           "name": "barbmole piece",
           "resistFlags": [
@@ -2542,12 +2541,12 @@
             false,
             false
           ],
-          "slot": 1
+          "slot": 1,
+          "weakness": "Fire"
         },
         {
           "action": null,
           "bnpcNameId": 14655,
-          "element": "Water",
           "icon": "/icons/pieces/242591.png",
           "name": "abaddon piece",
           "resistFlags": [
@@ -2563,7 +2562,8 @@
             true,
             false
           ],
-          "slot": 2
+          "slot": 2,
+          "weakness": "Water"
         },
         {
           "action": {
@@ -2573,7 +2573,6 @@
             "target": 5
           },
           "bnpcNameId": 14656,
-          "element": "Blunt",
           "icon": "/icons/pieces/242592.png",
           "name": "morpho piece",
           "resistFlags": [
@@ -2589,7 +2588,8 @@
             true,
             true
           ],
-          "slot": 3
+          "slot": 3,
+          "weakness": "Blunt"
         }
       ],
       "id": 36
@@ -2604,7 +2604,6 @@
             "target": 0
           },
           "bnpcNameId": 14657,
-          "element": "Fire",
           "icon": "/icons/pieces/242593.png",
           "name": "Durga piece",
           "resistFlags": [
@@ -2620,7 +2619,8 @@
             true,
             true
           ],
-          "slot": 0
+          "slot": 0,
+          "weakness": "Fire"
         },
         {
           "action": {
@@ -2630,7 +2630,6 @@
             "target": 6
           },
           "bnpcNameId": 14659,
-          "element": "Blunt",
           "icon": "/icons/pieces/242594.png",
           "name": "spinner-rook piece",
           "resistFlags": [
@@ -2646,7 +2645,8 @@
             true,
             true
           ],
-          "slot": 1
+          "slot": 1,
+          "weakness": "Blunt"
         }
       ],
       "id": 37
@@ -2661,7 +2661,6 @@
             "target": 0
           },
           "bnpcNameId": 14660,
-          "element": "Piercing",
           "icon": "/icons/pieces/242595.png",
           "name": "medusa piece",
           "resistFlags": [
@@ -2677,7 +2676,8 @@
             true,
             true
           ],
-          "slot": 0
+          "slot": 0,
+          "weakness": "Piercing"
         },
         {
           "action": {
@@ -2687,7 +2687,6 @@
             "target": 1
           },
           "bnpcNameId": 14661,
-          "element": "Piercing",
           "icon": "/icons/pieces/242596.png",
           "name": "lamia piece",
           "resistFlags": [
@@ -2703,7 +2702,8 @@
             true,
             false
           ],
-          "slot": 1
+          "slot": 1,
+          "weakness": "Piercing"
         },
         {
           "action": {
@@ -2713,7 +2713,6 @@
             "target": 1
           },
           "bnpcNameId": 14662,
-          "element": null,
           "icon": "/icons/pieces/242603.png",
           "name": "cyclops piece",
           "resistFlags": [
@@ -2729,7 +2728,8 @@
             true,
             false
           ],
-          "slot": 2
+          "slot": 2,
+          "weakness": null
         }
       ],
       "id": 38
@@ -2744,7 +2744,6 @@
             "target": 1
           },
           "bnpcNameId": 14663,
-          "element": "Water",
           "icon": "/icons/pieces/242597.png",
           "name": "chimera piece",
           "resistFlags": [
@@ -2760,7 +2759,8 @@
             true,
             true
           ],
-          "slot": 0
+          "slot": 0,
+          "weakness": "Water"
         }
       ],
       "id": 39
@@ -2775,7 +2775,6 @@
             "target": 0
           },
           "bnpcNameId": 14665,
-          "element": "Slashing",
           "icon": "/icons/pieces/242598.png",
           "name": "sphinx piece",
           "resistFlags": [
@@ -2791,7 +2790,8 @@
             true,
             true
           ],
-          "slot": 0
+          "slot": 0,
+          "weakness": "Slashing"
         }
       ],
       "id": 40
@@ -2806,7 +2806,6 @@
             "target": 0
           },
           "bnpcNameId": 14670,
-          "element": null,
           "icon": "/icons/pieces/242603.png",
           "name": "gigantis piece",
           "resistFlags": [
@@ -2822,7 +2821,8 @@
             false,
             true
           ],
-          "slot": 0
+          "slot": 0,
+          "weakness": null
         },
         {
           "action": {
@@ -2832,7 +2832,6 @@
             "target": 0
           },
           "bnpcNameId": 14671,
-          "element": null,
           "icon": "/icons/pieces/242604.png",
           "name": "cyclops piece",
           "resistFlags": [
@@ -2848,7 +2847,8 @@
             false,
             false
           ],
-          "slot": 1
+          "slot": 1,
+          "weakness": null
         },
         {
           "action": {
@@ -2858,7 +2858,6 @@
             "target": 0
           },
           "bnpcNameId": 14672,
-          "element": "Earth",
           "icon": "/icons/pieces/242605.png",
           "name": "congealed lightning",
           "resistFlags": [
@@ -2874,7 +2873,8 @@
             true,
             true
           ],
-          "slot": 2
+          "slot": 2,
+          "weakness": "Earth"
         },
         {
           "action": {
@@ -2884,7 +2884,6 @@
             "target": 0
           },
           "bnpcNameId": 14673,
-          "element": "Wind",
           "icon": "/icons/pieces/242606.png",
           "name": "congealed kindling",
           "resistFlags": [
@@ -2900,7 +2899,8 @@
             true,
             true
           ],
-          "slot": 3
+          "slot": 3,
+          "weakness": "Wind"
         }
       ],
       "id": 41
@@ -2910,7 +2910,6 @@
         {
           "action": null,
           "bnpcNameId": 14674,
-          "element": "Lightning",
           "icon": "/icons/pieces/242607.png",
           "name": "swordsmog piece",
           "resistFlags": [
@@ -2926,7 +2925,8 @@
             true,
             false
           ],
-          "slot": 0
+          "slot": 0,
+          "weakness": "Lightning"
         },
         {
           "action": {
@@ -2936,7 +2936,6 @@
             "target": 0
           },
           "bnpcNameId": 14675,
-          "element": "Lightning",
           "icon": "/icons/pieces/242608.png",
           "name": "mogbreaker piece",
           "resistFlags": [
@@ -2952,7 +2951,8 @@
             true,
             true
           ],
-          "slot": 1
+          "slot": 1,
+          "weakness": "Lightning"
         },
         {
           "action": {
@@ -2962,7 +2962,6 @@
             "target": 0
           },
           "bnpcNameId": 14676,
-          "element": "Blunt",
           "icon": "/icons/pieces/242610.png",
           "name": "kinged kupocurer",
           "resistFlags": [
@@ -2978,7 +2977,8 @@
             true,
             true
           ],
-          "slot": 2
+          "slot": 2,
+          "weakness": "Blunt"
         },
         {
           "action": {
@@ -2988,7 +2988,6 @@
             "target": 0
           },
           "bnpcNameId": 14677,
-          "element": "Blunt",
           "icon": "/icons/pieces/242609.png",
           "name": "kinged kupocaster",
           "resistFlags": [
@@ -3004,7 +3003,8 @@
             true,
             true
           ],
-          "slot": 3
+          "slot": 3,
+          "weakness": "Blunt"
         },
         {
           "action": {
@@ -3014,7 +3014,6 @@
             "target": 0
           },
           "bnpcNameId": 14678,
-          "element": "Blunt",
           "icon": "/icons/pieces/242610.png",
           "name": "kupocurer piece",
           "resistFlags": [
@@ -3030,7 +3029,8 @@
             true,
             true
           ],
-          "slot": 4
+          "slot": 4,
+          "weakness": "Blunt"
         },
         {
           "action": {
@@ -3040,7 +3040,6 @@
             "target": 2
           },
           "bnpcNameId": 14679,
-          "element": "Blunt",
           "icon": "/icons/pieces/242609.png",
           "name": "kupocaster piece",
           "resistFlags": [
@@ -3056,7 +3055,8 @@
             true,
             true
           ],
-          "slot": 5
+          "slot": 5,
+          "weakness": "Blunt"
         },
         {
           "action": {
@@ -3066,7 +3066,6 @@
             "target": 0
           },
           "bnpcNameId": 14680,
-          "element": "Lightning",
           "icon": "/icons/pieces/242611.png",
           "name": "kinged swordsmog",
           "resistFlags": [
@@ -3082,7 +3081,8 @@
             false,
             true
           ],
-          "slot": 6
+          "slot": 6,
+          "weakness": "Lightning"
         },
         {
           "action": {
@@ -3092,7 +3092,6 @@
             "target": 6
           },
           "bnpcNameId": 14681,
-          "element": "Water",
           "icon": "/icons/pieces/242612.png",
           "name": "melomog piece",
           "resistFlags": [
@@ -3108,7 +3107,8 @@
             true,
             false
           ],
-          "slot": 7
+          "slot": 7,
+          "weakness": "Water"
         },
         {
           "action": {
@@ -3118,7 +3118,6 @@
             "target": 5
           },
           "bnpcNameId": 14683,
-          "element": "Water",
           "icon": "/icons/pieces/242613.png",
           "name": "mogmugger piece",
           "resistFlags": [
@@ -3134,7 +3133,8 @@
             true,
             false
           ],
-          "slot": 8
+          "slot": 8,
+          "weakness": "Water"
         }
       ],
       "id": 42
@@ -3149,7 +3149,6 @@
             "target": 0
           },
           "bnpcNameId": 14684,
-          "element": "Earth",
           "icon": "/icons/pieces/242614.png",
           "name": "behemoth piece",
           "resistFlags": [
@@ -3165,7 +3164,8 @@
             true,
             true
           ],
-          "slot": 0
+          "slot": 0,
+          "weakness": "Earth"
         },
         {
           "action": {
@@ -3175,7 +3175,6 @@
             "target": 0
           },
           "bnpcNameId": 14685,
-          "element": "Lightning",
           "icon": "/icons/pieces/242615.png",
           "name": "giant piece",
           "resistFlags": [
@@ -3191,7 +3190,8 @@
             false,
             true
           ],
-          "slot": 1
+          "slot": 1,
+          "weakness": "Lightning"
         },
         {
           "action": {
@@ -3201,7 +3201,6 @@
             "target": 1
           },
           "bnpcNameId": 14686,
-          "element": "Earth",
           "icon": "/icons/pieces/242574.png",
           "name": "lightning sprite",
           "resistFlags": [
@@ -3217,7 +3216,8 @@
             true,
             true
           ],
-          "slot": 2
+          "slot": 2,
+          "weakness": "Earth"
         }
       ],
       "id": 43
@@ -3232,7 +3232,6 @@
             "target": 0
           },
           "bnpcNameId": 14688,
-          "element": "Ice",
           "icon": "/icons/pieces/242616.png",
           "name": "king ahriman piece",
           "resistFlags": [
@@ -3248,7 +3247,8 @@
             true,
             true
           ],
-          "slot": 0
+          "slot": 0,
+          "weakness": "Ice"
         },
         {
           "action": {
@@ -3258,7 +3258,6 @@
             "target": 3
           },
           "bnpcNameId": 14691,
-          "element": "Wind",
           "icon": "/icons/pieces/242617.png",
           "name": "hapalit piece",
           "resistFlags": [
@@ -3274,7 +3273,8 @@
             false,
             true
           ],
-          "slot": 1
+          "slot": 1,
+          "weakness": "Wind"
         },
         {
           "action": {
@@ -3284,7 +3284,6 @@
             "target": 0
           },
           "bnpcNameId": 14692,
-          "element": "Ice",
           "icon": "/icons/pieces/242618.png",
           "name": "dirty eye piece",
           "resistFlags": [
@@ -3300,7 +3299,8 @@
             true,
             false
           ],
-          "slot": 2
+          "slot": 2,
+          "weakness": "Ice"
         }
       ],
       "id": 44
@@ -3315,7 +3315,6 @@
             "target": 0
           },
           "bnpcNameId": 14693,
-          "element": null,
           "icon": "/icons/pieces/242619.png",
           "name": "Lauda the Spellcleaver",
           "resistFlags": [
@@ -3331,7 +3330,8 @@
             true,
             true
           ],
-          "slot": 0
+          "slot": 0,
+          "weakness": null
         },
         {
           "action": {
@@ -3341,7 +3341,6 @@
             "target": 0
           },
           "bnpcNameId": 14699,
-          "element": "Lightning",
           "icon": "/icons/pieces/242543.png",
           "name": "Thanatos piece",
           "resistFlags": [
@@ -3357,380 +3356,2102 @@
             true,
             true
           ],
-          "slot": 1
+          "slot": 1,
+          "weakness": "Lightning"
         }
       ],
       "id": 45
     }
   ],
-  "content": [
+  "boards": [
     {
-      "id": 0,
-      "raw": {
-        "u0": 250,
-        "u1": 500,
-        "u10": 500,
-        "u11": 750,
-        "u12": 1250,
-        "u13": 750,
-        "u14": 500,
-        "u15": 750,
-        "u16": 1000,
-        "u17": 750,
-        "u18": 750,
-        "u19": 500,
-        "u2": 750,
-        "u20": 500,
-        "u21": 375,
-        "u22": 750,
-        "u23": 750,
-        "u24": 750,
-        "u25": 750,
-        "u26": 750,
-        "u27": 750,
-        "u28": 750,
-        "u29": 750,
-        "u3": 1000,
-        "u30": 4000,
-        "u31": 6250,
-        "u32": 9000,
-        "u34": 0,
-        "u35": 0,
-        "u36": 255,
-        "u4": 1250,
-        "u5": 2500,
-        "u6": 4250,
-        "u7": 250,
-        "u8": 1000,
-        "u9": 250
-      }
-    },
-    {
+      "battleIds": [
+        6,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "bonusPoints": [
+        250,
+        500,
+        750,
+        1000,
+        1250,
+        2500,
+        4250,
+        250,
+        1000,
+        0,
+        0,
+        0,
+        1250,
+        750,
+        0,
+        750,
+        0,
+        750,
+        0,
+        500,
+        0,
+        375,
+        750,
+        750,
+        750,
+        750,
+        750,
+        750,
+        750,
+        750,
+        4000,
+        6250,
+        9000
+      ],
+      "bossBattleId": 6,
+      "campsites": [
+        2,
+        2
+      ],
       "id": 1,
+      "level": 30,
+      "map": {
+        "edges": [
+          {
+            "from": 11,
+            "kind": 6,
+            "to": 12
+          },
+          {
+            "from": 10,
+            "kind": 9,
+            "to": 11
+          },
+          {
+            "from": 9,
+            "kind": 10,
+            "to": 11
+          },
+          {
+            "from": 8,
+            "kind": 10,
+            "to": 10
+          },
+          {
+            "from": 8,
+            "kind": 9,
+            "to": 9
+          },
+          {
+            "from": 7,
+            "kind": 6,
+            "to": 8
+          },
+          {
+            "from": 6,
+            "kind": 6,
+            "to": 7
+          },
+          {
+            "from": 5,
+            "kind": 9,
+            "to": 6
+          },
+          {
+            "from": 4,
+            "kind": 10,
+            "to": 6
+          },
+          {
+            "from": 3,
+            "kind": 6,
+            "to": 5
+          },
+          {
+            "from": 2,
+            "kind": 6,
+            "to": 4
+          },
+          {
+            "from": 1,
+            "kind": 10,
+            "to": 3
+          },
+          {
+            "from": 1,
+            "kind": 9,
+            "to": 2
+          },
+          {
+            "from": 0,
+            "kind": 6,
+            "to": 1
+          }
+        ],
+        "nodes": [
+          {
+            "id": 12,
+            "x": 6,
+            "y": 3
+          },
+          {
+            "id": 11,
+            "x": 6,
+            "y": 4
+          },
+          {
+            "id": 10,
+            "x": 7,
+            "y": 5
+          },
+          {
+            "id": 9,
+            "x": 5,
+            "y": 5
+          },
+          {
+            "id": 8,
+            "x": 6,
+            "y": 6
+          },
+          {
+            "id": 7,
+            "x": 6,
+            "y": 7
+          },
+          {
+            "id": 6,
+            "x": 6,
+            "y": 8
+          },
+          {
+            "id": 5,
+            "x": 7,
+            "y": 9
+          },
+          {
+            "id": 4,
+            "x": 5,
+            "y": 9
+          },
+          {
+            "id": 3,
+            "x": 7,
+            "y": 10
+          },
+          {
+            "id": 2,
+            "x": 5,
+            "y": 10
+          },
+          {
+            "id": 1,
+            "x": 6,
+            "y": 11
+          },
+          {
+            "id": 0,
+            "x": 6,
+            "y": 12
+          }
+        ]
+      },
+      "modeBonuses": {
+        "first": 4000,
+        "second": 6250,
+        "third": 9000
+      },
+      "name": "First Board of the Unbroken",
+      "rankSync": 5,
       "raw": {
-        "u0": 250,
-        "u1": 500,
-        "u10": 0,
-        "u11": 0,
-        "u12": 1250,
-        "u13": 750,
-        "u14": 0,
-        "u15": 750,
-        "u16": 0,
-        "u17": 750,
-        "u18": 0,
-        "u19": 500,
-        "u2": 750,
-        "u20": 0,
-        "u21": 375,
-        "u22": 750,
-        "u23": 750,
-        "u24": 750,
-        "u25": 750,
-        "u26": 750,
-        "u27": 750,
-        "u28": 750,
-        "u29": 750,
-        "u3": 1000,
-        "u30": 4000,
-        "u31": 6250,
-        "u32": 9000,
-        "u34": 10,
-        "u35": 3,
-        "u36": 5,
-        "u4": 1250,
-        "u5": 2500,
-        "u6": 4250,
-        "u7": 250,
-        "u8": 1000,
-        "u9": 0
-      }
+        "u35": 3
+      },
+      "slug": "unbroken-1",
+      "squadSize": 10,
+      "sync": 30,
+      "tiles": [
+        {
+          "index": -1,
+          "move": 0,
+          "node": 0,
+          "type": "start",
+          "typeCode": 1
+        },
+        {
+          "battleId": 1,
+          "index": 1,
+          "move": 1,
+          "node": 1,
+          "type": "battle",
+          "typeCode": 2
+        },
+        {
+          "battleId": 2,
+          "index": 2,
+          "move": 2,
+          "node": 2,
+          "type": "battle",
+          "typeCode": 2
+        },
+        {
+          "battleId": 3,
+          "index": 3,
+          "move": 2,
+          "node": 3,
+          "type": "battle",
+          "typeCode": 2
+        },
+        {
+          "familiars": 2,
+          "index": 0,
+          "move": 3,
+          "node": 4,
+          "type": "campsite",
+          "typeCode": 6
+        },
+        {
+          "index": 0,
+          "move": 3,
+          "node": 5,
+          "type": "treasure",
+          "typeCode": 7
+        },
+        {
+          "battleId": 4,
+          "index": 4,
+          "move": 4,
+          "node": 6,
+          "type": "battle",
+          "typeCode": 2
+        },
+        {
+          "index": 1,
+          "move": 5,
+          "node": 7,
+          "type": "treasure",
+          "typeCode": 7
+        },
+        {
+          "battleId": 5,
+          "index": 5,
+          "move": 6,
+          "node": 8,
+          "type": "elite",
+          "typeCode": 3
+        },
+        {
+          "index": 2,
+          "move": 7,
+          "node": 9,
+          "type": "treasure",
+          "typeCode": 7
+        },
+        {
+          "familiars": 2,
+          "index": 1,
+          "move": 7,
+          "node": 10,
+          "type": "campsite",
+          "typeCode": 6
+        },
+        {
+          "index": 0,
+          "move": 8,
+          "node": 11,
+          "type": "shop",
+          "typeCode": 5
+        },
+        {
+          "battleId": 6,
+          "index": 0,
+          "move": 9,
+          "node": 12,
+          "type": "boss",
+          "typeCode": 4
+        }
+      ],
+      "unlockQuestId": 71030
     },
     {
+      "battleIds": [
+        13,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "bonusPoints": [
+        250,
+        500,
+        750,
+        1000,
+        1250,
+        2500,
+        4250,
+        250,
+        1000,
+        0,
+        0,
+        0,
+        1250,
+        750,
+        500,
+        750,
+        1000,
+        750,
+        0,
+        500,
+        500,
+        375,
+        750,
+        750,
+        750,
+        750,
+        750,
+        750,
+        750,
+        750,
+        4000,
+        6250,
+        9000
+      ],
+      "bossBattleId": 13,
+      "campsites": [
+        2,
+        3
+      ],
       "id": 2,
+      "level": 40,
+      "map": {
+        "edges": [
+          {
+            "from": 12,
+            "kind": 6,
+            "to": 13
+          },
+          {
+            "from": 11,
+            "kind": 4,
+            "to": 12
+          },
+          {
+            "from": 10,
+            "kind": 5,
+            "to": 12
+          },
+          {
+            "from": 9,
+            "kind": 5,
+            "to": 11
+          },
+          {
+            "from": 9,
+            "kind": 4,
+            "to": 10
+          },
+          {
+            "from": 8,
+            "kind": 6,
+            "to": 9
+          },
+          {
+            "from": 7,
+            "kind": 6,
+            "to": 8
+          },
+          {
+            "from": 6,
+            "kind": 4,
+            "to": 7
+          },
+          {
+            "from": 5,
+            "kind": 5,
+            "to": 7
+          },
+          {
+            "from": 4,
+            "kind": 6,
+            "to": 6
+          },
+          {
+            "from": 3,
+            "kind": 6,
+            "to": 5
+          },
+          {
+            "from": 2,
+            "kind": 5,
+            "to": 4
+          },
+          {
+            "from": 2,
+            "kind": 4,
+            "to": 3
+          },
+          {
+            "from": 1,
+            "kind": 6,
+            "to": 2
+          },
+          {
+            "from": 0,
+            "kind": 6,
+            "to": 1
+          }
+        ],
+        "nodes": [
+          {
+            "id": 13,
+            "x": 6,
+            "y": 2
+          },
+          {
+            "id": 12,
+            "x": 6,
+            "y": 3
+          },
+          {
+            "id": 11,
+            "x": 7,
+            "y": 4
+          },
+          {
+            "id": 10,
+            "x": 5,
+            "y": 4
+          },
+          {
+            "id": 9,
+            "x": 6,
+            "y": 5
+          },
+          {
+            "id": 8,
+            "x": 6,
+            "y": 6
+          },
+          {
+            "id": 7,
+            "x": 6,
+            "y": 7
+          },
+          {
+            "id": 6,
+            "x": 7,
+            "y": 8
+          },
+          {
+            "id": 5,
+            "x": 5,
+            "y": 8
+          },
+          {
+            "id": 4,
+            "x": 7,
+            "y": 9
+          },
+          {
+            "id": 3,
+            "x": 5,
+            "y": 9
+          },
+          {
+            "id": 2,
+            "x": 6,
+            "y": 10
+          },
+          {
+            "id": 1,
+            "x": 6,
+            "y": 11
+          },
+          {
+            "id": 0,
+            "x": 6,
+            "y": 12
+          }
+        ]
+      },
+      "modeBonuses": {
+        "first": 4000,
+        "second": 6250,
+        "third": 9000
+      },
+      "name": "Second Board of the Unbroken",
+      "rankSync": 10,
       "raw": {
-        "u0": 250,
-        "u1": 500,
-        "u10": 0,
-        "u11": 0,
-        "u12": 1250,
-        "u13": 750,
-        "u14": 500,
-        "u15": 750,
-        "u16": 1000,
-        "u17": 750,
-        "u18": 0,
-        "u19": 500,
-        "u2": 750,
-        "u20": 500,
-        "u21": 375,
-        "u22": 750,
-        "u23": 750,
-        "u24": 750,
-        "u25": 750,
-        "u26": 750,
-        "u27": 750,
-        "u28": 750,
-        "u29": 750,
-        "u3": 1000,
-        "u30": 4000,
-        "u31": 6250,
-        "u32": 9000,
-        "u34": 12,
-        "u35": 8,
-        "u36": 10,
-        "u4": 1250,
-        "u5": 2500,
-        "u6": 4250,
-        "u7": 250,
-        "u8": 1000,
-        "u9": 0
-      }
+        "u35": 8
+      },
+      "slug": "unbroken-2",
+      "squadSize": 12,
+      "sync": 40,
+      "tiles": [
+        {
+          "index": -1,
+          "move": 0,
+          "node": 0,
+          "type": "start",
+          "typeCode": 1
+        },
+        {
+          "battleId": 7,
+          "index": 1,
+          "move": 1,
+          "node": 1,
+          "type": "battle",
+          "typeCode": 2
+        },
+        {
+          "index": 0,
+          "move": 2,
+          "node": 2,
+          "type": "shop",
+          "typeCode": 5
+        },
+        {
+          "battleId": 8,
+          "index": 2,
+          "move": 3,
+          "node": 3,
+          "type": "elite",
+          "typeCode": 3
+        },
+        {
+          "battleId": 9,
+          "index": 3,
+          "move": 3,
+          "node": 4,
+          "type": "battle",
+          "typeCode": 2
+        },
+        {
+          "index": 0,
+          "move": 4,
+          "node": 5,
+          "type": "treasure",
+          "typeCode": 7
+        },
+        {
+          "familiars": 2,
+          "index": 0,
+          "move": 4,
+          "node": 6,
+          "type": "campsite",
+          "typeCode": 6
+        },
+        {
+          "battleId": 10,
+          "index": 4,
+          "move": 5,
+          "node": 7,
+          "type": "battle",
+          "typeCode": 2
+        },
+        {
+          "index": 1,
+          "move": 6,
+          "node": 8,
+          "type": "treasure",
+          "typeCode": 7
+        },
+        {
+          "battleId": 11,
+          "index": 5,
+          "move": 7,
+          "node": 9,
+          "type": "elite",
+          "typeCode": 3
+        },
+        {
+          "index": 0,
+          "move": 8,
+          "node": 10,
+          "options": [
+            {
+              "battleId": 12,
+              "index": 6,
+              "type": "battle",
+              "typeCode": 2
+            },
+            {
+              "familiars": 3,
+              "index": 1,
+              "type": "campsite",
+              "typeCode": 6
+            }
+          ],
+          "type": "random",
+          "typeCode": 8
+        },
+        {
+          "index": 2,
+          "move": 8,
+          "node": 11,
+          "type": "treasure",
+          "typeCode": 7
+        },
+        {
+          "index": 1,
+          "move": 9,
+          "node": 12,
+          "type": "shop",
+          "typeCode": 5
+        },
+        {
+          "battleId": 13,
+          "index": 0,
+          "move": 10,
+          "node": 13,
+          "type": "boss",
+          "typeCode": 4
+        }
+      ],
+      "unlockQuestId": 71032
     },
     {
+      "battleIds": [
+        21,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20
+      ],
+      "bonusPoints": [
+        250,
+        500,
+        750,
+        1000,
+        1250,
+        2500,
+        4250,
+        250,
+        1000,
+        0,
+        0,
+        0,
+        1250,
+        750,
+        500,
+        750,
+        1000,
+        750,
+        1500,
+        500,
+        500,
+        375,
+        750,
+        750,
+        750,
+        750,
+        750,
+        750,
+        750,
+        750,
+        4000,
+        6250,
+        9000
+      ],
+      "bossBattleId": 21,
+      "campsites": [
+        3,
+        3
+      ],
       "id": 3,
+      "level": 50,
+      "map": {
+        "edges": [
+          {
+            "from": 15,
+            "kind": 6,
+            "to": 16
+          },
+          {
+            "from": 14,
+            "kind": 9,
+            "to": 15
+          },
+          {
+            "from": 13,
+            "kind": 10,
+            "to": 15
+          },
+          {
+            "from": 12,
+            "kind": 10,
+            "to": 14
+          },
+          {
+            "from": 12,
+            "kind": 9,
+            "to": 13
+          },
+          {
+            "from": 11,
+            "kind": 6,
+            "to": 12
+          },
+          {
+            "from": 10,
+            "kind": 9,
+            "to": 11
+          },
+          {
+            "from": 9,
+            "kind": 10,
+            "to": 11
+          },
+          {
+            "from": 8,
+            "kind": 10,
+            "to": 10
+          },
+          {
+            "from": 8,
+            "kind": 9,
+            "to": 9
+          },
+          {
+            "from": 7,
+            "kind": 9,
+            "to": 8
+          },
+          {
+            "from": 6,
+            "kind": 10,
+            "to": 8
+          },
+          {
+            "from": 5,
+            "kind": 6,
+            "to": 7
+          },
+          {
+            "from": 4,
+            "kind": 6,
+            "to": 6
+          },
+          {
+            "from": 3,
+            "kind": 10,
+            "to": 5
+          },
+          {
+            "from": 3,
+            "kind": 9,
+            "to": 4
+          },
+          {
+            "from": 2,
+            "kind": 6,
+            "to": 3
+          },
+          {
+            "from": 1,
+            "kind": 6,
+            "to": 2
+          },
+          {
+            "from": 0,
+            "kind": 6,
+            "to": 1
+          }
+        ],
+        "nodes": [
+          {
+            "id": 16,
+            "x": 6,
+            "y": 0
+          },
+          {
+            "id": 15,
+            "x": 6,
+            "y": 1
+          },
+          {
+            "id": 14,
+            "x": 7,
+            "y": 2
+          },
+          {
+            "id": 13,
+            "x": 5,
+            "y": 2
+          },
+          {
+            "id": 12,
+            "x": 6,
+            "y": 3
+          },
+          {
+            "id": 11,
+            "x": 6,
+            "y": 4
+          },
+          {
+            "id": 10,
+            "x": 7,
+            "y": 5
+          },
+          {
+            "id": 9,
+            "x": 5,
+            "y": 5
+          },
+          {
+            "id": 8,
+            "x": 6,
+            "y": 6
+          },
+          {
+            "id": 7,
+            "x": 7,
+            "y": 7
+          },
+          {
+            "id": 6,
+            "x": 5,
+            "y": 7
+          },
+          {
+            "id": 5,
+            "x": 7,
+            "y": 8
+          },
+          {
+            "id": 4,
+            "x": 5,
+            "y": 8
+          },
+          {
+            "id": 3,
+            "x": 6,
+            "y": 9
+          },
+          {
+            "id": 2,
+            "x": 6,
+            "y": 10
+          },
+          {
+            "id": 1,
+            "x": 6,
+            "y": 11
+          },
+          {
+            "id": 0,
+            "x": 6,
+            "y": 12
+          }
+        ]
+      },
+      "modeBonuses": {
+        "first": 4000,
+        "second": 6250,
+        "third": 9000
+      },
+      "name": "Third Board of the Unbroken",
+      "rankSync": 15,
       "raw": {
-        "u0": 250,
-        "u1": 500,
-        "u10": 0,
-        "u11": 0,
-        "u12": 1250,
-        "u13": 750,
-        "u14": 500,
-        "u15": 750,
-        "u16": 1000,
-        "u17": 750,
-        "u18": 1500,
-        "u19": 500,
-        "u2": 750,
-        "u20": 500,
-        "u21": 375,
-        "u22": 750,
-        "u23": 750,
-        "u24": 750,
-        "u25": 750,
-        "u26": 750,
-        "u27": 750,
-        "u28": 750,
-        "u29": 750,
-        "u3": 1000,
-        "u30": 4000,
-        "u31": 6250,
-        "u32": 9000,
-        "u34": 14,
-        "u35": 13,
-        "u36": 15,
-        "u4": 1250,
-        "u5": 2500,
-        "u6": 4250,
-        "u7": 250,
-        "u8": 1000,
-        "u9": 0
-      }
+        "u35": 13
+      },
+      "slug": "unbroken-3",
+      "squadSize": 14,
+      "sync": 50,
+      "tiles": [
+        {
+          "index": -1,
+          "move": 0,
+          "node": 0,
+          "type": "start",
+          "typeCode": 1
+        },
+        {
+          "battleId": 14,
+          "index": 1,
+          "move": 1,
+          "node": 1,
+          "type": "battle",
+          "typeCode": 2
+        },
+        {
+          "battleId": 15,
+          "index": 2,
+          "move": 2,
+          "node": 2,
+          "type": "battle",
+          "typeCode": 2
+        },
+        {
+          "index": 0,
+          "move": 3,
+          "node": 3,
+          "type": "shop",
+          "typeCode": 5
+        },
+        {
+          "battleId": 16,
+          "index": 3,
+          "move": 4,
+          "node": 4,
+          "type": "elite",
+          "typeCode": 3
+        },
+        {
+          "battleId": 17,
+          "index": 4,
+          "move": 4,
+          "node": 5,
+          "type": "battle",
+          "typeCode": 2
+        },
+        {
+          "index": 0,
+          "move": 5,
+          "node": 6,
+          "type": "treasure",
+          "typeCode": 7
+        },
+        {
+          "familiars": 3,
+          "index": 0,
+          "move": 5,
+          "node": 7,
+          "type": "campsite",
+          "typeCode": 6
+        },
+        {
+          "battleId": 18,
+          "index": 5,
+          "move": 6,
+          "node": 8,
+          "type": "battle",
+          "typeCode": 2
+        },
+        {
+          "index": 1,
+          "move": 7,
+          "node": 9,
+          "type": "treasure",
+          "typeCode": 7
+        },
+        {
+          "index": 1,
+          "move": 7,
+          "node": 10,
+          "type": "shop",
+          "typeCode": 5
+        },
+        {
+          "battleId": 19,
+          "index": 6,
+          "move": 8,
+          "node": 11,
+          "type": "elite",
+          "typeCode": 3
+        },
+        {
+          "index": 2,
+          "move": 9,
+          "node": 12,
+          "type": "treasure",
+          "typeCode": 7
+        },
+        {
+          "index": 0,
+          "move": 10,
+          "node": 13,
+          "options": [
+            {
+              "battleId": 20,
+              "index": 7,
+              "type": "battle",
+              "typeCode": 2
+            },
+            {
+              "index": 3,
+              "type": "treasure",
+              "typeCode": 7
+            }
+          ],
+          "type": "random",
+          "typeCode": 8
+        },
+        {
+          "familiars": 3,
+          "index": 1,
+          "move": 10,
+          "node": 14,
+          "type": "campsite",
+          "typeCode": 6
+        },
+        {
+          "index": 2,
+          "move": 11,
+          "node": 15,
+          "type": "shop",
+          "typeCode": 5
+        },
+        {
+          "battleId": 21,
+          "index": 0,
+          "move": 12,
+          "node": 16,
+          "type": "boss",
+          "typeCode": 4
+        }
+      ],
+      "unlockQuestId": 71034
     },
     {
+      "battleIds": [
+        31,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29,
+        30
+      ],
+      "bonusPoints": [
+        250,
+        500,
+        750,
+        1000,
+        1250,
+        2500,
+        4250,
+        250,
+        1000,
+        0,
+        0,
+        0,
+        1250,
+        750,
+        500,
+        750,
+        1000,
+        750,
+        0,
+        500,
+        500,
+        375,
+        750,
+        750,
+        750,
+        750,
+        750,
+        750,
+        750,
+        750,
+        4000,
+        6250,
+        9000
+      ],
+      "bossBattleId": 31,
+      "campsites": [
+        2,
+        4
+      ],
       "id": 4,
+      "level": 50,
+      "map": {
+        "edges": [
+          {
+            "from": 13,
+            "kind": 9,
+            "to": 14
+          },
+          {
+            "from": 12,
+            "kind": 10,
+            "to": 14
+          },
+          {
+            "from": 11,
+            "kind": 6,
+            "to": 13
+          },
+          {
+            "from": 10,
+            "kind": 6,
+            "to": 12
+          },
+          {
+            "from": 9,
+            "kind": 6,
+            "to": 11
+          },
+          {
+            "from": 8,
+            "kind": 6,
+            "to": 10
+          },
+          {
+            "from": 7,
+            "kind": 10,
+            "to": 9
+          },
+          {
+            "from": 7,
+            "kind": 9,
+            "to": 8
+          },
+          {
+            "from": 6,
+            "kind": 9,
+            "to": 7
+          },
+          {
+            "from": 5,
+            "kind": 10,
+            "to": 7
+          },
+          {
+            "from": 4,
+            "kind": 10,
+            "to": 6
+          },
+          {
+            "from": 4,
+            "kind": 9,
+            "to": 5
+          },
+          {
+            "from": 3,
+            "kind": 9,
+            "to": 4
+          },
+          {
+            "from": 2,
+            "kind": 10,
+            "to": 4
+          },
+          {
+            "from": 1,
+            "kind": 10,
+            "to": 3
+          },
+          {
+            "from": 1,
+            "kind": 9,
+            "to": 2
+          },
+          {
+            "from": 0,
+            "kind": 6,
+            "to": 1
+          }
+        ],
+        "nodes": [
+          {
+            "id": 14,
+            "x": 6,
+            "y": 3
+          },
+          {
+            "id": 13,
+            "x": 7,
+            "y": 4
+          },
+          {
+            "id": 12,
+            "x": 5,
+            "y": 4
+          },
+          {
+            "id": 11,
+            "x": 7,
+            "y": 5
+          },
+          {
+            "id": 10,
+            "x": 5,
+            "y": 5
+          },
+          {
+            "id": 9,
+            "x": 7,
+            "y": 6
+          },
+          {
+            "id": 8,
+            "x": 5,
+            "y": 6
+          },
+          {
+            "id": 7,
+            "x": 6,
+            "y": 7
+          },
+          {
+            "id": 6,
+            "x": 7,
+            "y": 8
+          },
+          {
+            "id": 5,
+            "x": 5,
+            "y": 8
+          },
+          {
+            "id": 4,
+            "x": 6,
+            "y": 9
+          },
+          {
+            "id": 3,
+            "x": 7,
+            "y": 10
+          },
+          {
+            "id": 2,
+            "x": 5,
+            "y": 10
+          },
+          {
+            "id": 1,
+            "x": 6,
+            "y": 11
+          },
+          {
+            "id": 0,
+            "x": 6,
+            "y": 12
+          }
+        ]
+      },
+      "modeBonuses": {
+        "first": 4000,
+        "second": 6250,
+        "third": 9000
+      },
+      "name": "First Master's Board",
+      "rankSync": 20,
       "raw": {
-        "u0": 250,
-        "u1": 500,
-        "u10": 0,
-        "u11": 0,
-        "u12": 1250,
-        "u13": 750,
-        "u14": 500,
-        "u15": 750,
-        "u16": 1000,
-        "u17": 750,
-        "u18": 0,
-        "u19": 500,
-        "u2": 750,
-        "u20": 500,
-        "u21": 375,
-        "u22": 750,
-        "u23": 750,
-        "u24": 750,
-        "u25": 750,
-        "u26": 750,
-        "u27": 750,
-        "u28": 750,
-        "u29": 750,
-        "u3": 1000,
-        "u30": 4000,
-        "u31": 6250,
-        "u32": 9000,
-        "u34": 12,
-        "u35": 18,
-        "u36": 20,
-        "u4": 1250,
-        "u5": 2500,
-        "u6": 4250,
-        "u7": 250,
-        "u8": 1000,
-        "u9": 0
-      }
+        "u35": 18
+      },
+      "slug": "masters-1",
+      "squadSize": 12,
+      "sync": 50,
+      "tiles": [
+        {
+          "index": -1,
+          "move": 0,
+          "node": 0,
+          "type": "start",
+          "typeCode": 1
+        },
+        {
+          "battleId": 22,
+          "index": 1,
+          "move": 1,
+          "node": 1,
+          "type": "battle",
+          "typeCode": 2
+        },
+        {
+          "battleId": 23,
+          "index": 2,
+          "move": 2,
+          "node": 2,
+          "type": "battle",
+          "typeCode": 2
+        },
+        {
+          "index": 0,
+          "move": 2,
+          "node": 3,
+          "options": [
+            {
+              "battleId": 24,
+              "index": 3,
+              "type": "battle",
+              "typeCode": 2
+            },
+            {
+              "index": 0,
+              "type": "treasure",
+              "typeCode": 7
+            }
+          ],
+          "type": "random",
+          "typeCode": 8
+        },
+        {
+          "index": 0,
+          "move": 3,
+          "node": 4,
+          "type": "shop",
+          "typeCode": 5
+        },
+        {
+          "familiars": 2,
+          "index": 0,
+          "move": 4,
+          "node": 5,
+          "type": "campsite",
+          "typeCode": 6
+        },
+        {
+          "index": 1,
+          "move": 4,
+          "node": 6,
+          "options": [
+            {
+              "battleId": 25,
+              "index": 4,
+              "type": "battle",
+              "typeCode": 2
+            },
+            {
+              "index": 1,
+              "type": "treasure",
+              "typeCode": 7
+            }
+          ],
+          "type": "random",
+          "typeCode": 8
+        },
+        {
+          "battleId": 26,
+          "index": 5,
+          "move": 5,
+          "node": 7,
+          "type": "elite",
+          "typeCode": 3
+        },
+        {
+          "index": 2,
+          "move": 6,
+          "node": 8,
+          "options": [
+            {
+              "battleId": 27,
+              "index": 6,
+              "type": "battle",
+              "typeCode": 2
+            },
+            {
+              "index": 2,
+              "type": "treasure",
+              "typeCode": 7
+            },
+            {
+              "familiars": 4,
+              "index": 1,
+              "type": "campsite",
+              "typeCode": 6
+            }
+          ],
+          "type": "random",
+          "typeCode": 8
+        },
+        {
+          "index": 3,
+          "move": 6,
+          "node": 9,
+          "type": "treasure",
+          "typeCode": 7
+        },
+        {
+          "battleId": 28,
+          "index": 7,
+          "move": 7,
+          "node": 10,
+          "type": "elite",
+          "typeCode": 3
+        },
+        {
+          "battleId": 29,
+          "index": 8,
+          "move": 7,
+          "node": 11,
+          "type": "battle",
+          "typeCode": 2
+        },
+        {
+          "index": 3,
+          "move": 8,
+          "node": 12,
+          "options": [
+            {
+              "battleId": 30,
+              "index": 9,
+              "type": "battle",
+              "typeCode": 2
+            },
+            {
+              "index": 1,
+              "type": "shop",
+              "typeCode": 5
+            }
+          ],
+          "type": "random",
+          "typeCode": 8
+        },
+        {
+          "index": 2,
+          "move": 8,
+          "node": 13,
+          "type": "shop",
+          "typeCode": 5
+        },
+        {
+          "battleId": 31,
+          "index": 0,
+          "move": 9,
+          "node": 14,
+          "type": "boss",
+          "typeCode": 4
+        }
+      ],
+      "unlockQuestId": 71036
     },
     {
+      "battleIds": [
+        45,
+        32,
+        33,
+        34,
+        35,
+        36,
+        37,
+        38,
+        39,
+        40,
+        41,
+        42,
+        43,
+        44
+      ],
+      "bonusPoints": [
+        250,
+        500,
+        750,
+        1000,
+        1250,
+        2500,
+        4250,
+        250,
+        1000,
+        150,
+        300,
+        450,
+        1250,
+        750,
+        500,
+        750,
+        1000,
+        750,
+        1500,
+        500,
+        500,
+        375,
+        750,
+        750,
+        750,
+        750,
+        750,
+        750,
+        750,
+        750,
+        4000,
+        6250,
+        9000
+      ],
+      "bossBattleId": 45,
+      "campsites": [
+        1,
+        2,
+        3
+      ],
       "id": 5,
-      "raw": {
-        "u0": 250,
-        "u1": 500,
-        "u10": 300,
-        "u11": 450,
-        "u12": 1250,
-        "u13": 750,
-        "u14": 500,
-        "u15": 750,
-        "u16": 1000,
-        "u17": 750,
-        "u18": 1500,
-        "u19": 500,
-        "u2": 750,
-        "u20": 500,
-        "u21": 375,
-        "u22": 750,
-        "u23": 750,
-        "u24": 750,
-        "u25": 750,
-        "u26": 750,
-        "u27": 750,
-        "u28": 750,
-        "u29": 750,
-        "u3": 1000,
-        "u30": 4000,
-        "u31": 6250,
-        "u32": 9000,
-        "u34": 15,
-        "u35": 23,
-        "u36": 25,
-        "u4": 1250,
-        "u5": 2500,
-        "u6": 4250,
-        "u7": 250,
-        "u8": 1000,
-        "u9": 150
-      }
-    }
-  ],
-  "contentBattle": [],
-  "contentCamp": [
-    {
-      "id": 1,
-      "raw": {
-        "u0": 2
+      "level": 50,
+      "map": {
+        "edges": [
+          {
+            "from": 24,
+            "kind": 9,
+            "to": 25
+          },
+          {
+            "from": 23,
+            "kind": 10,
+            "to": 25
+          },
+          {
+            "from": 22,
+            "kind": 6,
+            "to": 24
+          },
+          {
+            "from": 21,
+            "kind": 6,
+            "to": 25
+          },
+          {
+            "from": 20,
+            "kind": 6,
+            "to": 23
+          },
+          {
+            "from": 19,
+            "kind": 8,
+            "to": 22
+          },
+          {
+            "from": 19,
+            "kind": 6,
+            "to": 21
+          },
+          {
+            "from": 19,
+            "kind": 7,
+            "to": 20
+          },
+          {
+            "from": 18,
+            "kind": 6,
+            "to": 19
+          },
+          {
+            "from": 17,
+            "kind": 7,
+            "to": 18
+          },
+          {
+            "from": 17,
+            "kind": 7,
+            "to": 18
+          },
+          {
+            "from": 16,
+            "kind": 8,
+            "to": 18
+          },
+          {
+            "from": 16,
+            "kind": 8,
+            "to": 18
+          },
+          {
+            "from": 15,
+            "kind": 6,
+            "to": 17
+          },
+          {
+            "from": 14,
+            "kind": 6,
+            "to": 16
+          },
+          {
+            "from": 13,
+            "kind": 8,
+            "to": 15
+          },
+          {
+            "from": 12,
+            "kind": 7,
+            "to": 14
+          },
+          {
+            "from": 11,
+            "kind": 8,
+            "to": 13
+          },
+          {
+            "from": 11,
+            "kind": 7,
+            "to": 12
+          },
+          {
+            "from": 10,
+            "kind": 6,
+            "to": 11
+          },
+          {
+            "from": 9,
+            "kind": 9,
+            "to": 10
+          },
+          {
+            "from": 8,
+            "kind": 6,
+            "to": 10
+          },
+          {
+            "from": 7,
+            "kind": 10,
+            "to": 10
+          },
+          {
+            "from": 6,
+            "kind": 6,
+            "to": 9
+          },
+          {
+            "from": 5,
+            "kind": 6,
+            "to": 8
+          },
+          {
+            "from": 4,
+            "kind": 6,
+            "to": 7
+          },
+          {
+            "from": 3,
+            "kind": 6,
+            "to": 6
+          },
+          {
+            "from": 3,
+            "kind": 9,
+            "to": 5
+          },
+          {
+            "from": 2,
+            "kind": 10,
+            "to": 5
+          },
+          {
+            "from": 2,
+            "kind": 6,
+            "to": 4
+          },
+          {
+            "from": 1,
+            "kind": 8,
+            "to": 3
+          },
+          {
+            "from": 1,
+            "kind": 7,
+            "to": 2
+          },
+          {
+            "from": 0,
+            "kind": 6,
+            "to": 1
+          }
+        ],
+        "nodes": [
+          {
+            "id": 25,
+            "x": 6,
+            "y": 3
+          },
+          {
+            "id": 24,
+            "x": 7,
+            "y": 4
+          },
+          {
+            "id": 23,
+            "x": 5,
+            "y": 4
+          },
+          {
+            "id": 22,
+            "x": 7,
+            "y": 5
+          },
+          {
+            "id": 21,
+            "x": 6,
+            "y": 4
+          },
+          {
+            "id": 20,
+            "x": 5,
+            "y": 5
+          },
+          {
+            "id": 19,
+            "x": 6,
+            "y": 5
+          },
+          {
+            "id": 18,
+            "x": 6,
+            "y": 6
+          },
+          {
+            "id": 17,
+            "x": 8,
+            "y": 6
+          },
+          {
+            "id": 16,
+            "x": 4,
+            "y": 6
+          },
+          {
+            "id": 15,
+            "x": 8,
+            "y": 7
+          },
+          {
+            "id": 14,
+            "x": 4,
+            "y": 7
+          },
+          {
+            "id": 13,
+            "x": 7,
+            "y": 7
+          },
+          {
+            "id": 12,
+            "x": 5,
+            "y": 7
+          },
+          {
+            "id": 11,
+            "x": 6,
+            "y": 7
+          },
+          {
+            "id": 10,
+            "x": 6,
+            "y": 8
+          },
+          {
+            "id": 9,
+            "x": 7,
+            "y": 9
+          },
+          {
+            "id": 8,
+            "x": 6,
+            "y": 9
+          },
+          {
+            "id": 7,
+            "x": 5,
+            "y": 9
+          },
+          {
+            "id": 6,
+            "x": 7,
+            "y": 10
+          },
+          {
+            "id": 5,
+            "x": 6,
+            "y": 10
+          },
+          {
+            "id": 4,
+            "x": 5,
+            "y": 10
+          },
+          {
+            "id": 3,
+            "x": 7,
+            "y": 11
+          },
+          {
+            "id": 2,
+            "x": 5,
+            "y": 11
+          },
+          {
+            "id": 1,
+            "x": 6,
+            "y": 11
+          },
+          {
+            "id": 0,
+            "x": 6,
+            "y": 12
+          }
+        ]
       },
-      "sub": 0
-    },
-    {
-      "id": 1,
-      "raw": {
-        "u0": 2
+      "modeBonuses": {
+        "first": 4000,
+        "second": 6250,
+        "third": 9000
       },
-      "sub": 1
-    },
-    {
-      "id": 2,
+      "name": "Second Master's Board",
+      "rankSync": 25,
       "raw": {
-        "u0": 2
+        "u35": 23
       },
-      "sub": 0
-    },
-    {
-      "id": 2,
-      "raw": {
-        "u0": 3
-      },
-      "sub": 1
-    },
-    {
-      "id": 3,
-      "raw": {
-        "u0": 3
-      },
-      "sub": 0
-    },
-    {
-      "id": 3,
-      "raw": {
-        "u0": 3
-      },
-      "sub": 1
-    },
-    {
-      "id": 4,
-      "raw": {
-        "u0": 2
-      },
-      "sub": 0
-    },
-    {
-      "id": 4,
-      "raw": {
-        "u0": 4
-      },
-      "sub": 1
-    },
-    {
-      "id": 5,
-      "raw": {
-        "u0": 1
-      },
-      "sub": 0
-    },
-    {
-      "id": 5,
-      "raw": {
-        "u0": 2
-      },
-      "sub": 1
-    },
-    {
-      "id": 5,
-      "raw": {
-        "u0": 3
-      },
-      "sub": 2
-    }
-  ],
-  "entrance": [
-    {
-      "id": 1,
-      "raw": {
-        "u0": 71030,
-        "u1": 1,
-        "u2": 1
-      }
-    },
-    {
-      "id": 2,
-      "raw": {
-        "u0": 71032,
-        "u1": 2,
-        "u2": 1
-      }
-    },
-    {
-      "id": 3,
-      "raw": {
-        "u0": 71034,
-        "u1": 3,
-        "u2": 1
-      }
-    },
-    {
-      "id": 4,
-      "raw": {
-        "u0": 71036,
-        "u1": 4,
-        "u2": 1
-      }
-    },
-    {
-      "id": 5,
-      "raw": {
-        "u0": 71037,
-        "u1": 5,
-        "u2": 1
-      }
+      "slug": "masters-2",
+      "squadSize": 15,
+      "sync": 50,
+      "tiles": [
+        {
+          "index": -1,
+          "move": 0,
+          "node": 0,
+          "type": "start",
+          "typeCode": 1
+        },
+        {
+          "battleId": 32,
+          "index": 1,
+          "move": 1,
+          "node": 1,
+          "type": "battle",
+          "typeCode": 2
+        },
+        {
+          "battleId": 33,
+          "index": 2,
+          "move": 2,
+          "node": 2,
+          "type": "elite",
+          "typeCode": 3
+        },
+        {
+          "index": 0,
+          "move": 2,
+          "node": 3,
+          "type": "shop",
+          "typeCode": 5
+        },
+        {
+          "familiars": 1,
+          "index": 0,
+          "move": 3,
+          "node": 4,
+          "type": "campsite",
+          "typeCode": 6
+        },
+        {
+          "index": 0,
+          "move": 3,
+          "node": 5,
+          "type": "treasure",
+          "typeCode": 7
+        },
+        {
+          "index": 0,
+          "move": 3,
+          "node": 6,
+          "options": [
+            {
+              "battleId": 34,
+              "index": 3,
+              "type": "battle",
+              "typeCode": 2
+            },
+            {
+              "index": 1,
+              "type": "treasure",
+              "typeCode": 7
+            }
+          ],
+          "type": "random",
+          "typeCode": 8
+        },
+        {
+          "index": 1,
+          "move": 4,
+          "node": 7,
+          "options": [
+            {
+              "battleId": 35,
+              "index": 4,
+              "type": "battle",
+              "typeCode": 2
+            },
+            {
+              "index": 1,
+              "type": "shop",
+              "typeCode": 5
+            }
+          ],
+          "type": "random",
+          "typeCode": 8
+        },
+        {
+          "battleId": 36,
+          "index": 5,
+          "move": 4,
+          "node": 8,
+          "type": "battle",
+          "typeCode": 2
+        },
+        {
+          "index": 2,
+          "move": 4,
+          "node": 9,
+          "type": "treasure",
+          "typeCode": 7
+        },
+        {
+          "battleId": 37,
+          "index": 6,
+          "move": 5,
+          "node": 10,
+          "type": "elite",
+          "typeCode": 3
+        },
+        {
+          "familiars": 2,
+          "index": 1,
+          "move": 6,
+          "node": 11,
+          "type": "campsite",
+          "typeCode": 6
+        },
+        {
+          "index": 2,
+          "move": 7,
+          "node": 12,
+          "options": [
+            {
+              "battleId": 38,
+              "index": 7,
+              "type": "elite",
+              "typeCode": 3
+            },
+            {
+              "index": 3,
+              "type": "treasure",
+              "typeCode": 7
+            }
+          ],
+          "type": "random",
+          "typeCode": 8
+        },
+        {
+          "index": 2,
+          "move": 7,
+          "node": 13,
+          "type": "shop",
+          "typeCode": 5
+        },
+        {
+          "index": 4,
+          "move": 8,
+          "node": 14,
+          "type": "treasure",
+          "typeCode": 7
+        },
+        {
+          "index": 5,
+          "move": 8,
+          "node": 15,
+          "type": "treasure",
+          "typeCode": 7
+        },
+        {
+          "battleId": 39,
+          "index": 8,
+          "move": 9,
+          "node": 16,
+          "type": "elite",
+          "typeCode": 3
+        },
+        {
+          "battleId": 40,
+          "index": 9,
+          "move": 9,
+          "node": 17,
+          "type": "battle",
+          "typeCode": 2
+        },
+        {
+          "battleId": 41,
+          "index": 10,
+          "move": 10,
+          "node": 18,
+          "type": "battle",
+          "typeCode": 2
+        },
+        {
+          "index": 3,
+          "move": 11,
+          "node": 19,
+          "type": "shop",
+          "typeCode": 5
+        },
+        {
+          "index": 3,
+          "move": 12,
+          "node": 20,
+          "options": [
+            {
+              "battleId": 42,
+              "index": 11,
+              "type": "battle",
+              "typeCode": 2
+            },
+            {
+              "index": 6,
+              "type": "treasure",
+              "typeCode": 7
+            }
+          ],
+          "type": "random",
+          "typeCode": 8
+        },
+        {
+          "familiars": 3,
+          "index": 2,
+          "move": 12,
+          "node": 21,
+          "type": "campsite",
+          "typeCode": 6
+        },
+        {
+          "index": 7,
+          "move": 12,
+          "node": 22,
+          "type": "treasure",
+          "typeCode": 7
+        },
+        {
+          "index": 4,
+          "move": 13,
+          "node": 23,
+          "options": [
+            {
+              "battleId": 43,
+              "index": 12,
+              "type": "elite",
+              "typeCode": 3
+            },
+            {
+              "index": 4,
+              "type": "shop",
+              "typeCode": 5
+            }
+          ],
+          "type": "random",
+          "typeCode": 8
+        },
+        {
+          "battleId": 44,
+          "index": 13,
+          "move": 13,
+          "node": 24,
+          "type": "elite",
+          "typeCode": 3
+        },
+        {
+          "battleId": 45,
+          "index": 0,
+          "move": 14,
+          "node": 25,
+          "type": "boss",
+          "typeCode": 4
+        }
+      ],
+      "unlockQuestId": 71037
     }
   ],
   "scoreBonus": [

@@ -15,7 +15,6 @@ that need a human are easy to drop in:
    - `src/content/notes/**/*.md` — Markdown notes rendered on the matching page (beast pages,
      Crucible stages, rotation, leveling, gear). Frontmatter carries `status: draft | verified`.
    - `src/data/curated/beast-locations.json` — the beast's level, map coordinates, spawn notes.
-   - `src/data/curated/tiers.json` — tier list placements.
    - `src/data/curated/comps.json` — featured familiar team comps.
 
 Every page renders something useful from layer 1 today and shows a "notes pending" stub where
@@ -24,7 +23,7 @@ layer 2 is still empty.
 ## Pages
 
 `/bestiary/` (+ one page per beast) · `/actions/` · `/leveling/` · `/crucible/` (+ one page per battle) ·
-`/comps/` · `/gear/` · `/tier-list/`
+`/comps/` · `/gear/`
 
 ## Commands
 

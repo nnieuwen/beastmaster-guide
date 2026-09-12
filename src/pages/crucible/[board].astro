@@ -1,0 +1,168 @@
+---
+import Base from '../../layouts/Base.astro';
+import BoardMap from '../../components/BoardMap.astro';
+import BeastCard from '../../components/BeastCard.astro';
+import StratTabs from '../../components/StratTabs.astro';
+import { boards, battleById, quests, comps, beastBySlug, routes, crucible, TILE_LABELS } from '../../lib/data';
+
+export function getStaticPaths() {
+  return boards.map((b) => ({ params: { board: b.slug }, props: { board: b } }));
+}
+const { board } = Astro.props;
+const idx = boards.findIndex((b) => b.id === board.id);
+const prev = boards[idx - 1];
+const next = boards[idx + 1];
+const unlock = quests.find((q) => q.id === board.unlockQuestId);
+const boss = board.bossBattleId ? battleById.get(board.bossBattleId) : null;
+const boardComps = comps
+  .filter((c) => c.board === board.slug)
+  .map((c) => ({ ...c, resolved: c.beasts.map((s) => beastBySlug.get(s)).filter((b): b is NonNullable<typeof b> => !!b) }));
+const boardRoutes = routes[board.slug] ?? [];
+const moves = [...new Set(board.tiles.map((t) => t.move))].sort((a, b) => a - b);
+const bonuses = crucible.scoreBonus.map((b) => ({ ...b, points: board.bonusPoints[b.id] ?? 0 })).filter((b) => b.name && b.points > 0);
+const isFight = (t: string) => t === 'battle' || t === 'elite' || t === 'boss';
+const battleLabel = (id: number | null | undefined) => {
+  const b = id ? battleById.get(id) : null;
+  return b ? b.enemies.map((e) => e.name).join(', ') : `battle ${id}`;
+};
+---
+
+<Base title={board.name} description={`${board.name}: level ${board.sync} sync, up to ${board.squadSize} familiars, rank sync ${board.rankSync}. Tile map, battles, team comps and strategy.`}>
+  <nav class="small muted" aria-label="Breadcrumb"><a href="/crucible/">Crucible</a> › {board.name}</nav>
+  <h1>{board.name}</h1>
+  <div class="row" style="flex-wrap:wrap;margin-bottom:1rem">
+    <span class="badge">Lv. {board.level} · sync {board.sync}</span>
+    <span class="badge">Up to {board.squadSize} familiars</span>
+    <span class="badge">Beast rank sync {board.rankSync}</span>
+    {unlock && <span class="badge">Unlock: {unlock.name} (Lv. {unlock.level})</span>}
+    <span class="badge">{board.battleIds.length} battles · {Math.max(...moves)} moves</span>
+  </div>
+  <p class="muted small">
+    Crucible Mode bonuses: First Degree +{board.modeBonuses.first.toLocaleString()}, Second Degree +{board.modeBonuses.second.toLocaleString()}, Third Degree +{board.modeBonuses.third.toLocaleString()}.
+    {boss && <> Boss: <a href={`/crucible/battles/${boss.id}/`}>{boss.enemies.map((e) => e.name).join(', ')}</a>.</>}
+  </p>
+
+  <div style="display:grid;grid-template-columns:minmax(260px,420px) 1fr;gap:1.5rem;align-items:start" class="board-grid">
+    <div class="card">
+      <h2 style="margin-top:0;font-size:1.1rem">Board</h2>
+      <BoardMap board={board} routes={boardRoutes} />
+    </div>
+    <div>
+      <h2 style="margin-top:0;font-size:1.1rem">Moves</h2>
+      <p class="muted small">Every tile on the board, in order. Forks are listed side by side; the game data says nothing about which fork is better — that's what the strategy tabs are for.</p>
+      <ol style="padding-left:1.4rem;display:grid;gap:0.4rem;margin:0" start="0">
+        {
+          moves.map((m) => (
+            <li value={m}>
+              {board.tiles
+                .filter((t) => t.move === m)
+                .map((t, i, arr) => (
+                  <span>
+                    {i > 0 && <span class="muted"> · or · </span>}
+                    <span class="tag">{TILE_LABELS[t.type] ?? t.type}</span>{' '}
+                    {isFight(t.type) && <a href={`/crucible/battles/${t.battleId}/`}>{battleLabel(t.battleId)}</a>}
+                    {t.type === 'campsite' && <span class="small">#{t.index + 1} — heals you and up to {t.familiars} familiars</span>}
+                    {(t.type === 'shop' || t.type === 'treasure') && <span class="small">#{t.index + 1}</span>}
+                    {t.type === 'random' && (
+                      <span class="small">
+                        one of:{' '}
+                        {(t.options ?? []).map((o, j) => (
+                          <span>
+                            {j > 0 && ' / '}
+                            {isFight(o.type) ? <a href={`/crucible/battles/${o.battleId}/`}>{battleLabel(o.battleId)}</a> : `${TILE_LABELS[o.type] ?? o.type} #${o.index + 1}`}
+                          </span>
+                        ))}
+                      </span>
+                    )}
+                    <span class="muted small"> (node {t.node})</span>
+                  </span>
+                ))}
+            </li>
+          ))
+        }
+      </ol>
+    </div>
+  </div>
+
+  <h2>Score bonuses on this board</h2>
+  <p class="muted small">Point values from the game data. Bonuses that don't apply on this board are omitted.</p>
+  <div class="table-wrap">
+    <table>
+      <thead><tr><th>Bonus</th><th>Condition</th><th class="num">Points</th></tr></thead>
+      <tbody>
+        {bonuses.map((b) => (
+          <tr>
+            <td><strong>{b.name}</strong></td>
+            <td class="small">{b.description}</td>
+            <td class="num">{b.points.toLocaleString()}</td>
+          </tr>
+        ))}
+      </tbody>
+    </table>
+  </div>
+
+  <h2>Team comps</h2>
+  {
+    boardComps.length ? (
+      <div class="grid">
+        {boardComps.map((c) => (
+          <div class="card">
+            <div class="row" style="justify-content:space-between;align-items:flex-start">
+              <strong>{c.name}</strong>
+              <span class:list={['badge', c.status === 'verified' ? 'ok' : c.status === 'draft' ? 'warn' : '']}>{c.status ?? 'draft'}</span>
+            </div>
+            <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(180px,1fr));gap:0.4rem;margin:0.6rem 0">
+              {c.resolved.map((b) => (
+                <BeastCard beast={b} />
+              ))}
+            </div>
+            {c.notes && <p class="small muted" style="margin:0 0 0.6rem">{c.notes}</p>}
+            <div class="row" style="flex-wrap:wrap">
+              <a class="btn" href={`/comps/?board=${board.slug}&b=${c.beasts.join(',')}`}>Load in builder</a>
+              {c.source && <a class="small" href={c.source} rel="noopener">Source ↗</a>}
+            </div>
+          </div>
+        ))}
+      </div>
+    ) : (
+      <p class="muted small">No comps recorded for this board yet — add them to <code>src/data/curated/comps.json</code> with <code>"board": "{board.slug}"</code>.</p>
+    )
+  }
+
+  <h2>Strategy</h2>
+  <StratTabs prefix={`crucible/${board.slug}`} hint="Route, fork choices, which familiars to bring and why — one file per variant (normal clear vs. Legendary run), rendered as tabs." />
+
+  <h2>Battles on this board</h2>
+  <div class="grid">
+    {
+      board.battleIds.map((id, i) => {
+        const b = battleById.get(id);
+        return b ? (
+          <a class="card" href={`/crucible/battles/${b.id}/`} style="color:inherit">
+            <div class="row" style="justify-content:space-between">
+              <strong>{i === 0 ? 'Boss' : `Battle ${b.id}`}</strong>
+              <span class="muted small">{b.enemies.length} piece{b.enemies.length === 1 ? '' : 's'}</span>
+            </div>
+            <div class="row" style="margin-top:0.5rem;flex-wrap:wrap">
+              {b.enemies.map((e) => (e.icon ? <img class="icon sm" src={e.icon} alt={e.name} title={e.name} width="28" height="28" loading="lazy" /> : <span class="tag">{e.name}</span>))}
+            </div>
+            <div class="small muted" style="margin-top:0.4rem">{b.enemies.map((e) => `${e.name}${e.weakness ? ` (weak: ${e.weakness})` : ''}`).join(', ')}</div>
+          </a>
+        ) : null;
+      })
+    }
+  </div>
+
+  <nav style="display:flex;justify-content:space-between;margin-top:2.5rem" aria-label="Neighbouring boards">
+    <span>{prev && <a href={`/crucible/${prev.slug}/`}>← {prev.name}</a>}</span>
+    <span>{next && <a href={`/crucible/${next.slug}/`}>{next.name} →</a>}</span>
+  </nav>
+</Base>
+
+<style>
+  @media (max-width: 760px) {
+    .board-grid {
+      grid-template-columns: 1fr !important;
+    }
+  }
+</style>

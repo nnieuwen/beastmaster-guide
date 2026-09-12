@@ -1,0 +1,45 @@
+---
+// A beast's STR / INT / PHY R / MAG R / CON at the ranks that matter: rank 1
+// and the five Crucible board syncs.
+import type { Beast } from '../lib/types';
+import { STAT_NAMES, RANK_MARKS, statsAt, build } from '../lib/data';
+
+interface Props {
+  beast: Beast;
+}
+const { beast } = Astro.props;
+const rows = RANK_MARKS.map((r) => ({ rank: r, stats: statsAt(beast, r) })).filter((r) => r.stats);
+const kind = build(beast);
+const max = Math.max(...rows.flatMap((r) => r.stats!.slice(0, 2)));
+---
+
+<div class="table-wrap" style="max-width:560px">
+  <table>
+    <thead>
+      <tr>
+        <th>Rank</th>
+        {STAT_NAMES.map((n) => <th class="num">{n}</th>)}
+      </tr>
+    </thead>
+    <tbody>
+      {
+        rows.map((r) => (
+          <tr>
+            <td>
+              <strong>{r.rank}</strong>
+            </td>
+            {r.stats!.map((v, i) => (
+              <td class="num" style={i < 2 && v === max ? 'color:var(--accent);font-weight:700' : undefined}>
+                {v}
+              </td>
+            ))}
+          </tr>
+        ))
+      }
+    </tbody>
+  </table>
+</div>
+<p class="muted small" style="margin:0.5rem 0 0">
+  {kind && <span class="badge" style="margin-right:0.4rem">{kind} attacker</span>}
+  Ranks 5 / 10 / 15 / 20 / 25 are the five Crucible boards' rank syncs. Stat profile #{beast.stats.profileId} in the game data.
+</p>

@@ -7,16 +7,19 @@ const types = ['Beast Gear', 'Feed', 'Crucible Item'];
 const byType = types.map((t) => ({ type: t, items: items.filter((i) => i.type === t) }));
 ---
 
-<Base title="Beast gear, feed & Crucible items" description="Every Beastmaster item from the game data: beast gear, feed, and Crucible consumables with their effects.">
-  <h1>Beast gear, feed & Crucible items</h1>
-  <p class="lead">{items.length} items from the game data, with their in-game effect text. How they're earned and what's worth using is guide territory.</p>
+<Base title="Gear" description="Beastmaster best-in-slot player gear, plus every beast gear, feed and Crucible item from the game data with its effect.">
+  <h1>Gear</h1>
+  <p class="lead">Your own best-in-slot first, then the {items.length} familiar-side items from the game data — beast gear, feed and Crucible consumables — with their in-game effect text.</p>
+
+  <h2>Player gear & best-in-slot</h2>
+  <Notes id="gear" heading="Gear notes" hint="BiS sets, upgrade order, food, and what to avoid in synced content." />
+
+  <h2>Familiar items</h2>
 
   <div class="filters">
     <input type="search" placeholder="Filter by name or effect…" data-item-q aria-label="Filter items" />
     {types.map((t) => <a class="btn" href={`#${t.toLowerCase().replace(/\s+/g, '-')}`}>{t} ({byType.find((g) => g.type === t)!.items.length})</a>)}
   </div>
-
-  <Notes id="gear" heading="Gear notes" hint="Where gear drops, what to feed which familiar, and Crucible item priorities." />
 
   {
     byType.map((g) => (

@@ -1,0 +1,99 @@
+---
+// A Crucible board drawn from the game's own tile graph (XBMContentStageEventMap
+// positions + XBMContentStageEvent tile types). Start at the bottom, boss at
+// the top, like the in-game board preview. Optional routes (curated) are
+// drawn over it as thick polylines.
+import type { CrucibleBoard } from '../lib/types';
+import { battleById, TILE_LABELS } from '../lib/data';
+
+interface Props {
+  board: CrucibleBoard;
+  routes?: { label: string; nodes: number[]; source?: string }[];
+}
+const { board, routes = [] } = Astro.props;
+
+const nodes = board.map.nodes;
+const xs = nodes.map((n) => n.x), ys = nodes.map((n) => n.y);
+const minX = Math.min(...xs), maxX = Math.max(...xs), minY = Math.min(...ys), maxY = Math.max(...ys);
+const COL = 72, ROW = 60, PAD = 40;
+const px = (x: number) => PAD + (x - minX) * COL;
+const py = (y: number) => PAD + (y - minY) * ROW;
+const width = PAD * 2 + (maxX - minX) * COL;
+const height = PAD * 2 + (maxY - minY) * ROW;
+const byId = new Map(nodes.map((n) => [n.id, n]));
+const tileOf = new Map(board.tiles.map((t) => [t.node, t]));
+
+const COLORS: Record<string, string> = {
+  start: 'var(--muted)',
+  battle: 'var(--c-rampant)',
+  elite: '#ff8c42',
+  boss: 'var(--accent)',
+  shop: 'var(--c-durant)',
+  campsite: 'var(--c-volant)',
+  treasure: 'var(--c-eldritch)',
+  random: '#a06bd6',
+};
+const GLYPH: Record<string, string> = { start: '▲', battle: '⚔', elite: '✦', boss: '☠', shop: '$', campsite: '⌂', treasure: '◆', random: '?' };
+const ROUTE_COLORS = ['#ff4d4d', '#4dc3ff', '#ffd24d', '#7dff8a'];
+
+const label = (nodeId: number) => {
+  const t = tileOf.get(nodeId);
+  if (!t) return `Node ${nodeId}`;
+  const base = TILE_LABELS[t.type] ?? t.type;
+  if (t.type === 'battle' || t.type === 'elite' || t.type === 'boss') {
+    const b = t.battleId ? battleById.get(t.battleId) : null;
+    return `${base}: ${b ? b.enemies.map((e) => e.name).join(', ') : `battle ${t.battleId}`}`;
+  }
+  if (t.type === 'campsite') return `Campsite #${t.index + 1} (heals up to ${t.familiars} familiars)`;
+  if (t.type === 'shop' || t.type === 'treasure') return `${base} #${t.index + 1}`;
+  if (t.type === 'random') return `${base}: ${(t.options ?? []).map((o) => (o.type === 'battle' || o.type === 'elite' ? `battle ${o.battleId}` : `${TILE_LABELS[o.type] ?? o.type} #${o.index + 1}`)).join(' / ')}`;
+  return base;
+};
+---
+
+<figure class="board-map" style="margin:0">
+  <svg viewBox={`0 0 ${width} ${height}`} width="100%" style={`max-width:${width}px;display:block`} role="img" aria-label={`${board.name} tile map: ${board.tiles.length} tiles over ${Math.max(...board.tiles.map((t) => t.move))} moves.`}>
+    {board.map.edges.map((e) => {
+      const a = byId.get(e.from), b = byId.get(e.to);
+      return a && b ? <line x1={px(a.x)} y1={py(a.y)} x2={px(b.x)} y2={py(b.y)} stroke="var(--border)" stroke-width="3" /> : null;
+    })}
+    {routes.map((r, i) => {
+      const pts = r.nodes.map((id) => byId.get(id)).filter((n): n is NonNullable<typeof n> => !!n);
+      return pts.length > 1 ? (
+        <polyline points={pts.map((n) => `${px(n.x)},${py(n.y)}`).join(' ')} fill="none" stroke={ROUTE_COLORS[i % ROUTE_COLORS.length]} stroke-width="5" stroke-linejoin="round" stroke-linecap="round" opacity="0.85" />
+      ) : null;
+    })}
+    {nodes.map((n) => {
+      const t = tileOf.get(n.id);
+      const type = t?.type ?? 'start';
+      const r = type === 'boss' ? 20 : type === 'elite' ? 17 : 15;
+      const href = t && (type === 'battle' || type === 'elite' || type === 'boss') && t.battleId ? `/crucible/battles/${t.battleId}/` : undefined;
+      const inner = (
+        <g>
+          <circle cx={px(n.x)} cy={py(n.y)} r={r} fill="var(--surface)" stroke={COLORS[type] ?? 'var(--muted)'} stroke-width="3" />
+          <text x={px(n.x)} y={py(n.y) + 1} text-anchor="middle" dominant-baseline="middle" font-size={type === 'boss' ? 16 : 13} fill={COLORS[type] ?? 'var(--muted)'} font-weight="700">
+            {GLYPH[type] ?? '·'}
+          </text>
+          <text x={px(n.x) + r + 3} y={py(n.y) - r + 2} font-size="9" fill="var(--muted)">
+            {n.id}
+          </text>
+          <title>{`#${n.id} · move ${t?.move ?? '?'} · ${label(n.id)}`}</title>
+        </g>
+      );
+      return href ? <a href={href}>{inner}</a> : inner;
+    })}
+  </svg>
+  <figcaption class="small muted" style="display:flex;gap:0.75rem;flex-wrap:wrap;margin-top:0.5rem">
+    {Object.entries(TILE_LABELS).map(([k, v]) => (
+      <span>
+        <span style={`color:${COLORS[k]};font-weight:700`}>{GLYPH[k]}</span> {v}
+      </span>
+    ))}
+    {routes.map((r, i) => (
+      <span>
+        <span style={`display:inline-block;width:18px;height:4px;background:${ROUTE_COLORS[i % ROUTE_COLORS.length]};vertical-align:middle;border-radius:2px`} /> {r.label}
+      </span>
+    ))}
+    <span>Small numbers are node ids (used by routes.json).</span>
+  </figcaption>
+</figure>

@@ -2,7 +2,9 @@
 import Base from '../../layouts/Base.astro';
 import Notes from '../../components/Notes.astro';
 import BeastCard from '../../components/BeastCard.astro';
-import { beasts, quests, beastLevel, actionByName } from '../../lib/data';
+import { beasts, quests, boards, beastLevel, actionByName } from '../../lib/data';
+
+const boardByQuest = new Map(boards.filter((b) => b.unlockQuestId).map((b) => [b.unlockQuestId!, b]));
 
 const unlock = quests.find((q) => q.key.startsWith('JobXbm001'));
 const chain = quests.filter((q) => q !== unlock);
@@ -25,7 +27,8 @@ const dutyGroups = [...new Set(duties.map((b) => b.source!.name))].map((name) =>
       {
         unlock && (
           <li>
-            Pick up <strong>{unlock.name}</strong> from the {unlock.issuer} in <strong>{unlock.zone}</strong>.
+            Pick up <strong>{unlock.name}</strong> from the {unlock.issuer} in <strong>{unlock.zone}</strong>
+            {unlock.coords && <> (X: {unlock.coords.x}, Y: {unlock.coords.y})</>}.
           </li>
         )
       }
@@ -40,7 +43,7 @@ const dutyGroups = [...new Set(duties.map((b) => b.source!.name))].map((name) =>
   <h2>Job quests</h2>
   <div class="table-wrap">
     <table>
-      <thead><tr><th>Lv.</th><th>Quest</th><th>From</th><th>Where</th></tr></thead>
+      <thead><tr><th>Lv.</th><th>Quest</th><th>From</th><th>Where</th><th>Opens</th></tr></thead>
       <tbody>
         {
           chain.map((q) => (
@@ -48,7 +51,11 @@ const dutyGroups = [...new Set(duties.map((b) => b.source!.name))].map((name) =>
               <td class="num">{q.level}</td>
               <td><strong>{q.name}</strong></td>
               <td>{q.issuer}</td>
-              <td>{q.zone}</td>
+              <td>
+                {q.zone}
+                {q.coords && <span class="muted small"> ({q.coords.x}, {q.coords.y})</span>}
+              </td>
+              <td class="small">{boardByQuest.get(q.id) ? <a href={`/crucible/${boardByQuest.get(q.id)!.slug}/`}>{boardByQuest.get(q.id)!.name}</a> : ''}</td>
             </tr>
           ))
         }

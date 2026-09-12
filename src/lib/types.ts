@@ -18,6 +18,16 @@ export interface Ability {
   combo: string | null;
   preservesCombo: boolean;
   targets: { self: boolean; party: boolean; hostile: boolean; area: boolean };
+  /** Level 50 upgrades only: the axe this replaces at 250 TP. */
+  upgradeOf?: string | null;
+}
+
+export interface Status {
+  id: number;
+  name: string;
+  description: string;
+  icon: string | null;
+  maxStacks: number;
 }
 
 export type Kin = 'Beastkin' | 'Vilekin' | 'Cloudkin' | 'Seedkin' | 'Wavekin' | 'Scalekin' | 'Soulkin' | 'Ashkin';
@@ -42,12 +52,14 @@ export interface Beast {
   autoAttack: { actionId: number; description: string };
   controlledAbility: { description: string };
   kin: Kin | null;
+  /** Per-rank [STR, INT, PHY R, MAG R, CON], index 0 = rank 1. */
+  stats: { profileId: number | null; ranks: number[][] };
   sourceType: 'starter' | 'field' | 'duty' | string;
   source: BeastSource | null;
   growth: number[];
   growthFlags: boolean[];
   abilities: Ability[];
-  raw: { u7: number | null; u8: number | null; u9: number | null; flags: (boolean | null)[] };
+  raw: { u7: number | null; u9: number | null; flags: (boolean | null)[] };
 }
 
 export interface Trait {
@@ -73,7 +85,8 @@ export interface CrucibleEnemy {
   slot: number;
   name: string;
   bnpcNameId: number;
-  element: string | null;
+  /** The damage type / element the piece is weak to. */
+  weakness: string | null;
   icon: string | null;
   resistFlags: boolean[];
   action: { name: string; status: string | null; effectType: number | null; target: number | null } | null;
@@ -84,14 +97,47 @@ export interface CrucibleBattle {
   enemies: CrucibleEnemy[];
 }
 
+export type TileType = 'start' | 'battle' | 'elite' | 'boss' | 'shop' | 'campsite' | 'treasure' | 'random';
+
+export interface CrucibleTileRef {
+  type: TileType | string;
+  typeCode: number;
+  index: number;
+  battleId?: number | null;
+  familiars?: number | null;
+}
+
+export interface CrucibleTile extends CrucibleTileRef {
+  node: number;
+  move: number;
+  options?: CrucibleTileRef[];
+}
+
+export interface CrucibleBoard {
+  id: number;
+  slug: string;
+  name: string;
+  level: number;
+  sync: number;
+  squadSize: number;
+  rankSync: number;
+  unlockQuestId: number | null;
+  modeBonuses: { first: number; second: number; third: number };
+  /** Points for each XBMScoreBonus (by id) on this board; 0 = not available here. */
+  bonusPoints: number[];
+  bossBattleId: number | null;
+  battleIds: number[];
+  campsites: number[];
+  tiles: CrucibleTile[];
+  map: { nodes: { id: number; x: number; y: number }[]; edges: { from: number; to: number; kind: number }[] };
+  raw: { u35: number | null };
+}
+
 export interface Crucible {
   battles: CrucibleBattle[];
+  boards: CrucibleBoard[];
   scoreRank: { id: number; name: string; raw: Record<string, unknown> }[];
   scoreBonus: { id: number; name: string; description: string; raw: Record<string, unknown> }[];
-  content: unknown[];
-  contentBattle: unknown[];
-  contentCamp: unknown[];
-  entrance: { id: number; raw: Record<string, unknown> }[];
 }
 
 export interface Quest {
@@ -101,6 +147,7 @@ export interface Quest {
   level: number | null;
   issuer: string;
   zone: string;
+  coords: { x: number; y: number } | null;
   previous: string[];
   expansion: string;
 }
@@ -125,6 +172,9 @@ export interface BeastLocation {
   verified?: boolean;
 }
 
+/** Hand-drawn routes over a board's tile graph: node ids in walking order. */
+export type Routes = Record<string, { label: string; nodes: number[]; source?: string }[]>;
+
 export interface Tiers {
   tiers: string[];
   placements: Record<string, string>; // beast slug -> tier
@@ -135,6 +185,9 @@ export interface Tiers {
 export interface Comp {
   name: string;
   beasts: string[]; // slugs
+  /** Crucible board slug this comp is for, if any. */
+  board?: string;
+  source?: string; // URL
   role?: string;
   notes?: string;
   status?: 'example' | 'draft' | 'verified';

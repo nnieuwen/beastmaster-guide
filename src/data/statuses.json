@@ -1,0 +1,156 @@
+[
+  {
+    "description": "Feeling Volant. Using instinctual skills with a Rampant affinity will trigger an intentional combo.",
+    "icon": "/icons/statuses/229001.png",
+    "id": 4595,
+    "maxStacks": 0,
+    "name": "Volant Heart"
+  },
+  {
+    "description": "Feeling Rampant. Using instinctual skills with a Durant affinity will trigger an intentional combo.",
+    "icon": "/icons/statuses/229002.png",
+    "id": 4596,
+    "maxStacks": 0,
+    "name": "Rampant Heart"
+  },
+  {
+    "description": "Feeling Durant. Using instinctual skills with an Eldritch affinity will trigger an intentional combo.",
+    "icon": "/icons/statuses/229003.png",
+    "id": 4597,
+    "maxStacks": 0,
+    "name": "Durant Heart"
+  },
+  {
+    "description": "Feeling Eldritch. Using instinctual skills with a Volant affinity will trigger an intentional combo.",
+    "icon": "/icons/statuses/229004.png",
+    "id": 4598,
+    "maxStacks": 0,
+    "name": "Eldritch Heart"
+  },
+  {
+    "description": "Striding boldly beneath the sun. Using instinctual skills with a Moonstalker affinity will trigger an infinitive combo.",
+    "icon": "/icons/statuses/229005.png",
+    "id": 4599,
+    "maxStacks": 0,
+    "name": "Sunstrider"
+  },
+  {
+    "description": "Stealthily stalking the moon. Using instinctual skills with a Sunstrider affinity will trigger an infinitive combo.",
+    "icon": "/icons/statuses/229006.png",
+    "id": 4600,
+    "maxStacks": 0,
+    "name": "Moonstalker"
+  },
+  {
+    "description": "Communing with the wilds. Able to execute Tempered Release or Borrow.",
+    "icon": "/icons/statuses/229007.png",
+    "id": 4601,
+    "maxStacks": 0,
+    "name": "One with Nature"
+  },
+  {
+    "description": "Borrowing aether from a beastkin familiar. Able to execute Beastskin.",
+    "icon": "/icons/statuses/229008.png",
+    "id": 4602,
+    "maxStacks": 0,
+    "name": "Beast Kinship"
+  },
+  {
+    "description": "Borrowing aether from a vilekin familiar. Able to execute Vileskin.",
+    "icon": "/icons/statuses/229009.png",
+    "id": 4603,
+    "maxStacks": 0,
+    "name": "Vile Kinship"
+  },
+  {
+    "description": "Borrowing aether from a cloudkin familiar. Able to execute Cloud Skim.",
+    "icon": "/icons/statuses/229010.png",
+    "id": 4604,
+    "maxStacks": 0,
+    "name": "Cloud Kinship"
+  },
+  {
+    "description": "Borrowing aether from a seedkin familiar. Able to execute Seedsower.",
+    "icon": "/icons/statuses/229011.png",
+    "id": 4605,
+    "maxStacks": 0,
+    "name": "Seed Kinship"
+  },
+  {
+    "description": "Borrowing aether from a wavekin familiar. Able to execute Quelling Wave.",
+    "icon": "/icons/statuses/229012.png",
+    "id": 4606,
+    "maxStacks": 0,
+    "name": "Wave Kinship"
+  },
+  {
+    "description": "Borrowing aether from a scalekin familiar. Able to execute Scaleskin.",
+    "icon": "/icons/statuses/229013.png",
+    "id": 4607,
+    "maxStacks": 0,
+    "name": "Scale Kinship"
+  },
+  {
+    "description": "Borrowing aether from a soulkin familiar. Able to execute Soul Crush.",
+    "icon": "/icons/statuses/229014.png",
+    "id": 4608,
+    "maxStacks": 0,
+    "name": "Soul Kinship"
+  },
+  {
+    "description": "Borrowing aether from an ashkin familiar. Able to execute Scouring Ash.",
+    "icon": "/icons/statuses/229015.png",
+    "id": 4609,
+    "maxStacks": 0,
+    "name": "Ash Kinship"
+  },
+  {
+    "description": "Next Parting Blow will deal increased damage.",
+    "icon": "/icons/statuses/229016.png",
+    "id": 4614,
+    "maxStacks": 0,
+    "name": "Lingering Vantage"
+  },
+  {
+    "description": "Immune to most knockback and draw-in effects. Blocking incoming attacks, and TP is increased for each successful block.",
+    "icon": "/icons/statuses/229017.png",
+    "id": 4620,
+    "maxStacks": 0,
+    "name": "Vileskin"
+  },
+  {
+    "description": "Physical damage taken is reduced and critical hit rate is increased.",
+    "icon": "/icons/statuses/229018.png",
+    "id": 4621,
+    "maxStacks": 0,
+    "name": "Beastskin"
+  },
+  {
+    "description": "Toxins are causing damage over time and damage dealt is reduced.",
+    "icon": "/icons/statuses/229019.png",
+    "id": 4622,
+    "maxStacks": 0,
+    "name": "Seeds Sown"
+  },
+  {
+    "description": "A scaly barrier is reducing magical damage. When the barrier is fully absorbed, TP will increase.",
+    "icon": "/icons/statuses/229020.png",
+    "id": 4623,
+    "maxStacks": 0,
+    "name": "Scaleskin"
+  },
+  {
+    "description": "Attempting to prove worthiness as a beastmaster.",
+    "icon": "/icons/statuses/229021.png",
+    "id": 4624,
+    "maxStacks": 0,
+    "name": "Capturing Interest"
+  },
+  {
+    "description": "Weighing worthiness. Alliance will be determined upon incapacitation.",
+    "icon": "/icons/statuses/229022.png",
+    "id": 4626,
+    "maxStacks": 0,
+    "name": "Interest Captured"
+  }
+]

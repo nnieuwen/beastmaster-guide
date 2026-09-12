@@ -1,16 +1,214 @@
 {
   "comps": [
     {
-      "name": "Starter trio (example)",
+      "name": "Normal clear — full squad",
+      "board": "unbroken-1",
+      "role": "Normal",
+      "status": "draft",
+      "author": "FC guide",
+      "beasts": [
+        "diremite",
+        "mantis",
+        "wespe",
+        "dullahan",
+        "sabotender",
+        "cu-sith",
+        "treant",
+        "rafflesia",
+        "ice-golem",
+        "behemoth"
+      ],
+      "notes": "10/10 at beast rank 5, from the FC guide's team screenshot."
+    },
+    {
+      "name": "Legendary — Vilekin trio",
+      "board": "unbroken-1",
+      "role": "Legendary",
+      "status": "draft",
+      "author": "FC guide",
+      "beasts": [
+        "diremite",
+        "mantis",
+        "wespe"
+      ],
+      "source": "https://www.youtube.com/watch?v=6I9HzBXf3yc",
+      "notes": "Three Vilekin at rank 5. Zane Lionhart's 'ultimate strategy' run: Legendary every time, 10 Faded Remnants per run."
+    },
+    {
+      "name": "Legendary — Cloudkin trio",
+      "board": "unbroken-1",
+      "role": "Legendary",
+      "status": "draft",
+      "author": "FC guide",
+      "beasts": [
+        "bat",
+        "vulture",
+        "zu"
+      ],
+      "source": "https://www.youtube.com/watch?v=G0_G1NCwhJ0",
+      "notes": "Bat, Vulture, Zu at rank 5 — two INT attackers and Zu on STR. From 'First Board of the Unbroken Crucible EASY Guide (Legendary Rank & Third Degree)'."
+    },
+    {
+      "name": "Legendary — Vilekin trio (alt)",
+      "board": "unbroken-1",
+      "role": "Legendary",
+      "status": "draft",
+      "author": "FC guide",
+      "beasts": [
+        "damselfly",
+        "wespe",
+        "mantis"
+      ],
+      "source": "https://www.youtube.com/watch?v=G0_G1NCwhJ0",
+      "notes": "Damselfly, Wespe, Mantis at rank 5 — the Vilekin trio with Damselfly's poison instead of Diremite. From the same Legendary / Third Degree guide."
+    },
+    {
+      "name": "Normal clear — full squad",
+      "board": "unbroken-2",
+      "role": "Normal",
+      "status": "draft",
+      "author": "FC guide",
+      "beasts": [
+        "diremite",
+        "mantis",
+        "wespe",
+        "rafflesia",
+        "treant",
+        "flying-trap",
+        "rotting-goobbue",
+        "golem",
+        "spriggan",
+        "behemoth",
+        "squirrel",
+        "opo-opo"
+      ],
+      "notes": "12/12 at beast rank 10, from the FC guide's team screenshot."
+    },
+    {
+      "name": "Legendary — Vilekin trio",
+      "board": "unbroken-2",
+      "role": "Legendary",
+      "status": "draft",
+      "author": "FC guide",
+      "beasts": [
+        "diremite",
+        "mantis",
+        "wespe"
+      ],
+      "notes": "The top row of the FC screenshot is cropped; its stats (INT 102, MAG R 96, CON 175) match Diremite at rank 10 — confirm."
+    },
+    {
+      "name": "Normal clear — full squad",
+      "board": "unbroken-3",
+      "role": "Normal",
+      "status": "draft",
+      "author": "FC guide",
+      "beasts": [
+        "drake",
+        "spriggan",
+        "squirrel",
+        "flying-trap",
+        "behemoth",
+        "ice-golem",
+        "rafflesia",
+        "treant",
+        "rotting-goobbue",
+        "golem",
+        "megalocrab",
+        "wespe",
+        "diremite",
+        "mantis"
+      ],
+      "notes": "14/14 at beast rank 15, from the FC guide's team screenshot."
+    },
+    {
+      "name": "Legendary — Beastkin trio",
+      "board": "unbroken-3",
+      "role": "Legendary",
+      "status": "draft",
+      "author": "FC guide",
       "beasts": [
         "cu-sith",
-        "lamb",
-        "pugil"
+        "buffalo",
+        "coeurl"
       ],
-      "role": "Leveling",
-      "status": "example",
-      "author": "site",
-      "notes": "Placeholder so the featured-comps section has a shape. Cu Sith for slashing damage, Lamb for the sleep Trick, Pugil for the magic-vulnerability buff. Replace with real comps."
+      "source": "https://www.youtube.com/watch?v=Yt519BDzQqo",
+      "notes": "Mrhappy1227's Legendary clear. Buffalo and Coeurl are visible; the cropped top row's stats (INT 160, MAG R 122) match Cu Sith — confirm. Coeurl is brought at rank 1."
+    },
+    {
+      "name": "Normal clear — full squad",
+      "board": "masters-1",
+      "role": "Normal",
+      "status": "draft",
+      "author": "FC guide",
+      "beasts": [
+        "treant",
+        "golem",
+        "rotting-goobbue",
+        "opo-opo",
+        "spriggan",
+        "rafflesia",
+        "flying-trap",
+        "vulture",
+        "diremite",
+        "cu-sith",
+        "behemoth",
+        "coeurl"
+      ],
+      "notes": "12/12 at beast rank 20, from the FC guide's team screenshot."
+    },
+    {
+      "name": "Legendary — Beastkin trio",
+      "board": "masters-1",
+      "role": "Legendary",
+      "status": "draft",
+      "author": "FC guide",
+      "beasts": [
+        "cu-sith",
+        "behemoth",
+        "coeurl"
+      ],
+      "source": "https://www.youtube.com/watch?v=WY2KgyKJWUE",
+      "notes": "Mrhappy1227's Legendary clear. Behemoth and Coeurl (rank 1) are visible; the cropped top row's stats match Cu Sith — confirm."
+    },
+    {
+      "name": "Normal clear — full squad",
+      "board": "masters-2",
+      "role": "Normal",
+      "status": "draft",
+      "author": "FC guide",
+      "beasts": [
+        "treant",
+        "rotting-goobbue",
+        "golem",
+        "rafflesia",
+        "vulture",
+        "megalocrab",
+        "behemoth",
+        "spriggan",
+        "puk",
+        "drake",
+        "cu-sith",
+        "flying-trap",
+        "ice-golem",
+        "opo-opo",
+        "coeurl"
+      ],
+      "notes": "15/15 at beast rank 25, from the FC guide's team screenshot."
+    },
+    {
+      "name": "Legendary — Beastkin trio",
+      "board": "masters-2",
+      "role": "Legendary",
+      "status": "draft",
+      "author": "FC guide",
+      "beasts": [
+        "cu-sith",
+        "behemoth",
+        "coeurl"
+      ],
+      "source": "https://www.youtube.com/watch?v=A-mep8xYcTg",
+      "notes": "Mrhappy1227's Legendary walkthrough. The map in the FC guide is annotated 'Pick Your Poison' at the top fork. Cropped top row's stats match Cu Sith — confirm."
     }
   ]
 }

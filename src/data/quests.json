@@ -1,5 +1,9 @@
 [
   {
+    "coords": {
+      "x": 15.4,
+      "y": 16.3
+    },
     "expansion": "Dawntrail",
     "id": 71027,
     "issuer": "J'yhuh Tia",
@@ -12,6 +16,10 @@
     "zone": "Central Shroud"
   },
   {
+    "coords": {
+      "x": 23.9,
+      "y": 19.7
+    },
     "expansion": "Dawntrail",
     "id": 71028,
     "issuer": "J'yhuh Tia",
@@ -24,6 +32,10 @@
     "zone": "Central Shroud"
   },
   {
+    "coords": {
+      "x": 23.9,
+      "y": 19.7
+    },
     "expansion": "Dawntrail",
     "id": 71029,
     "issuer": "J'yhuh Tia",
@@ -36,6 +48,10 @@
     "zone": "Central Shroud"
   },
   {
+    "coords": {
+      "x": 22.9,
+      "y": 19.1
+    },
     "expansion": "Dawntrail",
     "id": 71030,
     "issuer": "J'yhuh Tia",
@@ -48,6 +64,10 @@
     "zone": "Central Shroud"
   },
   {
+    "coords": {
+      "x": 21.9,
+      "y": 22.7
+    },
     "expansion": "Dawntrail",
     "id": 71031,
     "issuer": "J'yhuh Tia",
@@ -60,6 +80,10 @@
     "zone": "Central Shroud"
   },
   {
+    "coords": {
+      "x": 22.9,
+      "y": 19.1
+    },
     "expansion": "Dawntrail",
     "id": 71032,
     "issuer": "J'yhuh Tia",
@@ -72,6 +96,10 @@
     "zone": "Central Shroud"
   },
   {
+    "coords": {
+      "x": 22,
+      "y": 22.8
+    },
     "expansion": "Dawntrail",
     "id": 71033,
     "issuer": "Lauda",
@@ -84,6 +112,10 @@
     "zone": "Central Shroud"
   },
   {
+    "coords": {
+      "x": 11.8,
+      "y": 13.7
+    },
     "expansion": "Dawntrail",
     "id": 71026,
     "issuer": "excited adventurer",
@@ -96,6 +128,10 @@
     "zone": "New Gridania"
   },
   {
+    "coords": {
+      "x": 22.9,
+      "y": 19.1
+    },
     "expansion": "Dawntrail",
     "id": 71034,
     "issuer": "J'yhuh Tia",
@@ -108,6 +144,10 @@
     "zone": "Central Shroud"
   },
   {
+    "coords": {
+      "x": 22,
+      "y": 22.8
+    },
     "expansion": "Dawntrail",
     "id": 71035,
     "issuer": "Lauda",
@@ -120,6 +160,10 @@
     "zone": "Central Shroud"
   },
   {
+    "coords": {
+      "x": 21.8,
+      "y": 22.6
+    },
     "expansion": "Dawntrail",
     "id": 71036,
     "issuer": "Sylmond",
@@ -132,6 +176,10 @@
     "zone": "Central Shroud"
   },
   {
+    "coords": {
+      "x": 21.8,
+      "y": 22.6
+    },
     "expansion": "Dawntrail",
     "id": 71037,
     "issuer": "Sylmond",
@@ -144,6 +192,10 @@
     "zone": "Central Shroud"
   },
   {
+    "coords": {
+      "x": 21.8,
+      "y": 22.6
+    },
     "expansion": "Dawntrail",
     "id": 71045,
     "issuer": "Sylmond",
