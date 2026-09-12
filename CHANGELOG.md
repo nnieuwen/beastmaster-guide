@@ -21,6 +21,9 @@
   system, BiS gear and food, Crucible overview with Legendary breakpoints and beast-leveling tips,
   normal + Legendary comps for all five boards, per-board strategy tabs, and mechanics for all six
   board-1 battles from the *Legendary Rank & Third Degree* video transcript.
+- Third Board of the Unbroken: full Legendary strategy and mechanics for all six fought battles
+  (Cavalier/Bishop, Ymir, Zu, Lakhamu, Siren, Guttler) from Mrhappy1227's walkthrough transcript;
+  two extra board-1 Legendary trios (Cloudkin, alt Vilekin) from the *Legendary Rank & Third Degree* guide.
 - Tier list removed for now (per the FC — nothing to rate yet).
 - Fetch script: subrow-aware paging cursor (`after=row:subrow`).
 
