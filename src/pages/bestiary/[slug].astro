@@ -1,4 +1,5 @@
 ---
+import { withBase } from '../../lib/url';
 import Base from '../../layouts/Base.astro';
 import KinBadge from '../../components/KinBadge.astro';
 import StatTable from '../../components/StatTable.astro';
@@ -29,7 +30,7 @@ const sourceLabel =
 ---
 
 <Base title={beast.name} description={`${beast.name} (${beast.kin}) — where to capture it, its kit and Trick. ${beast.lore.slice(0, 120)}`}>
-  <nav class="small muted" aria-label="Breadcrumb"><a href="/bestiary/">Bestiary</a> › {beast.name}</nav>
+  <nav class="small muted" aria-label="Breadcrumb"><a href={withBase('/bestiary/')}>Bestiary</a> › {beast.name}</nav>
   <header class="row" style="gap:1.25rem;align-items:flex-start;margin:0.75rem 0 1.5rem">
     {beast.icon ? <img class="icon lg" src={beast.icon} alt="" width="80" height="80" /> : <span class="icon lg" />}
     <div>
@@ -123,7 +124,7 @@ const sourceLabel =
   <Notes id={`beasts/${beast.slug}`} heading={`${beast.name} notes`} hint="Where it spawns, how to pull it safely, and when it's worth bringing." />
 
   <nav style="display:flex;justify-content:space-between;margin-top:2.5rem" aria-label="Neighbouring beasts">
-    <a href={`/bestiary/${prev.slug}/`}>← {prev.name}</a>
-    <a href={`/bestiary/${next.slug}/`}>{next.name} →</a>
+    <a href={withBase(`/bestiary/${prev.slug}/`)}>← {prev.name}</a>
+    <a href={withBase(`/bestiary/${next.slug}/`)}>{next.name} →</a>
   </nav>
 </Base>

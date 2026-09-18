@@ -29,3 +29,6 @@ order: 1             # Crucible files only: tab order
 ```
 
 Plain Markdown below the frontmatter. Images go in `public/` and are referenced as `/whatever.png`.
+
+Links to other pages of the guide should be **relative** (`../bestiary/`, `../../crucible/`) rather
+than root-absolute (`/bestiary/`), so they keep working when the site is hosted under a sub-path.

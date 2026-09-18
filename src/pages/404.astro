@@ -1,8 +1,9 @@
 ---
+import { withBase } from '../lib/url';
 import Base from '../layouts/Base.astro';
 ---
 
 <Base title="Not found">
   <h1>Nothing here</h1>
-  <p class="lead">That page doesn't exist. Try the <a href="/bestiary/">bestiary</a> or head <a href="/">home</a>.</p>
+  <p class="lead">That page doesn't exist. Try the <a href={withBase('/bestiary/')}>bestiary</a> or head <a href={withBase('/')}>home</a>.</p>
 </Base>

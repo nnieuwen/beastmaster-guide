@@ -1,4 +1,5 @@
 ---
+import { withBase } from '../../lib/url';
 import Base from '../../layouts/Base.astro';
 import Notes from '../../components/Notes.astro';
 import { crucible, boards, quests, battleById } from '../../lib/data';
@@ -26,7 +27,7 @@ const first = boards[0];
         const unlock = b.unlockQuestId ? questById.get(b.unlockQuestId) : null;
         const boss = b.bossBattleId ? battleById.get(b.bossBattleId) : null;
         return (
-          <a class="card" href={`/crucible/${b.slug}/`} style="color:inherit">
+          <a class="card" href={withBase(`/crucible/${b.slug}/`)} style="color:inherit">
             <strong>{b.name}</strong>
             <div class="row small muted" style="flex-wrap:wrap;margin:0.4rem 0">
               <span class="badge">Lv. {b.sync}</span>
@@ -88,13 +89,13 @@ const first = boards[0];
     boards.map((b) => (
       <section>
         <h3>
-          <a href={`/crucible/${b.slug}/`}>{b.name}</a>
+          <a href={withBase(`/crucible/${b.slug}/`)}>{b.name}</a>
         </h3>
         <div class="grid">
           {b.battleIds.map((id, i) => {
             const battle = battleById.get(id);
             return battle ? (
-              <a class="card" href={`/crucible/battles/${battle.id}/`} style="color:inherit;padding:0.6rem 0.8rem">
+              <a class="card" href={withBase(`/crucible/battles/${battle.id}/`)} style="color:inherit;padding:0.6rem 0.8rem">
                 <div class="row" style="justify-content:space-between">
                   <strong>{i === 0 ? 'Boss' : `Battle ${battle.id}`}</strong>
                   <span class="muted small">{battle.enemies.length} piece{battle.enemies.length === 1 ? '' : 's'}</span>

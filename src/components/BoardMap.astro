@@ -1,4 +1,5 @@
 ---
+import { withBase } from '../lib/url';
 // A Crucible board drawn from the game's own tile graph (XBMContentStageEventMap
 // positions + XBMContentStageEvent tile types). Start at the bottom, boss at
 // the top, like the in-game board preview. Optional routes (curated) are
@@ -67,7 +68,7 @@ const label = (nodeId: number) => {
       const t = tileOf.get(n.id);
       const type = t?.type ?? 'start';
       const r = type === 'boss' ? 20 : type === 'elite' ? 17 : 15;
-      const href = t && (type === 'battle' || type === 'elite' || type === 'boss') && t.battleId ? `/crucible/battles/${t.battleId}/` : undefined;
+      const href = t && (type === 'battle' || type === 'elite' || type === 'boss') && t.battleId ? withBase(`/crucible/battles/${t.battleId}/`) : undefined;
       const inner = (
         <g>
           <circle cx={px(n.x)} cy={py(n.y)} r={r} fill="var(--surface)" stroke={COLORS[type] ?? 'var(--muted)'} stroke-width="3" />

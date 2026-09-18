@@ -1,4 +1,5 @@
 ---
+import { withBase } from '../lib/url';
 import '../styles/global.css';
 import { meta } from '../lib/data';
 
@@ -29,7 +30,7 @@ const fetched = new Date(meta.fetchedAt).toISOString().slice(0, 10);
     <meta name="description" content={description} />
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
-    <link rel="icon" href="/icons/beasts/242001.png" />
+    <link rel="icon" href={withBase('/icons/beasts/242001.png')} />
     <script is:inline>
       // Apply the saved theme before first paint so there is no flash.
       try {
@@ -41,9 +42,9 @@ const fetched = new Date(meta.fetchedAt).toISOString().slice(0, 10);
   <body>
     <header class="site-header">
       <div class="container">
-        <a class="brand" href="/"><img src="/icons/beasts/242001.png" alt="" width="28" height="28" /> Beastmaster Guide</a>
+        <a class="brand" href={withBase('/')}><img src={withBase('/icons/beasts/242001.png')} alt="" width="28" height="28" /> Beastmaster Guide</a>
         <nav class="nav" aria-label="Sections">
-          {nav.map(([href, label]) => <a href={href} aria-current={path.startsWith(href) ? 'page' : undefined}>{label}</a>)}
+          {nav.map(([href, label]) => <a href={withBase(href)} aria-current={path.startsWith(withBase(href)) ? 'page' : undefined}>{label}</a>)}
         </nav>
         <button class="theme-toggle" type="button" data-theme-toggle aria-label="Toggle light or dark theme">Theme</button>
       </div>

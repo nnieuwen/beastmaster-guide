@@ -5,6 +5,8 @@ import { defineConfig } from 'astro/config';
 // can be dropped onto any static host once a domain is chosen.
 export default defineConfig({
   output: 'static',
-  site: 'https://example.com', // TODO: set once the domain is picked
+  site: 'https://nnieuwen.github.io',
+  // Temporary home on GitHub Pages; drop `base` once the site has its own domain.
+  base: '/beastmaster-guide',
   trailingSlash: 'always',
 });

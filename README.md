@@ -25,6 +25,13 @@ layer 2 is still empty.
 `/bestiary/` (+ one page per beast) · `/actions/` · `/leveling/` · `/crucible/` (+ one page per battle) ·
 `/comps/` · `/gear/`
 
+## Live site
+
+Temporary home while a domain is picked: **https://nnieuwen.github.io/beastmaster-guide/**.
+Every push to `main` rebuilds and redeploys it via `.github/workflows/deploy.yml`. The sub-path
+comes from `base` in `astro.config.mjs`; all internal links go through `withBase()`
+(`src/lib/url.ts`), so moving to a root domain is a one-line change.
+
 ## Commands
 
 ```bash

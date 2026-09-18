@@ -1,4 +1,5 @@
 ---
+import { withBase } from '../../lib/url';
 import Base from '../../layouts/Base.astro';
 import KinBadge from '../../components/KinBadge.astro';
 import { beasts, KINS, AFFINITIES, roleTags, element, beastLevel, instinctOf, controlledOf, affinityColor, build, statsAt } from '../../lib/data';
@@ -99,7 +100,7 @@ const allTags = ['Damage', 'Control', 'Debuff', 'Buff', 'Sustain', 'Sacrifice'];
                 <input type="checkbox" data-caught={r.b.slug} aria-label={`Captured ${r.b.name}`} />
               </td>
               <td>
-                <a class="row" href={`/bestiary/${r.b.slug}/`} style="color:inherit;font-weight:600">
+                <a class="row" href={withBase(`/bestiary/${r.b.slug}/`)} style="color:inherit;font-weight:600">
                   {r.b.icon ? <img class="icon sm" src={r.b.icon} alt="" width="28" height="28" loading="lazy" /> : <span class="icon sm" />}
                   {r.b.name}
                 </a>

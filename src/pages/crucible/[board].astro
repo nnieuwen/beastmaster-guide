@@ -1,4 +1,5 @@
 ---
+import { withBase } from '../../lib/url';
 import Base from '../../layouts/Base.astro';
 import BoardMap from '../../components/BoardMap.astro';
 import BeastCard from '../../components/BeastCard.astro';
@@ -28,7 +29,7 @@ const battleLabel = (id: number | null | undefined) => {
 ---
 
 <Base title={board.name} description={`${board.name}: level ${board.sync} sync, up to ${board.squadSize} familiars, rank sync ${board.rankSync}. Tile map, battles, team comps and strategy.`}>
-  <nav class="small muted" aria-label="Breadcrumb"><a href="/crucible/">Crucible</a> › {board.name}</nav>
+  <nav class="small muted" aria-label="Breadcrumb"><a href={withBase('/crucible/')}>Crucible</a> › {board.name}</nav>
   <h1>{board.name}</h1>
   <div class="row" style="flex-wrap:wrap;margin-bottom:1rem">
     <span class="badge">Lv. {board.level} · sync {board.sync}</span>
@@ -39,7 +40,7 @@ const battleLabel = (id: number | null | undefined) => {
   </div>
   <p class="muted small">
     Crucible Mode bonuses: First Degree +{board.modeBonuses.first.toLocaleString()}, Second Degree +{board.modeBonuses.second.toLocaleString()}, Third Degree +{board.modeBonuses.third.toLocaleString()}.
-    {boss && <> Boss: <a href={`/crucible/battles/${boss.id}/`}>{boss.enemies.map((e) => e.name).join(', ')}</a>.</>}
+    {boss && <> Boss: <a href={withBase(`/crucible/battles/${boss.id}/`)}>{boss.enemies.map((e) => e.name).join(', ')}</a>.</>}
   </p>
 
   <div style="display:grid;grid-template-columns:minmax(260px,420px) 1fr;gap:1.5rem;align-items:start" class="board-grid">
@@ -60,7 +61,7 @@ const battleLabel = (id: number | null | undefined) => {
                   <span>
                     {i > 0 && <span class="muted"> · or · </span>}
                     <span class="tag">{TILE_LABELS[t.type] ?? t.type}</span>{' '}
-                    {isFight(t.type) && <a href={`/crucible/battles/${t.battleId}/`}>{battleLabel(t.battleId)}</a>}
+                    {isFight(t.type) && <a href={withBase(`/crucible/battles/${t.battleId}/`)}>{battleLabel(t.battleId)}</a>}
                     {t.type === 'campsite' && <span class="small">#{t.index + 1} — heals you and up to {t.familiars} familiars</span>}
                     {(t.type === 'shop' || t.type === 'treasure') && <span class="small">#{t.index + 1}</span>}
                     {t.type === 'random' && (
@@ -69,7 +70,7 @@ const battleLabel = (id: number | null | undefined) => {
                         {(t.options ?? []).map((o, j) => (
                           <span>
                             {j > 0 && ' / '}
-                            {isFight(o.type) ? <a href={`/crucible/battles/${o.battleId}/`}>{battleLabel(o.battleId)}</a> : `${TILE_LABELS[o.type] ?? o.type} #${o.index + 1}`}
+                            {isFight(o.type) ? <a href={withBase(`/crucible/battles/${o.battleId}/`)}>{battleLabel(o.battleId)}</a> : `${TILE_LABELS[o.type] ?? o.type} #${o.index + 1}`}
                           </span>
                         ))}
                       </span>
@@ -118,7 +119,7 @@ const battleLabel = (id: number | null | undefined) => {
             </div>
             {c.notes && <p class="small muted" style="margin:0 0 0.6rem">{c.notes}</p>}
             <div class="row" style="flex-wrap:wrap">
-              <a class="btn" href={`/comps/?board=${board.slug}&b=${c.beasts.join(',')}`}>Load in builder</a>
+              <a class="btn" href={withBase(`/comps/?board=${board.slug}&b=${c.beasts.join(',')}`)}>Load in builder</a>
               {c.source && <a class="small" href={c.source} rel="noopener">Source ↗</a>}
             </div>
           </div>
@@ -138,7 +139,7 @@ const battleLabel = (id: number | null | undefined) => {
       board.battleIds.map((id, i) => {
         const b = battleById.get(id);
         return b ? (
-          <a class="card" href={`/crucible/battles/${b.id}/`} style="color:inherit">
+          <a class="card" href={withBase(`/crucible/battles/${b.id}/`)} style="color:inherit">
             <div class="row" style="justify-content:space-between">
               <strong>{i === 0 ? 'Boss' : `Battle ${b.id}`}</strong>
               <span class="muted small">{b.enemies.length} piece{b.enemies.length === 1 ? '' : 's'}</span>
@@ -154,8 +155,8 @@ const battleLabel = (id: number | null | undefined) => {
   </div>
 
   <nav style="display:flex;justify-content:space-between;margin-top:2.5rem" aria-label="Neighbouring boards">
-    <span>{prev && <a href={`/crucible/${prev.slug}/`}>← {prev.name}</a>}</span>
-    <span>{next && <a href={`/crucible/${next.slug}/`}>{next.name} →</a>}</span>
+    <span>{prev && <a href={withBase(`/crucible/${prev.slug}/`)}>← {prev.name}</a>}</span>
+    <span>{next && <a href={withBase(`/crucible/${next.slug}/`)}>{next.name} →</a>}</span>
   </nav>
 </Base>
 

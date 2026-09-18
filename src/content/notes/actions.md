@@ -14,4 +14,4 @@ Whichever beast is out, it uses the same **four shared action slots**:
 - **Tempered Release** — the beast's unique controlled ability. Using it locks out Borrow for that summon.
 - **Borrow** — take on the beast's kinship yourself, which turns Beast Mode into a utility action that depends on its classification. Using it locks out Tempered Release.
 
-There are 50 beasts in the Master's Bestiary. Build a team around their attack elements, resistances and skills — see the [bestiary](/bestiary/) for every kit.
+There are 50 beasts in the Master's Bestiary. Build a team around their attack elements, resistances and skills — see the [bestiary](../bestiary/) for every kit.

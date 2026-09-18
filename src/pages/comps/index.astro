@@ -1,4 +1,5 @@
 ---
+import { withBase } from '../../lib/url';
 import Base from '../../layouts/Base.astro';
 import BeastCard from '../../components/BeastCard.astro';
 import { beasts, comps, boards, KINS, AFFINITIES, roleTags, element, beastBySlug, SHARED_ABILITIES, instinctOf, controlledOf, statsAt, build, RANK_MARKS, STAT_NAMES } from '../../lib/data';
@@ -102,7 +103,7 @@ const statNames = [...STAT_NAMES];
           </div>
           {c.notes && <p class="small muted" style="margin:0 0 0.6rem">{c.notes}</p>}
           <div class="row" style="flex-wrap:wrap">
-            <a class="btn" href={`/comps/?${c.board ? `board=${c.board}&` : ''}b=${c.beasts.join(',')}`}>Load in builder</a>
+            <a class="btn" href={withBase(`/comps/?${c.board ? `board=${c.board}&` : ''}b=${c.beasts.join(',')}`)}>Load in builder</a>
             {c.source && <a class="small" href={c.source} rel="noopener">Source ↗</a>}
           </div>
         </div>
@@ -117,6 +118,7 @@ const statNames = [...STAT_NAMES];
 </Base>
 
 <script>
+  const BASE = import.meta.env.BASE_URL.replace(/\/$/, '');
   type B = { slug: string; name: string; kin: string | null; icon: string | null; instinct: string; affinity: string | null; controlled: string; controlledText: string; tags: string[]; elements: string[]; skills: string[]; build: string | null; stats: Record<string, number[] | null> };
   const statNames: string[] = JSON.parse(document.getElementById('stat-names')!.textContent!);
   type A = { name: string; action: string; color: string; combo: string };
@@ -187,7 +189,7 @@ const statNames = [...STAT_NAMES];
           <div class="card">
             <div class="row">
               ${b.icon ? `<img class="icon" src="${b.icon}" alt="" width="40" height="40">` : ''}
-              <div><a href="/bestiary/${b.slug}/"><strong>${esc(b.name)}</strong></a><br><span class="badge kin" data-kin="${b.kin ?? ''}">${b.kin ?? ''}</span> ${b.build ? `<span class="tag">${b.build}</span>` : ''}</div>
+              <div><a href="${BASE}/bestiary/${b.slug}/"><strong>${esc(b.name)}</strong></a><br><span class="badge kin" data-kin="${b.kin ?? ''}">${b.kin ?? ''}</span> ${b.build ? `<span class="tag">${b.build}</span>` : ''}</div>
             </div>
             <p class="small" style="margin:0.6rem 0 0.3rem"><span class="muted">Trick:</span> ${esc(b.instinct)} ${b.affinity ? `<span class="tag" style="color:var(--c-${b.affinity.toLowerCase()});border-color:var(--c-${b.affinity.toLowerCase()})">${b.affinity}</span>` : ''}</p>
             <p class="small" style="margin:0"><span class="muted">Tempered Release:</span> ${esc(b.controlled)} — ${esc(b.controlledText)}</p>

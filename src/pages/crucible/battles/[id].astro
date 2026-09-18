@@ -1,4 +1,5 @@
 ---
+import { withBase } from '../../../lib/url';
 import Base from '../../../layouts/Base.astro';
 import StratTabs from '../../../components/StratTabs.astro';
 import { crucible, boardOfBattle } from '../../../lib/data';
@@ -19,7 +20,7 @@ const tiles = board ? board.tiles.filter((t) => t.battleId === battle.id || (t.o
 
 <Base title={`${isBoss ? 'Boss' : 'Battle'} ${battle.id}${board ? ` · ${board.name}` : ''}`} description={`Crucible battle ${battle.id}: ${battle.enemies.map((e) => e.name).join(', ')} — weaknesses, signature actions and strategy.`}>
   <nav class="small muted" aria-label="Breadcrumb">
-    <a href="/crucible/">Crucible</a> › {board && <><a href={`/crucible/${board.slug}/`}>{board.name}</a> › </>}Battle {battle.id}
+    <a href={withBase('/crucible/')}>Crucible</a> › {board && <><a href={withBase(`/crucible/${board.slug}/`)}>{board.name}</a> › </>}Battle {battle.id}
   </nav>
   <h1>
     {isBoss ? 'Boss: ' : ''}{battle.enemies.map((e) => e.name).join(', ')}
@@ -65,7 +66,7 @@ const tiles = board ? board.tiles.filter((t) => t.battleId === battle.id || (t.o
   <StratTabs prefix={`crucible/battles/${battle.id}`} hint="Mechanics, kill order, which familiars handle it — one file per variant, rendered as tabs." />
 
   <nav style="display:flex;justify-content:space-between;margin-top:2.5rem" aria-label="Neighbouring battles">
-    <span>{prev && <a href={`/crucible/battles/${prev.id}/`}>← Battle {prev.id}</a>}</span>
-    <span>{next && <a href={`/crucible/battles/${next.id}/`}>Battle {next.id} →</a>}</span>
+    <span>{prev && <a href={withBase(`/crucible/battles/${prev.id}/`)}>← Battle {prev.id}</a>}</span>
+    <span>{next && <a href={withBase(`/crucible/battles/${next.id}/`)}>Battle {next.id} →</a>}</span>
   </nav>
 </Base>

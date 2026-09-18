@@ -12,18 +12,19 @@ import locationsJson from '../data/curated/beast-locations.json';
 import compsJson from '../data/curated/comps.json';
 import routesJson from '../data/curated/routes.json';
 import statusesJson from '../data/statuses.json';
+import { rebaseIcons } from './url';
 import type { Ability, Beast, BeastLocation, Comp, Crucible, CrucibleBoard, Item, Kin, Meta, Quest, Routes, Status, Trait } from './types';
 
-export const beasts = beastsJson as Beast[];
-const allActions = actionsJson as Ability[];
+export const beasts = rebaseIcons(beastsJson) as Beast[];
+const allActions = rebaseIcons(actionsJson) as Ability[];
 /** Base kit (what the ClassJob=43 search returns). */
 export const actions = allActions.filter((a) => !a.upgradeOf);
 /** The four level 50 replacements that appear at 250 TP. */
 export const upgrades = allActions.filter((a) => !!a.upgradeOf);
-export const statuses = statusesJson as Status[];
-export const traits = traitsJson as Trait[];
-export const items = itemsJson as Item[];
-export const crucible = crucibleJson as unknown as Crucible;
+export const statuses = rebaseIcons(statusesJson) as Status[];
+export const traits = rebaseIcons(traitsJson) as Trait[];
+export const items = rebaseIcons(itemsJson) as Item[];
+export const crucible = rebaseIcons(crucibleJson) as unknown as Crucible;
 export const quests = questsJson as Quest[];
 export const meta = metaJson as Meta;
 export const locations = locationsJson as Record<string, BeastLocation>;

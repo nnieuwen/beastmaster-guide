@@ -1,4 +1,5 @@
 ---
+import { withBase } from '../lib/url';
 import Base from '../layouts/Base.astro';
 import Notes from '../components/Notes.astro';
 import { getCollection } from 'astro:content';
@@ -36,7 +37,7 @@ const sections = [
   <div class="grid section-links" style="margin-top:1.5rem">
     {
       sections.map((s) => (
-        <a class="card" href={s.href}>
+        <a class="card" href={withBase(s.href)}>
           <h3>{s.title}</h3>
           <p class="muted small" style="margin:0">{s.text}</p>
         </a>
@@ -65,7 +66,7 @@ const sections = [
   </div>
 
   <h2>Start here</h2>
-  <p class="small muted">Your first familiar is {starter?.name}, granted by the job quest. From there, the <a href="/leveling/">getting started</a> page lists what's capturable in each zone.</p>
+  <p class="small muted">Your first familiar is {starter?.name}, granted by the job quest. From there, the <a href={withBase('/leveling/')}>getting started</a> page lists what's capturable in each zone.</p>
 
   <Notes id="intro" heading="Introduction" hint="The guide's own introduction — who it's by, what it covers, and how to contribute." />
 
