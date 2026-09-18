@@ -209,6 +209,124 @@
       ],
       "source": "https://www.youtube.com/watch?v=A-mep8xYcTg",
       "notes": "Mrhappy1227's Legendary walkthrough. The map in the FC guide is annotated 'Pick Your Poison' at the top fork. Cropped top row's stats match Cu Sith — confirm."
+    },
+    {
+      "name": "Coverage roster — every fight on the board",
+      "board": "unbroken-1",
+      "role": "Normal",
+      "status": "draft",
+      "author": "Icy Veins",
+      "beasts": [
+        "ice-golem",
+        "opo-opo",
+        "gigantoad",
+        "coeurl",
+        "geshunpest",
+        "behemoth",
+        "cu-sith",
+        "zu",
+        "adamantoise",
+        "colibri"
+      ],
+      "source": "https://www.icy-veins.com/ffxiv/beastmaster-crucible-of-the-unbroken",
+      "notes": "Bring the lot and pick three per stop; each battle page names the suggested trio. Not a scoring comp (roster-size bonus is lost)."
+    },
+    {
+      "name": "Coverage roster — every fight on the board",
+      "board": "unbroken-2",
+      "role": "Normal",
+      "status": "draft",
+      "author": "Icy Veins",
+      "beasts": [
+        "zu",
+        "ghost",
+        "coeurl",
+        "adamantoise",
+        "golem",
+        "worm",
+        "spriggan",
+        "chimera",
+        "gigantoad",
+        "opo-opo",
+        "salamander",
+        "cu-sith"
+      ],
+      "source": "https://www.icy-veins.com/ffxiv/beastmaster-crucible-of-the-unbroken",
+      "notes": "Bring the lot and pick three per stop; each battle page names the suggested trio. Not a scoring comp (roster-size bonus is lost)."
+    },
+    {
+      "name": "Coverage roster — every fight on the board",
+      "board": "unbroken-3",
+      "role": "Normal",
+      "status": "draft",
+      "author": "Icy Veins",
+      "beasts": [
+        "squirrel",
+        "raptor",
+        "cu-sith",
+        "behemoth",
+        "buffalo",
+        "ice-golem",
+        "diremite",
+        "colibri",
+        "damselfly",
+        "crab",
+        "wespe",
+        "adamantoise",
+        "coblyn",
+        "mantis"
+      ],
+      "source": "https://www.icy-veins.com/ffxiv/beastmaster-crucible-of-the-unbroken",
+      "notes": "Bring the lot and pick three per stop; each battle page names the suggested trio. Not a scoring comp (roster-size bonus is lost)."
+    },
+    {
+      "name": "Coverage roster — every fight on the board",
+      "board": "masters-1",
+      "role": "Normal",
+      "status": "draft",
+      "author": "Icy Veins",
+      "beasts": [
+        "mantis",
+        "damselfly",
+        "wespe",
+        "behemoth",
+        "worm",
+        "geshunpest",
+        "coblyn",
+        "adamantoise",
+        "diremite",
+        "drake",
+        "gigantoad",
+        "spriggan"
+      ],
+      "source": "https://www.icy-veins.com/ffxiv/beastmaster-crucible-of-the-unbroken",
+      "notes": "Bring the lot and pick three per stop; each battle page names the suggested trio. Not a scoring comp (roster-size bonus is lost)."
+    },
+    {
+      "name": "Coverage roster — every fight on the board",
+      "board": "masters-2",
+      "role": "Normal",
+      "status": "draft",
+      "author": "Icy Veins",
+      "beasts": [
+        "golem",
+        "worm",
+        "ghost",
+        "behemoth",
+        "karlabos",
+        "raptor",
+        "opo-opo",
+        "drake",
+        "mantis",
+        "colibri",
+        "cu-sith",
+        "gigantoad",
+        "ice-golem",
+        "adamantoise",
+        "geshunpest"
+      ],
+      "source": "https://www.icy-veins.com/ffxiv/beastmaster-crucible-of-the-unbroken",
+      "notes": "Bring the lot and pick three per stop; each battle page names the suggested trio. Not a scoring comp (roster-size bonus is lost)."
     }
   ]
 }
