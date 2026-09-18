@@ -1,5 +1,6 @@
-# Builds the site and publishes dist/ to GitHub Pages on every push to main.
-# Live at https://nnieuwen.github.io/beastmaster-guide/ (see `base` in astro.config.mjs).
+# Fallback mirror: builds the site under /beastmaster-guide/ and publishes it to
+# GitHub Pages (https://nnieuwen.github.io/beastmaster-guide/) on every push.
+# The primary host is Cloudflare Pages at https://beastmaster-guide.pages.dev.
 name: Deploy to GitHub Pages
 
 on:
@@ -27,6 +28,9 @@ jobs:
           cache: npm
       - run: npm ci
       - run: npm run build
+        env:
+          SITE_URL: https://nnieuwen.github.io
+          BASE_PATH: /beastmaster-guide
       - uses: actions/upload-pages-artifact@v3
         with:
           path: dist

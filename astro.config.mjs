@@ -5,8 +5,9 @@ import { defineConfig } from 'astro/config';
 // can be dropped onto any static host once a domain is chosen.
 export default defineConfig({
   output: 'static',
-  site: 'https://nnieuwen.github.io',
-  // Temporary home on GitHub Pages; drop `base` once the site has its own domain.
-  base: '/beastmaster-guide',
+  // Primary host is Cloudflare Pages at the domain root. Setting BASE_PATH
+  // (the GitHub Pages workflow does) moves every link under a sub-path.
+  site: process.env.SITE_URL ?? 'https://beastmaster-guide.pages.dev',
+  base: process.env.BASE_PATH ?? '/',
   trailingSlash: 'always',
 });

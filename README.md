@@ -27,10 +27,12 @@ layer 2 is still empty.
 
 ## Live site
 
-Temporary home while a domain is picked: **https://nnieuwen.github.io/beastmaster-guide/**.
-Every push to `main` rebuilds and redeploys it via `.github/workflows/deploy.yml`. The sub-path
-comes from `base` in `astro.config.mjs`; all internal links go through `withBase()`
-(`src/lib/url.ts`), so moving to a root domain is a one-line change.
+Temporary home while a domain is picked: **https://beastmaster-guide.pages.dev** (Cloudflare
+Pages, deployed with `npx wrangler pages deploy dist`). A mirror at
+https://nnieuwen.github.io/beastmaster-guide/ rebuilds on every push to `main` via
+`.github/workflows/deploy.yml`, which sets `BASE_PATH` so the build lives under a sub-path.
+All internal links go through `withBase()` (`src/lib/url.ts`), so either layout works from one
+source tree; a real domain later is just `SITE_URL`.
 
 ## Commands
 
